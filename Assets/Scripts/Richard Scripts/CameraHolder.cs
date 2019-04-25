@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CameraHolder : MonoBehaviour
 {
+
     public float speed;
 
     // Start is called before the first frame update
@@ -18,8 +19,12 @@ public class CameraHolder : MonoBehaviour
         HandleControls();
     }
 
+    /// <summary>
+    ///     Checks for Camera Movement Keypresses. Only for M/KB.
+    /// </summary>
     private void HandleControls()
     {
+        //Strafe Controls
         if (Input.GetKey(KeyCode.W))
         {
             transform.Translate(Vector3.forward * speed * Time.deltaTime);
