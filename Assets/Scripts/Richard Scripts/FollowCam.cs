@@ -9,11 +9,11 @@ public class FollowCam : MonoBehaviour
     
     private void Awake()
     {
-        cameraHolder = GameObject.FindGameObjectWithTag("CameraHolder").GetComponent<CameraHolder>();
+        GameObject cameraGO = GameObject.FindGameObjectWithTag("CameraHolder");
+        cameraHolder = cameraGO.GetComponent<CameraHolder>();
     }
 
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         
     }
