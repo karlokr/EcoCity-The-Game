@@ -24,6 +24,6 @@ public class MatchTimerText : MonoBehaviour
     void Update()
     {
         if (matchTimer.matchStarted)
-            text.text = "Time Left: " + (int)matchTimer.levelTimeInSeconds + "s";
+            text.text = matchTimer.currentMonth.ToString() + " " + matchTimer.currentYear;
     }
 }

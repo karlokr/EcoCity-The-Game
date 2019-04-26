@@ -4,13 +4,9 @@ using UnityEngine;
 
 public class DebugBuilding : MonoBehaviour
 {
-    public Material debugMaterial;
-    private Renderer rend;
+   
 
-    private void Awake()
-    {
-        rend = GetComponent<Renderer>();
-    }
+    
 
     // Start is called before the first frame update
     void Start()
@@ -24,8 +20,4 @@ public class DebugBuilding : MonoBehaviour
         
     }
 
-    public void ActivateDebugColor()
-    {
-        rend.material = debugMaterial;
-    }
 }

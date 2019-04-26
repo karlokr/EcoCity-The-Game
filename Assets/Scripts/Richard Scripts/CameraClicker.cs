@@ -5,10 +5,13 @@ using UnityEngine;
 public class CameraClicker : MonoBehaviour
 {
     private Camera viewportCamera;
+    private MatchTimer matchTimer;
+    private Building selectedBuilding;
 
     private void Awake()
     {
         viewportCamera = GetComponent<Camera>();
+        matchTimer = GameObject.FindGameObjectWithTag("MatchTimer").GetComponent<MatchTimer>();
     }
 
     // Start is called before the first frame update
@@ -25,7 +28,7 @@ public class CameraClicker : MonoBehaviour
 
     private void HandleClicks()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && matchTimer.matchStarted)
         {
             RaycastHit raycastHit;
             Ray screenToWorld = viewportCamera.ScreenPointToRay(Input.mousePosition);
@@ -36,7 +39,8 @@ public class CameraClicker : MonoBehaviour
                 switch (other.tag)
                 {
                     case "Building":
-                        other.GetComponent<DebugBuilding>().ActivateDebugColor();
+                        selectedBuilding = other.GetComponent<Building>();
+                        selectedBuilding.ActivateDebugColor();
                         break;
                     default:
                         break;
