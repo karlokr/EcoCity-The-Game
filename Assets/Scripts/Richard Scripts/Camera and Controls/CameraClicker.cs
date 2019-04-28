@@ -8,7 +8,8 @@ public class CameraClicker : MonoBehaviour
     private MatchTimer matchTimer;
     private Building selectedBuilding;
     private Plot selectedPlot;
-    private GameObject buildMenu;
+    private GameObject buildMenuObj;
+    private BuildMenu buildMenu;
     
     //A GameObject that will be passed to a selected object.
     private GameObject objectToPass;
@@ -22,8 +23,10 @@ public class CameraClicker : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        buildMenu = GameObject.FindGameObjectWithTag("BuildMenu");
-        buildMenu.SetActive(false);
+        buildMenuObj = GameObject.FindGameObjectWithTag("BuildMenu");
+        buildMenuObj.SetActive(false);
+
+        buildMenu = buildMenuObj.GetComponent<BuildMenu>();
     }
 
     // Update is called once per frame
@@ -56,7 +59,8 @@ public class CameraClicker : MonoBehaviour
                     case "Plot":
                         ClearSelections();
                         selectedPlot = other.GetComponent<Plot>();
-                        buildMenu.SetActive(true);
+                        buildMenuObj.SetActive(true);
+                        buildMenu.SetButtonVisibilitySize(selectedPlot.size);
                         break;
                     default:
                         break;
@@ -75,7 +79,7 @@ public class CameraClicker : MonoBehaviour
     {
         selectedBuilding = null;
         selectedPlot = null;
-        buildMenu.SetActive(false);
+        buildMenuObj.SetActive(false);
     }
 
     

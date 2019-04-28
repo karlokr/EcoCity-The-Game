@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Plot : MonoBehaviour
 {
+    public PlotSize size;
+    public enum PlotSize { Small, Medium, Large };
     // Start is called before the first frame update
     void Start()
     {
