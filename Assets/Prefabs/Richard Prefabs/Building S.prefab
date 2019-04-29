@@ -398,6 +398,6 @@ MonoBehaviour:
   - {fileID: 2095555080246993863}
   - {fileID: 5224022948985823060}
   - {fileID: 2178677516925368736}
-  verticalOffset: 2.5
+  verticalOffset: 2.25
   buildingCost: 10
   totalEmission: 5

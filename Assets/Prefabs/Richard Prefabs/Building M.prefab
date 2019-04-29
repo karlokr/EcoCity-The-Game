@@ -395,6 +395,6 @@ MonoBehaviour:
   debugMaterial: {fileID: 2100000, guid: 28c7458476f6fba4891016eb9253541f, type: 2}
   rend: {fileID: 0}
   upgrades: []
-  verticalOffset: 5
+  verticalOffset: 4.75
   buildingCost: 50
   totalEmission: 10

@@ -22,7 +22,6 @@ public class Building : MonoBehaviour
     {
         rend = GetComponent<Renderer>();
         upgrades = GetComponentsInChildren<Upgrade>();
-        matchTimer = GameObject.FindGameObjectWithTag("MatchTimer").GetComponent<MatchTimer>();
     }
 
     private void Start()
@@ -43,6 +42,7 @@ public class Building : MonoBehaviour
 
     public void Emit()
     {
+        matchTimer = GameObject.FindGameObjectWithTag("MatchTimer").GetComponent<MatchTimer>();
         matchTimer.emission += totalEmission;
     }
 
