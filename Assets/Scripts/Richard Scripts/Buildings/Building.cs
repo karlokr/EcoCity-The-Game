@@ -10,11 +10,16 @@ public class Building : MonoBehaviour
     public Upgrade[] upgrades;
 
 
+
+
     [Header("Building Attributes")]
+    // How far should this building be moved up to land on the ground.
+    public float verticalOffset;
     public int buildingCost;
-    private int buildingLevel;
     public float emissionPerSecond;
+
     private MatchTimer matchTimer;
+    private int buildingLevel;
 
     private void Awake()
     {
@@ -26,6 +31,7 @@ public class Building : MonoBehaviour
     private void Start()
     {
         defaultMaterial = rend.material;
+        transform.Translate(Vector3.up * verticalOffset);
     }
 
     /// <summary>
