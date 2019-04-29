@@ -397,4 +397,5 @@ MonoBehaviour:
   upgrades: []
   verticalOffset: 4.75
   buildingCost: 50
+  population: 10
   totalEmission: 10

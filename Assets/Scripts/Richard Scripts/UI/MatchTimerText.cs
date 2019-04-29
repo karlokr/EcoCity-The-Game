@@ -7,7 +7,7 @@ public class MatchTimerText : MonoBehaviour
 {
     private Text text;
     private MatchTimer matchTimer;
-
+    private Text population;
     private Text money;
     private Text emission;
 
@@ -17,6 +17,7 @@ public class MatchTimerText : MonoBehaviour
         matchTimer = GameObject.FindGameObjectWithTag("MatchTimer").GetComponent<MatchTimer>();
         money = GameObject.FindGameObjectWithTag("Money").GetComponentInChildren<Text>();
         emission = GameObject.FindGameObjectWithTag("Emission").GetComponentInChildren<Text>();
+        population = GameObject.FindGameObjectWithTag("Population").GetComponent<Text>();
     }
 
     // Start is called before the first frame update
@@ -33,5 +34,6 @@ public class MatchTimerText : MonoBehaviour
 
         money.text = matchTimer.money.ToString();
         emission.text = matchTimer.emission.ToString();
+        population.text = matchTimer.population.ToString();
     }
 }
