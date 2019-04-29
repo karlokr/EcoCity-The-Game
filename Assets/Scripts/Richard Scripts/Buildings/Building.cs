@@ -23,7 +23,6 @@ public class Building : MonoBehaviour
         matchTimer = GameObject.FindGameObjectWithTag("MatchTimer").GetComponent<MatchTimer>();
         rend = GetComponent<Renderer>();
         upgrades = GetComponentsInChildren<Upgrade>();
-        
     }
 
     private void Start()
