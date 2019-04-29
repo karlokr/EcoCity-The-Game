@@ -436,12 +436,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 171439477}
   m_CullTransparentMesh: 0
---- !u!4 &276590043 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7980228404448646081, guid: 053121b59245e37478cdca044345599b,
-    type: 3}
-  m_PrefabInstance: {fileID: 7980228404720483866}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &296612931
 GameObject:
   m_ObjectHideFlags: 0
@@ -1030,7 +1024,7 @@ Transform:
   m_Children:
   - {fileID: 449895461}
   - {fileID: 426111225}
-  - {fileID: 276590043}
+  - {fileID: 7980228404720483867}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3352,11 +3346,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 670078440}
     m_Modifications:
-    - target: {fileID: 7980228404448646092, guid: 053121b59245e37478cdca044345599b,
-        type: 3}
-      propertyPath: m_Name
-      value: Building M
-      objectReference: {fileID: 0}
     - target: {fileID: 7980228404448646081, guid: 053121b59245e37478cdca044345599b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3412,6 +3401,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7980228404448646092, guid: 053121b59245e37478cdca044345599b,
+        type: 3}
+      propertyPath: m_Name
+      value: Building M
+      objectReference: {fileID: 0}
     - target: {fileID: 5952014569978889225, guid: 053121b59245e37478cdca044345599b,
         type: 3}
       propertyPath: m_LocalPosition.y
@@ -3460,6 +3454,11 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 7980228404448646093, guid: 053121b59245e37478cdca044345599b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 053121b59245e37478cdca044345599b, type: 3}
+--- !u!4 &7980228404720483867 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 7980228404720483866}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8551157436010786999
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3480,7 +3479,7 @@ PrefabInstance:
     - target: {fileID: 8551157436125872206, guid: 74a341b9cc246fd4ba415b64fadcef25,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.45
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 8551157436125872206, guid: 74a341b9cc246fd4ba415b64fadcef25,
         type: 3}
