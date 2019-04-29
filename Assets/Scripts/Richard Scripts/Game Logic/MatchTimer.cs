@@ -23,7 +23,7 @@ public class MatchTimer : MonoBehaviour
     [Header("Player Resources")]
     public float money;
     public float emission = 0;
-
+    public float wood;
     public float income = 10f;
 
     public enum Month {JAN, FEB, MAR, APR, MAY, JUN, JUL, AUG, SEP, OCT, NOV, DEC};
