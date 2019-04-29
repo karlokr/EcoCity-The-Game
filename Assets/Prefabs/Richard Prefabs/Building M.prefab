@@ -392,3 +392,8 @@ MonoBehaviour:
   debugMaterial: {fileID: 2100000, guid: 28c7458476f6fba4891016eb9253541f, type: 2}
   rend: {fileID: 0}
   upgrades: []
+<<<<<<< HEAD
+=======
+  buildingCost: 50
+  emissionPerSecond: 0.2
+>>>>>>> dc7d74c4c620c68d0dbe416335043b20a6d6d808

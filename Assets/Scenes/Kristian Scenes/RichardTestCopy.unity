@@ -294,8 +294,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   debugMaterial: {fileID: 2100000, guid: 28c7458476f6fba4891016eb9253541f, type: 2}
-  defaultMaterial: {fileID: 2100000, guid: 296aab27370890e45b48943300a29958, type: 2}
   rend: {fileID: 0}
+  upgrades: []
 --- !u!1 &171439477
 GameObject:
   m_ObjectHideFlags: 0
@@ -1060,7 +1060,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 65e4cbbc30f5aae4089994d31973c011, type: 3}
+    m_Font: {fileID: 12800000, guid: 4f7e35c733a1dbf4299e90ea13d46ff9, type: 3}
     m_FontSize: 36
     m_FontStyle: 0
     m_BestFit: 0

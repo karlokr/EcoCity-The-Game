@@ -33,7 +33,5 @@ public class Upgrade : MonoBehaviour
     public void Activate() {
         if (visualModel)
             visualModel.enabled = true;
-
-        Debug.Log(upgradeName + " upgrade activated");
     }
 }

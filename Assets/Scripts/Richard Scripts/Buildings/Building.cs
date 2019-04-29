@@ -9,8 +9,11 @@ public class Building : MonoBehaviour
     public Renderer rend;
     public Upgrade[] upgrades;
 
+
+    [Header("Building Attributes")]
+    public int buildingCost;
     private int buildingLevel;
-    private float emissionPerSecond;
+    public float emissionPerSecond;
 
     private void Awake()
     {
@@ -35,6 +38,8 @@ public class Building : MonoBehaviour
 
     public void Emit()
     {
+        MatchTimer matchTimer = GameObject.FindGameObjectWithTag("MatchTimer").GetComponent<MatchTimer>();
+        matchTimer.emissionsFromBuildings += emissionPerSecond;
 
     }
 
