@@ -72,6 +72,7 @@ public class CameraClicker : MonoBehaviour
                             ClearSelections();
                             Building.ClearDebugColor();
                             selectedPlot = other.GetComponent<Plot>();
+                            selectedPlot.ActivateDebugColor();
                             buildMenuObj.SetActive(true);
                             buildMenu.SetButtonVisibilitySize(selectedPlot.size);
                             break;
@@ -97,6 +98,7 @@ public class CameraClicker : MonoBehaviour
         buildMenuObj.SetActive(false);
         upgradeMenuObj.SetActive(false);
         Building.ClearDebugColor();
+        Plot.ClearDebugColor();
     }
 
     
