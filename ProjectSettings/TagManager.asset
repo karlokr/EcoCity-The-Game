@@ -12,6 +12,7 @@ TagManager:
   - Emission
   - Money
   - UpgradeMenu
+  - Wood
   layers:
   - Default
   - TransparentFX

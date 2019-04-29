@@ -11,11 +11,14 @@ public class MatchTimerText : MonoBehaviour
     private Text money;
     private Text emission;
 
+    private Text wood;
+
     private void Awake()
     {
         text = GetComponent<Text>();
         matchTimer = GameObject.FindGameObjectWithTag("MatchTimer").GetComponent<MatchTimer>();
         money = GameObject.FindGameObjectWithTag("Money").GetComponent<Text>();
+        wood = GameObject.FindGameObjectWithTag("Wood").GetComponent<Text>();
         emission = GameObject.FindGameObjectWithTag("Emission").GetComponent<Text>();
     }
 
@@ -33,5 +36,6 @@ public class MatchTimerText : MonoBehaviour
 
         money.text = matchTimer.money.ToString();
         emission.text = matchTimer.emission.ToString();
+        wood.text = matchTimer.wood.ToString();
     }
 }
