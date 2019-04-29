@@ -11,6 +11,8 @@ public class Plot : MonoBehaviour
     public static Material defaultMaterial;
     public Renderer[] rends;
 
+    private MatchTimer matchTimer;
+
     private void Awake()
     {
         rends = GetComponentsInChildren<Renderer>();
@@ -20,6 +22,7 @@ public class Plot : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        matchTimer = GameObject.FindGameObjectWithTag("MatchTimer").GetComponent<MatchTimer>();
 
     }
 
@@ -31,8 +34,18 @@ public class Plot : MonoBehaviour
 
     public void CreateBuilding(GameObject prefabToBuild)
     {
-        Instantiate(prefabToBuild, transform.position, transform.rotation);
-        Destroy(gameObject);
+        Building building = prefabToBuild.GetComponent<Building>();
+        if (matchTimer.money >= building.buildingCost)
+        {
+            Instantiate(prefabToBuild, transform.position, transform.rotation);
+            building.Emit();
+            matchTimer.money -= building.buildingCost;
+            Destroy(gameObject);
+        }
+        else
+        {
+            Debug.Log("Not enough money");
+        }
     }
 
 

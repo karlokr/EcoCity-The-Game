@@ -20,6 +20,13 @@ public class MatchTimer : MonoBehaviour
     private float monthTimer;
     private float yearTimer;
 
+    [Header("Player Resources")]
+    public float money;
+    public float emission = 0;
+
+    public float income = 10f;
+    public float emissionsFromBuildings = 0f;
+
     public enum Month {JAN, FEB, MAR, APR, MAY, JUN, JUL, AUG, SEP, OCT, NOV, DEC};
 
     void Start()
@@ -46,6 +53,10 @@ public class MatchTimer : MonoBehaviour
         if (monthTimer > timePerMonth)
         {
             levelTimeInMonths++;
+            //Increase money every month
+            money += income;
+            emission += emissionsFromBuildings;
+
             if (levelTimeInMonths > 11)
             {
                 currentYear++;
