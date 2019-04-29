@@ -110,6 +110,8 @@ MonoBehaviour:
   debugMaterial: {fileID: 2100000, guid: 28c7458476f6fba4891016eb9253541f, type: 2}
   rend: {fileID: 0}
   upgrades: []
+  buildingCost: 100
+  totalEmission: 15
 --- !u!1 &5891861409251154257
 GameObject:
   m_ObjectHideFlags: 0
@@ -201,7 +203,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upgradeName: Steam Chimney
-  cost: 0
+  cost: 50
+  emissionReduction: 1
   visualModel: {fileID: 0}
   upgradeActive: 0
 --- !u!1 &7855571568571712241
@@ -295,7 +298,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upgradeName: Generator
-  cost: 0
+  cost: 100
+  emissionReduction: 2
   visualModel: {fileID: 0}
   upgradeActive: 0
 --- !u!1 &8253314066960209692
@@ -389,8 +393,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upgradeName: Garden
-  cost: 0
+  cost: 150
+  emissionReduction: 3
   visualModel: {fileID: 0}
   upgradeActive: 0
-  buildingCost: 100
-  emissionPerSecond: 0.5

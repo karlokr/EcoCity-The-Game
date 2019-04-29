@@ -6,6 +6,7 @@ public class Upgrade : MonoBehaviour
 {
     public string upgradeName;
     public int cost;
+    public int emissionReduction;
     public Renderer visualModel;
     public bool upgradeActive;
 

@@ -25,7 +25,6 @@ public class MatchTimer : MonoBehaviour
     public float emission = 0;
 
     public float income = 10f;
-    public float emissionsFromBuildings = 0f;
 
     public enum Month {JAN, FEB, MAR, APR, MAY, JUN, JUL, AUG, SEP, OCT, NOV, DEC};
 
@@ -55,7 +54,6 @@ public class MatchTimer : MonoBehaviour
             levelTimeInMonths++;
             //Increase money every month
             money += income;
-            emission += emissionsFromBuildings;
 
             if (levelTimeInMonths > 11)
             {

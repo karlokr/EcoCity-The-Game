@@ -13,7 +13,7 @@ public class Building : MonoBehaviour
     [Header("Building Attributes")]
     public int buildingCost;
     private int buildingLevel;
-    public float emissionPerSecond;
+    public float totalEmission;
     private MatchTimer matchTimer;
 
     private void Awake()
@@ -35,13 +35,13 @@ public class Building : MonoBehaviour
     public void UpgradeBuilding(float emissionRatio)
     {
         buildingLevel++;
-        emissionPerSecond /= emissionRatio;
+        totalEmission /= emissionRatio;
     }
 
     public void Emit()
     {
         matchTimer = GameObject.FindGameObjectWithTag("MatchTimer").GetComponent<MatchTimer>();
-        matchTimer.emissionsFromBuildings += emissionPerSecond;
+        matchTimer.emission += totalEmission;
 
     }
 
@@ -72,10 +72,11 @@ public class Building : MonoBehaviour
 
     public void ActivateUpgrade(int index)
     {
-        if (matchTimer.money > upgrades[index].cost)
+        if (matchTimer.money >= upgrades[index].cost)
         {
             upgrades[index].Activate();
             matchTimer.money -= upgrades[index].cost;
+            matchTimer.emission -= upgrades[index].emissionReduction;
         }  
     }
 }
