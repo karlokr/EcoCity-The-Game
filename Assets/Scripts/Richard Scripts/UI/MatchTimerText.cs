@@ -11,6 +11,8 @@ public class MatchTimerText : MonoBehaviour
     private Text money;
     private Text emission;
 
+    private Text wood;
+
     private void Awake()
     {
         text = GetComponent<Text>();
@@ -18,6 +20,7 @@ public class MatchTimerText : MonoBehaviour
         money = GameObject.FindGameObjectWithTag("Money").GetComponentInChildren<Text>();
         emission = GameObject.FindGameObjectWithTag("Emission").GetComponentInChildren<Text>();
         population = GameObject.FindGameObjectWithTag("Population").GetComponent<Text>();
+        wood = GameObject.FindGameObjectWithTag("Wood").GetComponent<Text>();
     }
 
     // Start is called before the first frame update
@@ -35,5 +38,6 @@ public class MatchTimerText : MonoBehaviour
         money.text = matchTimer.money.ToString();
         emission.text = matchTimer.emission.ToString();
         population.text = matchTimer.population.ToString();
+        wood.text = matchTimer.wood.ToString();
     }
 }
