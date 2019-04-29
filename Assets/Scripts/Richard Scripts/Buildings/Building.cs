@@ -13,16 +13,17 @@ public class Building : MonoBehaviour
     // How far should this building be moved up to land on the ground.
     public float verticalOffset;
     public int buildingCost;
-
+    public int population;
     public float totalEmission;
     private MatchTimer matchTimer;
     private int buildingLevel;
 
     private void Awake()
     {
+        matchTimer = GameObject.FindGameObjectWithTag("MatchTimer").GetComponent<MatchTimer>();
         rend = GetComponent<Renderer>();
         upgrades = GetComponentsInChildren<Upgrade>();
-        matchTimer = GameObject.FindGameObjectWithTag("MatchTimer").GetComponent<MatchTimer>();
+        
     }
 
     private void Start()
@@ -43,7 +44,9 @@ public class Building : MonoBehaviour
 
     public void Emit()
     {
+        matchTimer = GameObject.FindGameObjectWithTag("MatchTimer").GetComponent<MatchTimer>();
         matchTimer.emission += totalEmission;
+        matchTimer.population += population;
     }
 
     /// <summary>

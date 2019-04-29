@@ -10,6 +10,7 @@ public class MatchTimer : MonoBehaviour
     public int endYear;
     public bool matchStarted;
 
+
     [Header("Accessible Data")]
     public Month currentMonth;
     public int currentYear;
@@ -23,6 +24,7 @@ public class MatchTimer : MonoBehaviour
     [Header("Player Resources")]
     public float money;
     public float emission = 0;
+    public int population;
 
     public float income = 10f;
 
@@ -30,7 +32,7 @@ public class MatchTimer : MonoBehaviour
 
     void Start()
     {
-
+        population = 0;
         timePerYear = levelTimeInSeconds / (endYear - startYear);
         timePerMonth = timePerYear / 12;
         currentYear = startYear;

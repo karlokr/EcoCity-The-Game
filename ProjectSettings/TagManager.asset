@@ -12,6 +12,7 @@ TagManager:
   - Emission
   - Money
   - UpgradeMenu
+  - Population
   layers:
   - Default
   - TransparentFX
