@@ -9,15 +9,12 @@ public class Building : MonoBehaviour
     public Renderer rend;
     public Upgrade[] upgrades;
 
-
-
-
     [Header("Building Attributes")]
     // How far should this building be moved up to land on the ground.
     public float verticalOffset;
     public int buildingCost;
-    public float emissionPerSecond;
 
+    public float totalEmission;
     private MatchTimer matchTimer;
     private int buildingLevel;
 
@@ -41,14 +38,12 @@ public class Building : MonoBehaviour
     public void UpgradeBuilding(float emissionRatio)
     {
         buildingLevel++;
-        emissionPerSecond /= emissionRatio;
+        totalEmission /= emissionRatio;
     }
 
     public void Emit()
     {
-        matchTimer = GameObject.FindGameObjectWithTag("MatchTimer").GetComponent<MatchTimer>();
-        matchTimer.emissionsFromBuildings += emissionPerSecond;
-
+        matchTimer.emission += totalEmission;
     }
 
     /// <summary>
@@ -78,10 +73,11 @@ public class Building : MonoBehaviour
 
     public void ActivateUpgrade(int index)
     {
-        if (matchTimer.money > upgrades[index].cost)
+        if (matchTimer.money >= upgrades[index].cost)
         {
             upgrades[index].Activate();
             matchTimer.money -= upgrades[index].cost;
+            matchTimer.emission -= upgrades[index].emissionReduction;
         }  
     }
 }

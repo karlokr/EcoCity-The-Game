@@ -92,6 +92,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upgradeName: Garden
   cost: 250
+  emissionReduction: 3
   visualModel: {fileID: 0}
   upgradeActive: 0
 --- !u!1 &4303497041275381299
@@ -186,6 +187,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upgradeName: Steam Chimney
   cost: 50
+  emissionReduction: 1
   visualModel: {fileID: 0}
   upgradeActive: 0
 --- !u!1 &5660184593139301442
@@ -280,6 +282,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upgradeName: Generator
   cost: 100
+  emissionReduction: 2
   visualModel: {fileID: 0}
   upgradeActive: 0
 --- !u!1 &8551157436125872195
@@ -309,7 +312,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8551157436125872195}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children:
@@ -391,6 +394,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debugMaterial: {fileID: 2100000, guid: 28c7458476f6fba4891016eb9253541f, type: 2}
   rend: {fileID: 0}
-  upgrades: []
+  upgrades:
+  - {fileID: 2095555080246993863}
+  - {fileID: 5224022948985823060}
+  - {fileID: 2178677516925368736}
+  verticalOffset: 2.5
   buildingCost: 10
-  emissionPerSecond: 0.1
+  totalEmission: 5

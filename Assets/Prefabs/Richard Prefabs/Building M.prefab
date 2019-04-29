@@ -26,13 +26,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2395630350038470453}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.024, y: -0.365, z: -0.55}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0.551, y: 0.072, z: 0.038}
   m_LocalScale: {x: 0.6, y: 0.1, z: 0.1}
   m_Children: []
   m_Father: {fileID: 7980228404448646081}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!33 &795523849043618634
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -91,7 +91,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upgradeName: Garden
-  cost: 0
+  cost: 150
+  emissionReduction: 3
   visualModel: {fileID: 0}
   upgradeActive: 0
 --- !u!1 &4525998977345363700
@@ -185,7 +186,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upgradeName: Steam Chimney
-  cost: 0
+  cost: 50
+  emissionReduction: 1
   visualModel: {fileID: 0}
   upgradeActive: 0
 --- !u!1 &7093879355592322036
@@ -279,7 +281,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upgradeName: Generator
-  cost: 0
+  cost: 100
+  emissionReduction: 2
   visualModel: {fileID: 0}
   upgradeActive: 0
 --- !u!1 &7980228404448646092
@@ -309,7 +312,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7980228404448646092}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children:
@@ -392,5 +395,6 @@ MonoBehaviour:
   debugMaterial: {fileID: 2100000, guid: 28c7458476f6fba4891016eb9253541f, type: 2}
   rend: {fileID: 0}
   upgrades: []
+  verticalOffset: 5
   buildingCost: 50
-  emissionPerSecond: 0.2
+  totalEmission: 10
