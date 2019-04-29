@@ -91,7 +91,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upgradeName: Garden
-  cost: 0
+  cost: 250
   visualModel: {fileID: 0}
   upgradeActive: 0
 --- !u!1 &4303497041275381299
@@ -185,7 +185,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upgradeName: Steam Chimney
-  cost: 0
+  cost: 50
   visualModel: {fileID: 0}
   upgradeActive: 0
 --- !u!1 &5660184593139301442
@@ -279,7 +279,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upgradeName: Generator
-  cost: 0
+  cost: 100
   visualModel: {fileID: 0}
   upgradeActive: 0
 --- !u!1 &8551157436125872195
