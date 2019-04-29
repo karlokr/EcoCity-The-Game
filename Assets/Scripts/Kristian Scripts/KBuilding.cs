@@ -48,7 +48,5 @@ public class KBuilding : MonoBehaviour
                 obj.rend.material = defaultMaterial;
             }
         }
-
-
     }
 }

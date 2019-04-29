@@ -5,8 +5,9 @@ using UnityEngine;
 public class Building : MonoBehaviour
 {
     public Material debugMaterial;
-    public Material defaultMaterial;
+    public static Material defaultMaterial;
     public Renderer rend;
+    public Upgrade[] upgrades;
 
     private int buildingLevel;
     private float emissionPerSecond;
@@ -14,6 +15,12 @@ public class Building : MonoBehaviour
     private void Awake()
     {
         rend = GetComponent<Renderer>();
+        upgrades = GetComponentsInChildren<Upgrade>();
+    }
+
+    private void Start()
+    {
+        defaultMaterial = rend.material;
     }
 
     /// <summary>
@@ -44,8 +51,15 @@ public class Building : MonoBehaviour
             {
                 obj.rend.material = defaultMaterial;
             }
-        }
+        } 
+    }
 
-        
+    public static void ClearDebugColor()
+    {
+        Building[] b = GameObject.FindObjectsOfType<Building>();
+        foreach (Building obj in b)
+        {
+            obj.rend.material = defaultMaterial;
+        }
     }
 }

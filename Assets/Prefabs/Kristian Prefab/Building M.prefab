@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 5818896857939980965}
   - component: {fileID: 5818896857939980964}
   - component: {fileID: 5064548356033717497}
-  - component: {fileID: 5818896857939980971}
   m_Layer: 0
   m_Name: Building M
   m_TagString: Building
@@ -111,15 +110,3 @@ MonoBehaviour:
   buildingCost: 100
   buildingLevel: 0
   emissionPerSecond: 0.5
---- !u!114 &5818896857939980971
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5818896857939980970}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac2cd0c5dfd6353479ab06eda699c34d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

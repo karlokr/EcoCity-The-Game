@@ -9,6 +9,9 @@ TagManager:
   - MatchTimer
   - BuildMenu
   - Plot
+  - Emission
+  - Money
+  - UpgradeMenu
   layers:
   - Default
   - TransparentFX

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class CameraClicker : MonoBehaviour
 {
@@ -9,7 +10,9 @@ public class CameraClicker : MonoBehaviour
     private Building selectedBuilding;
     private Plot selectedPlot;
     private GameObject buildMenuObj;
+    private GameObject upgradeMenuObj;
     private BuildMenu buildMenu;
+    private UpgradeMenu upgradeMenu;
     
     //A GameObject that will be passed to a selected object.
     private GameObject objectToPass;
@@ -26,7 +29,11 @@ public class CameraClicker : MonoBehaviour
         buildMenuObj = GameObject.FindGameObjectWithTag("BuildMenu");
         buildMenuObj.SetActive(false);
 
+        upgradeMenuObj = GameObject.FindGameObjectWithTag("UpgradeMenu");
+        upgradeMenuObj.SetActive(false);
+
         buildMenu = buildMenuObj.GetComponent<BuildMenu>();
+        upgradeMenu = upgradeMenuObj.GetComponent<UpgradeMenu>();
     }
 
     // Update is called once per frame
@@ -45,25 +52,31 @@ public class CameraClicker : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0) && matchTimer.matchStarted)
         {
-            Ray screenToWorld = viewportCamera.ScreenPointToRay(Input.mousePosition);
-            if (Physics.Raycast(screenToWorld, out RaycastHit raycastHit))
+            if (!EventSystem.current.IsPointerOverGameObject())
             {
-                Collider other = raycastHit.collider;
-                switch (other.tag)
+                Ray screenToWorld = viewportCamera.ScreenPointToRay(Input.mousePosition);
+                if (Physics.Raycast(screenToWorld, out RaycastHit raycastHit))
                 {
-                    case "Building":
-                        ClearSelections();
-                        selectedBuilding = other.GetComponent<Building>();
-                        selectedBuilding.ActivateDebugColor();
-                        break;
-                    case "Plot":
-                        ClearSelections();
-                        selectedPlot = other.GetComponent<Plot>();
-                        buildMenuObj.SetActive(true);
-                        buildMenu.SetButtonVisibilitySize(selectedPlot.size);
-                        break;
-                    default:
-                        break;
+                    Collider other = raycastHit.collider;
+                    switch (other.tag)
+                    {
+                        case "Building":
+                            ClearSelections();
+                            selectedBuilding = other.GetComponent<Building>();
+                            selectedBuilding.ActivateDebugColor();
+                            upgradeMenuObj.SetActive(true);
+                            break;
+                        case "Plot":
+                            ClearSelections();
+                            Building.ClearDebugColor();
+                            selectedPlot = other.GetComponent<Plot>();
+                            buildMenuObj.SetActive(true);
+                            buildMenu.SetButtonVisibilitySize(selectedPlot.size);
+                            break;
+                        default:
+                            ClearSelections();
+                            break;
+                    }
                 }
             }
         }
@@ -80,6 +93,8 @@ public class CameraClicker : MonoBehaviour
         selectedBuilding = null;
         selectedPlot = null;
         buildMenuObj.SetActive(false);
+        upgradeMenuObj.SetActive(false);
+        Building.ClearDebugColor();
     }
 
     
