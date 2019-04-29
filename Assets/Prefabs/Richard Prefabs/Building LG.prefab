@@ -110,7 +110,9 @@ MonoBehaviour:
   debugMaterial: {fileID: 2100000, guid: 28c7458476f6fba4891016eb9253541f, type: 2}
   rend: {fileID: 0}
   upgrades: []
+  verticalOffset: 0
   buildingCost: 100
+  population: 20
   totalEmission: 15
 --- !u!1 &5891861409251154257
 GameObject:
