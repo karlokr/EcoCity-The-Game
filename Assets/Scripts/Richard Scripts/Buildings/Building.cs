@@ -62,4 +62,9 @@ public class Building : MonoBehaviour
             obj.rend.material = defaultMaterial;
         }
     }
+
+    public void ActivateUpgrade(int index)
+    {
+        upgrades[index].Activate();
+    }
 }

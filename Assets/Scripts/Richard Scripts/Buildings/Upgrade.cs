@@ -30,7 +30,7 @@ public class Upgrade : MonoBehaviour
         
     }
 
-    public void ActivateUpgrade() {
+    public void Activate() {
         if (visualModel)
             visualModel.enabled = true;
 
