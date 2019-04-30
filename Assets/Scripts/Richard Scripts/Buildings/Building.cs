@@ -19,12 +19,14 @@ public class Building : MonoBehaviour
 
     public float totalEmission;
 
+    private Animator animator;
     private MatchTimer matchTimer;
     private int buildingLevel;
     private ParticleSystem particleSystem;
 
     private void Awake()
     {
+        animator = GetComponent<Animator>();
         particleSystem = GetComponentInChildren<ParticleSystem>();
         matchTimer = GameObject.FindGameObjectWithTag("MatchTimer").GetComponent<MatchTimer>();
         rend = GetComponent<Renderer>();
@@ -34,8 +36,15 @@ public class Building : MonoBehaviour
     private void Start()
     {
         defaultMaterial = rend.material;
+        StartCoroutine(StaggerLand());
     }
 
+    IEnumerator StaggerLand()
+    {
+        float waitTime = Random.Range(0.0f, 3f);
+        yield return new WaitForSeconds(waitTime);
+        animator.SetTrigger("Land");
+    }
 
     /// <summary>
     ///  Upgrades the buidling to emit less.
