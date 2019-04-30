@@ -113,6 +113,7 @@ MonoBehaviour:
   verticalOffset: 0
   buildingCost: 100
   population: 20
+  woodCost: 150
   totalEmission: 15
 --- !u!1 &5891861409251154257
 GameObject:
