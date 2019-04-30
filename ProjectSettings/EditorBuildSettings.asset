@@ -9,6 +9,17 @@ EditorBuildSettings:
     path: 
     guid: 00000000000000000000000000000000
   - enabled: 1
+    path: Assets/Scenes/Karlo Scenes/LandingPage.unity
+    guid: aa59d063b198d754fb6b9ad01fcc09af
+  - enabled: 1
+    path: Assets/Scenes/Karlo Scenes/LogIn.unity
+    guid: ec8ca0ab8b72355408a51d294fab8946
+  - enabled: 1
+    path: Assets/Scenes/Karlo Scenes/GameMenu.unity
+    guid: a7ad5eb1f3345bf4dbd6195efc5cccd4
+  - enabled: 1
+    path: Assets/Scenes/Richard Scenes/RichardTestEnvironment.unity
+    guid: 2496642c513aa8c4f9c237d0fe8b60c2
     path: Assets/Scenes/Kristian Scenes/Level_One.unity
     guid: ecfbb5ff3a7333d43919f398c4045cbf
   m_configObjects: {}
