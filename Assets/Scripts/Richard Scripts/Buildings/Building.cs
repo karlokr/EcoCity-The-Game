@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using EZCameraShake;
 
 public class Building : MonoBehaviour
 {
@@ -12,24 +13,34 @@ public class Building : MonoBehaviour
     [Header("Building Attributes")]
     // How far should this building be moved up to land on the ground.
     public float verticalOffset;
-    public int buildingCost;
 
-    public float totalEmission;
-    private MatchTimer matchTimer;
+    public string buildingType;
+    public int buildingCost;
+    public int woodCost;
+
+    private Animator animator;
+    public int populationCost;
+    public int totalEmission;
+    public MatchTimer matchTimer;
+
     private int buildingLevel;
+    private ParticleSystem particleSystem;
 
     private void Awake()
     {
+        animator = GetComponent<Animator>();
+        particleSystem = GetComponentInChildren<ParticleSystem>();
+        matchTimer = GameObject.FindGameObjectWithTag("MatchTimer").GetComponent<MatchTimer>();
         rend = GetComponent<Renderer>();
         upgrades = GetComponentsInChildren<Upgrade>();
-        matchTimer = GameObject.FindGameObjectWithTag("MatchTimer").GetComponent<MatchTimer>();
     }
 
-    private void Start()
+    public void Start()
     {
         defaultMaterial = rend.material;
-        transform.Translate(Vector3.up * verticalOffset);
+        animator.SetTrigger("Land");
     }
+
 
     /// <summary>
     ///  Upgrades the buidling to emit less.
@@ -37,13 +48,12 @@ public class Building : MonoBehaviour
     /// <param name="emissionRatio">The ratio at which to multiply emissionPerSecond.</param>
     public void UpgradeBuilding(float emissionRatio)
     {
-        buildingLevel++;
-        totalEmission /= emissionRatio;
+
     }
 
-    public void Emit()
+    public virtual void Emit()
     {
-        matchTimer.emission += totalEmission;
+
     }
 
     /// <summary>
@@ -79,5 +89,11 @@ public class Building : MonoBehaviour
             matchTimer.money -= upgrades[index].cost;
             matchTimer.emission -= upgrades[index].emissionReduction;
         }  
+    }
+
+    public void ShakeOnLand()
+    {
+        CameraShaker.Instance.ShakeOnce(4f, 2f, 0.0f, 0.5f);
+        particleSystem.Play();
     }
 }

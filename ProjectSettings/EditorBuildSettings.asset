@@ -5,6 +5,9 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Karlo Scenes/LandingPage.unity
     guid: aa59d063b198d754fb6b9ad01fcc09af
@@ -17,4 +20,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Richard Scenes/RichardTestEnvironment.unity
     guid: 2496642c513aa8c4f9c237d0fe8b60c2
+    path: Assets/Scenes/Kristian Scenes/Level_One.unity
+    guid: ecfbb5ff3a7333d43919f398c4045cbf
   m_configObjects: {}

@@ -10,6 +10,7 @@ public class Plot : MonoBehaviour
     public Material debugMaterial;
     public static Material defaultMaterial;
     public Renderer[] rends;
+    
 
     private MatchTimer matchTimer;
 
@@ -35,17 +36,31 @@ public class Plot : MonoBehaviour
     public void CreateBuilding(GameObject prefabToBuild)
     {
         Building building = prefabToBuild.GetComponent<Building>();
-        if (matchTimer.money >= building.buildingCost)
-        {
-            Instantiate(prefabToBuild, transform.position, transform.rotation);
-            building.Emit();
-            matchTimer.money -= building.buildingCost;
-            Destroy(gameObject);
-        }
-        else
+
+        if (matchTimer.money < building.buildingCost)
         {
             Debug.Log("Not enough money");
         }
+        if (matchTimer.wood < building.woodCost)
+        {
+            Debug.Log("Not Enough wood");
+        }
+        if (matchTimer.availiablePopulation < building.populationCost)
+        {
+            Debug.Log("Not enough people availiable to work");
+        }
+
+        else if (matchTimer.money >= building.buildingCost && matchTimer.wood >= building.woodCost && matchTimer.availiablePopulation >= building.populationCost)
+        {
+
+            GameObject newBuilding = Instantiate(prefabToBuild, transform.position, transform.rotation);
+            newBuilding.transform.Translate(Vector3.up * 35f);
+            matchTimer.money -= building.buildingCost;
+            matchTimer.wood -= building.woodCost;
+            Destroy(gameObject);
+            building.Emit();
+        }
+
     }
 
 

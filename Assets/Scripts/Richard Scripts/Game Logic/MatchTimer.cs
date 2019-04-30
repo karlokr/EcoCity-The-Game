@@ -10,6 +10,7 @@ public class MatchTimer : MonoBehaviour
     public int endYear;
     public bool matchStarted;
 
+
     [Header("Accessible Data")]
     public Month currentMonth;
     public int currentYear;
@@ -21,16 +22,21 @@ public class MatchTimer : MonoBehaviour
     private float yearTimer;
 
     [Header("Player Resources")]
-    public float money;
-    public float emission = 0;
+    public int money;
+    public int income = 5;
 
-    public float income = 10f;
+    public int emission = 0;
+    public int population;
+
+    public int availiablePopulation;
+    public int wood;
+    public int woodIncome = 5;
 
     public enum Month {JAN, FEB, MAR, APR, MAY, JUN, JUL, AUG, SEP, OCT, NOV, DEC};
 
     void Start()
     {
-
+        population = 0;
         timePerYear = levelTimeInSeconds / (endYear - startYear);
         timePerMonth = timePerYear / 12;
         currentYear = startYear;
@@ -52,8 +58,10 @@ public class MatchTimer : MonoBehaviour
         if (monthTimer > timePerMonth)
         {
             levelTimeInMonths++;
-            //Increase money every month
-            money += income;
+            // Increase money, wood, metal, electricity every month
+
+            money += income;            
+            wood += woodIncome;
 
             if (levelTimeInMonths > 11)
             {
