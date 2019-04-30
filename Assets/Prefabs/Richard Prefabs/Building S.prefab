@@ -401,4 +401,5 @@ MonoBehaviour:
   verticalOffset: 2.25
   buildingCost: 10
   population: 5
+  woodCost: 10
   totalEmission: 5
