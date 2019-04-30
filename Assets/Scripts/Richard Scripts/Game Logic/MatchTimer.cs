@@ -22,21 +22,15 @@ public class MatchTimer : MonoBehaviour
     private float yearTimer;
 
     [Header("Player Resources")]
-    public float money;
-    public float emission = 0;
+    public int money;
+    public int income = 5;
+
+    public int emission = 0;
     public int population;
 
-    public float income = 10f;
-
-    // More resources: Wood, Metal, and Electricity
-    public float wood;
-    public float woodIncome = 20f;
-
-    public float metal;
-    public float metalIncome = 5f;
-
-    public float electricity;
-    public float elecIncome = 3f;
+    public int availiablePopulation;
+    public int wood;
+    public int woodIncome = 5;
 
     public enum Month {JAN, FEB, MAR, APR, MAY, JUN, JUL, AUG, SEP, OCT, NOV, DEC};
 
@@ -65,8 +59,8 @@ public class MatchTimer : MonoBehaviour
         {
             levelTimeInMonths++;
             // Increase money, wood, metal, electricity every month
-            money += income;
-            
+
+            money += income;            
             wood += woodIncome;
 
             if (levelTimeInMonths > 11)

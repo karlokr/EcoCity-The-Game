@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571328, b: 0.3069217, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -843,7 +843,7 @@ MonoBehaviour:
   population: 0
   income: 10
   wood: 0
-  woodIncome: 20
+  woodIncome: 10
   metal: 0
   metalIncome: 5
   electricity: 0
@@ -1695,7 +1695,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -408.5, y: -0.000015258789}
+  m_AnchoredPosition: {x: -248.8, y: 0}
   m_SizeDelta: {x: 155.45001, y: 44.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1082515087
@@ -2647,7 +2647,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -247.5, y: 0}
+  m_AnchoredPosition: {x: -409, y: 0}
   m_SizeDelta: {x: 155.45001, y: 44.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1389512475

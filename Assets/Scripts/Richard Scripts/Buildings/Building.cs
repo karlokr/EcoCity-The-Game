@@ -12,12 +12,13 @@ public class Building : MonoBehaviour
     [Header("Building Attributes")]
     // How far should this building be moved up to land on the ground.
     public float verticalOffset;
-    public int buildingCost;
-    public int population;
-    public int woodCost;
 
-    public float totalEmission;
-    private MatchTimer matchTimer;
+    public string buildingType;
+    public int buildingCost;
+    public int woodCost;
+    public int populationCost;
+    public int totalEmission;
+    public MatchTimer matchTimer;
     private int buildingLevel;
 
     private void Awake()
@@ -39,15 +40,12 @@ public class Building : MonoBehaviour
     /// <param name="emissionRatio">The ratio at which to multiply emissionPerSecond.</param>
     public void UpgradeBuilding(float emissionRatio)
     {
-        buildingLevel++;
-        totalEmission /= emissionRatio;
+
     }
 
-    public void Emit()
+    public virtual void Emit()
     {
-        matchTimer = GameObject.FindGameObjectWithTag("MatchTimer").GetComponent<MatchTimer>();
-        matchTimer.emission += totalEmission;
-        matchTimer.population += population;
+
     }
 
     /// <summary>
