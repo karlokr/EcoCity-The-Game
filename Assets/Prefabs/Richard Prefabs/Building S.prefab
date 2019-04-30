@@ -297,7 +297,7 @@ GameObject:
   - component: {fileID: 8551157436125872207}
   - component: {fileID: 8551157436125872192}
   - component: {fileID: 8551157436125872193}
-  - component: {fileID: 8551157436125872205}
+  - component: {fileID: 2260749248395617314}
   m_Layer: 0
   m_Name: Building S
   m_TagString: Building
@@ -380,7 +380,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8551157436125872205
+--- !u!114 &2260749248395617314
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -389,17 +389,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 8551157436125872195}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71c0dcc32b6dfee4cbc06aefc6d6ad8b, type: 3}
+  m_Script: {fileID: 11500000, guid: 64ab1e56775690e4dbdc96856afb4c93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   debugMaterial: {fileID: 2100000, guid: 28c7458476f6fba4891016eb9253541f, type: 2}
   rend: {fileID: 0}
   upgrades:
-  - {fileID: 2095555080246993863}
-  - {fileID: 5224022948985823060}
-  - {fileID: 2178677516925368736}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   verticalOffset: 2.25
+  buildingType: residential
   buildingCost: 10
-  population: 5
-  woodCost: 10
+  woodCost: 5
   totalEmission: 5
+  matchTimer: {fileID: 0}
+  population: 5
