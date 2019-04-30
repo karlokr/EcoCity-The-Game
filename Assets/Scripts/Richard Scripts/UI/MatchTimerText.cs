@@ -17,8 +17,8 @@ public class MatchTimerText : MonoBehaviour
     {
         text = GetComponent<Text>();
         matchTimer = GameObject.FindGameObjectWithTag("MatchTimer").GetComponent<MatchTimer>();
-        money = GameObject.FindGameObjectWithTag("Money").GetComponentInChildren<Text>();
-        emission = GameObject.FindGameObjectWithTag("Emission").GetComponentInChildren<Text>();
+        money = GameObject.FindGameObjectWithTag("Money").GetComponent<Text>();
+        emission = GameObject.FindGameObjectWithTag("Emission").GetComponent<Text>();
         population = GameObject.FindGameObjectWithTag("Population").GetComponent<Text>();
         wood = GameObject.FindGameObjectWithTag("Wood").GetComponent<Text>();
     }

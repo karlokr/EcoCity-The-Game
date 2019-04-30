@@ -43,9 +43,13 @@ public class Plot : MonoBehaviour
             matchTimer.wood -= building.woodCost;
             Destroy(gameObject);
         }
-        else
+        if (matchTimer.money < building.buildingCost)
         {
             Debug.Log("Not enough money");
+        }
+        if (matchTimer.wood < building.woodCost)
+        {
+            Debug.Log("Not Enough wood");
         }
     }
 

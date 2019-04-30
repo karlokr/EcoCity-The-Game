@@ -30,7 +30,7 @@ public class MatchTimer : MonoBehaviour
 
     // More resources: Wood, Metal, and Electricity
     public float wood;
-    public float woodIncome = 20f;
+    public float woodIncome = 10f;
 
     public float metal;
     public float metalIncome = 5f;
@@ -65,8 +65,8 @@ public class MatchTimer : MonoBehaviour
         {
             levelTimeInMonths++;
             // Increase money, wood, metal, electricity every month
-            money += income;
-            
+
+            money += income;            
             wood += woodIncome;
 
             if (levelTimeInMonths > 11)
