@@ -5109,6 +5109,7 @@ GameObject:
   - component: {fileID: 7980228404448646082}
   - component: {fileID: 7980228404448646086}
   - component: {fileID: 363223539}
+  - component: {fileID: -8015146191275085775}
   m_Layer: 0
   m_Name: Building M
   m_TagString: Building
@@ -5192,7 +5193,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7980228404448646086
+--- !u!114 &-8015146191275085775
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5201,13 +5202,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 7980228404448646092}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71c0dcc32b6dfee4cbc06aefc6d6ad8b, type: 3}
+  m_Script: {fileID: 11500000, guid: 64ab1e56775690e4dbdc96856afb4c93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   debugMaterial: {fileID: 2100000, guid: 28c7458476f6fba4891016eb9253541f, type: 2}
   rend: {fileID: 0}
-  upgrades: []
+  upgrades:
+  - {fileID: 7902414147911773445}
+  - {fileID: 3371344018673174223}
+  - {fileID: 2064324695384317562}
   verticalOffset: 4.75
+  buildingType: residential
   buildingCost: 50
   population: 10
   woodCost: 0
@@ -5231,3 +5236,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+  woodCost: 100
+  totalEmission: 10
+  matchTimer: {fileID: 0}
+  population: 10

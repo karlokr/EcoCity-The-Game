@@ -17,8 +17,8 @@ public class MatchTimerText : MonoBehaviour
     {
         text = GetComponent<Text>();
         matchTimer = GameObject.FindGameObjectWithTag("MatchTimer").GetComponent<MatchTimer>();
-        money = GameObject.FindGameObjectWithTag("Money").GetComponentInChildren<Text>();
-        emission = GameObject.FindGameObjectWithTag("Emission").GetComponentInChildren<Text>();
+        money = GameObject.FindGameObjectWithTag("Money").GetComponent<Text>();
+        emission = GameObject.FindGameObjectWithTag("Emission").GetComponent<Text>();
         population = GameObject.FindGameObjectWithTag("Population").GetComponent<Text>();
         wood = GameObject.FindGameObjectWithTag("Wood").GetComponent<Text>();
     }
@@ -33,11 +33,12 @@ public class MatchTimerText : MonoBehaviour
     void Update()
     {
         if (matchTimer.matchStarted)
+        {
             text.text = matchTimer.currentMonth.ToString() + " " + matchTimer.currentYear;
-
-        money.text = matchTimer.money.ToString();
-        emission.text = matchTimer.emission.ToString();
-        population.text = matchTimer.population.ToString();
-        wood.text = matchTimer.wood.ToString();
+            money.text = matchTimer.money.ToString();
+            emission.text = matchTimer.emission.ToString();
+            population.text = matchTimer.availiablePopulation.ToString() + "/" + matchTimer.population.ToString();
+            wood.text = matchTimer.wood.ToString();
+        }
     }
 }
