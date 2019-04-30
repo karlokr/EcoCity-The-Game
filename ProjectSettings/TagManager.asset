@@ -13,6 +13,7 @@ TagManager:
   - Money
   - UpgradeMenu
   - Population
+  - Wood
   layers:
   - Default
   - TransparentFX

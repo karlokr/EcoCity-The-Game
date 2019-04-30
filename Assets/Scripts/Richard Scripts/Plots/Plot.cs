@@ -35,11 +35,12 @@ public class Plot : MonoBehaviour
     public void CreateBuilding(GameObject prefabToBuild)
     {
         Building building = prefabToBuild.GetComponent<Building>();
-        if (matchTimer.money >= building.buildingCost)
+        if (matchTimer.money >= building.buildingCost && matchTimer.wood >= building.woodCost)
         {
             Instantiate(prefabToBuild, transform.position, transform.rotation);
             building.Emit();
             matchTimer.money -= building.buildingCost;
+            matchTimer.wood -= building.woodCost;
             Destroy(gameObject);
         }
         else

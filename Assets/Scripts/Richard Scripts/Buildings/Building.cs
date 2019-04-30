@@ -14,6 +14,8 @@ public class Building : MonoBehaviour
     public float verticalOffset;
     public int buildingCost;
     public int population;
+    public int woodCost;
+
     public float totalEmission;
     private MatchTimer matchTimer;
     private int buildingLevel;
