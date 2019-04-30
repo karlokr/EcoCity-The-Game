@@ -36,15 +36,9 @@ public class Building : MonoBehaviour
     private void Start()
     {
         defaultMaterial = rend.material;
-        StartCoroutine(StaggerLand());
-    }
-
-    IEnumerator StaggerLand()
-    {
-        float waitTime = Random.Range(0.0f, 3f);
-        yield return new WaitForSeconds(waitTime);
         animator.SetTrigger("Land");
     }
+
 
     /// <summary>
     ///  Upgrades the buidling to emit less.
