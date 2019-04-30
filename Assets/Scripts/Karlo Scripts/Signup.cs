@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System;
 using System.Text.RegularExpressions;
+using UnityEngine.Networking;
 
 public class Signup : MonoBehaviour {
     public GameObject username;
@@ -12,13 +13,6 @@ public class Signup : MonoBehaviour {
     private string Username;
     private string Password;
     private string ConfirmPassword;
-    private string form;
-    private bool PasswordValid = false;
-
-    // Start is called before the first frame update
-    void Start() {
-
-    }
 
     // Update is called once per frame
     void Update() {
@@ -30,8 +24,28 @@ public class Signup : MonoBehaviour {
     public void RegisterButton() {
         if (CheckUsername() && CheckPassword()) {
             Password = EncryptPassword();
-            form = Username + "\n" + Password;
-            Debug.Log(form);
+            StartCoroutine(Register("http://localhost/sqlconnect/register.php"));
+        }
+    }
+
+    IEnumerator Register(string url) {
+        WWWForm form = new WWWForm();
+        form.AddField("name", Username);
+        form.AddField("password", Password);
+
+        using (UnityWebRequest webRequest = UnityWebRequest.Post(url, form)) {
+            yield return webRequest.SendWebRequest();
+            if (webRequest.isNetworkError || webRequest.isHttpError) {
+                Debug.Log(webRequest.error);
+            } else {
+                Debug.Log("Form upload complete!");
+            }
+            if (webRequest.downloadHandler.text == "0") {
+                Debug.Log("User created successfully.");
+                UnityEngine.SceneManagement.SceneManager.LoadScene(2);
+            } else {
+                Debug.Log("User creation failed. Error #" + webRequest.downloadHandler.text);
+            }
         }
     }
 
@@ -41,6 +55,14 @@ public class Signup : MonoBehaviour {
             EncryptedPass += ((char)(Password[i - 1] * (i + 1))).ToString();
         }
         return EncryptedPass;
+    }
+
+    private string DecryptPassword() {
+        string DecryptedPass = "";
+        for (int i = 1; i <= Password.Length; i++) {
+            DecryptedPass += ((char)(Password[i - 1] / (i + 1))).ToString();
+        }
+        return DecryptedPass;
     }
 
     private void AssignInputs() {
@@ -54,12 +76,7 @@ public class Signup : MonoBehaviour {
      ************************/
     private bool CheckUsername() {
         if (Username != "") {
-            if (!System.IO.File.Exists(@"E:/UnityTestFolder/" + Username + ".txt")) {
-                return true;
-            } else {
-                Debug.LogWarning("Username taken");
-                return false;
-            }
+            return true;
         } else {
             Debug.LogWarning("Username field empty");
             return false;
@@ -68,11 +85,7 @@ public class Signup : MonoBehaviour {
 
     private bool CheckPassword() {
         if (Password.Equals(ConfirmPassword)) {
-            if (OneCapital()
-                && OneLower()
-                && OneNumber()
-                && OneSpecial()
-                && LengthConstraint()) {
+            if (LengthConstraint()) {
                 Debug.LogWarning("Valid Password");
                 return true;
             } else {
@@ -83,57 +96,6 @@ public class Signup : MonoBehaviour {
             Debug.LogWarning("Passwords don't match");
             return false;
         }
-    }
-
-    private bool OneCapital() {
-        bool isTrue = false;
-        for (int i = 0; i < Password.Length; i++) {
-            char character = Password[i];
-            if ('A' <= character && character <= 'Z') {
-                isTrue = true;
-                break;
-            }
-        }
-        return isTrue;
-    }
-
-    private bool OneLower() {
-        bool isTrue = false;
-        int i;
-        for (i = 0; i < Password.Length; i++) {
-            char character = Password[i];
-            if ('a' <= character && character <= 'z') {
-                isTrue = true;
-                break;
-            }
-        }
-        return isTrue;
-    }
-
-    private bool OneNumber() {
-        bool isTrue = false;
-        int i;
-        for (i = 0; i < Password.Length; i++) {
-            char character = Password[i];
-            if ('0' <= character && character <= '9') {
-                isTrue = true;
-                break;
-            }
-        }
-        return isTrue;
-    }
-
-    private bool OneSpecial() {
-        bool isTrue = false;
-        int i;
-        for (i = 0; i < Password.Length; i++) {
-            char character = Password[i];
-            if ('!' <= character && character <= '*') {
-                isTrue = true;
-                break;
-            }
-        }
-        return isTrue;
     }
 
     private bool LengthConstraint() {
@@ -159,6 +121,7 @@ public class Signup : MonoBehaviour {
             && (username.GetComponent<InputField>().isFocused
             || password.GetComponent<InputField>().isFocused
             || confirmPassword.GetComponent<InputField>().isFocused)) {
+            RegisterButton();
         }
     }
 }
