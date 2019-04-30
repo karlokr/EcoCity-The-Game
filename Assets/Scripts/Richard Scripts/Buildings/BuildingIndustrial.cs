@@ -15,7 +15,7 @@ public class BuildingIndustrial : MonoBehaviour
     public int buildingCost;
     public int woodCost;
 
-    public float totalEmission;
+    public int totalEmission;
     private MatchTimer matchTimer;
     private int buildingLevel;
 
@@ -34,8 +34,7 @@ public class BuildingIndustrial : MonoBehaviour
     
     public void UpgradeBuilding(float emissionRatio)
     {
-        buildingLevel++;
-        totalEmission /= emissionRatio;
+        
     }
 
     public void Emit()
