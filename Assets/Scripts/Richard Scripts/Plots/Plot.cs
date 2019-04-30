@@ -10,6 +10,7 @@ public class Plot : MonoBehaviour
     public Material debugMaterial;
     public static Material defaultMaterial;
     public Renderer[] rends;
+    
 
     private MatchTimer matchTimer;
 
@@ -37,7 +38,8 @@ public class Plot : MonoBehaviour
         Building building = prefabToBuild.GetComponent<Building>();
         if (matchTimer.money >= building.buildingCost && matchTimer.wood >= building.woodCost)
         {
-            Instantiate(prefabToBuild, transform.position, transform.rotation);
+            GameObject newBuilding = Instantiate(prefabToBuild, transform.position, transform.rotation);
+            newBuilding.transform.Translate(Vector3.up * 35f);
             building.Emit();
             matchTimer.money -= building.buildingCost;
             matchTimer.wood -= building.woodCost;

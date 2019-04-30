@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using EZCameraShake;
 
 public class Building : MonoBehaviour
 {
@@ -17,11 +18,14 @@ public class Building : MonoBehaviour
     public int woodCost;
 
     public float totalEmission;
+
     private MatchTimer matchTimer;
     private int buildingLevel;
+    private ParticleSystem particleSystem;
 
     private void Awake()
     {
+        particleSystem = GetComponentInChildren<ParticleSystem>();
         matchTimer = GameObject.FindGameObjectWithTag("MatchTimer").GetComponent<MatchTimer>();
         rend = GetComponent<Renderer>();
         upgrades = GetComponentsInChildren<Upgrade>();
@@ -30,8 +34,8 @@ public class Building : MonoBehaviour
     private void Start()
     {
         defaultMaterial = rend.material;
-        transform.Translate(Vector3.up * verticalOffset);
     }
+
 
     /// <summary>
     ///  Upgrades the buidling to emit less.
@@ -83,5 +87,11 @@ public class Building : MonoBehaviour
             matchTimer.money -= upgrades[index].cost;
             matchTimer.emission -= upgrades[index].emissionReduction;
         }  
+    }
+
+    public void ShakeOnLand()
+    {
+        CameraShaker.Instance.ShakeOnce(4f, 2f, 0.0f, 0.5f);
+        particleSystem.Play();
     }
 }
