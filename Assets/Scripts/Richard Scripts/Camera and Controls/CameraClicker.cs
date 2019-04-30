@@ -9,7 +9,7 @@ public class CameraClicker : MonoBehaviour
     private MatchTimer matchTimer;
     private Building selectedBuilding;
     private Plot selectedPlot;
-    private GameObject buildMenuObj;
+    private GameObject[] buildMenuObj;
     private GameObject upgradeMenuObj;
     private BuildMenu buildMenu;
     private UpgradeMenu upgradeMenu;
@@ -26,13 +26,16 @@ public class CameraClicker : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        buildMenuObj = GameObject.FindGameObjectWithTag("BuildMenu");
-        buildMenuObj.SetActive(false);
+        buildMenuObj = GameObject.FindGameObjectsWithTag("BuildMenu");
+        for(int i = 0; i < buildMenuObj.Length; i++)
+        {
+            buildMenuObj[i].SetActive(false);
+        }
 
         upgradeMenuObj = GameObject.FindGameObjectWithTag("UpgradeMenu");
         upgradeMenuObj.SetActive(false);
 
-        buildMenu = buildMenuObj.GetComponent<BuildMenu>();
+       // buildMenu = buildMenuObj.GetComponentsInChildren<BuildMenu>();
         upgradeMenu = upgradeMenuObj.GetComponent<UpgradeMenu>();
     }
 
@@ -73,8 +76,19 @@ public class CameraClicker : MonoBehaviour
                             Building.ClearDebugColor();
                             selectedPlot = other.GetComponent<Plot>();
                             selectedPlot.ActivateDebugColor();
-                            buildMenuObj.SetActive(true);
-                            buildMenu.SetButtonVisibilitySize(selectedPlot.size);
+                            if (selectedPlot.size == (Plot.PlotSize) 0)
+                            {
+                                buildMenuObj[0].SetActive(true);
+                            }
+                            else if (selectedPlot.size == (Plot.PlotSize) 1)
+                            {
+                                buildMenuObj[1].SetActive(true);
+                            }
+                            else if (selectedPlot.size == (Plot.PlotSize) 2)
+                            {
+                                buildMenuObj[2].SetActive(true);
+                            }
+                            //buildMenu.SetButtonVisibilitySize(selectedPlot.size);
                             break;
                         default:
                             ClearSelections();
@@ -95,7 +109,11 @@ public class CameraClicker : MonoBehaviour
     {
         selectedBuilding = null;
         selectedPlot = null;
-        buildMenuObj.SetActive(false);
+        for (int i = 0; i < buildMenuObj.Length; i++)
+        {
+            buildMenuObj[i].SetActive(false);
+        }
+        
         upgradeMenuObj.SetActive(false);
         Building.ClearDebugColor();
         Plot.ClearDebugColor();
