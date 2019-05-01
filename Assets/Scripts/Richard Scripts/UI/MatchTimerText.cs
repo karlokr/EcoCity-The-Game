@@ -10,17 +10,12 @@ public class MatchTimerText : MonoBehaviour
     private Text population;
     private Text money;
     private Text emission;
-
     private Text wood;
 
     private void Awake()
     {
         text = GetComponent<Text>();
         matchTimer = GameObject.FindGameObjectWithTag("MatchTimer").GetComponent<MatchTimer>();
-        money = GameObject.FindGameObjectWithTag("Money").GetComponent<Text>();
-        emission = GameObject.FindGameObjectWithTag("Emission").GetComponent<Text>();
-        population = GameObject.FindGameObjectWithTag("Population").GetComponent<Text>();
-        wood = GameObject.FindGameObjectWithTag("Wood").GetComponent<Text>();
     }
 
     // Start is called before the first frame update
@@ -35,10 +30,6 @@ public class MatchTimerText : MonoBehaviour
         if (matchTimer.matchStarted)
         {
             text.text = matchTimer.currentMonth.ToString() + " " + matchTimer.currentYear;
-            money.text = matchTimer.money.ToString();
-            emission.text = matchTimer.emission.ToString();
-            population.text = matchTimer.availiablePopulation.ToString() + "/" + matchTimer.population.ToString();
-            wood.text = matchTimer.wood.ToString();
         }
     }
 }

@@ -8,9 +8,9 @@ public class ResidentialBuilding : Building
 
     public override void Emit()
     {
-        matchTimer = GameObject.FindGameObjectWithTag("MatchTimer").GetComponent<MatchTimer>();
-        matchTimer.emission += totalEmission;
-        matchTimer.population += population;
-        matchTimer.availiablePopulation += population;
+        resourceKeeper = GameObject.FindGameObjectWithTag("ResourceKeeper").GetComponent<ResourceKeeper>();
+        resourceKeeper.emission += totalEmission;
+        resourceKeeper.population += population;
+        resourceKeeper.availablePopulation -= populationCost;
     }
 }

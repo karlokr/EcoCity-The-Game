@@ -17,10 +17,12 @@ public class BuildingIndustrial : MonoBehaviour
 
     public int totalEmission;
     private MatchTimer matchTimer;
+    private ResourceKeeper resourceKeeper;
     private int buildingLevel;
 
     private void Awake()
     {
+        resourceKeeper = GameObject.FindGameObjectWithTag("ResourceKeeper").GetComponent<ResourceKeeper>();
         matchTimer = GameObject.FindGameObjectWithTag("MatchTimer").GetComponent<MatchTimer>();
         rend = GetComponent<Renderer>();
         upgrades = GetComponentsInChildren<Upgrade>();
@@ -39,8 +41,7 @@ public class BuildingIndustrial : MonoBehaviour
 
     public void Emit()
     {
-        matchTimer = GameObject.FindGameObjectWithTag("MatchTimer").GetComponent<MatchTimer>();
-        matchTimer.emission += totalEmission;
+        resourceKeeper.emission += totalEmission;
     }
 
     /// <summary>
@@ -70,11 +71,11 @@ public class BuildingIndustrial : MonoBehaviour
 
     public void ActivateUpgrade(int index)
     {
-        if (matchTimer.money >= upgrades[index].cost)
+        if (resourceKeeper.money >= upgrades[index].cost)
         {
             upgrades[index].Activate();
-            matchTimer.money -= upgrades[index].cost;
-            matchTimer.emission -= upgrades[index].emissionReduction;
+            resourceKeeper.money -= upgrades[index].cost;
+            resourceKeeper.emission -= upgrades[index].emissionReduction;
         }  
     }
 }

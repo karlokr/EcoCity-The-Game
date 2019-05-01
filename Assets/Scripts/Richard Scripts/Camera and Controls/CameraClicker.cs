@@ -7,6 +7,7 @@ public class CameraClicker : MonoBehaviour
 {
     private Camera viewportCamera;
     private MatchTimer matchTimer;
+    private ResourceKeeper resourceKeeper;
     private Building selectedBuilding;
     private Plot selectedPlot;
     private GameObject[] buildMenuObj;
@@ -19,6 +20,7 @@ public class CameraClicker : MonoBehaviour
 
     private void Awake()
     {
+        resourceKeeper = GameObject.FindGameObjectWithTag("ResourceKeeper").GetComponent<ResourceKeeper>();
         viewportCamera = GetComponent<Camera>();
         matchTimer = GameObject.FindGameObjectWithTag("MatchTimer").GetComponent<MatchTimer>();
     }

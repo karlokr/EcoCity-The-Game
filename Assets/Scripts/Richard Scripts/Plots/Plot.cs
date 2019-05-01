@@ -10,20 +10,20 @@ public class Plot : MonoBehaviour
     public Material debugMaterial;
     public static Material defaultMaterial;
     public Renderer[] rends;
-    
-
-    private MatchTimer matchTimer;
+   
+    private ResourceKeeper resourceKeeper;
 
     private void Awake()
     {
         rends = GetComponentsInChildren<Renderer>();
         defaultMaterial = GetComponentInChildren<Renderer>().material;
+        resourceKeeper = GameObject.FindGameObjectWithTag("ResourceKeeper").GetComponent<ResourceKeeper>();
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        matchTimer = GameObject.FindGameObjectWithTag("MatchTimer").GetComponent<MatchTimer>();
+       
 
     }
 
@@ -37,26 +37,26 @@ public class Plot : MonoBehaviour
     {
         Building building = prefabToBuild.GetComponent<Building>();
 
-        if (matchTimer.money < building.buildingCost)
+        if (resourceKeeper.money < building.buildingCost)
         {
             Debug.Log("Not enough money");
         }
-        if (matchTimer.wood < building.woodCost)
+        if (resourceKeeper.wood < building.woodCost)
         {
             Debug.Log("Not Enough wood");
         }
-        if (matchTimer.availiablePopulation < building.populationCost)
+        if (resourceKeeper.availablePopulation < building.populationCost)
         {
             Debug.Log("Not enough people availiable to work");
         }
 
-        else if (matchTimer.money >= building.buildingCost && matchTimer.wood >= building.woodCost && matchTimer.availiablePopulation >= building.populationCost)
+        else if (resourceKeeper.money >= building.buildingCost && resourceKeeper.wood >= building.woodCost && resourceKeeper.availablePopulation >= building.populationCost)
         {
 
             GameObject newBuilding = Instantiate(prefabToBuild, transform.position, transform.rotation);
             newBuilding.transform.Translate(Vector3.up * 35f);
-            matchTimer.money -= building.buildingCost;
-            matchTimer.wood -= building.woodCost;
+            resourceKeeper.money -= building.buildingCost;
+            resourceKeeper.wood -= building.woodCost;
             Destroy(gameObject);
             building.Emit();
         }

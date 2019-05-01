@@ -8,9 +8,9 @@ public class IndustrialBuilding : Building
 
     public override void Emit()
     {
-        matchTimer = GameObject.FindGameObjectWithTag("MatchTimer").GetComponent<MatchTimer>();
-        matchTimer.emission += totalEmission;
-        matchTimer.woodIncome += woodIncomeBonus;
-        matchTimer.availiablePopulation -= populationCost;
+        resourceKeeper = GameObject.FindGameObjectWithTag("ResourceKeeper").GetComponent<ResourceKeeper>();
+        resourceKeeper.emission += totalEmission;
+        resourceKeeper.woodIncome += woodIncomeBonus;
+        resourceKeeper.availablePopulation -= populationCost;
     }
 }

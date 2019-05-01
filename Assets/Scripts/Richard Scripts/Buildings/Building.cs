@@ -21,7 +21,7 @@ public class Building : MonoBehaviour
     private Animator animator;
     public int populationCost;
     public int totalEmission;
-    public MatchTimer matchTimer;
+    public ResourceKeeper resourceKeeper;
 
     private int buildingLevel;
     private ParticleSystem particleSystem;
@@ -30,7 +30,7 @@ public class Building : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         particleSystem = GetComponentInChildren<ParticleSystem>();
-        matchTimer = GameObject.FindGameObjectWithTag("MatchTimer").GetComponent<MatchTimer>();
+        resourceKeeper = GameObject.FindGameObjectWithTag("ResourceKeeper").GetComponent<ResourceKeeper>();
         rend = GetComponent<Renderer>();
         upgrades = GetComponentsInChildren<Upgrade>();
     }
@@ -83,11 +83,11 @@ public class Building : MonoBehaviour
 
     public void ActivateUpgrade(int index)
     {
-        if (matchTimer.money >= upgrades[index].cost)
+        if (resourceKeeper.money >= upgrades[index].cost)
         {
             upgrades[index].Activate();
-            matchTimer.money -= upgrades[index].cost;
-            matchTimer.emission -= upgrades[index].emissionReduction;
+            resourceKeeper.money -= upgrades[index].cost;
+            resourceKeeper.emission -= upgrades[index].emissionReduction;
         }  
     }
 
