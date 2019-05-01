@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5507955789871140816}
   - component: {fileID: 2064324695384317562}
   m_Layer: 0
-  m_Name: M Home Garden Upgrade (Placeholder)
+  m_Name: LocallySourced
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -90,9 +90,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7529974b9b44f4a478aa0346903ed0a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upgradeName: Garden
-  cost: 150
-  emissionReduction: 3
+  upgradeName: LocallySourced
+  cost: 500
+  emissionReduction: 5
+  incomeIncrease: 5
+  populationIncrease: 0
+  woodIncomeIncrease: 0
   visualModel: {fileID: 0}
   upgradeActive: 0
 --- !u!1 &4525998977345363700
@@ -108,7 +111,7 @@ GameObject:
   - component: {fileID: 5006777081984759180}
   - component: {fileID: 7902414147911773445}
   m_Layer: 0
-  m_Name: M Chimney Upgrade (Placeholder)
+  m_Name: EcoSupplier
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -185,9 +188,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7529974b9b44f4a478aa0346903ed0a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upgradeName: Steam Chimney
-  cost: 50
-  emissionReduction: 1
+  upgradeName: Eco Supplier
+  cost: 100
+  emissionReduction: 2
+  incomeIncrease: 2
+  populationIncrease: 0
+  woodIncomeIncrease: 0
   visualModel: {fileID: 0}
   upgradeActive: 0
 --- !u!1 &4760125560367686704
@@ -5013,7 +5019,7 @@ GameObject:
   - component: {fileID: 1359723918969965826}
   - component: {fileID: 3371344018673174223}
   m_Layer: 0
-  m_Name: M Generator Upgrade (Placeholder)
+  m_Name: RecycledPackaging
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5090,9 +5096,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7529974b9b44f4a478aa0346903ed0a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upgradeName: Generator
-  cost: 100
-  emissionReduction: 2
+  upgradeName: Recycled Packaging
+  cost: 250
+  emissionReduction: 5
+  incomeIncrease: 5
+  populationIncrease: 0
+  woodIncomeIncrease: 0
   visualModel: {fileID: 0}
   upgradeActive: 0
 --- !u!1 &7980228404448646092
@@ -5204,16 +5213,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24220fb93cb4c424d9b039d19a566d67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  debugMaterial: {fileID: 0}
+  debugMaterial: {fileID: 2100000, guid: 28c7458476f6fba4891016eb9253541f, type: 2}
   rend: {fileID: 0}
-  upgrades: []
+  upgrades:
+  - {fileID: 7902414147911773445}
+  - {fileID: 3371344018673174223}
+  - {fileID: 2064324695384317562}
   verticalOffset: 0
   buildingType: commercial
   buildingCost: 30
   woodCost: 20
   populationCost: 15
   totalEmission: 15
-  matchTimer: {fileID: 0}
+  resourceKeeper: {fileID: 0}
   incomeBonus: 15
 --- !u!95 &225357389486546714
 Animator:

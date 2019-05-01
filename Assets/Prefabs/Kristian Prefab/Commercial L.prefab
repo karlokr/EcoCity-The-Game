@@ -109,16 +109,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24220fb93cb4c424d9b039d19a566d67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  debugMaterial: {fileID: 0}
+  debugMaterial: {fileID: 2100000, guid: 28c7458476f6fba4891016eb9253541f, type: 2}
   rend: {fileID: 0}
-  upgrades: []
+  upgrades:
+  - {fileID: 6067670806412709821}
+  - {fileID: 6106095939136019656}
+  - {fileID: 1704164026378150744}
   verticalOffset: 0
   buildingType: commercial
   buildingCost: 100
   woodCost: 50
   populationCost: 20
   totalEmission: 20
-  matchTimer: {fileID: 0}
+  resourceKeeper: {fileID: 0}
   incomeBonus: 50
 --- !u!95 &-6002043104035652220
 Animator:
@@ -4962,7 +4965,7 @@ GameObject:
   - component: {fileID: 2482396109743194739}
   - component: {fileID: 6067670806412709821}
   m_Layer: 0
-  m_Name: L Chimney Upgrade (Placeholder)
+  m_Name: EcoSupplier
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5039,9 +5042,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7529974b9b44f4a478aa0346903ed0a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upgradeName: Steam Chimney
-  cost: 50
-  emissionReduction: 1
+  upgradeName: EcoSupplier
+  cost: 500
+  emissionReduction: 5
+  incomeIncrease: 5
+  populationIncrease: 0
+  woodIncomeIncrease: 0
   visualModel: {fileID: 0}
   upgradeActive: 0
 --- !u!1 &7855571568571712241
@@ -5057,7 +5063,7 @@ GameObject:
   - component: {fileID: 6458858123665320613}
   - component: {fileID: 6106095939136019656}
   m_Layer: 0
-  m_Name: L Generator Upgrade (Placeholder)
+  m_Name: RecycledPackaging
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5134,9 +5140,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7529974b9b44f4a478aa0346903ed0a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upgradeName: Generator
-  cost: 100
-  emissionReduction: 2
+  upgradeName: RecycledPackaging
+  cost: 1000
+  emissionReduction: 10
+  incomeIncrease: 10
+  populationIncrease: 0
+  woodIncomeIncrease: 0
   visualModel: {fileID: 0}
   upgradeActive: 0
 --- !u!1 &8253314066960209692
@@ -5152,7 +5161,7 @@ GameObject:
   - component: {fileID: 4749810981494294771}
   - component: {fileID: 1704164026378150744}
   m_Layer: 0
-  m_Name: L Home Garden Upgrade (Placeholder)
+  m_Name: LocallySourced
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5229,8 +5238,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7529974b9b44f4a478aa0346903ed0a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upgradeName: Garden
-  cost: 150
-  emissionReduction: 3
+  upgradeName: LocallySourced
+  cost: 10000
+  emissionReduction: 10
+  incomeIncrease: 10
+  populationIncrease: 0
+  woodIncomeIncrease: 0
   visualModel: {fileID: 0}
   upgradeActive: 0

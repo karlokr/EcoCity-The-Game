@@ -11,6 +11,6 @@ public class ResidentialBuilding : Building
         resourceKeeper = GameObject.FindGameObjectWithTag("ResourceKeeper").GetComponent<ResourceKeeper>();
         resourceKeeper.emission += totalEmission;
         resourceKeeper.population += population;
-        resourceKeeper.availablePopulation -= populationCost;
+        resourceKeeper.availablePopulation += population;
     }
 }

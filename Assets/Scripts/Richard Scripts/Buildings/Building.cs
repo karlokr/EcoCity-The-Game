@@ -88,6 +88,10 @@ public class Building : MonoBehaviour
             upgrades[index].Activate();
             resourceKeeper.money -= upgrades[index].cost;
             resourceKeeper.emission -= upgrades[index].emissionReduction;
+            resourceKeeper.income += upgrades[index].incomeIncrease;
+            resourceKeeper.woodIncome += upgrades[index].woodIncomeIncrease;
+            resourceKeeper.population += upgrades[index].populationIncrease;
+            resourceKeeper.availablePopulation += upgrades[index].populationIncrease;
         }  
     }
 

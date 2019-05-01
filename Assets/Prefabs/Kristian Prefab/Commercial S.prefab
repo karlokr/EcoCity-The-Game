@@ -4823,7 +4823,7 @@ GameObject:
   - component: {fileID: 3623883358931729975}
   - component: {fileID: 2178677516925368736}
   m_Layer: 0
-  m_Name: Home Garden Upgrade (Placeholder)
+  m_Name: Locally Sourced
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4900,9 +4900,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7529974b9b44f4a478aa0346903ed0a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upgradeName: Garden
+  upgradeName: Locally Sourced
   cost: 250
   emissionReduction: 3
+  incomeIncrease: 15
   visualModel: {fileID: 0}
   upgradeActive: 0
 --- !u!1 &4303497041275381299
@@ -4918,7 +4919,7 @@ GameObject:
   - component: {fileID: 7210902730279220320}
   - component: {fileID: 2095555080246993863}
   m_Layer: 0
-  m_Name: Chimney Upgrade (Placeholder)
+  m_Name: Eco Supplier Upgrade
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4995,9 +4996,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7529974b9b44f4a478aa0346903ed0a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upgradeName: Steam Chimney
+  upgradeName: Eco Suppliers
   cost: 50
   emissionReduction: 1
+  incomeIncrease: 5
   visualModel: {fileID: 0}
   upgradeActive: 0
 --- !u!1 &5660184593139301442
@@ -5013,7 +5015,7 @@ GameObject:
   - component: {fileID: 6771358516282105301}
   - component: {fileID: 5224022948985823060}
   m_Layer: 0
-  m_Name: Generator Upgrade (Placeholder)
+  m_Name: Recycled Packaging
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5090,9 +5092,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7529974b9b44f4a478aa0346903ed0a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upgradeName: Generator
+  upgradeName: Recycled Packaging
   cost: 100
   emissionReduction: 2
+  incomeIncrease: 10
   visualModel: {fileID: 0}
   upgradeActive: 0
 --- !u!1 &8551157436125872195
@@ -5216,7 +5219,7 @@ MonoBehaviour:
   woodCost: 5
   populationCost: 5
   totalEmission: 15
-  matchTimer: {fileID: 0}
+  resourceKeeper: {fileID: 0}
   incomeBonus: 5
 --- !u!95 &-9049937507703492709
 Animator:

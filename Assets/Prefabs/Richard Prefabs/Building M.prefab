@@ -91,8 +91,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upgradeName: Garden
-  cost: 150
-  emissionReduction: 3
+  cost: 1000
+  emissionReduction: 5
+  incomeIncrease: 0
+  populationIncrease: 5
+  woodIncomeIncrease: 0
   visualModel: {fileID: 0}
   upgradeActive: 0
 --- !u!1 &4525998977345363700
@@ -186,8 +189,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upgradeName: Steam Chimney
-  cost: 50
-  emissionReduction: 1
+  cost: 100
+  emissionReduction: 2
+  incomeIncrease: 0
+  populationIncrease: 1
+  woodIncomeIncrease: 0
   visualModel: {fileID: 0}
   upgradeActive: 0
 --- !u!1 &4918467663611520842
@@ -5013,7 +5019,7 @@ GameObject:
   - component: {fileID: 1359723918969965826}
   - component: {fileID: 3371344018673174223}
   m_Layer: 0
-  m_Name: M Generator Upgrade (Placeholder)
+  m_Name: RoomSize
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5090,9 +5096,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7529974b9b44f4a478aa0346903ed0a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upgradeName: Generator
-  cost: 100
-  emissionReduction: 2
+  upgradeName: RoomSize
+  cost: 500
+  emissionReduction: 0
+  incomeIncrease: 0
+  populationIncrease: 10
+  woodIncomeIncrease: 0
   visualModel: {fileID: 0}
   upgradeActive: 0
 --- !u!1 &7980228404448646092
@@ -5235,5 +5244,5 @@ MonoBehaviour:
   woodCost: 10
   populationCost: 0
   totalEmission: 10
-  matchTimer: {fileID: 0}
+  resourceKeeper: {fileID: 0}
   population: 10
