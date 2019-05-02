@@ -15,15 +15,15 @@ public class Building : MonoBehaviour
     public float verticalOffset;
 
     public string buildingType;
-    public int buildingCost;
+    public int cost;
     public int woodCost;
 
     private Animator animator;
-    public int populationCost;
-    public int totalEmission;
+    public int populationRequired;
+    public int emission;
     public ResourceKeeper resourceKeeper;
 
-    private int buildingLevel;
+    private int level;
     private ParticleSystem particleSystem;
 
     private void Awake()
@@ -38,16 +38,6 @@ public class Building : MonoBehaviour
     public void Start()
     {
         defaultMaterial = rend.material;
-    }
-
-
-    /// <summary>
-    ///  Upgrades the buidling to emit less.
-    /// </summary>
-    /// <param name="emissionRatio">The ratio at which to multiply emissionPerSecond.</param>
-    public void UpgradeBuilding(float emissionRatio)
-    {
-
     }
 
     public virtual void Emit()
@@ -82,7 +72,7 @@ public class Building : MonoBehaviour
 
     public void ActivateUpgrade(int index)
     {
-        if (resourceKeeper.money >= upgrades[index].cost)
+        if (resourceKeeper.money >= upgrades[index].cost && !upgrades[index].upgradeActive)
         {
             upgrades[index].Activate();
             resourceKeeper.money -= upgrades[index].cost;
@@ -90,7 +80,6 @@ public class Building : MonoBehaviour
             resourceKeeper.income += upgrades[index].incomeIncrease;
             resourceKeeper.woodIncome += upgrades[index].woodIncomeIncrease;
             resourceKeeper.population += upgrades[index].populationIncrease;
-            resourceKeeper.availablePopulation += upgrades[index].populationIncrease;
         }  
     }
 

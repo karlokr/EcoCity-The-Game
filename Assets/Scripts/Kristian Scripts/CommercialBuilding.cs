@@ -4,13 +4,11 @@ using UnityEngine;
 
 public class CommercialBuilding : Building
 {
-    public int incomeBonus;
+    public int incomeIncrease;
 
     public override void Emit()
     {
-        resourceKeeper = GameObject.FindGameObjectWithTag("ResourceKeeper").GetComponent<ResourceKeeper>();
-        resourceKeeper.emission += totalEmission;
-        resourceKeeper.income += incomeBonus;
-        resourceKeeper.availablePopulation -= populationCost;
+        resourceKeeper.emission += emission;
+        resourceKeeper.income += incomeIncrease;
     }
 }

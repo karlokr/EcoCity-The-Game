@@ -4825,7 +4825,7 @@ GameObject:
   - component: {fileID: 1648390923}
   - component: {fileID: -2209413150398133012}
   m_Layer: 0
-  m_Name: Building LG
+  m_Name: Residential L
   m_TagString: Building
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4945,10 +4945,10 @@ MonoBehaviour:
   - {fileID: 6106095939136019656}
   - {fileID: 1704164026378150744}
   verticalOffset: 0
-  buildingType: residential
+  buildingType: Residential L
   buildingCost: 100
   woodCost: 150
-  populationCost: 0
+  populationRequired: 100
   totalEmission: 20
   resourceKeeper: {fileID: 0}
   population: 20
