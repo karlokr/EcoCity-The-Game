@@ -5240,9 +5240,9 @@ MonoBehaviour:
   - {fileID: 2178677516925368736}
   verticalOffset: 0
   buildingType: Residential S
-  buildingCost: 10
+  cost: 0
   woodCost: 5
   populationRequired: 0
-  totalEmission: 5
+  emission: 5
   resourceKeeper: {fileID: 0}
-  population: 5
+  populationIncrease: 5

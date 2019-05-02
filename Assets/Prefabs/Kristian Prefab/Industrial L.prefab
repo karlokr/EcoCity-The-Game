@@ -117,12 +117,12 @@ MonoBehaviour:
   - {fileID: 1704164026378150744}
   verticalOffset: 0
   buildingType: Industrial L
-  buildingCost: 100
-  woodCost: 20
+  cost: 1000
+  woodCost: 1500
   populationRequired: 250
-  totalEmission: 100
+  emission: 100
   resourceKeeper: {fileID: 0}
-  woodIncomeBonus: 20
+  woodIncomeIncrease: 15
 --- !u!95 &1288238248757256751
 Animator:
   serializedVersion: 3

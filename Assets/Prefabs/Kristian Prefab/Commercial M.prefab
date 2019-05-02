@@ -5221,12 +5221,12 @@ MonoBehaviour:
   - {fileID: 2064324695384317562}
   verticalOffset: 0
   buildingType: Commercial M
-  buildingCost: 30
-  woodCost: 20
+  cost: 500
+  woodCost: 500
   populationRequired: 50
-  totalEmission: 15
+  emission: 50
   resourceKeeper: {fileID: 0}
-  incomeBonus: 15
+  incomeIncrease: 10
 --- !u!95 &225357389486546714
 Animator:
   serializedVersion: 3

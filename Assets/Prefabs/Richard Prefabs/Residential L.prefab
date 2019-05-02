@@ -4946,12 +4946,12 @@ MonoBehaviour:
   - {fileID: 1704164026378150744}
   verticalOffset: 0
   buildingType: Residential L
-  buildingCost: 100
+  cost: 0
   woodCost: 150
   populationRequired: 100
-  totalEmission: 20
+  emission: 50
   resourceKeeper: {fileID: 0}
-  population: 20
+  populationIncrease: 50
 --- !u!1 &5891861409251154257
 GameObject:
   m_ObjectHideFlags: 0
