@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class CommercialBuilding : Building
 {
-    public int incomeIncrease;
-
     public override void Emit()
     {
         ResourceKeeper resourceKeeper = GameObject.FindGameObjectWithTag("ResourceKeeper").GetComponent<ResourceKeeper>();

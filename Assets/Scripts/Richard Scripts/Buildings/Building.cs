@@ -26,6 +26,11 @@ public class Building : MonoBehaviour
     private int level;
     private ParticleSystem particleSystem;
 
+    //Category Specific Increases
+    public int populationIncrease;
+    public int woodIncomeIncrease;
+    public int incomeIncrease;
+
     private void Awake()
     {
         animator = GetComponent<Animator>();

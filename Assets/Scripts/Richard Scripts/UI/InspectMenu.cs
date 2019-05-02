@@ -7,7 +7,12 @@ public class InspectMenu : MonoBehaviour
 {
     public Text nameText;
     public Text description;
-    public List<Text> statTexts;
+    public Text moneyCost;
+    public Text woodCost;
+    public Text popCost;
+    public Text stat1;
+    public Text stat2;
+    public Text stat3;
 
     private Animator animator;
     private void Awake()
@@ -37,16 +42,49 @@ public class InspectMenu : MonoBehaviour
         description.text = s;
     }
 
-    public void SetStatTexts(string[] s)
-    {
-        for (int i = 0; i < statTexts.Count; i++)
-        {
-            statTexts[i].text = s[i];
-        }
-    }
-
     public void SetInspecting(bool b)
     {
         animator.SetBool("Inspecting", b);
+    }
+
+    public void SetStat1(string s)
+    {
+        stat1.text = s;
+    }
+
+    public void SetStat2(string s)
+    {
+        stat2.text = s;
+    }
+
+    public void SetStat3(string s)
+    {
+        stat3.text = s;
+    }
+
+    public void SetMoneyCost(string s)
+    {
+        moneyCost.text = s;
+    }
+
+    public void SetWoodCost(string s)
+    {
+        woodCost.text = s;
+    }
+
+    public void SetPopCost(string s)
+    {
+        popCost.text = s;
+    }
+
+    public void ReceiveBuilding(GameObject g)
+    {
+        Building b = g.GetComponent<Building>();
+
+        SetMoneyCost(b.cost.ToString());
+        SetPopCost(b.populationRequired.ToString());
+        SetWoodCost(b.woodCost.ToString());
+
+        SetStat1("+" + b.emission.ToString() + " EMISSION");
     }
 }

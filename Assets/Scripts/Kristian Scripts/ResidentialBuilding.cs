@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class ResidentialBuilding : Building
 {
-    public int populationIncrease;
 
     public override void Emit()
     {

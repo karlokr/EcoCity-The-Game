@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class IndustrialBuilding : Building
 {
-    public int woodIncomeIncrease;
+
 
     public override void Emit()
     {
