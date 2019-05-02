@@ -16,6 +16,7 @@ TagManager:
   - Wood
   - ResourceKeeper
   - WorldTile
+  - InspectMenu
   layers:
   - Default
   - TransparentFX

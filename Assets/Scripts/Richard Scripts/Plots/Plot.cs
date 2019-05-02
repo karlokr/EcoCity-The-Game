@@ -37,7 +37,7 @@ public class Plot : MonoBehaviour
     {
         Building building = prefabToBuild.GetComponent<Building>();
 
-        if (resourceKeeper.money < building.buildingCost)
+        if (resourceKeeper.money < building.cost)
         {
             Debug.Log("Not enough money");
         }
@@ -45,18 +45,18 @@ public class Plot : MonoBehaviour
         {
             Debug.Log("Not Enough wood");
         }
-        if (resourceKeeper.availablePopulation < building.populationCost)
+        if (resourceKeeper.population < building.populationRequired)
         {
-            Debug.Log("Not enough people availiable to work");
+            Debug.Log("Not enough population to build this building");
         }
 
-        else if (resourceKeeper.money >= building.buildingCost && resourceKeeper.wood >= building.woodCost && resourceKeeper.availablePopulation >= building.populationCost)
+        else if (resourceKeeper.money >= building.cost && resourceKeeper.wood >= building.woodCost && resourceKeeper.population >= building.populationRequired)
         {
 
             GameObject newBuilding = Instantiate(prefabToBuild, transform.position, transform.rotation);
             newBuilding.transform.SetParent(GameObject.FindGameObjectWithTag("WorldTile").transform);
             newBuilding.transform.Translate(Vector3.up * 35f);
-            resourceKeeper.money -= building.buildingCost;
+            resourceKeeper.money -= building.cost;
             resourceKeeper.wood -= building.woodCost;
             Destroy(gameObject);
             building.Emit();

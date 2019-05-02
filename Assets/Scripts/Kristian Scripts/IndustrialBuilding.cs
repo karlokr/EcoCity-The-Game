@@ -4,13 +4,12 @@ using UnityEngine;
 
 public class IndustrialBuilding : Building
 {
-    public int woodIncomeBonus;
+
 
     public override void Emit()
     {
-        resourceKeeper = GameObject.FindGameObjectWithTag("ResourceKeeper").GetComponent<ResourceKeeper>();
-        resourceKeeper.emission += totalEmission;
-        resourceKeeper.woodIncome += woodIncomeBonus;
-        resourceKeeper.availablePopulation -= populationCost;
+        ResourceKeeper resourceKeeper = GameObject.FindGameObjectWithTag("ResourceKeeper").GetComponent<ResourceKeeper>();
+        resourceKeeper.emission += emission;
+        resourceKeeper.woodIncome += woodIncomeIncrease;
     }
 }
