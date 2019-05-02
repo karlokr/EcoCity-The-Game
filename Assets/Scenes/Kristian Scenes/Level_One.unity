@@ -1630,7 +1630,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44c3b9ea93f1a4e4d93c09377ba53650, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelTimeInSeconds: 300
+  levelTimeInSeconds: 700
   startYear: 2019
   endYear: 2040
   matchStarted: 0
@@ -7451,10 +7451,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 982ef3c9f46e4b446867bf120bc6ca45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  money: 10
+  money: 100
   emission: 0
   population: 0
-  wood: 10
+  wood: 100
   ecoScore: 0
   income: 5
   woodIncome: 5
