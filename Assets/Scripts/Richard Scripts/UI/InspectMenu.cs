@@ -8,6 +8,13 @@ public class InspectMenu : MonoBehaviour
     public Text nameText;
     public Text description;
     public List<Text> statTexts;
+
+    private Animator animator;
+    private void Awake()
+    {
+        animator = GetComponent<Animator>();
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,5 +43,10 @@ public class InspectMenu : MonoBehaviour
         {
             statTexts[i].text = s[i];
         }
+    }
+
+    public void SetInspecting(bool b)
+    {
+        animator.SetBool("Inspecting", b);
     }
 }
