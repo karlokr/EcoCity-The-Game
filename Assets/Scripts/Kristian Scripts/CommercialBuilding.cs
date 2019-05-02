@@ -11,6 +11,5 @@ public class CommercialBuilding : Building
         resourceKeeper = GameObject.FindGameObjectWithTag("ResourceKeeper").GetComponent<ResourceKeeper>();
         resourceKeeper.emission += totalEmission;
         resourceKeeper.income += incomeBonus;
-        resourceKeeper.availablePopulation -= populationCost;
     }
 }

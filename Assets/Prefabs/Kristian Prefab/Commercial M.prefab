@@ -5223,7 +5223,7 @@ MonoBehaviour:
   buildingType: commercial
   buildingCost: 30
   woodCost: 20
-  populationCost: 15
+  populationRequired: 50
   totalEmission: 15
   resourceKeeper: {fileID: 0}
   incomeBonus: 15

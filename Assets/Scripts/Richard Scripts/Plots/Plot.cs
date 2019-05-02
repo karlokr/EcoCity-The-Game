@@ -45,12 +45,12 @@ public class Plot : MonoBehaviour
         {
             Debug.Log("Not Enough wood");
         }
-        if (resourceKeeper.availablePopulation < building.populationCost)
+        if (resourceKeeper.population < building.populationRequired)
         {
-            Debug.Log("Not enough people availiable to work");
+            Debug.Log("Not enough population to build this building");
         }
 
-        else if (resourceKeeper.money >= building.buildingCost && resourceKeeper.wood >= building.woodCost && resourceKeeper.availablePopulation >= building.populationCost)
+        else if (resourceKeeper.money >= building.buildingCost && resourceKeeper.wood >= building.woodCost && resourceKeeper.population >= building.populationRequired)
         {
 
             GameObject newBuilding = Instantiate(prefabToBuild, transform.position, transform.rotation);

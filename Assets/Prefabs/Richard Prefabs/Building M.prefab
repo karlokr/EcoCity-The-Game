@@ -5242,7 +5242,7 @@ MonoBehaviour:
   buildingType: residential
   buildingCost: 50
   woodCost: 10
-  populationCost: 0
+  populationRequired: 50
   totalEmission: 10
   resourceKeeper: {fileID: 0}
   population: 10

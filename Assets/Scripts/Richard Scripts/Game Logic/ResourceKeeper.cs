@@ -13,7 +13,9 @@ public class ResourceKeeper : MonoBehaviour
     //Accumulators
     public int income = 5;
     public int woodIncome = 5;
-    public int availablePopulation;
+
+    //Population requirement
+    public int populationRequired;
 
     // Start is called before the first frame update
     void Start()

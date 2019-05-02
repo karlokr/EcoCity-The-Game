@@ -5223,7 +5223,7 @@ MonoBehaviour:
   buildingType: industrial
   buildingCost: 10
   woodCost: 5
-  populationCost: 10
+  populationRequired: 25
   totalEmission: 15
   resourceKeeper: {fileID: 0}
   woodIncomeBonus: 5

@@ -11,6 +11,5 @@ public class IndustrialBuilding : Building
         resourceKeeper = GameObject.FindGameObjectWithTag("ResourceKeeper").GetComponent<ResourceKeeper>();
         resourceKeeper.emission += totalEmission;
         resourceKeeper.woodIncome += woodIncomeBonus;
-        resourceKeeper.availablePopulation -= populationCost;
     }
 }

@@ -119,7 +119,7 @@ MonoBehaviour:
   buildingType: commercial
   buildingCost: 100
   woodCost: 50
-  populationCost: 20
+  populationRequired: 150
   totalEmission: 20
   resourceKeeper: {fileID: 0}
   incomeBonus: 50
