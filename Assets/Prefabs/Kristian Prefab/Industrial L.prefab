@@ -5243,6 +5243,6 @@ MonoBehaviour:
   emissionReduction: 20
   incomeIncrease: 0
   populationIncrease: 0
-  woodIncomeIncrease: 0
+  woodIncomeIncrease: 10
   visualModel: {fileID: 0}
   upgradeActive: 0
