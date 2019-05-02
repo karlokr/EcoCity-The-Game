@@ -50,6 +50,7 @@ public class CameraClicker : MonoBehaviour
     void Update()
     {
         HandleMouseDrag();
+        HandleMobileDrag();
         HandleClicks();
     }
 
