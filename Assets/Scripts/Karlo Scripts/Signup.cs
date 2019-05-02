@@ -24,7 +24,7 @@ public class Signup : MonoBehaviour {
     public void RegisterButton() {
         if (CheckUsername() && CheckPassword()) {
             Password = EncryptPassword();
-            StartCoroutine(Register("http://localhost/sqlconnect/register.php"));
+            StartCoroutine(Register("https://ecocitythegame.ca/sqlconnect/register.php"));
         }
     }
 

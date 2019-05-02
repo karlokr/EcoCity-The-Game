@@ -24,7 +24,7 @@ public class Login : MonoBehaviour
     public void LoginButton() {
         if (CheckUsername() && CheckPassword()) {
             Password = EncryptPassword();
-            StartCoroutine(UserLogin("http://localhost/sqlconnect/login.php"));
+            StartCoroutine(UserLogin("https://ecocitythegame.ca/sqlconnect/login.php"));
         }
     }
 
@@ -42,7 +42,7 @@ public class Login : MonoBehaviour
             }
             if (webRequest.downloadHandler.text[0] == '0') {
                 DBManager.username = Username;
-                DBManager.score = int.Parse(webRequest.downloadHandler.text.Split('\t')[1]);
+                DBManager.id = int.Parse(webRequest.downloadHandler.text.Split('\t')[1]);
                 Debug.Log("User login success");
                 UnityEngine.SceneManagement.SceneManager.LoadScene(2);
             } else {
@@ -103,9 +103,7 @@ public class Login : MonoBehaviour
     }
 
     public void Enter() {
-        if (Input.GetKeyDown(KeyCode.Return)
-            && (username.GetComponent<InputField>().isFocused
-            || password.GetComponent<InputField>().isFocused)) {
+        if (Input.GetKeyDown(KeyCode.Return) && (username.GetComponent<InputField>().isFocused || password.GetComponent<InputField>().isFocused)) {
             LoginButton();
         }
     }
