@@ -6,6 +6,7 @@ using UnityEngine.EventSystems;
 public class CameraClicker : MonoBehaviour
 {
     private Camera viewportCamera;
+    private CameraHolder cameraHolder;
     private MatchTimer matchTimer;
     private ResourceKeeper resourceKeeper;
     private Building selectedBuilding;
@@ -14,6 +15,8 @@ public class CameraClicker : MonoBehaviour
     private GameObject upgradeMenuObj;
     private BuildMenu buildMenu;
     private UpgradeMenu upgradeMenu;
+    private bool dragging;
+    private Vector3 startDragPosition;
     
     //A GameObject that will be passed to a selected object.
     private GameObject objectToPass;
@@ -22,12 +25,14 @@ public class CameraClicker : MonoBehaviour
     {
         resourceKeeper = GameObject.FindGameObjectWithTag("ResourceKeeper").GetComponent<ResourceKeeper>();
         viewportCamera = GetComponent<Camera>();
+        cameraHolder = GameObject.FindGameObjectWithTag("CameraHolder").GetComponent<CameraHolder>();
         matchTimer = GameObject.FindGameObjectWithTag("MatchTimer").GetComponent<MatchTimer>();
     }
 
     // Start is called before the first frame update
     void Start()
     {
+        dragging = false;
         buildMenuObj = GameObject.FindGameObjectsWithTag("BuildMenu");
         for(int i = 0; i < buildMenuObj.Length; i++)
         {
@@ -44,6 +49,7 @@ public class CameraClicker : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        HandleMouseDrag();
         HandleClicks();
     }
 
@@ -55,7 +61,7 @@ public class CameraClicker : MonoBehaviour
 
     private void HandleClicks()
     {
-        if (Input.GetMouseButtonDown(0) && matchTimer.matchStarted)
+        if (Input.GetMouseButtonUp(0) && matchTimer.matchStarted && !dragging)
         {
             if (!EventSystem.current.IsPointerOverGameObject())
             {
@@ -98,6 +104,45 @@ public class CameraClicker : MonoBehaviour
                     }
                 }
             }
+        }
+    }
+
+    private void HandleMouseDrag()
+    {
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            startDragPosition = Input.mousePosition;
+            dragging = true;
+        }
+
+        if (Input.GetMouseButton(0))
+        {
+            Vector2 rawDelta = (Input.mousePosition - startDragPosition).normalized;
+            Vector3 ourDelta = new Vector3(rawDelta.x, 0, rawDelta.y);
+            cameraHolder.transform.Translate(ourDelta * cameraHolder.speed * Time.deltaTime);                                         //Move the position of the camera to simulate a drag, speed * 10 for screen to worldspace conversion
+        }
+
+
+        if (Input.GetMouseButtonUp(0))
+        {
+            if (Input.mousePosition != startDragPosition)
+            {
+                dragging = true;
+            }
+            else
+            {
+                dragging = false;
+            }
+        }
+    }
+
+    private void HandleMobileDrag()
+    {
+        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Moved)
+        {
+            Vector2 touchDeltaPosition = Input.GetTouch(0).deltaPosition;
+            cameraHolder.transform.Translate(-touchDeltaPosition.x * cameraHolder.speed, 0, -touchDeltaPosition.y * cameraHolder.speed);
         }
     }
 

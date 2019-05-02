@@ -5,6 +5,7 @@ using UnityEngine;
 public class FollowCam : MonoBehaviour
 {
     public float followSpeed;
+    public float rotationSpeed;
     private CameraHolder cameraHolder;
     
     private void Awake()

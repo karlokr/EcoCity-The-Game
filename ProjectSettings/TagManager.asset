@@ -15,6 +15,7 @@ TagManager:
   - Population
   - Wood
   - ResourceKeeper
+  - WorldTile
   layers:
   - Default
   - TransparentFX

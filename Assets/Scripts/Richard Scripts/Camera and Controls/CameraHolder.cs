@@ -32,12 +32,12 @@ public class CameraHolder : MonoBehaviour
 
         if (Input.GetKey(KeyCode.A))
         {
-            transform.Translate(Vector3.left * speed * Time.deltaTime);
+            transform.Translate(-transform.right * speed * Time.deltaTime);
         }
 
         if (Input.GetKey(KeyCode.D))
         {
-            transform.Translate(Vector3.right * speed * Time.deltaTime);
+            transform.Translate(transform.right * speed * Time.deltaTime);
         }
 
         if (Input.GetKey(KeyCode.S))

@@ -54,6 +54,7 @@ public class Plot : MonoBehaviour
         {
 
             GameObject newBuilding = Instantiate(prefabToBuild, transform.position, transform.rotation);
+            newBuilding.transform.SetParent(GameObject.FindGameObjectWithTag("WorldTile").transform);
             newBuilding.transform.Translate(Vector3.up * 35f);
             resourceKeeper.money -= building.buildingCost;
             resourceKeeper.wood -= building.woodCost;

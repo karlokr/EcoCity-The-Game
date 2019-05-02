@@ -38,7 +38,6 @@ public class Building : MonoBehaviour
     public void Start()
     {
         defaultMaterial = rend.material;
-        animator.SetTrigger("Land");
     }
 
 
