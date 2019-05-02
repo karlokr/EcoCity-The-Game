@@ -5221,8 +5221,8 @@ MonoBehaviour:
   - {fileID: 2178677516925368736}
   verticalOffset: 0
   buildingType: Commercial S
-  cost: 50
-  woodCost: 50
+  cost: 75
+  woodCost: 20
   populationRequired: 10
   emission: 15
   resourceKeeper: {fileID: 0}
