@@ -5000,7 +5000,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upgradeName: Steam Chimney
   cost: 50
-  emissionReduction: 1
+  emissionReduction: 5
   incomeIncrease: 0
   populationIncrease: 0
   woodIncomeIncrease: 1
@@ -5221,12 +5221,12 @@ MonoBehaviour:
   - {fileID: 2178677516925368736}
   verticalOffset: 0
   buildingType: Industrial S
-  buildingCost: 10
-  woodCost: 5
+  cost: 100
+  woodCost: 100
   populationRequired: 25
-  totalEmission: 15
+  emission: 15
   resourceKeeper: {fileID: 0}
-  woodIncomeBonus: 5
+  woodIncomeIncrease: 5
 --- !u!95 &-3835264439836399139
 Animator:
   serializedVersion: 3
