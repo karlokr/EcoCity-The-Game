@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4536171865774241351}
   - component: {fileID: 1288238248757256751}
   m_Layer: 0
-  m_Name: Industrial LG
+  m_Name: Industrial L
   m_TagString: Building
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -116,7 +116,7 @@ MonoBehaviour:
   - {fileID: 6106095939136019656}
   - {fileID: 1704164026378150744}
   verticalOffset: 0
-  buildingType: industrial
+  buildingType: Industrial L
   buildingCost: 100
   woodCost: 20
   populationRequired: 250

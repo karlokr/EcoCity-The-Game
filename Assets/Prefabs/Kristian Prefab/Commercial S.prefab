@@ -5220,7 +5220,7 @@ MonoBehaviour:
   - {fileID: 5224022948985823060}
   - {fileID: 2178677516925368736}
   verticalOffset: 0
-  buildingType: commercial
+  buildingType: Commercial S
   buildingCost: 10
   woodCost: 5
   populationRequired: 10

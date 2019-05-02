@@ -15,15 +15,15 @@ public class Building : MonoBehaviour
     public float verticalOffset;
 
     public string buildingType;
-    public int buildingCost;
+    public int cost;
     public int woodCost;
 
     private Animator animator;
     public int populationRequired;
-    public int totalEmission;
+    public int emission;
     public ResourceKeeper resourceKeeper;
 
-    private int buildingLevel;
+    private int level;
     private ParticleSystem particleSystem;
 
     private void Awake()

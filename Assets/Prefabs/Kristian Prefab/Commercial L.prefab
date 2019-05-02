@@ -116,7 +116,7 @@ MonoBehaviour:
   - {fileID: 6106095939136019656}
   - {fileID: 1704164026378150744}
   verticalOffset: 0
-  buildingType: commercial
+  buildingType: Commercial L
   buildingCost: 100
   woodCost: 50
   populationRequired: 150

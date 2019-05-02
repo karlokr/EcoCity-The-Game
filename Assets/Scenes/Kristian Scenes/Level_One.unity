@@ -7455,9 +7455,9 @@ MonoBehaviour:
   emission: 0
   population: 0
   wood: 10
+  ecoScore: 0
   income: 5
   woodIncome: 5
-  populationRequired: 0
 --- !u!4 &1945410524
 Transform:
   m_ObjectHideFlags: 0
@@ -7921,6 +7921,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5553049097249040962, guid: 843cbb8582d79cc41977603298a3b19e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5553049097249040962, guid: 843cbb8582d79cc41977603298a3b19e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 843cbb8582d79cc41977603298a3b19e, type: 3}
