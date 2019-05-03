@@ -12,18 +12,18 @@ public class Login : MonoBehaviour
     public GameObject password;
     private string Username;
     private string Password;
+    private bool isFocused;
 
-    // Update is called once per frame
-    void Update()
-    {
+    void Update() { 
         Tab();
         Enter();
         AssignInputs();
+        isFocused = username.GetComponent<InputField>().isFocused || password.GetComponent<InputField>().isFocused;
     }
 
     public void LoginButton() {
-        if (CheckUsername() && CheckPassword()) {
-            Password = EncryptPassword();
+        if (AuthFuncs.CheckUsername(Username) && AuthFuncs.CheckPassword(Password)) {
+            Password = AuthFuncs.EncryptPassword(Password);
             StartCoroutine(UserLogin("https://ecocitythegame.ca/sqlconnect/login.php"));
         }
     }
@@ -51,44 +51,9 @@ public class Login : MonoBehaviour
         }
     }
 
-    private bool CheckUsername() {
-        if (Username != "") {
-            return true;
-        } else {
-            Debug.LogWarning("Username field empty");
-            return false;
-        }
-    }
-
-    private bool CheckPassword() {
-        if (Password != "") {
-            return true;
-        } else {
-            Debug.LogWarning("Username field empty");
-            return false;
-        }
-    }
-
-
     private void AssignInputs() {
         Username = username.GetComponent<InputField>().text;
         Password = password.GetComponent<InputField>().text;
-    }
-
-    private string EncryptPassword() {
-        string EncryptedPass = "";
-        for (int i = 1; i <= Password.Length; i++) {
-            EncryptedPass += ((char)(Password[i - 1] * (i + 1))).ToString();
-        }
-        return EncryptedPass;
-    }
-
-    private string DecryptPassword() {
-        string DecryptedPass = "";
-        for (int i = 1; i <= Password.Length; i++) {
-            DecryptedPass += ((char)(Password[i - 1] / (i + 1))).ToString();
-        }
-        return DecryptedPass;
     }
 
     /*************************
@@ -96,15 +61,23 @@ public class Login : MonoBehaviour
      ************************/
     private void Tab() {
         if (Input.GetKeyDown(KeyCode.Tab)) {
-            if (username.GetComponent<InputField>().isFocused) {
-                password.GetComponent<InputField>().Select();
+            if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift)) {
+                if (password.GetComponent<InputField>().isFocused) {
+                    username.GetComponent<InputField>().Select();
+                }
+            } else {
+                if (username.GetComponent<InputField>().isFocused) {
+                    password.GetComponent<InputField>().Select();
+                }
             }
         }
     }
 
     public void Enter() {
-        if (Input.GetKeyDown(KeyCode.Return) && (username.GetComponent<InputField>().isFocused || password.GetComponent<InputField>().isFocused)) {
-            LoginButton();
+        if (isFocused) {
+            if (Input.GetKeyDown(KeyCode.Return)) {
+                LoginButton();
+            }
         }
     }
 }
