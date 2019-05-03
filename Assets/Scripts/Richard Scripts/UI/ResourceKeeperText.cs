@@ -35,7 +35,7 @@ public class ResourceKeeperText : MonoBehaviour
         {
             money.text = resourceKeeper.money.ToString();
             emission.text = resourceKeeper.emission.ToString();
-            population.text = resourceKeeper.availablePopulation.ToString() + "/" + resourceKeeper.population.ToString();
+            population.text = resourceKeeper.population.ToString();
             wood.text = resourceKeeper.wood.ToString();
         }
     }

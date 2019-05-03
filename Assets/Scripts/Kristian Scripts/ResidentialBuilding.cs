@@ -4,13 +4,11 @@ using UnityEngine;
 
 public class ResidentialBuilding : Building
 {
-    public int population;
 
     public override void Emit()
     {
-        resourceKeeper = GameObject.FindGameObjectWithTag("ResourceKeeper").GetComponent<ResourceKeeper>();
-        resourceKeeper.emission += totalEmission;
-        resourceKeeper.population += population;
-        resourceKeeper.availablePopulation += population;
+        ResourceKeeper resourceKeeper = GameObject.FindGameObjectWithTag("ResourceKeeper").GetComponent<ResourceKeeper>();
+        resourceKeeper.emission += emission;
+        resourceKeeper.population += populationIncrease;
     }
 }

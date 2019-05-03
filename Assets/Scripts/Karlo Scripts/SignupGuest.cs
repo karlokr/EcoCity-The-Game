@@ -8,8 +8,10 @@ public class SignupGuest : MonoBehaviour {
 
     IEnumerator RegisterGuest(string url) {
         WWWForm form = new WWWForm();
-        form.AddField("name", Guid.NewGuid().ToString());
-        form.AddField("password", Guid.NewGuid().ToString());
+        string username = Guid.NewGuid().ToString();
+        string password = Guid.NewGuid().ToString();
+        form.AddField("name", username);
+        form.AddField("password", password);
 
         using (UnityWebRequest webRequest = UnityWebRequest.Post(url, form)) {
             yield return webRequest.SendWebRequest();
@@ -20,6 +22,8 @@ public class SignupGuest : MonoBehaviour {
             }
             if (webRequest.downloadHandler.text == "0") {
                 Debug.Log("User created successfully.");
+                DBManager.username = username;
+                DBManager.isGuest = true;
                 UnityEngine.SceneManagement.SceneManager.LoadScene(2);
             } else {
                 Debug.Log("User creation failed. Error #" + webRequest.downloadHandler.text);
@@ -28,7 +32,7 @@ public class SignupGuest : MonoBehaviour {
     }
 
     public void RegisterGuestButton() {
-            StartCoroutine(RegisterGuest("http://localhost/sqlconnect/register.php"));
+            StartCoroutine(RegisterGuest("https://ecocitythegame.ca/sqlconnect/register.php"));
     }
 }
 
