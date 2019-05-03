@@ -86,5 +86,20 @@ public class InspectMenu : MonoBehaviour
         SetWoodCost(b.woodCost.ToString());
 
         SetStat1("+" + b.emission.ToString() + " EMISSION");
+
+        if (b.woodIncomeIncrease != 0)
+        {
+            SetStat2("+" + b.woodIncomeIncrease.ToString() + " WOOD INCOME");
+            
+        }
+        if (b.incomeIncrease != 0)
+        {
+            SetStat2("+" + b.incomeIncrease.ToString() + " INCOME");
+        }
+        if (b.populationIncrease != 0)
+        {
+            SetStat2("+" + b.populationIncrease.ToString() + " POPULATION");
+        }
+        SetStat3("");
     }
 }

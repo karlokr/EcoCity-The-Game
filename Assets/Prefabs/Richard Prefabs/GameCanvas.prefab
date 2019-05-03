@@ -4879,6 +4879,7 @@ MonoBehaviour:
   stat1: {fileID: 6997184796355323406}
   stat2: {fileID: 6997184795170045011}
   stat3: {fileID: 6997184794978837898}
+  varImg: {fileID: 0}
 --- !u!95 &6997184796238504600
 Animator:
   serializedVersion: 3
