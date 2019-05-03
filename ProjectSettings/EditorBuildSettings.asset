@@ -17,4 +17,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Kristian Scenes/Level_One.unity
     guid: ecfbb5ff3a7333d43919f398c4045cbf
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/Kristian Scenes/win_screen.unity
+    guid: 207f2cb768f8ee04084f15b43b431a98
   m_configObjects: {}
