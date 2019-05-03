@@ -17,6 +17,7 @@ TagManager:
   - ResourceKeeper
   - WorldTile
   - InspectMenu
+  - HiddenTile
   layers:
   - Default
   - TransparentFX
