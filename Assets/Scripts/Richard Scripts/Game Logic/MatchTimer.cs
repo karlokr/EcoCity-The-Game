@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MatchTimer : MonoBehaviour
 {
@@ -54,6 +55,11 @@ public class MatchTimer : MonoBehaviour
             levelTimeInSeconds -= Time.deltaTime;
             monthTimer += Time.deltaTime;
             yearTimer += Time.deltaTime;
+            
+            if (resourceKeeper.population >= 20)
+            {
+                SceneManager.LoadScene("win_screen");
+            }
         }
 
         if (monthTimer > timePerMonth)
@@ -83,5 +89,10 @@ public class MatchTimer : MonoBehaviour
     public void StartMatch()
     {
         matchStarted = true;
+    }
+
+    public void StopTime()
+    {
+        matchStarted = false;
     }
 }
