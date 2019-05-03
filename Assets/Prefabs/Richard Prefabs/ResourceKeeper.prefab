@@ -44,10 +44,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 982ef3c9f46e4b446867bf120bc6ca45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  money: 10
+  money: 100
   emission: 0
   population: 0
-  wood: 10
+  wood: 100
   ecoScore: 0
   income: 5
   woodIncome: 5
