@@ -13,17 +13,21 @@ public class Signup : MonoBehaviour {
     private string Username;
     private string Password;
     private string ConfirmPassword;
+    private bool isFocused;
 
     // Update is called once per frame
     void Update() {
         Tab();
         Enter();
         AssignInputs();
+        isFocused = username.GetComponent<InputField>().isFocused
+                    || password.GetComponent<InputField>().isFocused
+                    || confirmPassword.GetComponent<InputField>().isFocused;
     }
 
     public void RegisterButton() {
-        if (CheckUsername() && CheckPassword()) {
-            Password = EncryptPassword();
+        if (AuthFuncs.CheckUsername(Username) && AuthFuncs.CheckSignupPassword(Password, ConfirmPassword)) {
+            Password = AuthFuncs.EncryptPassword(Password);
             StartCoroutine(Register("https://ecocitythegame.ca/sqlconnect/register.php"));
         }
     }
@@ -49,79 +53,40 @@ public class Signup : MonoBehaviour {
         }
     }
 
-    private string EncryptPassword() {
-        string EncryptedPass = "";
-        for (int i = 1; i <= Password.Length; i++) {
-            EncryptedPass += ((char)(Password[i - 1] * (i + 1))).ToString();
-        }
-        return EncryptedPass;
-    }
-
-    private string DecryptPassword() {
-        string DecryptedPass = "";
-        for (int i = 1; i <= Password.Length; i++) {
-            DecryptedPass += ((char)(Password[i - 1] / (i + 1))).ToString();
-        }
-        return DecryptedPass;
-    }
-
     private void AssignInputs() {
         Username = username.GetComponent<InputField>().text;
         Password = password.GetComponent<InputField>().text;
         ConfirmPassword = confirmPassword.GetComponent<InputField>().text;
     }
-
-    /*************************
-     * Useranme and password validation.
-     ************************/
-    private bool CheckUsername() {
-        if (Username != "") {
-            return true;
-        } else {
-            Debug.LogWarning("Username field empty");
-            return false;
-        }
-    }
-
-    private bool CheckPassword() {
-        if (Password.Equals(ConfirmPassword)) {
-            if (LengthConstraint()) {
-                Debug.LogWarning("Valid Password");
-                return true;
-            } else {
-                Debug.LogWarning("Invalid Password");
-                return false;
-            }
-        } else {
-            Debug.LogWarning("Passwords don't match");
-            return false;
-        }
-    }
-
-    private bool LengthConstraint() {
-        return Password.Length >= 8;
-    }
-
+    
     /*************************
      * Keyboard controls
      ************************/
-    public void Tab() {
+    private void Tab() {
         if (Input.GetKeyDown(KeyCode.Tab)) {
-            if (username.GetComponent<InputField>().isFocused) {
-                password.GetComponent<InputField>().Select();
-            }
-            if (password.GetComponent<InputField>().isFocused) {
-                confirmPassword.GetComponent<InputField>().Select();
+            if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift)) {
+                if (password.GetComponent<InputField>().isFocused) {
+                    username.GetComponent<InputField>().Select();
+                }
+                if (confirmPassword.GetComponent<InputField>().isFocused) {
+                    password.GetComponent<InputField>().Select();
+                }
+            } else {
+                if (username.GetComponent<InputField>().isFocused) {
+                    password.GetComponent<InputField>().Select();
+                }
+                if (password.GetComponent<InputField>().isFocused) {
+                    confirmPassword.GetComponent<InputField>().Select();
+                }
             }
         }
     }
 
     public void Enter() {
-        if (Input.GetKeyDown(KeyCode.Return)
-            && (username.GetComponent<InputField>().isFocused
-            || password.GetComponent<InputField>().isFocused
-            || confirmPassword.GetComponent<InputField>().isFocused)) {
-            RegisterButton();
+        if (isFocused) {
+            if (Input.GetKeyDown(KeyCode.Return)) {
+                RegisterButton();
+            }
         }
     }
 }
