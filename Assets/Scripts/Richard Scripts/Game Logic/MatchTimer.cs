@@ -56,7 +56,7 @@ public class MatchTimer : MonoBehaviour
             monthTimer += Time.deltaTime;
             yearTimer += Time.deltaTime;
             
-            if (resourceKeeper.population >= 20)
+            if (resourceKeeper.population >= 250)
             {
                 SceneManager.LoadScene("win_screen");
             }
