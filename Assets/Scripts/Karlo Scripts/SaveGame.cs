@@ -20,8 +20,8 @@ public class SaveGame : MonoBehaviour {
             } else {
                 Debug.Log("Form upload complete!");
             }
-            if (webRequest.downloadHandler.text[0] == '0') {
-                DBManager.save_num = int.Parse(webRequest.downloadHandler.text.Split('\t')[1]);
+            if (webRequest.downloadHandler.text == "0") {
+                //DBManager.save_num = int.Parse(webRequest.downloadHandler.text.Split('\t')[1]);
                 Debug.Log("Game Saved Successfully");
             } else {
                 Debug.Log("Save failed. Error #" + webRequest.downloadHandler.text);
