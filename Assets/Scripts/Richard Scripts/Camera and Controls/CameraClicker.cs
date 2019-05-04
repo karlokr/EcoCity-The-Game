@@ -15,6 +15,7 @@ public class CameraClicker : MonoBehaviour
     private GameObject upgradeMenuObj;
     private BuildMenu buildMenu;
     private UpgradeMenu upgradeMenu;
+    private InspectMenu inspectMenu;
     private bool dragging;
     private Vector3 startDragPosition;
     
@@ -27,6 +28,7 @@ public class CameraClicker : MonoBehaviour
         viewportCamera = GetComponent<Camera>();
         cameraHolder = GameObject.FindGameObjectWithTag("CameraHolder").GetComponent<CameraHolder>();
         matchTimer = GameObject.FindGameObjectWithTag("MatchTimer").GetComponent<MatchTimer>();
+        inspectMenu = GameObject.FindGameObjectWithTag("InspectMenu").GetComponent<InspectMenu>();
     }
 
     // Start is called before the first frame update
@@ -50,6 +52,7 @@ public class CameraClicker : MonoBehaviour
     void Update()
     {
         HandleMouseDrag();
+        HandleMobileDrag();
         HandleClicks();
     }
 
@@ -164,6 +167,7 @@ public class CameraClicker : MonoBehaviour
         upgradeMenuObj.SetActive(false);
         Building.ClearDebugColor();
         Plot.ClearDebugColor();
+        inspectMenu.SetInspecting(false);
     }
 
     

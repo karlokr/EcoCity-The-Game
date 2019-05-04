@@ -36,6 +36,9 @@ public class Upgrade : MonoBehaviour
 
     public void Activate() {
         if (visualModel)
+        {
             visualModel.enabled = true;
+            upgradeActive = true;
+        }
     }
 }

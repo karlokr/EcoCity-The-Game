@@ -6,6 +6,17 @@ public class CameraHolder : MonoBehaviour
 {
 
     public float speed;
+    public float zoomSpeed;
+
+    private Animator animator;
+    private float animPlayPercent = 0.0f;
+    private Camera mainCamera;
+
+    private void Awake()
+    {
+        animator = GetComponent<Animator>();
+        mainCamera = Camera.main;
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -17,6 +28,7 @@ public class CameraHolder : MonoBehaviour
     void Update()
     {
         HandleControls();
+        SetZoom();
     }
 
     /// <summary>
@@ -45,4 +57,19 @@ public class CameraHolder : MonoBehaviour
             transform.Translate(Vector3.back * speed * Time.deltaTime);
         }
     }
+
+    private void SetZoom()
+    {
+        if (Input.GetAxis("Mouse ScrollWheel") > 0f) // forward
+        {
+            transform.Translate(mainCamera.transform.forward * zoomSpeed);
+        }
+        if (Input.GetAxis("Mouse ScrollWheel") < 0f) // backwards
+        {
+            transform.Translate(-mainCamera.transform.forward * zoomSpeed);
+        }
+    }
+
+
+
 }
