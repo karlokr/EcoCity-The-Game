@@ -18,6 +18,7 @@ TagManager:
   - WorldTile
   - InspectMenu
   - HiddenTile
+  - Forest
   layers:
   - Default
   - TransparentFX
