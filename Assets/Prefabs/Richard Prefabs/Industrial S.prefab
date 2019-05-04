@@ -1,5 +1,52 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &816721557
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 816721558}
+  - component: {fileID: 816721559}
+  m_Layer: 0
+  m_Name: ModelPicker
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &816721558
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 816721557}
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8551157436125872206}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &816721559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 816721557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3ed9af77db88de4fa1a4ade7949d32c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  models:
+  - {fileID: 100000, guid: 0c86e3b71038ebc4db3ad0766b7fac03, type: 3}
+  - {fileID: 100000, guid: a34f6a526d05ad04990e600f38b3cd62, type: 3}
+  - {fileID: 100000, guid: dcbfe6575c5ca1341b8bedbf9f71b2d9, type: 3}
 --- !u!1 &2180939685888401376
 GameObject:
   m_ObjectHideFlags: 0
@@ -5134,12 +5181,13 @@ Transform:
   m_GameObject: {fileID: 8551157436125872195}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7392156646973063238}
   - {fileID: 3625342033328156500}
   - {fileID: 616628912333023721}
   - {fileID: 7581058594225696775}
+  - {fileID: 816721558}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5226,7 +5274,9 @@ MonoBehaviour:
   populationRequired: 10
   emission: 15
   resourceKeeper: {fileID: 0}
+  populationIncrease: 0
   woodIncomeIncrease: 5
+  incomeIncrease: 0
 --- !u!95 &-3835264439836399139
 Animator:
   serializedVersion: 3

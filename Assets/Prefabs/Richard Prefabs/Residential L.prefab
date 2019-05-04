@@ -4840,12 +4840,13 @@ Transform:
   m_GameObject: {fileID: 2470695281993958899}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 20, y: 10, z: 10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7619807492710864463}
   - {fileID: 7329218222967219976}
   - {fileID: 4740820818986966407}
   - {fileID: 6879553744807337089}
+  - {fileID: 2374987476942965007}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4864,7 +4865,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2470695281993958899}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -4952,6 +4953,8 @@ MonoBehaviour:
   emission: 50
   resourceKeeper: {fileID: 0}
   populationIncrease: 50
+  woodIncomeIncrease: 0
+  incomeIncrease: 0
 --- !u!1 &5891861409251154257
 GameObject:
   m_ObjectHideFlags: 0
@@ -5050,6 +5053,53 @@ MonoBehaviour:
   woodIncomeIncrease: 0
   visualModel: {fileID: 0}
   upgradeActive: 0
+--- !u!1 &6110986326326873724
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2374987476942965007}
+  - component: {fileID: 5578933993678546263}
+  m_Layer: 0
+  m_Name: ModelPicker
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2374987476942965007
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6110986326326873724}
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -20.74, y: 35.25, z: -2.0599995}
+  m_LocalScale: {x: 0.10000005, y: 0.099999994, z: 0.10000005}
+  m_Children: []
+  m_Father: {fileID: 2470695281993958904}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5578933993678546263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6110986326326873724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3ed9af77db88de4fa1a4ade7949d32c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  models:
+  - {fileID: 100000, guid: 74978b6b36516b04b92f6ec6b3b0898d, type: 3}
+  - {fileID: 100000, guid: 2d94dc6eeb30a8b4da06c6ac961039d0, type: 3}
+  - {fileID: 100000, guid: 7170f1a798cad8241b24ac62c357fb16, type: 3}
 --- !u!1 &7855571568571712241
 GameObject:
   m_ObjectHideFlags: 0
