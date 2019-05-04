@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 57923551}
   - component: {fileID: 57923556}
   m_Layer: 0
-  m_Name: Plane
+  m_Name: Water
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -211,7 +211,7 @@ Transform:
   m_LocalScale: {x: 34.529114, y: 34.529114, z: 34.529114}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &57923556
 MonoBehaviour:
@@ -241,7 +241,6 @@ GameObject:
   - component: {fileID: 130978578}
   - component: {fileID: 130978577}
   - component: {fileID: 130978576}
-  - component: {fileID: 130978580}
   m_Layer: 0
   m_Name: North
   m_TagString: WorldTile
@@ -319,21 +318,8 @@ Transform:
   m_LocalScale: {x: 51, y: 1, z: 50}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &130978580
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 130978575}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 093ae12bd866ea440a0c3a7efc9edfa8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hiddenTiles: []
 --- !u!1001 &131886822
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -384,7 +370,7 @@ PrefabInstance:
     - target: {fileID: 1942898279846151785, guid: 7bf914edf2b435d46aeb03a3b70a1b71,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1942898279846151785, guid: 7bf914edf2b435d46aeb03a3b70a1b71,
         type: 3}
@@ -602,6 +588,25 @@ PrefabInstance:
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7bf914edf2b435d46aeb03a3b70a1b71, type: 3}
+--- !u!1 &168695263 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6496008809211425832, guid: 4bcd5e552f951c946937068fa7db895b,
+    type: 3}
+  m_PrefabInstance: {fileID: 6496008809387890274}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &168695268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 168695263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff562f1cff9b27044a23d4c60b505f31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  worldTiles: []
 --- !u!1 &207457099
 GameObject:
   m_ObjectHideFlags: 0
@@ -630,7 +635,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &338826935
 GameObject:
@@ -696,14 +701,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &452523494 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1942898280121610113, guid: 7bf914edf2b435d46aeb03a3b70a1b71,
-    type: 3}
-  m_PrefabInstance: {fileID: 131886822}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &491915329
 GameObject:
   m_ObjectHideFlags: 0
@@ -716,7 +715,6 @@ GameObject:
   - component: {fileID: 491915332}
   - component: {fileID: 491915331}
   - component: {fileID: 491915330}
-  - component: {fileID: 491915334}
   m_Layer: 0
   m_Name: Southwest
   m_TagString: WorldTile
@@ -794,21 +792,8 @@ Transform:
   m_LocalScale: {x: 51, y: 1, z: 50}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &491915334
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 491915329}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 093ae12bd866ea440a0c3a7efc9edfa8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hiddenTiles: []
 --- !u!224 &508696019 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1942898279803358728, guid: 7bf914edf2b435d46aeb03a3b70a1b71,
@@ -861,20 +846,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &593470538 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1942898279916177919, guid: 7bf914edf2b435d46aeb03a3b70a1b71,
-    type: 3}
-  m_PrefabInstance: {fileID: 131886822}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e762e174a98aa146b62f21eec1b49f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &670078439
 GameObject:
   m_ObjectHideFlags: 0
@@ -917,7 +890,6 @@ GameObject:
   - component: {fileID: 828194296}
   - component: {fileID: 828194295}
   - component: {fileID: 828194294}
-  - component: {fileID: 828194298}
   m_Layer: 0
   m_Name: East
   m_TagString: WorldTile
@@ -995,21 +967,8 @@ Transform:
   m_LocalScale: {x: 51, y: 1, z: 50}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &828194298
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 828194293}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 093ae12bd866ea440a0c3a7efc9edfa8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hiddenTiles: []
 --- !u!1 &1145143309
 GameObject:
   m_ObjectHideFlags: 0
@@ -1022,7 +981,6 @@ GameObject:
   - component: {fileID: 1145143312}
   - component: {fileID: 1145143311}
   - component: {fileID: 1145143310}
-  - component: {fileID: 1145143314}
   m_Layer: 0
   m_Name: Northeast
   m_TagString: WorldTile
@@ -1100,21 +1058,8 @@ Transform:
   m_LocalScale: {x: 51, y: 1, z: 50}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1145143314
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1145143309}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 093ae12bd866ea440a0c3a7efc9edfa8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hiddenTiles: []
 --- !u!1 &1287709271
 GameObject:
   m_ObjectHideFlags: 0
@@ -1206,7 +1151,6 @@ GameObject:
   - component: {fileID: 1562955933}
   - component: {fileID: 1562955932}
   - component: {fileID: 1562955931}
-  - component: {fileID: 1562955935}
   m_Layer: 0
   m_Name: Northwest
   m_TagString: WorldTile
@@ -1284,21 +1228,8 @@ Transform:
   m_LocalScale: {x: 51, y: 1, z: 50}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1562955935
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1562955930}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 093ae12bd866ea440a0c3a7efc9edfa8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hiddenTiles: []
 --- !u!1 &1571647368
 GameObject:
   m_ObjectHideFlags: 0
@@ -1457,7 +1388,6 @@ GameObject:
   - component: {fileID: 1882595212}
   - component: {fileID: 1882595211}
   - component: {fileID: 1882595210}
-  - component: {fileID: 1882595214}
   m_Layer: 0
   m_Name: South
   m_TagString: WorldTile
@@ -1535,21 +1465,8 @@ Transform:
   m_LocalScale: {x: 51, y: 1, z: 50}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1882595214
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1882595209}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 093ae12bd866ea440a0c3a7efc9edfa8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hiddenTiles: []
 --- !u!1 &2041244992
 GameObject:
   m_ObjectHideFlags: 0
@@ -1562,7 +1479,6 @@ GameObject:
   - component: {fileID: 2041244995}
   - component: {fileID: 2041244994}
   - component: {fileID: 2041244993}
-  - component: {fileID: 2041244997}
   m_Layer: 0
   m_Name: Southeast
   m_TagString: WorldTile
@@ -1640,21 +1556,8 @@ Transform:
   m_LocalScale: {x: 51, y: 1, z: 50}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2041244997
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2041244992}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 093ae12bd866ea440a0c3a7efc9edfa8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hiddenTiles: []
 --- !u!1 &2058187633
 GameObject:
   m_ObjectHideFlags: 0
@@ -1666,7 +1569,7 @@ GameObject:
   - component: {fileID: 2058187634}
   - component: {fileID: 2058187638}
   - component: {fileID: 2058187637}
-  - component: {fileID: 2058187636}
+  - component: {fileID: 2058187635}
   m_Layer: 5
   m_Name: Buy Tiles
   m_TagString: Untagged
@@ -1689,12 +1592,12 @@ RectTransform:
   m_Father: {fileID: 508696019}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 563.5, y: -606}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -92, y: 26}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2058187636
+--- !u!114 &2058187635
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1737,43 +1640,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 593470538}
-        m_MethodName: PassObject
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 8551157436125872195, guid: 74a341b9cc246fd4ba415b64fadcef25,
-            type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 593470538}
-        m_MethodName: 
+      - m_Target: {fileID: 168695268}
+        m_MethodName: showTiles
         m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 452523494}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1610085110}
-        m_MethodName: SetInspecting
-        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1833,7 +1702,6 @@ GameObject:
   - component: {fileID: 2098768575}
   - component: {fileID: 2098768574}
   - component: {fileID: 2098768573}
-  - component: {fileID: 2098768577}
   m_Layer: 0
   m_Name: West
   m_TagString: WorldTile
@@ -1911,21 +1779,8 @@ Transform:
   m_LocalScale: {x: 51, y: 1, z: 50}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2098768577
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2098768572}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 093ae12bd866ea440a0c3a7efc9edfa8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hiddenTiles: []
 --- !u!1 &2101355102
 GameObject:
   m_ObjectHideFlags: 0
@@ -1954,7 +1809,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2139447887 stripped
 MonoBehaviour:
@@ -1962,7 +1817,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 6496008809387890274}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 168695263}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5b365ed45e0c01545b3ebafd865b6982, type: 3}
@@ -2091,7 +1946,7 @@ PrefabInstance:
     - target: {fileID: 6496008809211425836, guid: 4bcd5e552f951c946937068fa7db895b,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 6496008809211425836, guid: 4bcd5e552f951c946937068fa7db895b,
         type: 3}
