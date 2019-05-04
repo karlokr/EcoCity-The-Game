@@ -1,5 +1,56 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &562529141
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 562529142}
+  - component: {fileID: 562529143}
+  m_Layer: 0
+  m_Name: ModelPicker
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &562529142
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 562529141}
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7980228404448646081}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &562529143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 562529141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3ed9af77db88de4fa1a4ade7949d32c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  models:
+  - {fileID: 100000, guid: da3aa27e16a60194ea66f90d187a3660, type: 3}
+  - {fileID: 100000, guid: 87fa912de9bd9a143a8a26511cd93987, type: 3}
+  - {fileID: 100000, guid: 2d411e3705baf384f95cd9fdb8f7c680, type: 3}
+  - {fileID: 100000, guid: d9052d0a1977d744fb0bd304bded4446, type: 3}
+  - {fileID: 100000, guid: a57f2a3f27562464e869aefe6954871b, type: 3}
+  - {fileID: 100000, guid: 303d9b02a3b7b874eb028800a52153a8, type: 3}
+  - {fileID: 100000, guid: fc152a1d9fdf7c149ad52afea80feabe, type: 3}
 --- !u!1 &2395630350038470453
 GameObject:
   m_ObjectHideFlags: 0
@@ -5134,12 +5185,13 @@ Transform:
   m_GameObject: {fileID: 7980228404448646092}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8450445340532085722}
   - {fileID: 5074340985787348604}
   - {fileID: 5952014569978889225}
   - {fileID: 1764808552648868928}
+  - {fileID: 562529142}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5158,7 +5210,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7980228404448646092}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -5226,6 +5278,8 @@ MonoBehaviour:
   populationRequired: 50
   emission: 50
   resourceKeeper: {fileID: 0}
+  populationIncrease: 0
+  woodIncomeIncrease: 0
   incomeIncrease: 10
 --- !u!95 &225357389486546714
 Animator:
