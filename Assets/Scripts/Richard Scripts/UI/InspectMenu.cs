@@ -14,10 +14,21 @@ public class InspectMenu : MonoBehaviour
     public Text stat2;
     public Text stat3;
 
+    public Image varImg;
+
+    private Sprite gold;
+    private Sprite wood;
+    private Sprite pop;
+
     private Animator animator;
     private void Awake()
     {
         animator = GetComponent<Animator>();
+        gold = (Sprite)UnityEditor.AssetDatabase.LoadAssetAtPath("Assets/Art/2D/UI/Resource Vector Graphics/UI_Graphic_Resource_Coins.png", typeof(Sprite));
+        wood = (Sprite)UnityEditor.AssetDatabase.LoadAssetAtPath("Assets/Art/2D/UI/Resource Vector Graphics/UI_Graphic_Resource_Wood.png", typeof(Sprite));
+        pop = (Sprite)UnityEditor.AssetDatabase.LoadAssetAtPath("Assets/Art/2D/UI/Resource Vector Graphics/UI_Graphic_Resource_Food.png", typeof(Sprite));
+
+
     }
 
     // Start is called before the first frame update
@@ -90,15 +101,18 @@ public class InspectMenu : MonoBehaviour
         if (b.woodIncomeIncrease != 0)
         {
             SetStat2("+" + b.woodIncomeIncrease.ToString() + " WOOD INCOME");
-            
+            varImg.GetComponent<Image>().sprite = wood;
+
         }
         if (b.incomeIncrease != 0)
         {
             SetStat2("+" + b.incomeIncrease.ToString() + " INCOME");
+            varImg.GetComponent<Image>().sprite = gold;
         }
         if (b.populationIncrease != 0)
         {
             SetStat2("+" + b.populationIncrease.ToString() + " POPULATION");
+            varImg.GetComponent<Image>().sprite = pop;
         }
         SetStat3("");
     }
