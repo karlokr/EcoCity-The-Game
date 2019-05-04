@@ -70,6 +70,7 @@ public class Plot : MonoBehaviour
     /// </summary>
     public void ActivateDebugColor()
     {
+        
         foreach (Renderer r in rends)
         {
             r.material = debugMaterial;

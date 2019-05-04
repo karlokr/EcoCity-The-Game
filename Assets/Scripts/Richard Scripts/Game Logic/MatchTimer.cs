@@ -84,4 +84,9 @@ public class MatchTimer : MonoBehaviour
     {
         matchStarted = true;
     }
+
+    public void StopTime()
+    {
+        matchStarted = false;
+    }
 }

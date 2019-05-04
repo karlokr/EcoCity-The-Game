@@ -5,22 +5,28 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/Karlo Scenes/LandingPage.unity
+    path: Assets/Scenes/Karlo Scenes/Menus/LandingPage.unity
     guid: aa59d063b198d754fb6b9ad01fcc09af
   - enabled: 1
-    path: Assets/Scenes/Karlo Scenes/LogIn.unity
+    path: Assets/Scenes/Karlo Scenes/Menus/LogIn.unity
     guid: ec8ca0ab8b72355408a51d294fab8946
   - enabled: 1
-    path: Assets/Scenes/Karlo Scenes/GameMenu.unity
+    path: Assets/Scenes/Karlo Scenes/Menus/GameMenu.unity
     guid: a7ad5eb1f3345bf4dbd6195efc5cccd4
+  - enabled: 1
+    path: Assets/Scenes/Karlo Scenes/Menus/LoadingScreen.unity
+    guid: 8f9fe2b9be021c446a47f10a6254a728
   - enabled: 1
     path: Assets/Scenes/Kristian Scenes/Level_One.unity
     guid: ecfbb5ff3a7333d43919f398c4045cbf
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/Kristian Scenes/win_screen.unity
+    guid: 207f2cb768f8ee04084f15b43b431a98
+  - enabled: 1
+    path: Assets/Scenes/Kristian Scenes/lose_screen.unity
+    guid: c2fe06f3e0f715844856636eda4eac87
   m_configObjects: {}

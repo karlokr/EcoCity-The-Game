@@ -5226,6 +5226,8 @@ MonoBehaviour:
   populationRequired: 10
   emission: 15
   resourceKeeper: {fileID: 0}
+  populationIncrease: 0
+  woodIncomeIncrease: 0
   incomeIncrease: 5
 --- !u!95 &-9049937507703492709
 Animator:
