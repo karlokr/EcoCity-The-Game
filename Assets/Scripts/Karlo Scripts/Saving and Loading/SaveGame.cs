@@ -11,7 +11,8 @@ public class SaveGame : MonoBehaviour {
         WWWForm form = new WWWForm();
         form.AddField("name", DBManager.username);
         form.AddField("id", DBManager.id);
-        Debug.Log(DBManager.id);
+        form.AddField("ecoscore", SaveManager.ecoscore);
+        form.AddField("savedata", SaveManager.savedata);
 
         using (UnityWebRequest webRequest = UnityWebRequest.Post(url, form)) {
             yield return webRequest.SendWebRequest();

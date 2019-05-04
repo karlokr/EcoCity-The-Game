@@ -9,8 +9,9 @@ public class UpdateSave : MonoBehaviour
         WWWForm form = new WWWForm();
         form.AddField("name", DBManager.username);
         form.AddField("id", DBManager.id);
-        form.AddField("save_num", 2);
-        Debug.Log(DBManager.id);
+        form.AddField("save_num", SaveManager.save_num);
+        form.AddField("ecoscore", SaveManager.ecoscore);
+        form.AddField("savedata", SaveManager.savedata);
 
         using (UnityWebRequest webRequest = UnityWebRequest.Post(url, form)) {
             yield return webRequest.SendWebRequest();
