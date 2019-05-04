@@ -76,8 +76,8 @@ public class CameraClicker : MonoBehaviour
                     {
                         case "Building":
                             ClearSelections();
-                            selectedBuilding = other.GetComponent<Building>();
-                            selectedBuilding.ActivateDebugColor();
+                            selectedBuilding = other.GetComponentInParent<Building>();
+                            //selectedBuilding.ActivateDebugColor();
                             upgradeMenuObj.SetActive(true);
                             upgradeMenu.PopulateList(selectedBuilding.upgrades);
                             upgradeMenu.SetSelectedBuilding(selectedBuilding);
