@@ -11,6 +11,7 @@ public class CameraClicker : MonoBehaviour
     private ResourceKeeper resourceKeeper;
     private Building selectedBuilding;
     private Plot selectedPlot;
+    private Forest selectedForest;
     private GameObject[] buildMenuObj;
     private GameObject upgradeMenuObj;
     private BuildMenu buildMenu;
@@ -101,6 +102,11 @@ public class CameraClicker : MonoBehaviour
                             }
                             //buildMenu.SetButtonVisibilitySize(selectedPlot.size);
                             break;
+                        case "Forest":
+                            ClearSelections();
+                            selectedForest = other.GetComponent<Forest>();
+                            selectedForest.BuyForest();
+                            break;
                         default:
                             ClearSelections();
                             break;
@@ -167,6 +173,7 @@ public class CameraClicker : MonoBehaviour
         upgradeMenuObj.SetActive(false);
         Building.ClearDebugColor();
         Plot.ClearDebugColor();
+        Forest.ClearDebugColor();
         inspectMenu.SetInspecting(false);
     }
 
