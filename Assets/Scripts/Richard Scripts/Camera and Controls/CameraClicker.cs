@@ -112,6 +112,9 @@ public class CameraClicker : MonoBehaviour
                                 selectedForest.TurnIntoPlot();
                             }
                             break;
+                        case "WorldTile":
+                            Destroy(hit.transform.gameObject);
+                            break;
                         default:
                             ClearSelections();
                             break;
