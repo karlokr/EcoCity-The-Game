@@ -54,6 +54,8 @@ public class CameraClicker : MonoBehaviour
 
         buyMenuObj = GameObject.FindGameObjectWithTag("BuyTileMenu");
         buyMenuObj.SetActive(false);
+        buyTileMenu.buildButtons[0].SetActive(false);
+        buyTileMenu.buildButtons[1].SetActive(false);
 
 
     }
@@ -116,6 +118,7 @@ public class CameraClicker : MonoBehaviour
                             selectedForest = other.GetComponent<Forest>();
                             buyTileMenu.SetSelectedTile(selectedForest);
                             buyMenuObj.SetActive(true);
+                            buyTileMenu.buildButtons[0].SetActive(true);
                             break;
                         case "WorldTile":
                             //Destroy(hit.transform.gameObject);
@@ -188,6 +191,7 @@ public class CameraClicker : MonoBehaviour
         Plot.ClearDebugColor();
         Forest.ClearDebugColor();
         inspectMenu.SetInspecting(false);
+        buyMenuObj.SetActive(false);
     }
 
     
