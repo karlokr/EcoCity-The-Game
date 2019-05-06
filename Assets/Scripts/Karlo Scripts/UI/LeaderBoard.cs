@@ -8,10 +8,7 @@ using UnityEngine.Networking;
 
 public class LeaderBoard : MonoBehaviour {
 
-    void Awake()
-    {
-         
-    }
+    
 
     public void LeaderBoardButton()
     {
@@ -38,10 +35,9 @@ public class LeaderBoard : MonoBehaviour {
             }
             if (webRequest.downloadHandler.text[0] == '0')
             {
-                //DBManager.username = Username;
-                //DBManager.id = int.Parse(webRequest.downloadHandler.text.Split('\t')[1]);
                 Debug.Log(webRequest.downloadHandler.text.Split('\t')[1]);
-                //UnityEngine.SceneManagement.SceneManager.LoadScene(2);
+                LeaderManager.LeaderData = webRequest.downloadHandler.text.Split('\t')[1];
+                LeaderAssembly.GenerateLeaderBoard();
             }
             else
             {
