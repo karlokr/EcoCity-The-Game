@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class CameraClicker : MonoBehaviour
 {
@@ -14,9 +15,11 @@ public class CameraClicker : MonoBehaviour
     private Forest selectedForest;
     private GameObject[] buildMenuObj;
     private GameObject upgradeMenuObj;
+    private GameObject buyMenuObj;
     private BuildMenu buildMenu;
     private UpgradeMenu upgradeMenu;
     private InspectMenu inspectMenu;
+    private BuyTileMenu buyTileMenu;
     private bool dragging;
     private Vector3 startDragPosition;
     
@@ -30,6 +33,7 @@ public class CameraClicker : MonoBehaviour
         cameraHolder = GameObject.FindGameObjectWithTag("CameraHolder").GetComponent<CameraHolder>();
         matchTimer = GameObject.FindGameObjectWithTag("MatchTimer").GetComponent<MatchTimer>();
         inspectMenu = GameObject.FindGameObjectWithTag("InspectMenu").GetComponent<InspectMenu>();
+        buyTileMenu = GameObject.FindGameObjectWithTag("BuyTileMenu").GetComponent<BuyTileMenu>();
     }
 
     // Start is called before the first frame update
@@ -47,6 +51,11 @@ public class CameraClicker : MonoBehaviour
 
        // buildMenu = buildMenuObj.GetComponentsInChildren<BuildMenu>();
         upgradeMenu = upgradeMenuObj.GetComponent<UpgradeMenu>();
+
+        buyMenuObj = GameObject.FindGameObjectWithTag("BuyTileMenu");
+        buyMenuObj.SetActive(false);
+
+
     }
 
     // Update is called once per frame
@@ -105,12 +114,8 @@ public class CameraClicker : MonoBehaviour
                         case "Forest":
                             ClearSelections();
                             selectedForest = other.GetComponent<Forest>();
-                            selectedForest.BuyForest();
-
-                            if (selectedForest.finished)
-                            {
-                                selectedForest.TurnIntoPlot();
-                            }
+                            buyTileMenu.SetSelectedTile(selectedForest);
+                            buyMenuObj.SetActive(true);
                             break;
                         case "WorldTile":
                             Destroy(hit.transform.gameObject);
