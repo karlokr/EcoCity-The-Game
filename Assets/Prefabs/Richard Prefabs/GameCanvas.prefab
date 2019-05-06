@@ -89,24 +89,24 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 248092770738052849}
+  - component: {fileID: 9051905040151069029}
   - component: {fileID: 2489086244356392416}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Buy Tile Menu
   m_TagString: BuyTileMenu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &248092770738052849
-Transform:
+  m_IsActive: 0
+--- !u!224 &9051905040151069029
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 722773055862604813}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 462, y: -277.9, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3112348536268189338}
@@ -114,6 +114,11 @@ Transform:
   m_Father: {fileID: 6997184795865007124}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -134.9, y: 78.8}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2489086244356392416
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -147,7 +152,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3112348536268189338
 RectTransform:
   m_ObjectHideFlags: 0
@@ -160,7 +165,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7865894775057729515}
-  m_Father: {fileID: 248092770738052849}
+  m_Father: {fileID: 9051905040151069029}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
@@ -384,7 +389,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 822740996555503811}
-  m_Father: {fileID: 248092770738052849}
+  m_Father: {fileID: 9051905040151069029}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
@@ -4432,7 +4437,7 @@ RectTransform:
   - {fileID: 6997184796503694898}
   - {fileID: 6997184796125505860}
   - {fileID: 6997184796238504676}
-  - {fileID: 248092770738052849}
+  - {fileID: 9051905040151069029}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

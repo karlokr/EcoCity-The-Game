@@ -118,7 +118,7 @@ public class CameraClicker : MonoBehaviour
                             buyMenuObj.SetActive(true);
                             break;
                         case "WorldTile":
-                            Destroy(hit.transform.gameObject);
+                            //Destroy(hit.transform.gameObject);
                             break;
                         default:
                             ClearSelections();
