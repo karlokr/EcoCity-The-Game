@@ -9,9 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4760237931473232516}
+  - component: {fileID: 1993153375700723329}
+  - component: {fileID: 5946823087086284674}
   m_Layer: 0
   m_Name: Forest
-  m_TagString: Untagged
+  m_TagString: Forest
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1424405004404467532}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.895898, y: -6.3716516, z: -10.32}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3075772230003094771}
@@ -42,6 +44,38 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1993153375700723329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1424405004404467532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4695816cf75078f42bc22b8041bcc6aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  size: 1
+  debugMaterial: {fileID: 0}
+  rends: []
+  progress: {fileID: 6187601375120174455}
+  prefabToBuild: {fileID: 5553049097827639339, guid: 843cbb8582d79cc41977603298a3b19e,
+    type: 3}
+  finished: 0
+--- !u!65 &5946823087086284674
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1424405004404467532}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 9.972667, y: 4.9630656, z: 9.804996}
+  m_Center: {x: -7.5698695, y: 9.426253, z: 2.3451314}
 --- !u!1 &1668440593668300792
 GameObject:
   m_ObjectHideFlags: 0
@@ -78,7 +112,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -6.7, y: 16.54}
+  m_AnchoredPosition: {x: -6.97, y: 15.32}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!23 &6772043380087106251
@@ -182,8 +216,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -220,7 +254,7 @@ MonoBehaviour:
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 4.254005, y: 1.5254822, z: 4.766945, w: 0}
   m_textInfo:
     textComponent: {fileID: 6187601375120174455}
     characterCount: 0
@@ -257,8 +291,6 @@ GameObject:
   - component: {fileID: 3075772230003094771}
   - component: {fileID: 3075772230004389075}
   - component: {fileID: 3075772230005519891}
-  - component: {fileID: 1987113127870454927}
-  - component: {fileID: 989959623853570705}
   m_Layer: 0
   m_Name: Forest
   m_TagString: Forest
@@ -327,35 +359,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &1987113127870454927
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3075772230003583187}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4695816cf75078f42bc22b8041bcc6aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  size: 1
-  debugMaterial: {fileID: 2100000, guid: 28c7458476f6fba4891016eb9253541f, type: 2}
-  rends: []
-  progress: {fileID: 6187601375120174455}
---- !u!65 &989959623853570705
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3075772230003583187}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 9.910597, y: 5.442148, z: 9.894012}
-  m_Center: {x: -0.044701576, y: 2.751605, z: 0.12108612}
 --- !u!1 &3128155192401465691
 GameObject:
   m_ObjectHideFlags: 0
@@ -663,18 +666,6 @@ PrefabInstance:
       value: tree_medium_mesh (2)
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 471d45b220915504f893693209abc57d, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -8.738212
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 471d45b220915504f893693209abc57d, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 7.0416517
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 471d45b220915504f893693209abc57d, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -1.6144361
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 471d45b220915504f893693209abc57d, type: 3}
       propertyPath: m_LocalRotation.x
       value: -0
       objectReference: {fileID: 0}
@@ -705,6 +696,18 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 471d45b220915504f893693209abc57d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 471d45b220915504f893693209abc57d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 7.0416517
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 471d45b220915504f893693209abc57d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.6144361
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 471d45b220915504f893693209abc57d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -8.738212
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 471d45b220915504f893693209abc57d, type: 3}

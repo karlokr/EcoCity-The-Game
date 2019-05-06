@@ -106,6 +106,11 @@ public class CameraClicker : MonoBehaviour
                             ClearSelections();
                             selectedForest = other.GetComponent<Forest>();
                             selectedForest.BuyForest();
+
+                            if (selectedForest.finished)
+                            {
+                                selectedForest.TurnIntoPlot();
+                            }
                             break;
                         default:
                             ClearSelections();

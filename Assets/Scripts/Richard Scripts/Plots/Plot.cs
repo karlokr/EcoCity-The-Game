@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Plot : MonoBehaviour
 {
@@ -10,7 +8,7 @@ public class Plot : MonoBehaviour
     public Material debugMaterial;
     public static Material defaultMaterial;
     public Renderer[] rends;
-   
+
     private ResourceKeeper resourceKeeper;
 
     private void Awake()
@@ -23,14 +21,14 @@ public class Plot : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       
+
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void CreateBuilding(GameObject prefabToBuild)
@@ -70,18 +68,18 @@ public class Plot : MonoBehaviour
     /// </summary>
     public void ActivateDebugColor()
     {
-        
+
         foreach (Renderer r in rends)
         {
             r.material = debugMaterial;
         }
-        
+
         Plot[] p = GameObject.FindObjectsOfType<Plot>();
         foreach (Plot obj in p)
         {
             if (obj != this)
             {
-                foreach(Renderer r in obj.rends)
+                foreach (Renderer r in obj.rends)
                 {
                     r.material = defaultMaterial;
                 }
