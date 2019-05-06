@@ -10,15 +10,17 @@ public class Forest : Plot
     public float buildTime = 0f;
     public float bt = 10f;
 
+    private BuyTileMenu buyMenu;
     private ResourceKeeper rk;
     public static Material forestDefaultMaterial;
 
     public Plot prefabToBuild;
 
-    private bool building;
+    public bool building;
     public bool finished;
     void Awake()
     {
+        buyMenu = GameObject.FindGameObjectWithTag("BuyTileMenu").GetComponent<BuyTileMenu>();
         rk = GameObject.FindGameObjectWithTag("ResourceKeeper").GetComponent<ResourceKeeper>();
         forestDefaultMaterial = GetComponentInChildren<Renderer>().material;
     }
@@ -47,6 +49,8 @@ public class Forest : Plot
           {
             finished = true;
             building = false;
+            buyMenu.buildButtons[0].SetActive(false);
+            buyMenu.buildButtons[1].SetActive(true);
             
           }
        

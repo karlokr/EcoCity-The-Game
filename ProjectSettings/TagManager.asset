@@ -19,6 +19,7 @@ TagManager:
   - InspectMenu
   - HiddenTile
   - Forest
+  - BuyTileMenu
   layers:
   - Default
   - TransparentFX
