@@ -2,13 +2,15 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Forest : Plot
 {
-    private float buildTime = .5f;
+    public Image progressBar;
+    public float buildTime = 0f;
+    public float bt = 10f;
+
     private ResourceKeeper rk;
-    private MatchTimer mt;
-    public TextMeshPro progress;
     public static Material forestDefaultMaterial;
 
     public Plot prefabToBuild;
@@ -17,7 +19,6 @@ public class Forest : Plot
     public bool finished;
     void Awake()
     {
-        mt = GameObject.FindGameObjectWithTag("MatchTimer").GetComponent<MatchTimer>();
         rk = GameObject.FindGameObjectWithTag("ResourceKeeper").GetComponent<ResourceKeeper>();
         forestDefaultMaterial = GetComponentInChildren<Renderer>().material;
     }
@@ -40,12 +41,10 @@ public class Forest : Plot
     }
     private void BuildForest()
     {
-        buildTime -= Time.deltaTime;
-        buildTime = Mathf.Max(0, buildTime);
-        progress.text = (buildTime.ToString("F2"));
-        if (buildTime == 0.0)
+        buildTime += Time.deltaTime;
+        progressBar.GetComponent<Image>().fillAmount = buildTime / bt;
+        if (buildTime >= bt)
           {
-            progress.text = "Done";
             finished = true;
             building = false;
             
@@ -61,6 +60,7 @@ public class Forest : Plot
         newPlot.transform.Translate(Vector3.up * 7.125f);
         newPlot.transform.Translate(Vector3.left * 7.4f);
         newPlot.transform.Translate(Vector3.forward * 2.5f);
+        rk.wood += 1000;
         Destroy(gameObject);
     }
 }
