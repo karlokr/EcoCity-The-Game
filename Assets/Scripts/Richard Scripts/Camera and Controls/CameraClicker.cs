@@ -11,6 +11,7 @@ public class CameraClicker : MonoBehaviour
     private ResourceKeeper resourceKeeper;
     private Building selectedBuilding;
     private Plot selectedPlot;
+    private Forest selectedForest;
     private GameObject[] buildMenuObj;
     private GameObject upgradeMenuObj;
     private BuildMenu buildMenu;
@@ -76,8 +77,8 @@ public class CameraClicker : MonoBehaviour
                     {
                         case "Building":
                             ClearSelections();
-                            selectedBuilding = other.GetComponent<Building>();
-                            selectedBuilding.ActivateDebugColor();
+                            selectedBuilding = other.GetComponentInParent<Building>();
+                            //selectedBuilding.ActivateDebugColor();
                             upgradeMenuObj.SetActive(true);
                             upgradeMenu.PopulateList(selectedBuilding.upgrades);
                             upgradeMenu.SetSelectedBuilding(selectedBuilding);
@@ -100,6 +101,16 @@ public class CameraClicker : MonoBehaviour
                                 buildMenuObj[2].SetActive(true);
                             }
                             //buildMenu.SetButtonVisibilitySize(selectedPlot.size);
+                            break;
+                        case "Forest":
+                            ClearSelections();
+                            selectedForest = other.GetComponent<Forest>();
+                            selectedForest.BuyForest();
+
+                            if (selectedForest.finished)
+                            {
+                                selectedForest.TurnIntoPlot();
+                            }
                             break;
                         default:
                             ClearSelections();
@@ -167,6 +178,7 @@ public class CameraClicker : MonoBehaviour
         upgradeMenuObj.SetActive(false);
         Building.ClearDebugColor();
         Plot.ClearDebugColor();
+        Forest.ClearDebugColor();
         inspectMenu.SetInspecting(false);
     }
 
