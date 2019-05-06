@@ -9,14 +9,14 @@ public class Plot : MonoBehaviour
 
     public Material debugMaterial;
     public static Material defaultMaterial;
-    public Renderer[] rends;
-   
+    public Animator animator;
+
     private ResourceKeeper resourceKeeper;
+    
 
     private void Awake()
     {
-        rends = GetComponentsInChildren<Renderer>();
-        defaultMaterial = GetComponentInChildren<Renderer>().material;
+        animator = GetComponent<Animator>();
         resourceKeeper = GameObject.FindGameObjectWithTag("ResourceKeeper").GetComponent<ResourceKeeper>();
     }
 
@@ -68,38 +68,24 @@ public class Plot : MonoBehaviour
     /// <summary>
     /// Debug function that sets the mesh color to magenta.
     /// </summary>
-    public void ActivateDebugColor()
+    public void FocusOnPlot()
     {
-        
-        foreach (Renderer r in rends)
-        {
-            r.material = debugMaterial;
-        }
-        
+        // UnfocusAllPlots();
+        Debug.Log("Focusing on plot!");
+        animator.SetBool("Focused", true);
+    }
+
+
+    public static void UnfocusAllPlots()
+    {
         Plot[] p = GameObject.FindObjectsOfType<Plot>();
         foreach (Plot obj in p)
         {
-            if (obj != this)
-            {
-                foreach(Renderer r in obj.rends)
-                {
-                    r.material = defaultMaterial;
-                }
-            }
+            obj.animator.SetBool("Focused", false);
         }
     }
 
-    public static void ClearDebugColor()
-    {
-        Plot[] p = GameObject.FindObjectsOfType<Plot>();
-        foreach (Plot obj in p)
-        {
-            foreach (Renderer r in obj.rends)
-            {
-                r.material = defaultMaterial;
-            }
-        }
-    }
+    
 
 
 }
