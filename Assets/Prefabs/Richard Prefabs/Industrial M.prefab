@@ -5274,7 +5274,7 @@ MonoBehaviour:
   buildingType: Industrial M
   cost: 500
   woodCost: 750
-  populationRequired: 100
+  populationRequired: 20
   emission: 50
   resourceKeeper: {fileID: 0}
   populationIncrease: 0

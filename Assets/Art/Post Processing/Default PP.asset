@@ -65,7 +65,7 @@ MonoBehaviour:
     value: 150
   sampleCount:
     overrideState: 1
-    value: 8
+    value: 10
 --- !u!114 &-4562139350784189855
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -1418,13 +1418,13 @@ MonoBehaviour:
     value: 14
   aperture:
     overrideState: 1
-    value: 4.5
+    value: 4.4
   focalLength:
     overrideState: 1
-    value: 99
+    value: 43
   kernelSize:
     overrideState: 1
-    value: 0
+    value: 1
 --- !u!114 &3397196334463800498
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -1486,7 +1486,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6050e2d5de785ce4d931e4dbdbf2d755, type: 3}
   m_Name: ChromaticAberration
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   enabled:
     overrideState: 1
     value: 1
@@ -1496,7 +1496,7 @@ MonoBehaviour:
     defaultState: 1
   intensity:
     overrideState: 1
-    value: 0.04
+    value: 0
   fastMode:
     overrideState: 1
     value: 1
