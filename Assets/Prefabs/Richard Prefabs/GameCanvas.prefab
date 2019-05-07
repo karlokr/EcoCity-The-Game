@@ -2426,7 +2426,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -106.9}
+  m_AnchoredPosition: {x: 0, y: -110.4}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6997184795365016947
@@ -5382,8 +5382,8 @@ MonoBehaviour:
   stat1: {fileID: 6997184796355323406}
   stat2: {fileID: 6997184795170045011}
   stat3: {fileID: 6997184794978837898}
-  stat2Image: {fileID: 1984956704715678661}
   stat1Image: {fileID: 6997184795438909648}
+  stat2Image: {fileID: 1984956704715678661}
   stat3Image: {fileID: 0}
   gold: {fileID: 0}
   wood: {fileID: 0}
