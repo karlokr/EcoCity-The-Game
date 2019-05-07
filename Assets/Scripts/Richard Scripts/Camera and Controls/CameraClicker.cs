@@ -13,6 +13,7 @@ public class CameraClicker : MonoBehaviour
     private Building selectedBuilding;
     private Plot selectedPlot;
     private Forest selectedForest;
+    private WorldTile selectedTile;
     private GameObject[] buildMenuObj;
     private GameObject upgradeMenuObj;
     private GameObject buyMenuObj;
@@ -121,7 +122,16 @@ public class CameraClicker : MonoBehaviour
                             buyTileMenu.buildButtons[0].SetActive(true);
                             break;
                         case "WorldTile":
-                            //Destroy(hit.transform.gameObject);
+                            ClearSelections();
+                            selectedTile = other.GetComponent<WorldTile>();
+                            Destroy(selectedTile.gameObject);
+                            Vector2 index = TileManager.findTile(selectedTile.gameObject);
+                            GameObject newTile = selectedTile.createNewTile();
+                            TileManager.tiles[(int)index.x, (int)index.y] = newTile;
+                            TileManager.shownTiles[(int)index.x, (int)index.y] = true;
+                            TileManager.showTiles();
+
+
                             break;
                         default:
                             ClearSelections();

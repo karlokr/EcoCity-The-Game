@@ -6,8 +6,8 @@ public class TileManager : MonoBehaviour
 {
     private const int rowNumber = 5;
     private const int colNumber = 5;
-    public GameObject[,] tiles = new GameObject[rowNumber, colNumber];
-    public bool[,] shownTiles = new bool[rowNumber, colNumber];
+    public static GameObject[,] tiles = new GameObject[rowNumber, colNumber];
+    public static bool[,] shownTiles = new bool[rowNumber, colNumber];
 
     public GameObject[] worldTiles;
     // Start is called before the first frame update
@@ -34,6 +34,16 @@ public class TileManager : MonoBehaviour
     }
     void Start()
     {
+        for (int row = 0; row < rowNumber; row++)
+        {
+            for (int col = 0; col < colNumber; col++)
+            {
+                if (tiles[row, col].activeSelf)
+                {
+                    shownTiles[row, col] = true;
+                }
+            }
+        }
         showTiles();
     }
 
@@ -46,19 +56,10 @@ public class TileManager : MonoBehaviour
     // Iterates over the 2D array of tiles, checks to see if it is active
     // if it is, adds the index to the 2D boolean array, which is then 
     // checked and true indices have the surrounding indices set to active
-    public void showTiles()
+    public static void showTiles()
     {
 
-        for(int row = 0; row < rowNumber; row++)
-        {
-            for (int col = 0; col < colNumber; col++)
-            {
-                if (tiles[row, col].activeSelf)
-                {
-                    shownTiles[row, col] = true;
-                }
-            }
-        }
+        
         for (int i = 0; i < rowNumber; i++)
         {
             for (int j = 0; j < colNumber; j++)
@@ -72,7 +73,7 @@ public class TileManager : MonoBehaviour
     }
     // Checks to see if surrounding tiles are empty, and 
     // also checks to see if its within the bounds of the array.
-    private void checkNeighbours(int row, int col)
+    public static void checkNeighbours(int row, int col)
     {
         if (col - 1 >= 0)
         {
@@ -90,5 +91,24 @@ public class TileManager : MonoBehaviour
         {
             tiles[row + 1, col].SetActive(true);
         }
+    }
+    public static Vector2 findTile(GameObject tile)
+    {
+        for (int row = 0; row < rowNumber; row++)
+        {
+            for (int col = 0; col < colNumber; col++)
+            {   
+                if (tiles[row, col].Equals(tile))
+                {
+                    Vector2 index = new Vector2(row, col);
+                    return index;
+                }
+            }
+        }
+        // This sucks, fix later
+        Vector2 badIndex = new Vector2(0, 0);
+        return badIndex;
+
+
     }
 }

@@ -24,6 +24,7 @@ TagManager:
   - Login
   - UsernameLogin
   - BuyTileMenu
+  - TileHolder
   layers:
   - Default
   - TransparentFX
