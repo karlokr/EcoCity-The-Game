@@ -22,7 +22,10 @@ public class Building : MonoBehaviour
     public int populationRequired;
     public int emission;
     private int level;
-    private ParticleSystem particleSystem;
+    public ParticleSystem landingParticleSystem;
+    public ParticleSystem popParticleSystem;
+    public ParticleSystem moneyParticleSystem;
+    public ParticleSystem woodParticleSystem;
 
     //Category Specific Increases
     public int populationIncrease;
@@ -32,7 +35,6 @@ public class Building : MonoBehaviour
     private void Awake()
     {
         animator = GetComponent<Animator>();
-        particleSystem = GetComponentInChildren<ParticleSystem>();
         rend = GetComponent<Renderer>();
         upgrades = GetComponentsInChildren<Upgrade>();
     }
@@ -50,25 +52,17 @@ public class Building : MonoBehaviour
     /// <summary>
     /// Debug function that sets the mesh color to magenta.
     /// </summary>
-    public void ActivateDebugColor()
+    public void FocusOnBuilding()
     {
-        rend.material = debugMaterial;
-        Building[] b = GameObject.FindObjectsOfType<Building>();
-        foreach (Building obj in b)
-        {
-            if (obj != this)
-            {
-                obj.rend.material = defaultMaterial;
-            }
-        } 
+        animator.SetBool("Inspecting", true);
     }
 
-    public static void ClearDebugColor()
+    public static void UnfocusAllBuildings()
     {
         Building[] b = GameObject.FindObjectsOfType<Building>();
         foreach (Building obj in b)
         {
-            obj.rend.material = defaultMaterial;
+            obj.animator.SetBool("Inspecting", false);
         }
     }
 
@@ -88,6 +82,15 @@ public class Building : MonoBehaviour
     public void ShakeOnLand()
     {
         CameraShaker.Instance.ShakeOnce(4f, 2f, 0.0f, 0.5f);
-        particleSystem.Play();
+        landingParticleSystem.Play();
+        EmitResources(populationIncrease, incomeIncrease, woodIncomeIncrease);
+    }
+
+    public void EmitResources(int pop, int credits, int wood)
+    {
+        popParticleSystem.Emit(pop);
+        woodParticleSystem.Emit(wood);
+        moneyParticleSystem.Emit(credits);
+        
     }
 }

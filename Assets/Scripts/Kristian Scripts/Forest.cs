@@ -4,7 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Forest : Plot
+public class Forest : MonoBehaviour
 {
     public Image progressBar;
     public float elapsedTime = 0f;
@@ -53,10 +53,7 @@ public class Forest : Plot
         {
             finished = true;
             building = false;
-
         }
-       
-        
     }
 
     public void TurnIntoPlot()

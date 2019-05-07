@@ -90,14 +90,14 @@ public class CameraClicker : MonoBehaviour
                         case "Building":
                             ClearSelections();
                             selectedBuilding = other.GetComponentInParent<Building>();
-                            //selectedBuilding.ActivateDebugColor();
+                            selectedBuilding.FocusOnBuilding();
                             upgradeMenuObj.SetActive(true);
                             upgradeMenu.PopulateList(selectedBuilding.upgrades);
                             upgradeMenu.SetSelectedBuilding(selectedBuilding);
                             break;
                         case "Plot":
                             ClearSelections();
-                            Building.ClearDebugColor();
+                            Building.UnfocusAllBuildings();
                             selectedPlot = other.GetComponent<Plot>();
                             selectedPlot.FocusOnPlot();
                             if (selectedPlot.size == (Plot.PlotSize) 0)
@@ -207,7 +207,7 @@ public class CameraClicker : MonoBehaviour
         }
         
         upgradeMenuObj.SetActive(false);
-        Building.ClearDebugColor();
+        Building.UnfocusAllBuildings();
         Plot.UnfocusAllPlots();
         inspectMenu.SetInspecting(false);
         buyMenuObj.SetActive(false);
