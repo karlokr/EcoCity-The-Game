@@ -9,6 +9,7 @@ public class Forest : Plot
     public Image progressBar;
     public float buildTime = 0f;
     public float bt = 10f;
+    public int woodGained;
 
     public BuyTileMenu buyMenu;
     public ResourceKeeper rk;
@@ -39,20 +40,18 @@ public class Forest : Plot
             rk.money -= 100;
             building = true;
         }
-        
+
     }
     private void BuildForest()
     {
         buildTime += Time.deltaTime;
         progressBar.GetComponent<Image>().fillAmount = buildTime / bt;
         if (buildTime >= bt)
-          {
+        {
             finished = true;
             building = false;
-            buyMenu.buildButtons[0].SetActive(false);
-            buyMenu.buildButtons[1].SetActive(true);
-            
-          }
+
+        }
        
         
     }
@@ -64,6 +63,7 @@ public class Forest : Plot
         newPlot.transform.Translate(Vector3.up * 7.125f);
         newPlot.transform.Translate(Vector3.left * 7.4f);
         newPlot.transform.Translate(Vector3.forward * 2.5f);
+        rk.wood += woodGained;
         Destroy(gameObject);
     }
 }

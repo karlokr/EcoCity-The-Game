@@ -30,7 +30,6 @@ public class BuyTileMenu : MonoBehaviour
 
     public void ConvertTile()
     {
-        Debug.Log("Clicked");
         if (forestTile.finished)
         {
             forestTile.TurnIntoPlot();

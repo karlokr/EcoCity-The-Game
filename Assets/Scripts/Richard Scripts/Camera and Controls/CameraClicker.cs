@@ -100,15 +100,15 @@ public class CameraClicker : MonoBehaviour
                             Building.ClearDebugColor();
                             selectedPlot = other.GetComponent<Plot>();
                             selectedPlot.ActivateDebugColor();
-                            if (selectedPlot.size == (Plot.PlotSize) 0)
+                            if (selectedPlot.size == (Plot.PlotSize)0)
                             {
                                 buildMenuObj[0].SetActive(true);
                             }
-                            else if (selectedPlot.size == (Plot.PlotSize) 1)
+                            else if (selectedPlot.size == (Plot.PlotSize)1)
                             {
                                 buildMenuObj[1].SetActive(true);
                             }
-                            else if (selectedPlot.size == (Plot.PlotSize) 2)
+                            else if (selectedPlot.size == (Plot.PlotSize)2)
                             {
                                 buildMenuObj[2].SetActive(true);
                             }
@@ -119,7 +119,16 @@ public class CameraClicker : MonoBehaviour
                             selectedForest = other.GetComponent<Forest>();
                             buyTileMenu.SetSelectedTile(selectedForest);
                             buyMenuObj.SetActive(true);
-                            buyTileMenu.buildButtons[0].SetActive(true);
+                            if (!selectedForest.finished)
+                            {
+                                buyTileMenu.buildButtons[0].SetActive(true);
+                                buyTileMenu.buildButtons[1].SetActive(false);
+                            }
+                            if (selectedForest.finished || selectedForest.building)
+                            {
+                                buyTileMenu.buildButtons[0].SetActive(false);
+                                buyTileMenu.buildButtons[1].SetActive(true);
+                            }
                             break;
                         case "WorldTile":
                             ClearSelections();
