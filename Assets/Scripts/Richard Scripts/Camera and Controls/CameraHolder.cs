@@ -44,12 +44,12 @@ public class CameraHolder : MonoBehaviour
 
         if (Input.GetKey(KeyCode.A))
         {
-            transform.Translate(-transform.right * speed * Time.deltaTime);
+            transform.Translate(Vector3.left * speed * Time.deltaTime);
         }
 
         if (Input.GetKey(KeyCode.D))
         {
-            transform.Translate(transform.right * speed * Time.deltaTime);
+            transform.Translate(Vector3.right * speed * Time.deltaTime);
         }
 
         if (Input.GetKey(KeyCode.S))
@@ -62,11 +62,11 @@ public class CameraHolder : MonoBehaviour
     {
         if (Input.GetAxis("Mouse ScrollWheel") > 0f) // forward
         {
-            transform.Translate(mainCamera.transform.forward * zoomSpeed);
+            mainCamera.orthographicSize = Mathf.Clamp(mainCamera.orthographicSize - zoomSpeed, 13, 60);
         }
         if (Input.GetAxis("Mouse ScrollWheel") < 0f) // backwards
         {
-            transform.Translate(-mainCamera.transform.forward * zoomSpeed);
+            mainCamera.orthographicSize = Mathf.Clamp(mainCamera.orthographicSize + zoomSpeed, 13, 60);
         }
     }
 

@@ -4949,7 +4949,7 @@ MonoBehaviour:
   buildingType: Residential
   cost: 1000
   woodCost: 1500
-  populationRequired: 100
+  populationRequired: 30
   emission: 50
   resourceKeeper: {fileID: 0}
   populationIncrease: 50

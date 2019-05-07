@@ -64,7 +64,7 @@ public class CameraClicker : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        HandleMouseDrag();
+        //HandleMouseDrag();
         HandleMobileDrag();
         HandleClicks();
     }
@@ -79,8 +79,8 @@ public class CameraClicker : MonoBehaviour
     {
         if (Input.GetMouseButtonUp(0) && matchTimer.matchStarted && !dragging)
         {
-            if (!EventSystem.current.IsPointerOverGameObject())
-            {
+            //if (!EventSystem.current.IsPointerOverGameObject())
+            //{
                 Ray screenToWorld = viewportCamera.ScreenPointToRay(Input.mousePosition);
                 if (Physics.Raycast(screenToWorld, out RaycastHit raycastHit))
                 {
@@ -99,8 +99,8 @@ public class CameraClicker : MonoBehaviour
                             ClearSelections();
                             Building.ClearDebugColor();
                             selectedPlot = other.GetComponent<Plot>();
-                            selectedPlot.ActivateDebugColor();
-                            if (selectedPlot.size == (Plot.PlotSize)0)
+                            selectedPlot.FocusOnPlot();
+                            if (selectedPlot.size == (Plot.PlotSize) 0)
                             {
                                 buildMenuObj[0].SetActive(true);
                             }
@@ -147,7 +147,7 @@ public class CameraClicker : MonoBehaviour
                             break;
                     }
                 }
-            }
+            //}
         }
     }
 
@@ -207,8 +207,7 @@ public class CameraClicker : MonoBehaviour
         
         upgradeMenuObj.SetActive(false);
         Building.ClearDebugColor();
-        Plot.ClearDebugColor();
-        Forest.ClearDebugColor();
+        Plot.UnfocusAllPlots();
         inspectMenu.SetInspecting(false);
         buyMenuObj.SetActive(false);
     }
