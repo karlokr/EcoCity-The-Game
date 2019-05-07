@@ -67,8 +67,4 @@ public class Forest : MonoBehaviour
         Destroy(gameObject);
     }
 
-    public void GetComponents()
-    {
-
-    }
 }
