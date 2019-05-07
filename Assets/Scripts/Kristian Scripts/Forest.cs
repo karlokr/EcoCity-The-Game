@@ -11,7 +11,7 @@ public class Forest : Plot
     public float buildTime = 10f;
     public int woodGained;
 
-    public BuyTileMenu buyMenu;
+    public BuyTileMenu buyTileMenu;
     public static Material forestDefaultMaterial;
 
     public Plot prefabToBuild;
@@ -21,6 +21,11 @@ public class Forest : Plot
     void Awake()
     {
 
+    }
+    private void Start()
+    {
+        buyTileMenu = GameObject.FindGameObjectWithTag("BuyTileMenu").GetComponent<BuyTileMenu>();
+        forestDefaultMaterial = GetComponentInChildren<Renderer>().material; 
     }
     void Update()
     {
@@ -67,7 +72,6 @@ public class Forest : Plot
 
     public void GetComponents()
     {
-        buyMenu = GameObject.FindGameObjectWithTag("BuyTileMenu").GetComponent<BuyTileMenu>();
-        forestDefaultMaterial = GetComponentInChildren<Renderer>().material;
+
     }
 }

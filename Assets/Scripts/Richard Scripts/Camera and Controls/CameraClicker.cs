@@ -117,6 +117,7 @@ public class CameraClicker : MonoBehaviour
                         case "Forest":
                             ClearSelections();
                             selectedForest = other.GetComponent<Forest>();
+                            //selectedForest.GetComponents();
                             buyTileMenu.SetSelectedTile(selectedForest);
                             buyMenuObj.SetActive(true);
                             if (!selectedForest.finished)
