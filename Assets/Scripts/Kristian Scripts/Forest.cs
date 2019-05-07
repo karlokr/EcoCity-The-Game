@@ -53,10 +53,7 @@ public class Forest : MonoBehaviour
         {
             finished = true;
             building = false;
-
         }
-       
-        
     }
 
     public void TurnIntoPlot()
