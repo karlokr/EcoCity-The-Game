@@ -143,12 +143,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upgradeName: LocallySourced
   cost: 500
-  emissionReduction: 5
-  incomeIncrease: 5
+  emissionReduction: 10
+  incomeIncrease: 20
   populationIncrease: 0
   woodIncomeIncrease: 0
   visualModel: {fileID: 0}
   upgradeActive: 0
+  description: THICC income increase. Small emission reduction.
 --- !u!1 &4525998977345363700
 GameObject:
   m_ObjectHideFlags: 0
@@ -241,12 +242,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upgradeName: Eco Supplier
   cost: 100
-  emissionReduction: 2
-  incomeIncrease: 2
+  emissionReduction: 5
+  incomeIncrease: 15
   populationIncrease: 0
   woodIncomeIncrease: 0
   visualModel: {fileID: 0}
   upgradeActive: 0
+  description: BIG income increase minor emission reduction
 --- !u!1 &4760125560367686704
 GameObject:
   m_ObjectHideFlags: 0
@@ -5155,6 +5157,7 @@ MonoBehaviour:
   woodIncomeIncrease: 0
   visualModel: {fileID: 0}
   upgradeActive: 0
+  description: Income increase and a small emission reduction.
 --- !u!1 &7980228404448646092
 GameObject:
   m_ObjectHideFlags: 0
@@ -5272,7 +5275,7 @@ MonoBehaviour:
   - {fileID: 3371344018673174223}
   - {fileID: 2064324695384317562}
   verticalOffset: 0
-  buildingType: Commercial M
+  buildingType: Commercial
   cost: 500
   woodCost: 500
   populationRequired: 50
