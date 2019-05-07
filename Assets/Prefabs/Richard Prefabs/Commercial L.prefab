@@ -117,7 +117,7 @@ MonoBehaviour:
   - {fileID: 6106095939136019656}
   - {fileID: 1704164026378150744}
   verticalOffset: 0
-  buildingType: Commercial L
+  buildingType: Commercial
   cost: 1000
   woodCost: 1500
   populationRequired: 30
@@ -5047,12 +5047,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upgradeName: EcoSupplier
   cost: 500
-  emissionReduction: 5
-  incomeIncrease: 5
+  emissionReduction: 25
+  incomeIncrease: 15
   populationIncrease: 0
   woodIncomeIncrease: 0
   visualModel: {fileID: 0}
   upgradeActive: 0
+  description: BIG income increase minor emission reduction
 --- !u!1 &6678423472745742067
 GameObject:
   m_ObjectHideFlags: 0
@@ -5198,6 +5199,7 @@ MonoBehaviour:
   woodIncomeIncrease: 0
   visualModel: {fileID: 0}
   upgradeActive: 0
+  description: Income increase and a small emission reduction.
 --- !u!1 &8253314066960209692
 GameObject:
   m_ObjectHideFlags: 0
@@ -5291,8 +5293,9 @@ MonoBehaviour:
   upgradeName: LocallySourced
   cost: 10000
   emissionReduction: 10
-  incomeIncrease: 10
+  incomeIncrease: 25
   populationIncrease: 0
   woodIncomeIncrease: 0
   visualModel: {fileID: 0}
   upgradeActive: 0
+  description: THICC income increase. Small emission reduction.

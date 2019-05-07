@@ -4958,6 +4958,7 @@ MonoBehaviour:
   woodIncomeIncrease: 0
   visualModel: {fileID: 0}
   upgradeActive: 0
+  description: THICC income increase. Small emission reduction.
 --- !u!1 &4303497041275381299
 GameObject:
   m_ObjectHideFlags: 0
@@ -5056,6 +5057,7 @@ MonoBehaviour:
   woodIncomeIncrease: 0
   visualModel: {fileID: 0}
   upgradeActive: 0
+  description: BIG income increase minor emission reduction
 --- !u!1 &5660184593139301442
 GameObject:
   m_ObjectHideFlags: 0
@@ -5154,6 +5156,7 @@ MonoBehaviour:
   woodIncomeIncrease: 0
   visualModel: {fileID: 0}
   upgradeActive: 0
+  description: Income increase and a small emission reduction.
 --- !u!1 &8551157436125872195
 GameObject:
   m_ObjectHideFlags: 0

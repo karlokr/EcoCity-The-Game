@@ -4955,6 +4955,7 @@ MonoBehaviour:
   woodIncomeIncrease: 5
   visualModel: {fileID: 0}
   upgradeActive: 0
+  description: get the power of ECO
 --- !u!1 &4303497041275381299
 GameObject:
   m_ObjectHideFlags: 0
@@ -5053,6 +5054,7 @@ MonoBehaviour:
   woodIncomeIncrease: 1
   visualModel: {fileID: 0}
   upgradeActive: 0
+  description: Reduce emissions and increase wood income.
 --- !u!1 &5660184593139301442
 GameObject:
   m_ObjectHideFlags: 0
@@ -5151,6 +5153,7 @@ MonoBehaviour:
   woodIncomeIncrease: 2
   visualModel: {fileID: 0}
   upgradeActive: 0
+  description: Reduce emissions and increase wood income.
 --- !u!1 &8551157436125872195
 GameObject:
   m_ObjectHideFlags: 0
@@ -5268,7 +5271,7 @@ MonoBehaviour:
   - {fileID: 5224022948985823060}
   - {fileID: 2178677516925368736}
   verticalOffset: 0
-  buildingType: Industrial S
+  buildingType: Industrial
   cost: 25
   woodCost: 10
   populationRequired: 1

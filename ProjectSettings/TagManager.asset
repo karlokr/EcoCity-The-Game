@@ -19,6 +19,12 @@ TagManager:
   - InspectMenu
   - HiddenTile
   - Forest
+  - LeaderUser
+  - LeaderScore
+  - Login
+  - UsernameLogin
+  - BuyTileMenu
+  - TileHolder
   layers:
   - Default
   - TransparentFX
