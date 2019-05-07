@@ -54,6 +54,8 @@ public class Plot : MonoBehaviour
         {
 
             GameObject newBuilding = Instantiate(prefabToBuild, transform.position, transform.rotation);
+            int randRotFactor = Random.Range(0, 3);
+            newBuilding.transform.Rotate(Vector3.up * (90f * randRotFactor));
             newBuilding.transform.SetParent(GameObject.FindGameObjectWithTag("WorldTile").transform);
             newBuilding.transform.Translate(Vector3.up * 35f);
             resourceKeeper.money -= building.cost;
@@ -71,7 +73,6 @@ public class Plot : MonoBehaviour
     public void FocusOnPlot()
     {
         // UnfocusAllPlots();
-        Debug.Log("Focusing on plot!");
         animator.SetBool("Focused", true);
     }
 

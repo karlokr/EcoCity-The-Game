@@ -5304,10 +5304,10 @@ MonoBehaviour:
   verticalOffset: 0
   buildingType: Residential S
   cost: 50
-  woodCost: 50
+  woodCost: 5
   populationRequired: 0
-  emission: 10
+  emission: 15
   resourceKeeper: {fileID: 0}
   populationIncrease: 10
   woodIncomeIncrease: 0
-  incomeIncrease: 0
+  incomeIncrease: 15

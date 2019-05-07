@@ -5272,14 +5272,14 @@ MonoBehaviour:
   - {fileID: 2178677516925368736}
   verticalOffset: 0
   buildingType: Commercial S
-  cost: 75
-  woodCost: 20
-  populationRequired: 10
+  cost: 40
+  woodCost: 15
+  populationRequired: 5
   emission: 15
   resourceKeeper: {fileID: 0}
   populationIncrease: 0
   woodIncomeIncrease: 0
-  incomeIncrease: 5
+  incomeIncrease: 20
 --- !u!95 &-9049937507703492709
 Animator:
   serializedVersion: 3

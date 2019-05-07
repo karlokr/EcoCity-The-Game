@@ -87,7 +87,6 @@ public class CameraClicker : MonoBehaviour
                             Building.ClearDebugColor();
                             selectedPlot = other.GetComponent<Plot>();
                             selectedPlot.FocusOnPlot();
-                            Debug.Log("DSADSADSA");
                             if (selectedPlot.size == (Plot.PlotSize) 0)
                             {
                                 buildMenuObj[0].SetActive(true);
