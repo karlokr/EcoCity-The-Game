@@ -1660,19 +1660,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   worldTiles: []
---- !u!114 &859406676
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 859406668}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5433e2007b8c0e94d88e8f2fe64c290b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefabToBuild: {fileID: 0}
 --- !u!1 &966287889
 GameObject:
   m_ObjectHideFlags: 0
@@ -1897,12 +1884,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelOneLayout
       objectReference: {fileID: 0}
-    - target: {fileID: 4306223267081757537, guid: c4d55a2df94bb2b4a9b3267d343ab774,
-        type: 3}
-      propertyPath: prefabToBuild
-      value: 
-      objectReference: {fileID: 3349237013509034084, guid: c4d55a2df94bb2b4a9b3267d343ab774,
-        type: 3}
     - target: {fileID: 3349237013509034080, guid: c4d55a2df94bb2b4a9b3267d343ab774,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1968,6 +1949,12 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4306223267081757537, guid: c4d55a2df94bb2b4a9b3267d343ab774,
+        type: 3}
+      propertyPath: prefabToBuild
+      value: 
+      objectReference: {fileID: 3349237013509034084, guid: c4d55a2df94bb2b4a9b3267d343ab774,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4d55a2df94bb2b4a9b3267d343ab774, type: 3}
 --- !u!1 &1222062668
