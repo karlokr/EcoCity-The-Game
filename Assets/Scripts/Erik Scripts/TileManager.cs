@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class TileManager : MonoBehaviour
 {
-    private const int rowNumber = 3;
-    private const int colNumber = 3;
+    private const int rowNumber = 5;
+    private const int colNumber = 5;
     public GameObject[,] tiles = new GameObject[rowNumber, colNumber];
     public bool[,] shownTiles = new bool[rowNumber, colNumber];
 
     public GameObject[] worldTiles;
     // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
         worldTiles = GameObject.FindGameObjectsWithTag("WorldTile");
         int count = 0;
@@ -24,12 +24,17 @@ public class TileManager : MonoBehaviour
             }
         }
         foreach (GameObject tile in tiles)
-        {   if (!tile.name.Equals("LevelOneLayout"))
+        {
+            if (!tile.name.Equals("LevelOneLayout"))
             {
                 tile.SetActive(false);
             }
         }
 
+    }
+    void Start()
+    {
+        showTiles();
     }
 
     // Update is called once per frame
@@ -38,6 +43,9 @@ public class TileManager : MonoBehaviour
         
     }
 
+    // Iterates over the 2D array of tiles, checks to see if it is active
+    // if it is, adds the index to the 2D boolean array, which is then 
+    // checked and true indices have the surrounding indices set to active
     public void showTiles()
     {
 
@@ -51,25 +59,19 @@ public class TileManager : MonoBehaviour
                 }
             }
         }
-        foreach (bool shownTile in shownTiles)
+        for (int i = 0; i < rowNumber; i++)
         {
-            Debug.Log(shownTile);
+            for (int j = 0; j < colNumber; j++)
+            {
+                if (shownTiles[i, j])
+                {
+                    checkNeighbours(i, j);
+                }
+            }
         }
-        Debug.Log(shownTiles);
-        checkNeighbours(1, 1);
-        //for(int i = 0; i < rowNumber; i++)
-        //{
-        //    for(int j = 0; j < colNumber; j++)
-        //    {
-        //        if(shownTiles[i,j])
-        //        {
-        //            checkNeighbours(i, j);
-        //            Debug.Log(i);
-        //            Debug.Log(j);
-        //        }
-        //    }
-        //}
     }
+    // Checks to see if surrounding tiles are empty, and 
+    // also checks to see if its within the bounds of the array.
     private void checkNeighbours(int row, int col)
     {
         if (col - 1 >= 0)

@@ -23,6 +23,7 @@ TagManager:
   - LeaderScore
   - Login
   - UsernameLogin
+  - BuyTileMenu
   layers:
   - Default
   - TransparentFX
