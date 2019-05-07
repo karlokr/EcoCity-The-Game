@@ -7,10 +7,15 @@ public class UpgradeMenu : MonoBehaviour
 {
     public Button[] upgradeOptions;
     private Building selectedBuilding;
+    public InspectMenu inspectMenu;
+
     // Start is called before the first frame update
     void Start()
     {
         
+    }
+    private void Awake()
+    {
     }
 
     // Update is called once per frame
@@ -43,5 +48,10 @@ public class UpgradeMenu : MonoBehaviour
     public void PassUpgrade(int index)
     {
         selectedBuilding.ActivateUpgrade(index);
+    }
+
+    public void UpdateInspectMenu(int i)
+    {
+        inspectMenu.SetMoneyCost(selectedBuilding.upgrades[i].cost.ToString());
     }
 }
