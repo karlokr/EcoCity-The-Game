@@ -6,8 +6,8 @@ public class TileManager : MonoBehaviour
 {
     private const int rowNumber = 5;
     private const int colNumber = 5;
-    public GameObject[,] tiles = new GameObject[rowNumber, colNumber];
-    public bool[,] shownTiles = new bool[rowNumber, colNumber];
+    public static GameObject[,] tiles = new GameObject[rowNumber, colNumber];
+    public static bool[,] shownTiles = new bool[rowNumber, colNumber];
 
     public GameObject[] worldTiles;
     // Start is called before the first frame update
@@ -90,5 +90,24 @@ public class TileManager : MonoBehaviour
         {
             tiles[row + 1, col].SetActive(true);
         }
+    }
+    public static Vector2 findTile(GameObject tile)
+    {
+        for (int row = 0; row < rowNumber; row++)
+        {
+            for (int col = 0; col < colNumber; col++)
+            {   
+                if (tiles[row, col].Equals(tile))
+                {
+                    Vector2 index = new Vector2(row, col);
+                    return index;
+                }
+            }
+        }
+        // This sucks, fix later
+        Vector2 badIndex = new Vector2(0, 0);
+        return badIndex;
+
+
     }
 }

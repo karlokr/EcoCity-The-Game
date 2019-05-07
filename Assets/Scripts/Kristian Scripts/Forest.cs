@@ -10,8 +10,8 @@ public class Forest : Plot
     public float buildTime = 0f;
     public float bt = 10f;
 
-    private BuyTileMenu buyMenu;
-    private ResourceKeeper rk;
+    public BuyTileMenu buyMenu;
+    public ResourceKeeper rk;
     public static Material forestDefaultMaterial;
 
     public Plot prefabToBuild;
@@ -64,7 +64,6 @@ public class Forest : Plot
         newPlot.transform.Translate(Vector3.up * 7.125f);
         newPlot.transform.Translate(Vector3.left * 7.4f);
         newPlot.transform.Translate(Vector3.forward * 2.5f);
-        rk.wood += 1000;
         Destroy(gameObject);
     }
 }
