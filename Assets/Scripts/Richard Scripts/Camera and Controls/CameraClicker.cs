@@ -123,8 +123,11 @@ public class CameraClicker : MonoBehaviour
                             selectedTile = other.GetComponent<WorldTile>();
                             Destroy(selectedTile.gameObject);
                             Vector2 index = TileManager.findTile(selectedTile.gameObject);
-                            selectedTile.createNewTile();
-                            
+                            GameObject newTile = selectedTile.createNewTile();
+                            TileManager.tiles[(int)index.x, (int)index.y] = newTile;
+                            TileManager.shownTiles[(int)index.x, (int)index.y] = true;
+                            TileManager.showTiles();
+
 
                             break;
                         default:

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WorldTile : MonoBehaviour
 {
-    public WorldTile prefabToBuild;
+    public GameObject prefabToBuild;
     private bool status;
     // Start is called before the first frame update
     void Start()
@@ -17,14 +17,12 @@ public class WorldTile : MonoBehaviour
     {
         
     }
-    public void createNewTile()
+    public GameObject createNewTile()
     {   
 
 
-        WorldTile newTile = Instantiate(prefabToBuild, transform.position, transform.rotation);
+        GameObject newTile = Instantiate(prefabToBuild, transform.position, transform.rotation);
         newTile.transform.SetParent(GameObject.FindGameObjectWithTag("TileHolder").transform);
-        newTile.transform.Translate(Vector3.up * 7.125f);
-        newTile.transform.Translate(Vector3.left * 7.4f);
-        newTile.transform.Translate(Vector3.forward * 2.5f);
+        return newTile;
     }
 }

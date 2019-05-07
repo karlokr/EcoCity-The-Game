@@ -34,6 +34,16 @@ public class TileManager : MonoBehaviour
     }
     void Start()
     {
+        for (int row = 0; row < rowNumber; row++)
+        {
+            for (int col = 0; col < colNumber; col++)
+            {
+                if (tiles[row, col].activeSelf)
+                {
+                    shownTiles[row, col] = true;
+                }
+            }
+        }
         showTiles();
     }
 
@@ -46,19 +56,10 @@ public class TileManager : MonoBehaviour
     // Iterates over the 2D array of tiles, checks to see if it is active
     // if it is, adds the index to the 2D boolean array, which is then 
     // checked and true indices have the surrounding indices set to active
-    public void showTiles()
+    public static void showTiles()
     {
 
-        for(int row = 0; row < rowNumber; row++)
-        {
-            for (int col = 0; col < colNumber; col++)
-            {
-                if (tiles[row, col].activeSelf)
-                {
-                    shownTiles[row, col] = true;
-                }
-            }
-        }
+        
         for (int i = 0; i < rowNumber; i++)
         {
             for (int j = 0; j < colNumber; j++)
@@ -72,7 +73,7 @@ public class TileManager : MonoBehaviour
     }
     // Checks to see if surrounding tiles are empty, and 
     // also checks to see if its within the bounds of the array.
-    private void checkNeighbours(int row, int col)
+    public static void checkNeighbours(int row, int col)
     {
         if (col - 1 >= 0)
         {
