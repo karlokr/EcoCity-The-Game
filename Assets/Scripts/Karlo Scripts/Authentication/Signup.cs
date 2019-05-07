@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using System;
 using System.Text.RegularExpressions;
 using UnityEngine.Networking;
+using TMPro;
 
 public class Signup : MonoBehaviour {
     public GameObject username;
@@ -20,9 +21,9 @@ public class Signup : MonoBehaviour {
         Tab();
         Enter();
         AssignInputs();
-        isFocused = username.GetComponent<InputField>().isFocused
-                    || password.GetComponent<InputField>().isFocused
-                    || confirmPassword.GetComponent<InputField>().isFocused;
+        isFocused = username.GetComponentInChildren<TMP_InputField>().isFocused
+                    || password.GetComponentInChildren<TMP_InputField>().isFocused
+                    || confirmPassword.GetComponentInChildren<TMP_InputField>().isFocused;
     }
 
     public void RegisterButton() {
@@ -54,9 +55,9 @@ public class Signup : MonoBehaviour {
     }
 
     private void AssignInputs() {
-        Username = username.GetComponent<InputField>().text;
-        Password = password.GetComponent<InputField>().text;
-        ConfirmPassword = confirmPassword.GetComponent<InputField>().text;
+        Username = username.GetComponentInChildren<TMP_InputField>().text;
+        Password = password.GetComponentInChildren<TMP_InputField>().text;
+        ConfirmPassword = confirmPassword.GetComponentInChildren<TMP_InputField>().text;
     }
     
     /*************************
@@ -65,18 +66,18 @@ public class Signup : MonoBehaviour {
     private void Tab() {
         if (Input.GetKeyDown(KeyCode.Tab)) {
             if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift)) {
-                if (password.GetComponent<InputField>().isFocused) {
-                    username.GetComponent<InputField>().Select();
+                if (password.GetComponentInChildren<TMP_InputField>().isFocused) {
+                    username.GetComponentInChildren<TMP_InputField>().Select();
                 }
-                if (confirmPassword.GetComponent<InputField>().isFocused) {
-                    password.GetComponent<InputField>().Select();
+                if (confirmPassword.GetComponentInChildren<TMP_InputField>().isFocused) {
+                    password.GetComponentInChildren<TMP_InputField>().Select();
                 }
             } else {
-                if (username.GetComponent<InputField>().isFocused) {
-                    password.GetComponent<InputField>().Select();
+                if (username.GetComponentInChildren<TMP_InputField>().isFocused) {
+                    password.GetComponentInChildren<TMP_InputField>().Select();
                 }
-                if (password.GetComponent<InputField>().isFocused) {
-                    confirmPassword.GetComponent<InputField>().Select();
+                if (password.GetComponentInChildren<TMP_InputField>().isFocused) {
+                    confirmPassword.GetComponentInChildren<TMP_InputField>().Select();
                 }
             }
         }
