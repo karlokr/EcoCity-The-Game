@@ -25,7 +25,7 @@ public class Forest : Plot
     private void Start()
     {
         buyTileMenu = GameObject.FindGameObjectWithTag("BuyTileMenu").GetComponent<BuyTileMenu>();
-        forestDefaultMaterial = GetComponentInChildren<Renderer>().material;
+        forestDefaultMaterial = GetComponentInChildren<Renderer>().material; 
     }
     void Update()
     {
