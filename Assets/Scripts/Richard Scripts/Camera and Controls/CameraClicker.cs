@@ -117,7 +117,6 @@ public class CameraClicker : MonoBehaviour
                         case "Forest":
                             ClearSelections();
                             selectedForest = other.GetComponent<Forest>();
-                            //selectedForest.GetComponents();
                             buyTileMenu.SetSelectedTile(selectedForest);
                             buyMenuObj.SetActive(true);
                             if (!selectedForest.finished)
@@ -125,7 +124,7 @@ public class CameraClicker : MonoBehaviour
                                 buyTileMenu.buildButtons[0].SetActive(true);
                                 buyTileMenu.buildButtons[1].SetActive(false);
                             }
-                            if (selectedForest.finished || selectedForest.building)
+                            if (selectedForest.finished)
                             {
                                 buyTileMenu.buildButtons[0].SetActive(false);
                                 buyTileMenu.buildButtons[1].SetActive(true);
