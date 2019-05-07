@@ -19,6 +19,10 @@ TagManager:
   - InspectMenu
   - HiddenTile
   - Forest
+  - LeaderUser
+  - LeaderScore
+  - Login
+  - UsernameLogin
   - BuyTileMenu
   layers:
   - Default
