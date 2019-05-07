@@ -5273,13 +5273,13 @@ MonoBehaviour:
   verticalOffset: 0
   buildingType: Industrial
   cost: 25
-  woodCost: 75
-  populationRequired: 10
+  woodCost: 10
+  populationRequired: 1
   emission: 15
   resourceKeeper: {fileID: 0}
   populationIncrease: 0
   woodIncomeIncrease: 5
-  incomeIncrease: 0
+  incomeIncrease: 20
 --- !u!95 &-3835264439836399139
 Animator:
   serializedVersion: 3

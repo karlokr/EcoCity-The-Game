@@ -7,13 +7,14 @@ public class Plot : MonoBehaviour
 
     public Material debugMaterial;
     public static Material defaultMaterial;
-    public Renderer[] rends;
+    public Animator animator;
 
+    private ResourceKeeper resourceKeeper;
+    
 
     private void Awake()
     {
-        rends = GetComponentsInChildren<Renderer>();
-        defaultMaterial = GetComponentInChildren<Renderer>().material;
+        animator = GetComponent<Animator>();
     }
 
     // Start is called before the first frame update
@@ -50,6 +51,8 @@ public class Plot : MonoBehaviour
         {
 
             GameObject newBuilding = Instantiate(prefabToBuild, transform.position, transform.rotation);
+            int randRotFactor = Random.Range(0, 3);
+            newBuilding.transform.Rotate(Vector3.up * (90f * randRotFactor));
             newBuilding.transform.SetParent(GameObject.FindGameObjectWithTag("WorldTile").transform);
             newBuilding.transform.Translate(Vector3.up * 35f);
             ResourceKeeper.money -= building.cost;
@@ -64,38 +67,22 @@ public class Plot : MonoBehaviour
     /// <summary>
     /// Debug function that sets the mesh color to magenta.
     /// </summary>
-    public void ActivateDebugColor()
+    public void FocusOnPlot()
     {
-
-        foreach (Renderer r in rends)
-        {
-            r.material = debugMaterial;
-        }
-
-        Plot[] p = GameObject.FindObjectsOfType<Plot>();
-        foreach (Plot obj in p)
-        {
-            if (obj != this)
-            {
-                foreach (Renderer r in obj.rends)
-                {
-                    r.material = defaultMaterial;
-                }
-            }
-        }
+        animator.SetBool("Focused", true);
     }
 
-    public static void ClearDebugColor()
+
+    public static void UnfocusAllPlots()
     {
         Plot[] p = GameObject.FindObjectsOfType<Plot>();
         foreach (Plot obj in p)
         {
-            foreach (Renderer r in obj.rends)
-            {
-                r.material = defaultMaterial;
-            }
+            obj.animator.SetBool("Focused", false);
         }
     }
+
+    
 
 
 }
