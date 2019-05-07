@@ -7,12 +7,11 @@ using UnityEngine.UI;
 public class Forest : Plot
 {
     public Image progressBar;
-    public float buildTime = 0f;
-    public float bt = 10f;
+    public float elapsedTime = 0f;
+    public float buildTime = 10f;
     public int woodGained;
 
     public BuyTileMenu buyMenu;
-    public ResourceKeeper rk;
     public static Material forestDefaultMaterial;
 
     public Plot prefabToBuild;
@@ -21,9 +20,7 @@ public class Forest : Plot
     public bool finished;
     void Awake()
     {
-        buyMenu = GameObject.FindGameObjectWithTag("BuyTileMenu").GetComponent<BuyTileMenu>();
-        rk = GameObject.FindGameObjectWithTag("ResourceKeeper").GetComponent<ResourceKeeper>();
-        forestDefaultMaterial = GetComponentInChildren<Renderer>().material;
+
     }
     void Update()
     {
@@ -35,18 +32,19 @@ public class Forest : Plot
 
     public void BuyForest()
     {
-        if (rk.money >= 100)
+        if (ResourceKeeper.money >= 100)
         {
-            rk.money -= 100;
+            ResourceKeeper.money -= 100;
             building = true;
         }
 
     }
     private void BuildForest()
     {
-        buildTime += Time.deltaTime;
-        progressBar.GetComponent<Image>().fillAmount = buildTime / bt;
-        if (buildTime >= bt)
+        elapsedTime += Time.deltaTime;
+        progressBar.GetComponent<Image>().fillAmount = elapsedTime / buildTime;
+
+        if (elapsedTime >= buildTime)
         {
             finished = true;
             building = false;
@@ -63,7 +61,13 @@ public class Forest : Plot
         newPlot.transform.Translate(Vector3.up * 7.125f);
         newPlot.transform.Translate(Vector3.left * 7.4f);
         newPlot.transform.Translate(Vector3.forward * 2.5f);
-        rk.wood += woodGained;
+        ResourceKeeper.wood += woodGained;
         Destroy(gameObject);
+    }
+
+    public void GetComponents()
+    {
+        buyMenu = GameObject.FindGameObjectWithTag("BuyTileMenu").GetComponent<BuyTileMenu>();
+        forestDefaultMaterial = GetComponentInChildren<Renderer>().material;
     }
 }

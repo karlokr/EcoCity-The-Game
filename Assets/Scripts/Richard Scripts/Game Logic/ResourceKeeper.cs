@@ -5,20 +5,19 @@ using UnityEngine;
 public class ResourceKeeper : MonoBehaviour
 {
     //The Big 4
-    public int money;
-    public int emission;
-    public int population;
-    public int wood;
-    public int ecoScore;
+    public static int money = 250;
+    public static int emission = 0;
+    public static int population = 0;
+    public static int wood = 250;
+    public static int ecoScore = 0;
     //Accumulators
-    public int income = 5;
-    public int woodIncome = 5;
+    public static int income = 5;
+    public static int woodIncome = 5;
 
     // Start is called before the first frame update
     void Start()
     {
-        population = 0;
-        emission = 0;
+
     }
 
     // Update is called once per frame

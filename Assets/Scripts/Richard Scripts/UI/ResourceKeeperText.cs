@@ -9,13 +9,11 @@ public class ResourceKeeperText : MonoBehaviour
     private Text money;
     private Text emission;
     private Text wood;
-    private ResourceKeeper resourceKeeper;
     private MatchTimer matchTimer;
 
     private void Awake()
     {
         matchTimer = GameObject.FindGameObjectWithTag("MatchTimer").GetComponent<MatchTimer>();
-        resourceKeeper = GameObject.FindGameObjectWithTag("ResourceKeeper").GetComponent<ResourceKeeper>();
         money = GameObject.FindGameObjectWithTag("Money").GetComponent<Text>();
         emission = GameObject.FindGameObjectWithTag("Emission").GetComponent<Text>();
         population = GameObject.FindGameObjectWithTag("Population").GetComponent<Text>();
@@ -33,10 +31,10 @@ public class ResourceKeeperText : MonoBehaviour
     {
         if (matchTimer.matchStarted)
         {
-            money.text = resourceKeeper.money.ToString();
-            emission.text = resourceKeeper.emission.ToString();
-            population.text = resourceKeeper.population.ToString();
-            wood.text = resourceKeeper.wood.ToString();
+            money.text = ResourceKeeper.money.ToString();
+            emission.text = ResourceKeeper.emission.ToString();
+            population.text = ResourceKeeper.population.ToString();
+            wood.text = ResourceKeeper.wood.ToString();
         }
     }
 }

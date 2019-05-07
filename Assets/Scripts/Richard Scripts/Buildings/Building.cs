@@ -21,8 +21,6 @@ public class Building : MonoBehaviour
     private Animator animator;
     public int populationRequired;
     public int emission;
-    public ResourceKeeper resourceKeeper;
-
     private int level;
     private ParticleSystem particleSystem;
 
@@ -35,7 +33,6 @@ public class Building : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         particleSystem = GetComponentInChildren<ParticleSystem>();
-        resourceKeeper = GameObject.FindGameObjectWithTag("ResourceKeeper").GetComponent<ResourceKeeper>();
         rend = GetComponent<Renderer>();
         upgrades = GetComponentsInChildren<Upgrade>();
     }
@@ -77,14 +74,14 @@ public class Building : MonoBehaviour
 
     public void ActivateUpgrade(int index)
     {
-        if (resourceKeeper.money >= upgrades[index].cost && !upgrades[index].upgradeActive)
+        if (ResourceKeeper.money >= upgrades[index].cost && !upgrades[index].upgradeActive)
         {
             upgrades[index].Activate();
-            resourceKeeper.money -= upgrades[index].cost;
-            resourceKeeper.emission -= upgrades[index].emissionReduction;
-            resourceKeeper.income += upgrades[index].incomeIncrease;
-            resourceKeeper.woodIncome += upgrades[index].woodIncomeIncrease;
-            resourceKeeper.population += upgrades[index].populationIncrease;
+            ResourceKeeper.money -= upgrades[index].cost;
+            ResourceKeeper.emission -= upgrades[index].emissionReduction;
+            ResourceKeeper.income += upgrades[index].incomeIncrease;
+            ResourceKeeper.woodIncome += upgrades[index].woodIncomeIncrease;
+            ResourceKeeper.population += upgrades[index].populationIncrease;
         }  
     }
 
