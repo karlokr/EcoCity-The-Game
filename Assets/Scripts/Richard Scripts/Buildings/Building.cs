@@ -89,7 +89,8 @@ public class Building : MonoBehaviour
     public void EmitResources(int pop, int credits, int wood)
     {
         popParticleSystem.Emit(pop);
-        moneyParticleSystem.Emit(credits);
         woodParticleSystem.Emit(wood);
+        moneyParticleSystem.Emit(credits);
+        
     }
 }
