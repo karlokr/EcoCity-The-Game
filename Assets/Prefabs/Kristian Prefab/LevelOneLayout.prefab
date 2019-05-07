@@ -499,7 +499,6 @@ GameObject:
   - component: {fileID: 3349237013509034085}
   - component: {fileID: 3349237013509034081}
   - component: {fileID: 3349237013606241746}
-  - component: {fileID: 4306223267081757537}
   m_Layer: 0
   m_Name: LevelOneLayout
   m_TagString: WorldTile
@@ -634,19 +633,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71f48f7f79b75ed4fa147e175bdaae04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &4306223267081757537
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3349237013509034084}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5433e2007b8c0e94d88e8f2fe64c290b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefabToBuild: {fileID: 0}
 --- !u!1 &3349237013653299403
 GameObject:
   m_ObjectHideFlags: 0
