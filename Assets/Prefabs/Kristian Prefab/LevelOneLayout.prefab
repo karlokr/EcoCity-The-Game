@@ -615,7 +615,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3349237013509034084}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5b365ed45e0c01545b3ebafd865b6982, type: 3}
   m_Name: 
@@ -14558,11 +14558,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3349237013509034080}
     m_Modifications:
-    - target: {fileID: 1424405004404467532, guid: d94124c757dcd7e4d9a7efcf135b0b15,
-        type: 3}
-      propertyPath: m_Name
-      value: Forest
-      objectReference: {fileID: 0}
     - target: {fileID: 4760237931473232516, guid: d94124c757dcd7e4d9a7efcf135b0b15,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -14628,6 +14623,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.02
       objectReference: {fileID: 0}
+    - target: {fileID: 1424405004404467532, guid: d94124c757dcd7e4d9a7efcf135b0b15,
+        type: 3}
+      propertyPath: m_Name
+      value: Forest
+      objectReference: {fileID: 0}
     - target: {fileID: 5078380683663584410, guid: d94124c757dcd7e4d9a7efcf135b0b15,
         type: 3}
       propertyPath: m_Mesh
@@ -14648,11 +14648,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3349237013509034080}
     m_Modifications:
-    - target: {fileID: 1424405004404467532, guid: d94124c757dcd7e4d9a7efcf135b0b15,
-        type: 3}
-      propertyPath: m_Name
-      value: Forest (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 4760237931473232516, guid: d94124c757dcd7e4d9a7efcf135b0b15,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -14717,6 +14712,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 1424405004404467532, guid: d94124c757dcd7e4d9a7efcf135b0b15,
+        type: 3}
+      propertyPath: m_Name
+      value: Forest (1)
       objectReference: {fileID: 0}
     - target: {fileID: 5078380683663584410, guid: d94124c757dcd7e4d9a7efcf135b0b15,
         type: 3}
