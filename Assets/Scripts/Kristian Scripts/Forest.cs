@@ -31,7 +31,7 @@ public class Forest : MonoBehaviour
     {
         if (building)
         {
-            BuildForest();
+            BuildForest(); 
         }
     }
 
