@@ -50,7 +50,6 @@ public class CameraClicker : MonoBehaviour
         upgradeMenuObj = GameObject.FindGameObjectWithTag("UpgradeMenu");
         upgradeMenuObj.SetActive(false);
 
-       // buildMenu = buildMenuObj.GetComponentsInChildren<BuildMenu>();
         upgradeMenu = upgradeMenuObj.GetComponent<UpgradeMenu>();
 
         buyMenuObj = GameObject.FindGameObjectWithTag("BuyTileMenu");
@@ -139,15 +138,12 @@ public class CameraClicker : MonoBehaviour
                             TileManager.tiles[(int)index.x, (int)index.y] = newTile;
                             TileManager.shownTiles[(int)index.x, (int)index.y] = true;
                             TileManager.showTiles();
-
-
                             break;
                         default:
                             ClearSelections();
                             break;
                     }
                 }
-            //}
         }
     }
 

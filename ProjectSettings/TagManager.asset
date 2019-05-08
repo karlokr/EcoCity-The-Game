@@ -25,6 +25,10 @@ TagManager:
   - UsernameLogin
   - BuyTileMenu
   - TileHolder
+  - CampaignSelected
+  - EndlessSelected
+  - CampaignButton
+  - EndlessButton
   layers:
   - Default
   - TransparentFX

@@ -22,6 +22,7 @@ public class WorldTile : MonoBehaviour
 
 
         GameObject newTile = Instantiate(prefabToBuild, transform.position, transform.rotation);
+        newTile.transform.Translate(Vector3.down * 12f);
         newTile.transform.SetParent(GameObject.FindGameObjectWithTag("TileHolder").transform);
         return newTile;
     }

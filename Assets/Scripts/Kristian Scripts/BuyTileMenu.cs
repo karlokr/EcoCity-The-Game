@@ -37,7 +37,6 @@ public class BuyTileMenu : MonoBehaviour
     }
     public void BuyTile()
     {
-        forestTile.GetComponents();
         forestTile.BuyForest();       
 
     }

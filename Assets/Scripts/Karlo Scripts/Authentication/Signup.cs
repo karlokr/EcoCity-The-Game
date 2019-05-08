@@ -47,6 +47,8 @@ public class Signup : MonoBehaviour {
             }
             if (webRequest.downloadHandler.text == "0") {
                 Debug.Log("User created successfully.");
+                DBManager.isGuest = true;  //change this later
+                DBManager.username = Username;
                 UnityEngine.SceneManagement.SceneManager.LoadScene(2);
             } else {
                 Debug.Log("User creation failed. Error #" + webRequest.downloadHandler.text);

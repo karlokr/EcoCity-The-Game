@@ -20,6 +20,7 @@ public class LeaderAssembly : MonoBehaviour
             if (i < length) {
                 Debug.Log(i);
                 Debug.Log((string)LeaderData["leaderboard"][i]["username"]);
+                UserObject.GetComponentInParent<Image>().gameObject.SetActive(true);
                 UserObject.GetComponent<Text>().text = (string)LeaderData["leaderboard"][i]["username"];
                 i++;
             } 
