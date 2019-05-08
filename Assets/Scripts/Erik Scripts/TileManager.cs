@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class TileManager : MonoBehaviour
 {
-    private const int rowNumber = 3;
-    private const int colNumber = 3;
-    public GameObject[,] tiles = new GameObject[rowNumber, colNumber];
-    public bool[,] shownTiles = new bool[rowNumber, colNumber];
+    private const int rowNumber = 5;
+    private const int colNumber = 5;
+    public static GameObject[,] tiles = new GameObject[rowNumber, colNumber];
+    public static bool[,] shownTiles = new bool[rowNumber, colNumber];
 
     public GameObject[] worldTiles;
     // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
         worldTiles = GameObject.FindGameObjectsWithTag("WorldTile");
         int count = 0;
@@ -24,24 +24,17 @@ public class TileManager : MonoBehaviour
             }
         }
         foreach (GameObject tile in tiles)
-        {   if (!tile.name.Equals("LevelOneLayout"))
+        {
+            if (!tile.name.Equals("LevelOneLayout"))
             {
                 tile.SetActive(false);
             }
         }
 
     }
-
-    // Update is called once per frame
-    void Update()
+    void Start()
     {
-        
-    }
-
-    public void showTiles()
-    {
-
-        for(int row = 0; row < rowNumber; row++)
+        for (int row = 0; row < rowNumber; row++)
         {
             for (int col = 0; col < colNumber; col++)
             {
@@ -51,26 +44,36 @@ public class TileManager : MonoBehaviour
                 }
             }
         }
-        foreach (bool shownTile in shownTiles)
-        {
-            Debug.Log(shownTile);
-        }
-        Debug.Log(shownTiles);
-        checkNeighbours(1, 1);
-        //for(int i = 0; i < rowNumber; i++)
-        //{
-        //    for(int j = 0; j < colNumber; j++)
-        //    {
-        //        if(shownTiles[i,j])
-        //        {
-        //            checkNeighbours(i, j);
-        //            Debug.Log(i);
-        //            Debug.Log(j);
-        //        }
-        //    }
-        //}
+        showTiles();
     }
-    private void checkNeighbours(int row, int col)
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
+    // Iterates over the 2D array of tiles, checks to see if it is active
+    // if it is, adds the index to the 2D boolean array, which is then 
+    // checked and true indices have the surrounding indices set to active
+    public static void showTiles()
+    {
+
+        
+        for (int i = 0; i < rowNumber; i++)
+        {
+            for (int j = 0; j < colNumber; j++)
+            {
+                if (shownTiles[i, j])
+                {
+                    checkNeighbours(i, j);
+                }
+            }
+        }
+    }
+    // Checks to see if surrounding tiles are empty, and 
+    // also checks to see if its within the bounds of the array.
+    public static void checkNeighbours(int row, int col)
     {
         if (col - 1 >= 0)
         {
@@ -88,5 +91,25 @@ public class TileManager : MonoBehaviour
         {
             tiles[row + 1, col].SetActive(true);
         }
+    }
+    // Finds the index of the tile in the 2D array and returns it
+    public static Vector2 findTile(GameObject tile)
+    {
+        for (int row = 0; row < rowNumber; row++)
+        {
+            for (int col = 0; col < colNumber; col++)
+            {   
+                if (tiles[row, col].Equals(tile))
+                {
+                    Vector2 index = new Vector2(row, col);
+                    return index;
+                }
+            }
+        }
+        // This sucks, fix later
+        Vector2 badIndex = new Vector2(0, 0);
+        return badIndex;
+
+
     }
 }

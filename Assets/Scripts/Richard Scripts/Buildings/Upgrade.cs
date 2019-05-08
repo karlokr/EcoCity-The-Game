@@ -13,6 +13,8 @@ public class Upgrade : MonoBehaviour
     public Renderer visualModel;
     public bool upgradeActive;
 
+    public string description;
+
     private void Awake()
     {
         visualModel = GetComponent<Renderer>();
