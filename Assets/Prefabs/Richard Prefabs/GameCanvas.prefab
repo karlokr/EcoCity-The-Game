@@ -6408,7 +6408,7 @@ MonoBehaviour:
   - {fileID: 6997184795348063280}
   - {fileID: 6997184796633870177}
   - {fileID: 6997184795365016957}
-  inspectMenu: {fileID: 0}
+  inspectMenu: {fileID: 6997184796238504603}
 --- !u!1 &6997184796561114793
 GameObject:
   m_ObjectHideFlags: 0
