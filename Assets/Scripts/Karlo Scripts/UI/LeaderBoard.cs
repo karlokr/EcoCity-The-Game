@@ -8,11 +8,17 @@ using UnityEngine.Networking;
 
 public class LeaderBoard : MonoBehaviour {
 
-    
+    public GameObject[] LeaderSlots;
 
-    public void LeaderBoardButton()
+    public void Awake() {
+        LeaderBoardCoroutine();
+
+
+    }
+
+    public void LeaderBoardCoroutine()
     {
-            StartCoroutine(GetLeaderBoard("https://ecocitythegame.ca/sqlconnect/leaderboard.php"));
+        StartCoroutine(GetLeaderBoard("https://ecocitythegame.ca/sqlconnect/leaderboard.php"));
     }
 
     IEnumerator GetLeaderBoard(string url)
