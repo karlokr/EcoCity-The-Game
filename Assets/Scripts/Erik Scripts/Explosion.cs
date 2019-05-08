@@ -13,12 +13,19 @@ public class Explosion : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
     private void OnCollisionEnter(Collision other)
     {
         Debug.Log("boooom");
         GameObject nuke = Instantiate(explosion, new Vector3(0, 60, 0), transform.rotation);
+        StartCoroutine(Wait());
+    }
+    private IEnumerator Wait()
+    {
+
+        yield return new WaitForSeconds(1);
         ResourceKeeper.emission = 5000;
+
     }
 }
