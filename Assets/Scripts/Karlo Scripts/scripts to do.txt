@@ -1,5 +1,3 @@
-leaderboards.php
-Leaderboard.cs
 saves.php
 loadsave.php
 GetSavedGames.cs
