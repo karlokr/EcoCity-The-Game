@@ -50,7 +50,6 @@ public class CameraClicker : MonoBehaviour
         upgradeMenuObj = GameObject.FindGameObjectWithTag("UpgradeMenu");
         upgradeMenuObj.SetActive(false);
 
-       // buildMenu = buildMenuObj.GetComponentsInChildren<BuildMenu>();
         upgradeMenu = upgradeMenuObj.GetComponent<UpgradeMenu>();
 
         buyMenuObj = GameObject.FindGameObjectWithTag("BuyTileMenu");
@@ -124,7 +123,7 @@ public class CameraClicker : MonoBehaviour
                                 buyTileMenu.buildButtons[0].SetActive(true);
                                 buyTileMenu.buildButtons[1].SetActive(false);
                             }
-                            if (selectedForest.finished)
+                            if (selectedForest.finished || selectedForest.building)
                             {
                                 buyTileMenu.buildButtons[0].SetActive(false);
                                 buyTileMenu.buildButtons[1].SetActive(true);

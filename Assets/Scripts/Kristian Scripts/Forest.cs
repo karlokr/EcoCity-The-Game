@@ -11,7 +11,6 @@ public class Forest : MonoBehaviour
     public float buildTime = 10f;
     public int woodGained;
 
-    public BuyTileMenu buyTileMenu;
     public static Material forestDefaultMaterial;
 
     public Plot prefabToBuild;
@@ -24,7 +23,6 @@ public class Forest : MonoBehaviour
     }
     private void Start()
     {
-        buyTileMenu = GameObject.FindGameObjectWithTag("BuyTileMenu").GetComponent<BuyTileMenu>();
         forestDefaultMaterial = GetComponentInChildren<Renderer>().material; 
     }
     void Update()
@@ -41,6 +39,10 @@ public class Forest : MonoBehaviour
         {
             ResourceKeeper.money -= 100;
             building = true;
+        }
+        else
+        {
+            Debug.Log("Not enough money");
         }
 
     }
