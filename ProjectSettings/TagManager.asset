@@ -29,6 +29,7 @@ TagManager:
   - EndlessSelected
   - CampaignButton
   - EndlessButton
+  - SkullIsland
   layers:
   - Default
   - TransparentFX

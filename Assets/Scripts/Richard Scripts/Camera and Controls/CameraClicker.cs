@@ -23,12 +23,15 @@ public class CameraClicker : MonoBehaviour
     private BuyTileMenu buyTileMenu;
     private bool dragging;
     private Vector3 startDragPosition;
+    private int bombCounter;
     
     //A GameObject that will be passed to a selected object.
     private GameObject objectToPass;
+    private NukeTime nuke;
 
     private void Awake()
     {
+        bombCounter = 0;
         resourceKeeper = GameObject.FindGameObjectWithTag("ResourceKeeper").GetComponent<ResourceKeeper>();
         viewportCamera = GetComponent<Camera>();
         cameraHolder = GameObject.FindGameObjectWithTag("CameraHolder").GetComponent<CameraHolder>();
@@ -132,13 +135,22 @@ public class CameraClicker : MonoBehaviour
                         case "WorldTile":
                             ClearSelections();
                             selectedTile = other.GetComponent<WorldTile>();
-                            Destroy(selectedTile.gameObject);
                             Vector2 index = TileManager.findTile(selectedTile.gameObject);
                             GameObject newTile = selectedTile.createNewTile();
                             TileManager.tiles[(int)index.x, (int)index.y] = newTile;
                             TileManager.shownTiles[(int)index.x, (int)index.y] = true;
                             TileManager.showTiles();
-                            break;
+                            Destroy(selectedTile.gameObject);
+                        break;
+                    case "SkullIsland":
+                        bombCounter++;
+                        Debug.Log(bombCounter);
+                        if (bombCounter >= 5)
+                        {
+                            nuke = other.GetComponent<NukeTime>();
+                            nuke.nukeTime();
+                        }
+                        break;
                         default:
                             ClearSelections();
                             break;
