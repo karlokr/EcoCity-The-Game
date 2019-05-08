@@ -139,15 +139,12 @@ public class CameraClicker : MonoBehaviour
                             TileManager.tiles[(int)index.x, (int)index.y] = newTile;
                             TileManager.shownTiles[(int)index.x, (int)index.y] = true;
                             TileManager.showTiles();
-
-
                             break;
                         default:
                             ClearSelections();
                             break;
                     }
                 }
-            //}
         }
     }
 
