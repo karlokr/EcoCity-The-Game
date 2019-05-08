@@ -76,6 +76,8 @@ public class Building : MonoBehaviour
             ResourceKeeper.income += upgrades[index].incomeIncrease;
             ResourceKeeper.woodIncome += upgrades[index].woodIncomeIncrease;
             ResourceKeeper.population += upgrades[index].populationIncrease;
+
+            EmitResources(upgrades[index].populationIncrease, upgrades[index].incomeIncrease, upgrades[index].woodIncomeIncrease);
         }  
     }
 
@@ -91,6 +93,5 @@ public class Building : MonoBehaviour
         popParticleSystem.Emit(pop);
         woodParticleSystem.Emit(wood);
         moneyParticleSystem.Emit(credits);
-        
     }
 }
