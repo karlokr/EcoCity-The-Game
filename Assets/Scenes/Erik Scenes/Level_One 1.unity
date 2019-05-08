@@ -952,7 +952,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b984975ddfe8064fb393825006b658f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  missile: {fileID: 3915041866929638950, guid: f5532420911ef1a48a8c3cf00974e4f2, type: 3}
+  missile: {fileID: 7813782468033484098, guid: 77cb50af2bc456f40831108381ba03f7, type: 3}
 --- !u!1 &551088775
 GameObject:
   m_ObjectHideFlags: 0
@@ -2019,6 +2019,16 @@ PrefabInstance:
     - target: {fileID: 3349237013509034085, guid: c4d55a2df94bb2b4a9b3267d343ab774,
         type: 3}
       propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3349237013509034085, guid: c4d55a2df94bb2b4a9b3267d343ab774,
+        type: 3}
+      propertyPath: m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3349237013509034085, guid: c4d55a2df94bb2b4a9b3267d343ab774,
+        type: 3}
+      propertyPath: m_Size.x
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []

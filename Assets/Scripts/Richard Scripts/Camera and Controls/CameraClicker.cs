@@ -145,7 +145,7 @@ public class CameraClicker : MonoBehaviour
                     case "SkullIsland":
                         bombCounter++;
                         Debug.Log(bombCounter);
-                        if (bombCounter >= 5)
+                        if (bombCounter == 5)
                         {
                             nuke = other.GetComponent<NukeTime>();
                             nuke.nukeTime();

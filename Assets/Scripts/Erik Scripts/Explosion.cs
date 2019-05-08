@@ -8,7 +8,6 @@ public class Explosion : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
@@ -16,9 +15,10 @@ public class Explosion : MonoBehaviour
     {
         
     }
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision other)
     {
-        Debug.Log("bboooom");
-        GameObject nuke = Instantiate(explosion, new Vector3(0, 0, 0), transform.rotation);
+        Debug.Log("boooom");
+        GameObject nuke = Instantiate(explosion, new Vector3(0, 60, 0), transform.rotation);
+        ResourceKeeper.emission = 5000;
     }
 }
