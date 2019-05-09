@@ -11,6 +11,7 @@ public class MainMenu : MonoBehaviour
     public GameObject PlayButton;
     public GameObject CampaignSelectedButton;
     public GameObject EndlessSelectedButton;
+    private GameObject BackButton;
     private bool CampaignSelected;
     private bool EndlessSelected;
 
@@ -23,6 +24,10 @@ public class MainMenu : MonoBehaviour
         EndlessSelected = false;
         CampaignSelectedButton.SetActive(false);
         EndlessSelectedButton.SetActive(false);
+        if (DBManager.inGame == false) {
+            BackButton = GameObject.FindGameObjectWithTag("BackButton");
+            BackButton.SetActive(false);
+        }
     }
 
     // Update is called once per frame
@@ -34,6 +39,8 @@ public class MainMenu : MonoBehaviour
     public void PlayGame() {
         DBManager.level = NewGameManager.level;
         DBManager.game_mode = NewGameManager.game_mode;
+        DBManager.newGame = true;
+        DBManager.inGame = true;
         UnityEngine.SceneManagement.SceneManager.LoadScene(3);
 
     }
