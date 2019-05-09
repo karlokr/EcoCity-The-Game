@@ -67,7 +67,7 @@ public class Building : MonoBehaviour
     /// </summary>
     public void FocusOnBuilding()
     {
-        animator.SetBool("Inspecting", true);
+        //animator.SetBool("Inspecting", true);
     }
 
     public static void UnfocusAllBuildings()
@@ -75,7 +75,7 @@ public class Building : MonoBehaviour
         Building[] b = GameObject.FindObjectsOfType<Building>();
         foreach (Building obj in b)
         {
-            obj.animator.SetBool("Inspecting", false);
+            //obj.animator.SetBool("Inspecting", false);
         }
     }
 
