@@ -28,6 +28,11 @@ public class Building : MonoBehaviour
     public ParticleSystem woodParticleSystem;
     public GameObject upgradeSystems;
 
+    private AudioSource audioSource;
+
+    public AudioClip landingThud;
+    public AudioClip coinSpluge;
+
     //Category Specific Increases
     public int populationIncrease;
     public int woodIncomeIncrease;
@@ -35,6 +40,7 @@ public class Building : MonoBehaviour
 
     private void Awake()
     {
+        audioSource = GetComponent<AudioSource>();
         animator = GetComponent<Animator>();
         rend = GetComponent<Renderer>();
         upgrades = GetComponentsInChildren<Upgrade>();
@@ -48,6 +54,12 @@ public class Building : MonoBehaviour
     public virtual void Emit()
     {
 
+    }
+
+    public void PlayLandingSounds()
+    {
+        audioSource.PlayOneShot(coinSpluge);
+        audioSource.PlayOneShot(landingThud);
     }
 
     /// <summary>
