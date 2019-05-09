@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class BuyTileMenu : MonoBehaviour
 {
+    private WorldTile worldTile;
     private Forest forestTile;
     public GameObject[] buildButtons;
 
@@ -27,7 +28,10 @@ public class BuyTileMenu : MonoBehaviour
     {
         forestTile = tile;
     }
-
+    public void SetSelectedTile(WorldTile tile)
+    {
+        worldTile = tile;
+    }
     public void ConvertTile()
     {
         if (forestTile.finished)
@@ -38,6 +42,16 @@ public class BuyTileMenu : MonoBehaviour
     public void BuyTile()
     {
         forestTile.BuyForest();       
+
+    }
+    public void BuyNewTile()
+    {
+        Vector2 index = TileManager.findTile(worldTile.gameObject);
+        GameObject newTile = worldTile.createNewTile();
+        TileManager.tiles[(int)index.x, (int)index.y] = newTile;
+        TileManager.shownTiles[(int)index.x, (int)index.y] = true;
+        TileManager.showTiles();
+        Destroy(worldTile.gameObject);
 
     }
 }
