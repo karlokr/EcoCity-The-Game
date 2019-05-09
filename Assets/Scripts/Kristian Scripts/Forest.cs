@@ -48,7 +48,10 @@ public class Forest : MonoBehaviour
     }
     private void BuildForest()
     {
+
         elapsedTime += Time.deltaTime;
+        Animator animator = gameObject.GetComponent<Animator>();
+        animator.SetTrigger("Run");
         progressBar.GetComponent<Image>().fillAmount = elapsedTime / buildTime;
 
         if (elapsedTime >= buildTime)

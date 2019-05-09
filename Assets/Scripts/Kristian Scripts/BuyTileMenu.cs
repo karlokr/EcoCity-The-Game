@@ -46,6 +46,7 @@ public class BuyTileMenu : MonoBehaviour
     }
     public void BuyNewTile()
     {
+        ResourceKeeper.wood -= 1000;
         Vector2 index = TileManager.findTile(worldTile.gameObject);
         GameObject newTile = worldTile.createNewTile();
         TileManager.tiles[(int)index.x, (int)index.y] = newTile;
