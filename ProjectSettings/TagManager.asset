@@ -29,6 +29,7 @@ TagManager:
   - EndlessSelected
   - CampaignButton
   - EndlessButton
+  - BackButton
   layers:
   - Default
   - TransparentFX
