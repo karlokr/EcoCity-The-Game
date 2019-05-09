@@ -4,33 +4,9 @@ using UnityEngine;
 
 public class BuyTile : MonoBehaviour
 {
-    private const int rowNumber = 3;
-    private const int colNumber = 3;
-    private GameObject[,] tiles = new GameObject[rowNumber, colNumber];
-
-    public GameObject[] hiddenTiles;
-    // Start is called before the first frame update
     void Start()
     {
-        hiddenTiles = GameObject.FindGameObjectsWithTag("WorldTile");
-        foreach (GameObject hiddenTile in hiddenTiles)
-        {
-            hiddenTile.SetActive(false);
-        }
-
-        foreach (GameObject hiddenTile in hiddenTiles) { 
-        for (int row = 0; row < rowNumber; row++)
-        {
-            for (int col = 0; col < colNumber; col++)
-            {
-                tiles[row, col] = hiddenTile;;
-                }
-        }
-            foreach (GameObject tile in tiles)
-            {
-                Debug.Log(tile);
-            }
-        }
+       
     }
 
     // Update is called once per frame
@@ -38,11 +14,13 @@ public class BuyTile : MonoBehaviour
     {
         
     }
-    private void handleClick()
+    private void handleClick(WorldTile selectedTile)
     {
-        foreach (GameObject hiddenTile in hiddenTiles)
-        {
-            hiddenTile.SetActive(false);
-        }
+        Vector2 index = TileManager.findTile(selectedTile.gameObject);
+        GameObject newTile = selectedTile.createNewTile();
+        TileManager.tiles[(int)index.x, (int)index.y] = newTile;
+        TileManager.shownTiles[(int)index.x, (int)index.y] = true;
+        TileManager.showTiles();
+        Destroy(selectedTile.gameObject);
     }
 }
