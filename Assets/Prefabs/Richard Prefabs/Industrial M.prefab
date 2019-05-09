@@ -19567,7 +19567,7 @@ MonoBehaviour:
   verticalOffset: 0
   buildingType: Industrial
   cost: 500
-  woodCost: 750
+  woodCost: 300
   populationRequired: 20
   emission: 50
   landingParticleSystem: {fileID: 8275358843509160407}
