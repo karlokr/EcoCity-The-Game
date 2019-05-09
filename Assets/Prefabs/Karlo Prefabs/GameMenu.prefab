@@ -58,7 +58,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.20784314, b: 0, a: 0.7490196}
+  m_Color: {r: 0, g: 0.20784314, b: 0, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -4213,11 +4213,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2387601544845697569}
     m_Modifications:
-    - target: {fileID: 4190848206704606023, guid: 28f8a3a00c46c0040ba381d71dddaa65,
-        type: 3}
-      propertyPath: m_Name
-      value: Right Arrow
-      objectReference: {fileID: 0}
     - target: {fileID: 4190848206704606022, guid: 28f8a3a00c46c0040ba381d71dddaa65,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4338,6 +4333,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4190848206704606023, guid: 28f8a3a00c46c0040ba381d71dddaa65,
+        type: 3}
+      propertyPath: m_Name
+      value: Right Arrow
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 28f8a3a00c46c0040ba381d71dddaa65, type: 3}
 --- !u!224 &1948533381936828462 stripped
@@ -4353,11 +4353,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2387601543770804280}
     m_Modifications:
-    - target: {fileID: 4190848206704606023, guid: 28f8a3a00c46c0040ba381d71dddaa65,
-        type: 3}
-      propertyPath: m_Name
-      value: Left Arrow
-      objectReference: {fileID: 0}
     - target: {fileID: 4190848206704606022, guid: 28f8a3a00c46c0040ba381d71dddaa65,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4478,6 +4473,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4190848206704606023, guid: 28f8a3a00c46c0040ba381d71dddaa65,
+        type: 3}
+      propertyPath: m_Name
+      value: Left Arrow
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 28f8a3a00c46c0040ba381d71dddaa65, type: 3}
 --- !u!224 &1948533380699285960 stripped
@@ -4493,11 +4493,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3476455512335418025}
     m_Modifications:
-    - target: {fileID: 4190848206704606023, guid: 28f8a3a00c46c0040ba381d71dddaa65,
-        type: 3}
-      propertyPath: m_Name
-      value: Left Arrow
-      objectReference: {fileID: 0}
     - target: {fileID: 4190848206704606022, guid: 28f8a3a00c46c0040ba381d71dddaa65,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4617,6 +4612,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4190848206704606023, guid: 28f8a3a00c46c0040ba381d71dddaa65,
+        type: 3}
+      propertyPath: m_Name
+      value: Left Arrow
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 28f8a3a00c46c0040ba381d71dddaa65, type: 3}
