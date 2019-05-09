@@ -16,8 +16,8 @@ public class LeaderBoard : MonoBehaviour {
 
     public void Awake() {
         LeaderBoardCoroutine();
-        GameMode.GetComponent<TMP_Text>().text = DBManager.game_mode;
-        Level.GetComponent<TMP_Text>().text = DBManager.level;
+        GameMode.GetComponent<TMP_Text>().text = DBManager.game_mode.Substring(0,1).ToUpper() + DBManager.game_mode.Substring(1);
+        Level.GetComponent<TMP_Text>().text = DBManager.level.Substring(0, 1).ToUpper() + DBManager.level.Substring(1);
     }
 
     public void LeaderBoardCoroutine()
