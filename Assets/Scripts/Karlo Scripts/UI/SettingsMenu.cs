@@ -11,4 +11,8 @@ public class SettingsMenu : MonoBehaviour
     public void NewGameButton() {
         (Instantiate(GameMenu) as GameObject).transform.parent = Canvas.transform;
     }
+
+    public void Back() {
+        Destroy(Canvas);
+    }
 }

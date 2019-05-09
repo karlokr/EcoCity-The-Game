@@ -936,7 +936,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GameCanvas: {fileID: 6997184795865007120}
-  Leaderboard: {fileID: 1243752561230686998, guid: accf91e29aa010a479a73968656a8b22,
+  Leaderboard: {fileID: 5656640058580819352, guid: db7f89d249f315843bb670462c9251e9,
     type: 3}
 --- !u!1 &6552020452449426113
 GameObject:
