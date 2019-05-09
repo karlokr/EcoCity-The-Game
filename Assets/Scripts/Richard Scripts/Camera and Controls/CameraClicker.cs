@@ -23,12 +23,15 @@ public class CameraClicker : MonoBehaviour
     private BuyTileMenu buyTileMenu;
     private bool dragging;
     private Vector3 startDragPosition;
+    private int bombCounter;
     
     //A GameObject that will be passed to a selected object.
     private GameObject objectToPass;
+    private NukeTime nuke;
 
     private void Awake()
     {
+        bombCounter = 0;
         resourceKeeper = GameObject.FindGameObjectWithTag("ResourceKeeper").GetComponent<ResourceKeeper>();
         viewportCamera = GetComponent<Camera>();
         cameraHolder = GameObject.FindGameObjectWithTag("CameraHolder").GetComponent<CameraHolder>();
@@ -56,6 +59,7 @@ public class CameraClicker : MonoBehaviour
         buyMenuObj.SetActive(false);
         buyTileMenu.buildButtons[0].SetActive(false);
         buyTileMenu.buildButtons[1].SetActive(false);
+        buyTileMenu.buildButtons[2].SetActive(false);
 
 
     }
@@ -122,27 +126,39 @@ public class CameraClicker : MonoBehaviour
                             {
                                 buyTileMenu.buildButtons[0].SetActive(true);
                                 buyTileMenu.buildButtons[1].SetActive(false);
-                            }
+                                buyTileMenu.buildButtons[2].SetActive(false);
+                             }
                             if (selectedForest.finished || selectedForest.building)
                             {
                                 buyTileMenu.buildButtons[0].SetActive(false);
                                 buyTileMenu.buildButtons[1].SetActive(true);
-                            }
+                                buyTileMenu.buildButtons[2].SetActive(false);
+                             }
                             break;
                         case "WorldTile":
                             ClearSelections();
                             selectedTile = other.GetComponent<WorldTile>();
-                            Destroy(selectedTile.gameObject);
-                            Vector2 index = TileManager.findTile(selectedTile.gameObject);
-                            GameObject newTile = selectedTile.createNewTile();
-                            TileManager.tiles[(int)index.x, (int)index.y] = newTile;
-                            TileManager.shownTiles[(int)index.x, (int)index.y] = true;
-                            TileManager.showTiles();
+                            buyTileMenu.SetSelectedTile(selectedTile);
+                            if (!selectedTile.purchased)
+                            {
+                            buyTileMenu.buildButtons[2].SetActive(true);
+                            buyMenuObj.SetActive(true);
+                            }
+
                             break;
-                        default:
-                            ClearSelections();
+                        case "SkullIsland":
+                            bombCounter++;
+                            Debug.Log(bombCounter);
+                            if (bombCounter == 5)
+                            {
+                                nuke = other.GetComponent<NukeTime>();
+                                nuke.nukeTime();
+                            }
                             break;
-                    }
+                            default:
+                                ClearSelections();
+                                break;
+                        }
                 }
         }
     }
