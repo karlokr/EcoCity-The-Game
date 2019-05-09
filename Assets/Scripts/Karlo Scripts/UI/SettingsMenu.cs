@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class SettingsMenu : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+
+    public GameObject GameMenu;
+    public GameObject Canvas;
+
+    public void NewGameButton() {
+        (Instantiate(GameMenu) as GameObject).transform.parent = Canvas.transform;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public void Back() {
+        Destroy(Canvas);
     }
 }

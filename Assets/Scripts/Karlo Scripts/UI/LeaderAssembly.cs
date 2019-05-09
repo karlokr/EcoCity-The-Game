@@ -29,6 +29,7 @@ public class LeaderAssembly : MonoBehaviour
         foreach (GameObject ScoreObject in GameObject.FindGameObjectsWithTag("LeaderScore")) {
             if (j < length) {
                 Debug.Log(j);
+                int score = (int)LeaderData["leaderboard"][j]["ecoscore"];
                 ScoreObject.GetComponent<Text>().text = score.ToString();
                 j++;
             } else {

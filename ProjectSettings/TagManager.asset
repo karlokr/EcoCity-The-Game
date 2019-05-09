@@ -4,32 +4,21 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - CameraHolder
   - Building
-  - MatchTimer
-  - BuildMenu
-  - Plot
-  - Emission
+  - BuyTileMenu
   - Money
-  - UpgradeMenu
+  - BuildMenu
   - Population
+  - Emission
+  - InspectMenu
+  - UpgradeMenu
   - Wood
+  - MatchTimer
+  - CameraHolder
   - ResourceKeeper
   - WorldTile
-  - InspectMenu
-  - HiddenTile
   - Forest
-  - LeaderUser
-  - LeaderScore
-  - Login
-  - UsernameLogin
-  - BuyTileMenu
-  - TileHolder
-  - CampaignSelected
-  - EndlessSelected
-  - CampaignButton
-  - EndlessButton
-  - SkullIsland
+  - Plot
   layers:
   - Default
   - TransparentFX
@@ -39,7 +28,7 @@ TagManager:
   - UI
   - 
   - 
-  - Post Processing
+  - 
   - 
   - 
   - 
