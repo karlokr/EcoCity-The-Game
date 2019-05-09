@@ -8,6 +8,8 @@ public static class DBManager {
     public static int id;
     public static int score;
     public static bool isGuest;
+    public static bool inGame;
+    public static bool newGame;
     public static int save_num;
     public static string game_mode;
     public static string level;

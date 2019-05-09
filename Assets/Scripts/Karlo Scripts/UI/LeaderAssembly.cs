@@ -19,7 +19,6 @@ public class LeaderAssembly : MonoBehaviour
         foreach (GameObject UserObject in GameObject.FindGameObjectsWithTag("LeaderUser")) {
             if (i < length) {
                 Debug.Log(i);
-                Debug.Log((string)LeaderData["leaderboard"][i]["username"]);
                 UserObject.GetComponentInParent<Image>().gameObject.SetActive(true);
                 UserObject.GetComponent<Text>().text = (string)LeaderData["leaderboard"][i]["username"];
                 i++;
@@ -31,7 +30,6 @@ public class LeaderAssembly : MonoBehaviour
             if (j < length) {
                 Debug.Log(j);
                 int score = (int)LeaderData["leaderboard"][j]["ecoscore"];
-                Debug.Log(score);
                 ScoreObject.GetComponent<Text>().text = score.ToString();
                 j++;
             } else {
