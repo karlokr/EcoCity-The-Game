@@ -11,9 +11,11 @@ public class MainMenu : MonoBehaviour
     public GameObject PlayButton;
     public GameObject CampaignSelectedButton;
     public GameObject EndlessSelectedButton;
+    public GameObject Menu;
     private GameObject BackButton;
     private bool CampaignSelected;
     private bool EndlessSelected;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -33,7 +35,7 @@ public class MainMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        NewGameManager.level = "easy";
     }
 
     public void PlayGame() {
@@ -65,5 +67,9 @@ public class MainMenu : MonoBehaviour
         EndlessButton.SetActive(false);
         EndlessSelectedButton.SetActive(true);
         PlayButton.GetComponent<Button>().interactable = true;
+    }
+
+    public void Back() {
+        Destroy(Menu);
     }
 }
