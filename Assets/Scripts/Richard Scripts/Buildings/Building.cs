@@ -26,6 +26,7 @@ public class Building : MonoBehaviour
     public ParticleSystem popParticleSystem;
     public ParticleSystem moneyParticleSystem;
     public ParticleSystem woodParticleSystem;
+    public GameObject upgradeSystems;
 
     //Category Specific Increases
     public int populationIncrease;
@@ -78,6 +79,11 @@ public class Building : MonoBehaviour
             ResourceKeeper.population += upgrades[index].populationIncrease;
 
             EmitResources(upgrades[index].populationIncrease, upgrades[index].incomeIncrease, upgrades[index].woodIncomeIncrease);
+            ParticleSystem[] systems = upgradeSystems.GetComponentsInChildren<ParticleSystem>();
+            foreach (ParticleSystem p in systems)
+            {
+                p.Play();
+            }
         }  
     }
 

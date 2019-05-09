@@ -4823,6 +4823,7 @@ Transform:
   - {fileID: 6795621434697522689}
   - {fileID: 8787996795304556069}
   - {fileID: 421740939339195520}
+  - {fileID: 6374580120918882490}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4912,6 +4913,7 @@ MonoBehaviour:
   popParticleSystem: {fileID: 7960129278324118893}
   moneyParticleSystem: {fileID: 5836984364329324055}
   woodParticleSystem: {fileID: 3283637033678991977}
+  upgradeSystems: {fileID: 3915200992249441484}
   populationIncrease: 0
   woodIncomeIncrease: 0
   incomeIncrease: 30
@@ -19592,3 +19594,84 @@ MonoBehaviour:
   visualModel: {fileID: 0}
   upgradeActive: 0
   description: THICC income increase. Small emission reduction.
+--- !u!1001 &2601944253148122091
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2470695281993958904}
+    m_Modifications:
+    - target: {fileID: 1319097346479073063, guid: a266c376265a9fe4896dfa4c6941bd88,
+        type: 3}
+      propertyPath: m_Name
+      value: Upgrade Particle Systems
+      objectReference: {fileID: 0}
+    - target: {fileID: 8965814030696559441, guid: a266c376265a9fe4896dfa4c6941bd88,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8965814030696559441, guid: a266c376265a9fe4896dfa4c6941bd88,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8965814030696559441, guid: a266c376265a9fe4896dfa4c6941bd88,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8965814030696559441, guid: a266c376265a9fe4896dfa4c6941bd88,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8965814030696559441, guid: a266c376265a9fe4896dfa4c6941bd88,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8965814030696559441, guid: a266c376265a9fe4896dfa4c6941bd88,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8965814030696559441, guid: a266c376265a9fe4896dfa4c6941bd88,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8965814030696559441, guid: a266c376265a9fe4896dfa4c6941bd88,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8965814030696559441, guid: a266c376265a9fe4896dfa4c6941bd88,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8965814030696559441, guid: a266c376265a9fe4896dfa4c6941bd88,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8965814030696559441, guid: a266c376265a9fe4896dfa4c6941bd88,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a266c376265a9fe4896dfa4c6941bd88, type: 3}
+--- !u!1 &3915200992249441484 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1319097346479073063, guid: a266c376265a9fe4896dfa4c6941bd88,
+    type: 3}
+  m_PrefabInstance: {fileID: 2601944253148122091}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &6374580120918882490 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8965814030696559441, guid: a266c376265a9fe4896dfa4c6941bd88,
+    type: 3}
+  m_PrefabInstance: {fileID: 2601944253148122091}
+  m_PrefabAsset: {fileID: 0}
