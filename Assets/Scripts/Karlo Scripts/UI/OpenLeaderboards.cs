@@ -7,7 +7,7 @@ public class OpenLeaderboards : MonoBehaviour
     public GameObject GameCanvas;
     public GameObject Leaderboard;
 
-    public void ShowLeaderboard() {
+    public void ShowLeaderboard() { 
         (Instantiate(Leaderboard) as GameObject).transform.parent = GameCanvas.transform;
     }
 }
