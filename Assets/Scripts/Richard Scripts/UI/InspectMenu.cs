@@ -22,6 +22,7 @@ public class InspectMenu : MonoBehaviour
     public Sprite wood;
     public Sprite pop;
     public Sprite gem;
+    public bool inspecting;
 
     private Animator animator;
     private void Awake()
@@ -60,6 +61,7 @@ public class InspectMenu : MonoBehaviour
     public void SetInspecting(bool b)
     {
         animator.SetBool("Inspecting", b);
+        inspecting = b;
     }
 
     public void SetStat1(string s)
