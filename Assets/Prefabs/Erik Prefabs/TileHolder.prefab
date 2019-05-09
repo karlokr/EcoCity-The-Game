@@ -224,6 +224,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5692885578721872285}
   - component: {fileID: 5692885578721872282}
+  - component: {fileID: 3381820568009617031}
   m_Layer: 0
   m_Name: TileHolder
   m_TagString: TileHolder
@@ -283,6 +284,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotateSpeed: 15
+--- !u!114 &3381820568009617031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5692885578721872284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff562f1cff9b27044a23d4c60b505f31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  worldTiles: []
 --- !u!1 &5692885578872205927
 GameObject:
   m_ObjectHideFlags: 0
@@ -2644,6 +2658,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5692885578721872285}
     m_Modifications:
+    - target: {fileID: 3349237013509034084, guid: c4d55a2df94bb2b4a9b3267d343ab774,
+        type: 3}
+      propertyPath: m_Name
+      value: LevelOneLayout
+      objectReference: {fileID: 0}
     - target: {fileID: 3349237013509034080, guid: c4d55a2df94bb2b4a9b3267d343ab774,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2708,11 +2727,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3349237013509034084, guid: c4d55a2df94bb2b4a9b3267d343ab774,
-        type: 3}
-      propertyPath: m_Name
-      value: LevelOneLayout
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4d55a2df94bb2b4a9b3267d343ab774, type: 3}
