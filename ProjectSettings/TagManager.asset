@@ -19,6 +19,20 @@ TagManager:
   - InspectMenu
   - HiddenTile
   - Forest
+  - LeaderUser
+  - LeaderScore
+  - Login
+  - UsernameLogin
+  - BuyTileMenu
+  - TileHolder
+  - CampaignSelected
+  - EndlessSelected
+  - CampaignButton
+  - EndlessButton
+  - BackButton
+  - GameMenu
+  - LGameMode
+  - LLevel
   layers:
   - Default
   - TransparentFX

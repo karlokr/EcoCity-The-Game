@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Plot : MonoBehaviour
 {
@@ -9,55 +7,56 @@ public class Plot : MonoBehaviour
 
     public Material debugMaterial;
     public static Material defaultMaterial;
-    public Renderer[] rends;
-   
+    public Animator animator;
+
     private ResourceKeeper resourceKeeper;
+    
 
     private void Awake()
     {
-        rends = GetComponentsInChildren<Renderer>();
-        defaultMaterial = GetComponentInChildren<Renderer>().material;
-        resourceKeeper = GameObject.FindGameObjectWithTag("ResourceKeeper").GetComponent<ResourceKeeper>();
+        animator = GetComponent<Animator>();
     }
 
     // Start is called before the first frame update
     void Start()
     {
-       
+
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void CreateBuilding(GameObject prefabToBuild)
     {
         Building building = prefabToBuild.GetComponent<Building>();
 
-        if (resourceKeeper.money < building.cost)
+        if (ResourceKeeper.money < building.cost)
         {
             Debug.Log("Not enough money");
         }
-        if (resourceKeeper.wood < building.woodCost)
+        if (ResourceKeeper.wood < building.woodCost)
         {
             Debug.Log("Not Enough wood");
         }
-        if (resourceKeeper.population < building.populationRequired)
+        if (ResourceKeeper.population < building.populationRequired)
         {
             Debug.Log("Not enough population to build this building");
         }
 
-        else if (resourceKeeper.money >= building.cost && resourceKeeper.wood >= building.woodCost && resourceKeeper.population >= building.populationRequired)
+        else if (ResourceKeeper.money >= building.cost && ResourceKeeper.wood >= building.woodCost && ResourceKeeper.population >= building.populationRequired)
         {
 
             GameObject newBuilding = Instantiate(prefabToBuild, transform.position, transform.rotation);
+            int randRotFactor = Random.Range(0, 3);
+            newBuilding.transform.Rotate(Vector3.up * (90f * randRotFactor));
             newBuilding.transform.SetParent(GameObject.FindGameObjectWithTag("WorldTile").transform);
             newBuilding.transform.Translate(Vector3.up * 35f);
-            resourceKeeper.money -= building.cost;
-            resourceKeeper.wood -= building.woodCost;
+            ResourceKeeper.money -= building.cost;
+            ResourceKeeper.wood -= building.woodCost;
             Destroy(gameObject);
             building.Emit();
         }
@@ -68,38 +67,22 @@ public class Plot : MonoBehaviour
     /// <summary>
     /// Debug function that sets the mesh color to magenta.
     /// </summary>
-    public void ActivateDebugColor()
+    public void FocusOnPlot()
     {
-        
-        foreach (Renderer r in rends)
-        {
-            r.material = debugMaterial;
-        }
-        
+        animator.SetBool("Focused", true);
+    }
+
+
+    public static void UnfocusAllPlots()
+    {
         Plot[] p = GameObject.FindObjectsOfType<Plot>();
         foreach (Plot obj in p)
         {
-            if (obj != this)
-            {
-                foreach(Renderer r in obj.rends)
-                {
-                    r.material = defaultMaterial;
-                }
-            }
+            obj.animator.SetBool("Focused", false);
         }
     }
 
-    public static void ClearDebugColor()
-    {
-        Plot[] p = GameObject.FindObjectsOfType<Plot>();
-        foreach (Plot obj in p)
-        {
-            foreach (Renderer r in obj.rends)
-            {
-                r.material = defaultMaterial;
-            }
-        }
-    }
+
 
 
 }

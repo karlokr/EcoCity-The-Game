@@ -1,7 +1,12 @@
 fileFormatVersion: 2
 guid: 7170f1a798cad8241b24ac62c357fb16
+<<<<<<< HEAD
 PrefabImporter:
   externalObjects: {}
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+=======
+NativeFormatImporter:
+  userData: 
+>>>>>>> richard

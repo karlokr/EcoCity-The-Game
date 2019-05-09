@@ -14,16 +14,20 @@ public class InspectMenu : MonoBehaviour
     public Text stat2;
     public Text stat3;
 
-    public Image varImg;
+    public Image stat1Image;
+    public Image stat2Image;
+    public Image stat3Image;
 
-    private Sprite gold;
-    private Sprite wood;
-    private Sprite pop;
+    public Sprite gold;
+    public Sprite wood;
+    public Sprite pop;
+    public Sprite gem;
 
     private Animator animator;
     private void Awake()
     {
         animator = GetComponent<Animator>();
+        gem = (Sprite)UnityEditor.AssetDatabase.LoadAssetAtPath("Assets/Art/2D/UI/Resource Vector Graphics/UI_Graphic_Resource_Gems.png", typeof(Sprite));
         gold = (Sprite)UnityEditor.AssetDatabase.LoadAssetAtPath("Assets/Art/2D/UI/Resource Vector Graphics/UI_Graphic_Resource_Coins.png", typeof(Sprite));
         wood = (Sprite)UnityEditor.AssetDatabase.LoadAssetAtPath("Assets/Art/2D/UI/Resource Vector Graphics/UI_Graphic_Resource_Wood.png", typeof(Sprite));
         pop = (Sprite)UnityEditor.AssetDatabase.LoadAssetAtPath("Assets/Art/2D/UI/Resource Vector Graphics/UI_Graphic_Resource_Food.png", typeof(Sprite));
@@ -96,23 +100,24 @@ public class InspectMenu : MonoBehaviour
         SetPopCost(b.populationRequired.ToString());
         SetWoodCost(b.woodCost.ToString());
 
+        stat1Image.GetComponent<Image>().sprite = gem;
         SetStat1("+" + b.emission.ToString() + " EMISSION");
 
-        if (b.woodIncomeIncrease != 0)
+        if (b.buildingType == "Industrial")
         {
             SetStat2("+" + b.woodIncomeIncrease.ToString() + " WOOD INCOME");
-            varImg.GetComponent<Image>().sprite = wood;
+            stat2Image.GetComponent<Image>().sprite = wood;
 
         }
-        if (b.incomeIncrease != 0)
+        if (b.buildingType == "Commercial")
         {
             SetStat2("+" + b.incomeIncrease.ToString() + " INCOME");
-            varImg.GetComponent<Image>().sprite = gold;
+            stat2Image.GetComponent<Image>().sprite = gold;
         }
-        if (b.populationIncrease != 0)
+        if (b.buildingType == "Residential")
         {
             SetStat2("+" + b.populationIncrease.ToString() + " POPULATION");
-            varImg.GetComponent<Image>().sprite = pop;
+            stat2Image.GetComponent<Image>().sprite = pop;
         }
         SetStat3("");
     }
