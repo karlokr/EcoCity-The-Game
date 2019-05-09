@@ -29,6 +29,10 @@ TagManager:
   - EndlessSelected
   - CampaignButton
   - EndlessButton
+  - BackButton
+  - GameMenu
+  - LGameMode
+  - LLevel
   layers:
   - Default
   - TransparentFX

@@ -5,4 +5,5 @@ using UnityEngine;
 public static class LeaderManager
 {
     public static string LeaderData;
+    public static int TotalNumRecords;
 }
