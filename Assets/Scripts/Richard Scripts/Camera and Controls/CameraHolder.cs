@@ -7,7 +7,10 @@ public class CameraHolder : MonoBehaviour
 
     public float speed;
     public float zoomSpeed;
+    public int minZoom = 13;
+    public int maxZoom = 60;
 
+    private float orthoTarget;
     private Animator animator;
     private float animPlayPercent = 0.0f;
     private Camera mainCamera;
@@ -21,7 +24,7 @@ public class CameraHolder : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        orthoTarget = mainCamera.orthographicSize;
     }
 
     // Update is called once per frame
@@ -29,6 +32,7 @@ public class CameraHolder : MonoBehaviour
     {
         HandleControls();
         SetZoom();
+        mainCamera.orthographicSize = Mathf.Lerp(mainCamera.orthographicSize, orthoTarget, Time.deltaTime * zoomSpeed);
     }
 
     /// <summary>
@@ -62,14 +66,26 @@ public class CameraHolder : MonoBehaviour
     {
         if (Input.GetAxis("Mouse ScrollWheel") > 0f) // forward
         {
-            mainCamera.orthographicSize = Mathf.Clamp(mainCamera.orthographicSize - zoomSpeed, 13, 60);
+            orthoTarget = Mathf.Clamp(mainCamera.orthographicSize - zoomSpeed, minZoom, maxZoom);
+
         }
         if (Input.GetAxis("Mouse ScrollWheel") < 0f) // backwards
         {
-            mainCamera.orthographicSize = Mathf.Clamp(mainCamera.orthographicSize + zoomSpeed, 13, 60);
+            orthoTarget = Mathf.Clamp(mainCamera.orthographicSize + zoomSpeed, minZoom, maxZoom);
         }
     }
 
+    public void ZoomIn()
+    {
+        orthoTarget = Mathf.Clamp(mainCamera.orthographicSize - zoomSpeed, minZoom, maxZoom);
+    }
 
+    public void ZoomOut()
+    {
+        if (Input.GetAxis("Mouse ScrollWheel") < 0f) // backwards
+        {
+            orthoTarget = Mathf.Clamp(mainCamera.orthographicSize + zoomSpeed, minZoom, maxZoom);
+        }
+    }
 
 }
