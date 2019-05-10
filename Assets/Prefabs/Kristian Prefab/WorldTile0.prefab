@@ -107,7 +107,7 @@ GameObject:
   - component: {fileID: 2379163540597328448}
   - component: {fileID: 1641290071181275862}
   m_Layer: 0
-  m_Name: LevelOneLayout
+  m_Name: WorldTile0
   m_TagString: WorldTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -271,8 +271,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5433e2007b8c0e94d88e8f2fe64c290b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabToBuild: {fileID: 0}
-  purchased: 0
+  purchased: 1
 --- !u!1 &3349237013966668644
 GameObject:
   m_ObjectHideFlags: 0
