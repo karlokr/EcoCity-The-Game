@@ -25,7 +25,7 @@ public class TileManager : MonoBehaviour
         }
         foreach (GameObject tile in tiles)
         {
-            if (!tile.name.Equals("LevelOneLayout"))
+            if (!tile.name.Equals("WorldTile0"))
             {
                 tile.SetActive(false);
             }
@@ -93,6 +93,7 @@ public class TileManager : MonoBehaviour
         }
     }
     // Finds the index of the tile in the 2D array and returns it
+
     public static Vector2 findTile(GameObject tile)
     {
         for (int row = 0; row < rowNumber; row++)

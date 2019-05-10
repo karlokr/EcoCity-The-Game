@@ -26,6 +26,12 @@ public class Building : MonoBehaviour
     public ParticleSystem popParticleSystem;
     public ParticleSystem moneyParticleSystem;
     public ParticleSystem woodParticleSystem;
+    public GameObject upgradeSystems;
+
+    private AudioSource audioSource;
+
+    public AudioClip landingThud;
+    public AudioClip coinSpluge;
 
     //Category Specific Increases
     public int populationIncrease;
@@ -34,6 +40,7 @@ public class Building : MonoBehaviour
 
     private void Awake()
     {
+        audioSource = GetComponent<AudioSource>();
         animator = GetComponent<Animator>();
         rend = GetComponent<Renderer>();
         upgrades = GetComponentsInChildren<Upgrade>();
@@ -49,12 +56,18 @@ public class Building : MonoBehaviour
 
     }
 
+    public void PlayLandingSounds()
+    {
+        audioSource.PlayOneShot(coinSpluge);
+        audioSource.PlayOneShot(landingThud);
+    }
+
     /// <summary>
     /// Debug function that sets the mesh color to magenta.
     /// </summary>
     public void FocusOnBuilding()
     {
-        animator.SetBool("Inspecting", true);
+        //animator.SetBool("Inspecting", true);
     }
 
     public static void UnfocusAllBuildings()
@@ -62,7 +75,7 @@ public class Building : MonoBehaviour
         Building[] b = GameObject.FindObjectsOfType<Building>();
         foreach (Building obj in b)
         {
-            obj.animator.SetBool("Inspecting", false);
+            //obj.animator.SetBool("Inspecting", false);
         }
     }
 
@@ -78,6 +91,11 @@ public class Building : MonoBehaviour
             ResourceKeeper.population += upgrades[index].populationIncrease;
 
             EmitResources(upgrades[index].populationIncrease, upgrades[index].incomeIncrease, upgrades[index].woodIncomeIncrease);
+            ParticleSystem[] systems = upgradeSystems.GetComponentsInChildren<ParticleSystem>();
+            foreach (ParticleSystem p in systems)
+            {
+                p.Play();
+            }
         }  
     }
 

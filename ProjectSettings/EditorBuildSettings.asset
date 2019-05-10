@@ -17,12 +17,27 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Karlo Scenes/Menus/LoadingScreen.unity
     guid: 8f9fe2b9be021c446a47f10a6254a728
-  - enabled: 1
-    path: Assets/Scenes/Kristian Scenes/Level_One.unity
-    guid: ecfbb5ff3a7333d43919f398c4045cbf
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/Karlo Scenes/GameTypes/campaign/campaign_easy.unity
+    guid: f09c270db5c8f124fb211d01828f7a15
+  - enabled: 1
+    path: Assets/Scenes/Karlo Scenes/GameTypes/campaign/campaign_medium.unity
+    guid: 4d042da8491db4a48980ead04d2fe400
+  - enabled: 1
+    path: Assets/Scenes/Karlo Scenes/GameTypes/campaign/campaign_hard.unity
+    guid: 28efa5ad1c54f424b8b8a55134a8fe0f
+  - enabled: 1
+    path: Assets/Scenes/Karlo Scenes/GameTypes/endless/endless_easy.unity
+    guid: f8907ce735da111499aa2dc472ab48dc
+  - enabled: 1
+    path: Assets/Scenes/Karlo Scenes/GameTypes/endless/endless_medium.unity
+    guid: 6133e2139ec31b6429c5fcf13e5f5da8
+  - enabled: 1
+    path: Assets/Scenes/Karlo Scenes/GameTypes/endless/endless_hard.unity
+    guid: 7e36e2281c4ec5e458b3a37091a14ff6
   - enabled: 1
     path: Assets/Scenes/Kristian Scenes/win_screen.unity
     guid: 207f2cb768f8ee04084f15b43b431a98

@@ -23,12 +23,16 @@ public class CameraClicker : MonoBehaviour
     private BuyTileMenu buyTileMenu;
     private bool dragging;
     private Vector3 startDragPosition;
-    
+    private int bombCounter;
+    private ClickerAudio clickerAudio;
     //A GameObject that will be passed to a selected object.
     private GameObject objectToPass;
+    private NukeTime nuke;
 
     private void Awake()
     {
+        clickerAudio = GetComponent<ClickerAudio>();
+        bombCounter = 0;
         resourceKeeper = GameObject.FindGameObjectWithTag("ResourceKeeper").GetComponent<ResourceKeeper>();
         viewportCamera = GetComponent<Camera>();
         cameraHolder = GameObject.FindGameObjectWithTag("CameraHolder").GetComponent<CameraHolder>();
@@ -56,8 +60,7 @@ public class CameraClicker : MonoBehaviour
         buyMenuObj.SetActive(false);
         buyTileMenu.buildButtons[0].SetActive(false);
         buyTileMenu.buildButtons[1].SetActive(false);
-
-
+        buyTileMenu.buildButtons[2].SetActive(false);
     }
 
     // Update is called once per frame
@@ -76,13 +79,14 @@ public class CameraClicker : MonoBehaviour
 
     private void HandleClicks()
     {
-        if (Input.GetMouseButtonUp(0) && matchTimer.matchStarted && !dragging)
+        if (!EventSystem.current.IsPointerOverGameObject())
         {
-            //if (!EventSystem.current.IsPointerOverGameObject())
-            //{
+            if (Input.GetMouseButtonUp(0) && matchTimer.matchStarted && !dragging)
+            {
                 Ray screenToWorld = viewportCamera.ScreenPointToRay(Input.mousePosition);
                 if (Physics.Raycast(screenToWorld, out RaycastHit raycastHit))
                 {
+                    clickerAudio.PlayInspect();
                     Collider other = raycastHit.collider;
                     switch (other.tag)
                     {
@@ -97,9 +101,9 @@ public class CameraClicker : MonoBehaviour
                         case "Plot":
                             ClearSelections();
                             Building.UnfocusAllBuildings();
-                            selectedPlot = other.GetComponent<Plot>();
+                            selectedPlot = other.GetComponentInParent<Plot>();
                             selectedPlot.FocusOnPlot();
-                            if (selectedPlot.size == (Plot.PlotSize) 0)
+                            if (selectedPlot.size == (Plot.PlotSize)0)
                             {
                                 buildMenuObj[0].SetActive(true);
                             }
@@ -118,10 +122,11 @@ public class CameraClicker : MonoBehaviour
                             selectedForest = other.GetComponent<Forest>();
                             buyTileMenu.SetSelectedTile(selectedForest);
                             buyMenuObj.SetActive(true);
+                            buyTileMenu.buildButtons[2].SetActive(false);
                             if (!selectedForest.finished)
                             {
                                 buyTileMenu.buildButtons[0].SetActive(true);
-                                buyTileMenu.buildButtons[1].SetActive(false);
+                                buyTileMenu.buildButtons[1].SetActive(false);                                
                             }
                             if (selectedForest.finished || selectedForest.building)
                             {
@@ -132,18 +137,28 @@ public class CameraClicker : MonoBehaviour
                         case "WorldTile":
                             ClearSelections();
                             selectedTile = other.GetComponent<WorldTile>();
-                            Destroy(selectedTile.gameObject);
-                            Vector2 index = TileManager.findTile(selectedTile.gameObject);
-                            GameObject newTile = selectedTile.createNewTile();
-                            TileManager.tiles[(int)index.x, (int)index.y] = newTile;
-                            TileManager.shownTiles[(int)index.x, (int)index.y] = true;
-                            TileManager.showTiles();
+                            buyTileMenu.SetSelectedTile(selectedTile);
+                            if (!selectedTile.purchased)
+                            {
+                                buyMenuObj.SetActive(true);
+                                buyTileMenu.buildButtons[2].SetActive(true);
+                            }
+                            break;
+                        case "SkullIsland":
+                            bombCounter++;
+                            Debug.Log(bombCounter);
+                            if (bombCounter == 5)
+                            {
+                                nuke = other.GetComponent<NukeTime>();
+                                nuke.nukeTime();
+                            }
                             break;
                         default:
                             ClearSelections();
                             break;
                     }
                 }
+            }
         }
     }
 

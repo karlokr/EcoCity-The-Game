@@ -5,8 +5,11 @@ using UnityEngine.UI;
 
 public class BuyTileMenu : MonoBehaviour
 {
+    private WorldTile worldTile;
     private Forest forestTile;
     public GameObject[] buildButtons;
+
+    private GameObject randomTile;
 
     private void Awake()
     {
@@ -27,7 +30,10 @@ public class BuyTileMenu : MonoBehaviour
     {
         forestTile = tile;
     }
-
+    public void SetSelectedTile(WorldTile tile)
+    {
+        worldTile = tile;
+    }
     public void ConvertTile()
     {
         if (forestTile.finished)
@@ -39,5 +45,22 @@ public class BuyTileMenu : MonoBehaviour
     {
         forestTile.BuyForest();       
 
+    }
+    public void BuyNewTile()
+    {
+        SelectRandomTile();
+        ResourceKeeper.wood -= 1000;
+        Vector2 index = TileManager.findTile(worldTile.gameObject);
+        GameObject newTile = worldTile.createNewTile(randomTile);
+        TileManager.tiles[(int)index.x, (int)index.y] = newTile;
+        TileManager.shownTiles[(int)index.x, (int)index.y] = true;
+        TileManager.showTiles();
+        Destroy(worldTile.gameObject);
+
+    }
+    private void SelectRandomTile()
+    {
+        int randomNumber = Random.Range(0, 2);
+        randomTile = (GameObject)UnityEditor.AssetDatabase.LoadAssetAtPath("Assets/Prefabs/Kristian Prefab/WorldTile" + randomNumber + ".prefab", typeof(GameObject));
     }
 }

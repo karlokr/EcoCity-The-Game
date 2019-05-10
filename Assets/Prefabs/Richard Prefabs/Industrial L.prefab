@@ -85,6 +85,7 @@ Transform:
   - {fileID: 5081319049679341151}
   - {fileID: 1015945178}
   - {fileID: 5696358023717603145}
+  - {fileID: 8895408211746511160}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -167,13 +168,14 @@ MonoBehaviour:
   verticalOffset: 0
   buildingType: Industrial
   cost: 1000
-  woodCost: 750
+  woodCost: 400
   populationRequired: 30
   emission: 100
   landingParticleSystem: {fileID: 4443102788440182514}
   popParticleSystem: {fileID: 3860429550815443879}
   moneyParticleSystem: {fileID: 935245168541869795}
   woodParticleSystem: {fileID: 4335812689850226912}
+  upgradeSystems: {fileID: 1535814283312778574}
   populationIncrease: 0
   woodIncomeIncrease: 15
   incomeIncrease: 0
@@ -19592,3 +19594,84 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!1001 &512899050872236649
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2470695281993958904}
+    m_Modifications:
+    - target: {fileID: 1319097346479073063, guid: a266c376265a9fe4896dfa4c6941bd88,
+        type: 3}
+      propertyPath: m_Name
+      value: Upgrade Particle Systems
+      objectReference: {fileID: 0}
+    - target: {fileID: 8965814030696559441, guid: a266c376265a9fe4896dfa4c6941bd88,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8965814030696559441, guid: a266c376265a9fe4896dfa4c6941bd88,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8965814030696559441, guid: a266c376265a9fe4896dfa4c6941bd88,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8965814030696559441, guid: a266c376265a9fe4896dfa4c6941bd88,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8965814030696559441, guid: a266c376265a9fe4896dfa4c6941bd88,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8965814030696559441, guid: a266c376265a9fe4896dfa4c6941bd88,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8965814030696559441, guid: a266c376265a9fe4896dfa4c6941bd88,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8965814030696559441, guid: a266c376265a9fe4896dfa4c6941bd88,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8965814030696559441, guid: a266c376265a9fe4896dfa4c6941bd88,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8965814030696559441, guid: a266c376265a9fe4896dfa4c6941bd88,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8965814030696559441, guid: a266c376265a9fe4896dfa4c6941bd88,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a266c376265a9fe4896dfa4c6941bd88, type: 3}
+--- !u!1 &1535814283312778574 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1319097346479073063, guid: a266c376265a9fe4896dfa4c6941bd88,
+    type: 3}
+  m_PrefabInstance: {fileID: 512899050872236649}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8895408211746511160 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8965814030696559441, guid: a266c376265a9fe4896dfa4c6941bd88,
+    type: 3}
+  m_PrefabInstance: {fileID: 512899050872236649}
+  m_PrefabAsset: {fileID: 0}

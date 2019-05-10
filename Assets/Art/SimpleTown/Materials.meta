@@ -1,5 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
+<<<<<<< HEAD:Assets/Art/SimpleTown/Materials.meta
 guid: 5a6bde94f1d1a984d860b74bf66d9a44
+=======
+guid: 9c44ff7b4f7e964489684c39e0fb5ea7
+>>>>>>> richard:Assets/Art/Animations/GameObjects/Large Plot.meta
+=======
+guid: 5a6bde94f1d1a984d860b74bf66d9a44
+>>>>>>> richard
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
