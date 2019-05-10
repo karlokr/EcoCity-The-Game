@@ -7,7 +7,8 @@ using UnityEngine.UI;
 
 public class LeaderAssembly : MonoBehaviour
 {
-    public static void GenerateLeaderBoard() {
+
+    public static void GenerateLeaderBoard(GameObject[] LeaderSlots) {
         string RawData = LeaderManager.LeaderData;
         Debug.Log(RawData);
         var LeaderData = JObject.Parse(RawData);
@@ -15,26 +16,16 @@ public class LeaderAssembly : MonoBehaviour
         int length = items.Count;
         Debug.Log(length);
 
-        int i = 0;
-        foreach (GameObject UserObject in GameObject.FindGameObjectsWithTag("LeaderUser")) {
+        for (int i=0; i<LeaderSlots.Length; i++) { 
             if (i < length) {
                 Debug.Log(i);
-                UserObject.GetComponentInParent<Image>().gameObject.SetActive(true);
-                UserObject.GetComponent<Text>().text = (string)LeaderData["leaderboard"][i]["username"];
-                i++;
-            } 
-        }
-
-        int j = 0;
-        foreach (GameObject ScoreObject in GameObject.FindGameObjectsWithTag("LeaderScore")) {
-            if (j < length) {
-                Debug.Log(j);
-                int score = (int)LeaderData["leaderboard"][j]["ecoscore"];
-                ScoreObject.GetComponent<Text>().text = score.ToString();
-                j++;
+                LeaderSlots[i].GetComponent<Image>().gameObject.SetActive(true);
+                LeaderSlots[i].GetComponentInChildren<Text>().text = (string)LeaderData["leaderboard"][i]["username"];
+                LeaderSlots[i].GetComponentInChildren<Text>().GetComponentInChildren<Text>().text = (string)LeaderData["leaderboard"][i]["ecoscore"];
             } else {
-                ScoreObject.GetComponentInParent<Image>().gameObject.SetActive(false);
+                LeaderSlots[i].GetComponent<Image>().gameObject.SetActive(false);
             }
         }
+
     }
 }

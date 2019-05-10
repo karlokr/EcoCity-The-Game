@@ -19,6 +19,18 @@ TagManager:
   - WorldTile
   - Forest
   - Plot
+  - GameMenu
+  - EndlessSelected
+  - CampaignSelected
+  - BackButton
+  - EndlessButton
+  - CampaignButton
+  - LeaderScore
+  - LeaderUser
+  - LGameMode
+  - LLevel
+  - UsernameLogin
+  - AudioPlayer
   layers:
   - Default
   - TransparentFX
