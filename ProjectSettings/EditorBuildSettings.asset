@@ -17,18 +17,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Karlo Scenes/Menus/LoadingScreen.unity
     guid: 8f9fe2b9be021c446a47f10a6254a728
-  - enabled: 1
-    path: Assets/Scenes/Karlo Scenes/GameTypes/campaign/campaign_easy.unity
-    guid: 0eb74864b1404114e8fe1617990433a3
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Karlo Scenes/GameTypes/campaign/campaign_medium.unity
     guid: 4d042da8491db4a48980ead04d2fe400
   - enabled: 1
-    path: Assets/Scenes/Karlo Scenes/GameTypes/campaign/campaign_hard.unity
-    guid: 28efa5ad1c54f424b8b8a55134a8fe0f
-  - enabled: 1
     path: Assets/Scenes/Karlo Scenes/GameTypes/endless/endless_easy.unity
     guid: f8907ce735da111499aa2dc472ab48dc
+  - enabled: 1
+    path: Assets/Scenes/Karlo Scenes/GameTypes/campaign/campaign_hard.unity
+    guid: 28efa5ad1c54f424b8b8a55134a8fe0f
   - enabled: 1
     path: Assets/Scenes/Karlo Scenes/GameTypes/endless/endless_medium.unity
     guid: 6133e2139ec31b6429c5fcf13e5f5da8
