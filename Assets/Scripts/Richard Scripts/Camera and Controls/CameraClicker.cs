@@ -122,17 +122,16 @@ public class CameraClicker : MonoBehaviour
                             selectedForest = other.GetComponent<Forest>();
                             buyTileMenu.SetSelectedTile(selectedForest);
                             buyMenuObj.SetActive(true);
+                            buyTileMenu.buildButtons[2].SetActive(false);
                             if (!selectedForest.finished)
                             {
                                 buyTileMenu.buildButtons[0].SetActive(true);
-                                buyTileMenu.buildButtons[1].SetActive(false);
-                                buyTileMenu.buildButtons[2].SetActive(false);
+                                buyTileMenu.buildButtons[1].SetActive(false);                                
                             }
                             if (selectedForest.finished || selectedForest.building)
                             {
                                 buyTileMenu.buildButtons[0].SetActive(false);
                                 buyTileMenu.buildButtons[1].SetActive(true);
-                                buyTileMenu.buildButtons[2].SetActive(false);
                             }
                             break;
                         case "WorldTile":
@@ -141,10 +140,9 @@ public class CameraClicker : MonoBehaviour
                             buyTileMenu.SetSelectedTile(selectedTile);
                             if (!selectedTile.purchased)
                             {
-                                buyTileMenu.buildButtons[2].SetActive(true);
                                 buyMenuObj.SetActive(true);
+                                buyTileMenu.buildButtons[2].SetActive(true);
                             }
-
                             break;
                         case "SkullIsland":
                             bombCounter++;
