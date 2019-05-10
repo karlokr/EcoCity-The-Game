@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Karlo Scenes/Menus/LandingPage.unity
+    guid: 87bb223b263fb2c438e24752d7661d57
+  - enabled: 1
     path: Assets/Scenes/Karlo Scenes/Menus/LogIn.unity
     guid: ec8ca0ab8b72355408a51d294fab8946
   - enabled: 1
