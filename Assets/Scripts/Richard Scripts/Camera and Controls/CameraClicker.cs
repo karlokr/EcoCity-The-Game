@@ -24,13 +24,14 @@ public class CameraClicker : MonoBehaviour
     private bool dragging;
     private Vector3 startDragPosition;
     private int bombCounter;
-    
+    private ClickerAudio clickerAudio;
     //A GameObject that will be passed to a selected object.
     private GameObject objectToPass;
     private NukeTime nuke;
 
     private void Awake()
     {
+        clickerAudio = GetComponent<ClickerAudio>();
         bombCounter = 0;
         resourceKeeper = GameObject.FindGameObjectWithTag("ResourceKeeper").GetComponent<ResourceKeeper>();
         viewportCamera = GetComponent<Camera>();
@@ -60,8 +61,6 @@ public class CameraClicker : MonoBehaviour
         buyTileMenu.buildButtons[0].SetActive(false);
         buyTileMenu.buildButtons[1].SetActive(false);
         buyTileMenu.buildButtons[2].SetActive(false);
-
-
     }
 
     // Update is called once per frame
@@ -80,13 +79,14 @@ public class CameraClicker : MonoBehaviour
 
     private void HandleClicks()
     {
-        if (Input.GetMouseButtonUp(0) && matchTimer.matchStarted && !dragging)
+        if (!EventSystem.current.IsPointerOverGameObject())
         {
-            //if (!EventSystem.current.IsPointerOverGameObject())
-            //{
+            if (Input.GetMouseButtonUp(0) && matchTimer.matchStarted && !dragging)
+            {
                 Ray screenToWorld = viewportCamera.ScreenPointToRay(Input.mousePosition);
                 if (Physics.Raycast(screenToWorld, out RaycastHit raycastHit))
                 {
+                    clickerAudio.PlayInspect();
                     Collider other = raycastHit.collider;
                     switch (other.tag)
                     {
@@ -101,9 +101,9 @@ public class CameraClicker : MonoBehaviour
                         case "Plot":
                             ClearSelections();
                             Building.UnfocusAllBuildings();
-                            selectedPlot = other.GetComponent<Plot>();
+                            selectedPlot = other.GetComponentInParent<Plot>();
                             selectedPlot.FocusOnPlot();
-                            if (selectedPlot.size == (Plot.PlotSize) 0)
+                            if (selectedPlot.size == (Plot.PlotSize)0)
                             {
                                 buildMenuObj[0].SetActive(true);
                             }
@@ -127,13 +127,13 @@ public class CameraClicker : MonoBehaviour
                                 buyTileMenu.buildButtons[0].SetActive(true);
                                 buyTileMenu.buildButtons[1].SetActive(false);
                                 buyTileMenu.buildButtons[2].SetActive(false);
-                             }
+                            }
                             if (selectedForest.finished || selectedForest.building)
                             {
                                 buyTileMenu.buildButtons[0].SetActive(false);
                                 buyTileMenu.buildButtons[1].SetActive(true);
                                 buyTileMenu.buildButtons[2].SetActive(false);
-                             }
+                            }
                             break;
                         case "WorldTile":
                             ClearSelections();
@@ -141,8 +141,8 @@ public class CameraClicker : MonoBehaviour
                             buyTileMenu.SetSelectedTile(selectedTile);
                             if (!selectedTile.purchased)
                             {
-                            buyTileMenu.buildButtons[2].SetActive(true);
-                            buyMenuObj.SetActive(true);
+                                buyTileMenu.buildButtons[2].SetActive(true);
+                                buyMenuObj.SetActive(true);
                             }
 
                             break;
@@ -155,11 +155,12 @@ public class CameraClicker : MonoBehaviour
                                 nuke.nukeTime();
                             }
                             break;
-                            default:
-                                ClearSelections();
-                                break;
-                        }
+                        default:
+                            ClearSelections();
+                            break;
+                    }
                 }
+            }
         }
     }
 
