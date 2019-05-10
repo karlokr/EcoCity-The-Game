@@ -459,17 +459,17 @@ PrefabInstance:
     - target: {fileID: 2460546236600169305, guid: 811447dfe188e594cabc1b6ff1a42527,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -376.7
+      value: -456.9
       objectReference: {fileID: 0}
     - target: {fileID: 2460546236600169305, guid: 811447dfe188e594cabc1b6ff1a42527,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -306.04
+      value: -245.18
       objectReference: {fileID: 0}
     - target: {fileID: 2460546236600169305, guid: 811447dfe188e594cabc1b6ff1a42527,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -33.8
+      value: -110.5
       objectReference: {fileID: 0}
     - target: {fileID: 2460546236600169305, guid: 811447dfe188e594cabc1b6ff1a42527,
         type: 3}
@@ -776,34 +776,54 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6997184796125505860, guid: 940b2a1dcf1721b46b896d024318b35b,
         type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6997184796125505860, guid: 940b2a1dcf1721b46b896d024318b35b,
+        type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6997184796125505860, guid: 940b2a1dcf1721b46b896d024318b35b,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: -1760
+      value: -1031.4
       objectReference: {fileID: 0}
     - target: {fileID: 6997184796125505860, guid: 940b2a1dcf1721b46b896d024318b35b,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: -1050
+      value: -499.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 8134255607035855179, guid: 940b2a1dcf1721b46b896d024318b35b,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8134255607035855179, guid: 940b2a1dcf1721b46b896d024318b35b,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7623124210036429407, guid: 940b2a1dcf1721b46b896d024318b35b,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7623124210036429407, guid: 940b2a1dcf1721b46b896d024318b35b,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6997184796125505861, guid: 940b2a1dcf1721b46b896d024318b35b,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1942898280707190856}
-    - target: {fileID: 2489086244356392416, guid: 940b2a1dcf1721b46b896d024318b35b,
+    - target: {fileID: 764859848000898895, guid: 940b2a1dcf1721b46b896d024318b35b,
         type: 3}
-      propertyPath: buildButtons.Array.size
-      value: 3
+      propertyPath: m_Name
+      value: Buy Forest
       objectReference: {fileID: 0}
-    - target: {fileID: 2489086244356392416, guid: 940b2a1dcf1721b46b896d024318b35b,
-        type: 3}
-      propertyPath: buildButtons.Array.data[2]
-      value: 
-      objectReference: {fileID: 5480137491610929775}
     - target: {fileID: 6997184795724163092, guid: 940b2a1dcf1721b46b896d024318b35b,
         type: 3}
       propertyPath: m_Delegates.Array.size
@@ -1794,9 +1814,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3bd18d6c93b54542933fe691408fab4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &5480137491610929775 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4026549903440003187, guid: 940b2a1dcf1721b46b896d024318b35b,
-    type: 3}
-  m_PrefabInstance: {fileID: 8929637294020348444}
-  m_PrefabAsset: {fileID: 0}
