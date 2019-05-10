@@ -292,7 +292,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff562f1cff9b27044a23d4c60b505f31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  worldTiles: []
+  worldTiles:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &5692885578872205927
 GameObject:
   m_ObjectHideFlags: 0

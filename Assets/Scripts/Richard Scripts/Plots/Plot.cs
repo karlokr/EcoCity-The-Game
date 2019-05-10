@@ -3,8 +3,9 @@
 [System.Serializable]
 public class Plot : MonoBehaviour
 {
-    public PlotSize size;
+    
     public enum PlotSize { Small, Medium, Large };
+    public PlotSize size;
 
     public Material debugMaterial;
     public static Material defaultMaterial;
