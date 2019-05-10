@@ -61,6 +61,7 @@ public class BuyTileMenu : MonoBehaviour
     private void SelectRandomTile()
     {
         int randomNumber = Random.Range(0, 2);
-        randomTile = (GameObject)UnityEditor.AssetDatabase.LoadAssetAtPath("Assets/Prefabs/Kristian Prefab/WorldTile" + randomNumber + ".prefab", typeof(GameObject));
+        randomTile = Resources.Load("Prefabs/WorldTile" + randomNumber) as GameObject;
+
     }
 }

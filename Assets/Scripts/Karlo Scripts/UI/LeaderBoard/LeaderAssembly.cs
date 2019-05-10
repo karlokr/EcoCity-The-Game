@@ -10,18 +10,21 @@ public class LeaderAssembly : MonoBehaviour
 
     public static void GenerateLeaderBoard(GameObject[] LeaderSlots) {
         string RawData = LeaderManager.LeaderData;
-        Debug.Log(RawData);
         var LeaderData = JObject.Parse(RawData);
         JArray items = (JArray)LeaderData["leaderboard"];
         int length = items.Count;
-        Debug.Log(length);
 
         for (int i=0; i<LeaderSlots.Length; i++) { 
             if (i < length) {
-                Debug.Log(i);
                 LeaderSlots[i].GetComponent<Image>().gameObject.SetActive(true);
-                LeaderSlots[i].GetComponentInChildren<Text>().text = (string)LeaderData["leaderboard"][i]["username"];
-                LeaderSlots[i].GetComponentInChildren<Text>().GetComponentInChildren<Text>().text = (string)LeaderData["leaderboard"][i]["ecoscore"];
+                Text[] TextBoxes = LeaderSlots[i].GetComponentsInChildren<Text>();
+                foreach (Text TextBox in TextBoxes) {
+                    if (TextBox.CompareTag("LeaderUser")) {
+                        TextBox.GetComponent<Text>().text = ((i+1) + (LeaderManager.Page)*5) + ". " + (string)LeaderData["leaderboard"][i]["username"];
+                    } else {
+                        TextBox.GetComponent<Text>().text = (string)LeaderData["leaderboard"][i]["ecoscore"];
+                    }
+                }
             } else {
                 LeaderSlots[i].GetComponent<Image>().gameObject.SetActive(false);
             }

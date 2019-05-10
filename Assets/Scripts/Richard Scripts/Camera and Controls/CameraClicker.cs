@@ -105,11 +105,11 @@ public class CameraClicker : MonoBehaviour
                             selectedPlot.FocusOnPlot();
                             if (selectedPlot.size == (Plot.PlotSize)0)
                             {
-                                buildMenuObj[0].SetActive(true);
+                                buildMenuObj[1].SetActive(true);
                             }
                             else if (selectedPlot.size == (Plot.PlotSize)1)
                             {
-                                buildMenuObj[1].SetActive(true);
+                                buildMenuObj[0].SetActive(true);
                             }
                             else if (selectedPlot.size == (Plot.PlotSize)2)
                             {
@@ -122,17 +122,16 @@ public class CameraClicker : MonoBehaviour
                             selectedForest = other.GetComponent<Forest>();
                             buyTileMenu.SetSelectedTile(selectedForest);
                             buyMenuObj.SetActive(true);
+                            buyTileMenu.buildButtons[2].SetActive(false);
                             if (!selectedForest.finished)
                             {
                                 buyTileMenu.buildButtons[0].SetActive(true);
-                                buyTileMenu.buildButtons[1].SetActive(false);
-                                buyTileMenu.buildButtons[2].SetActive(false);
+                                buyTileMenu.buildButtons[1].SetActive(false);                                
                             }
                             if (selectedForest.finished || selectedForest.building)
                             {
                                 buyTileMenu.buildButtons[0].SetActive(false);
                                 buyTileMenu.buildButtons[1].SetActive(true);
-                                buyTileMenu.buildButtons[2].SetActive(false);
                             }
                             break;
                         case "WorldTile":
@@ -141,10 +140,9 @@ public class CameraClicker : MonoBehaviour
                             buyTileMenu.SetSelectedTile(selectedTile);
                             if (!selectedTile.purchased)
                             {
-                                buyTileMenu.buildButtons[2].SetActive(true);
                                 buyMenuObj.SetActive(true);
+                                buyTileMenu.buildButtons[2].SetActive(true);
                             }
-
                             break;
                         case "SkullIsland":
                             bombCounter++;

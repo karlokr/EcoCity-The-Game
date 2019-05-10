@@ -28,10 +28,6 @@ public class InspectMenu : MonoBehaviour
     private void Awake()
     {
         animator = GetComponent<Animator>();
-        gem = (Sprite)UnityEditor.AssetDatabase.LoadAssetAtPath("Assets/Art/2D/UI/Resource Vector Graphics/UI_Graphic_Resource_Gems.png", typeof(Sprite));
-        gold = (Sprite)UnityEditor.AssetDatabase.LoadAssetAtPath("Assets/Art/2D/UI/Resource Vector Graphics/UI_Graphic_Resource_Coins.png", typeof(Sprite));
-        wood = (Sprite)UnityEditor.AssetDatabase.LoadAssetAtPath("Assets/Art/2D/UI/Resource Vector Graphics/UI_Graphic_Resource_Wood.png", typeof(Sprite));
-        pop = (Sprite)UnityEditor.AssetDatabase.LoadAssetAtPath("Assets/Art/2D/UI/Resource Vector Graphics/UI_Graphic_Resource_Food.png", typeof(Sprite));
 
 
     }
@@ -39,7 +35,10 @@ public class InspectMenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        gem = Resources.Load<Sprite>("Sprites/UI_Graphic_Resource_Gems");
+        gold = Resources.Load<Sprite>("Sprites/UI_Graphic_Resource_Coins");
+        wood = Resources.Load<Sprite>("Sprites/UI_Graphic_Resource_Wood");
+        pop = Resources.Load<Sprite>("Sprites/UI_Graphic_Resource_Food");
     }
 
     // Update is called once per frame
