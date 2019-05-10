@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WorldTile : MonoBehaviour
 {
-    public GameObject prefabToBuild;
+    //public GameObject prefabToBuild;
     public bool purchased;
     // Start is called before the first frame update
     void Start()
@@ -16,8 +16,8 @@ public class WorldTile : MonoBehaviour
     {
         
     }
-    public GameObject createNewTile()
-    {   
+    public GameObject createNewTile(GameObject prefabToBuild)
+    {
         GameObject newTile = Instantiate(prefabToBuild, transform.position, transform.rotation);
         newTile.GetComponent<WorldTile>().purchased = true;
         newTile.transform.Translate(Vector3.down * 12f);
