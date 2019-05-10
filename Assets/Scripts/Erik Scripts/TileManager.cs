@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class TileManager : MonoBehaviour
 {
     private const int rowNumber = 5;
@@ -25,7 +24,7 @@ public class TileManager : MonoBehaviour
         }
         foreach (GameObject tile in tiles)
         {
-            if (!tile.name.Equals("LevelOneLayout"))
+            if (!tile.name.Equals("WorldTile0"))
             {
                 tile.SetActive(false);
             }
