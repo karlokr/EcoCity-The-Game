@@ -30,6 +30,8 @@ TagManager:
   - CampaignButton
   - EndlessButton
   - SkullIsland
+  - Collider
+  - Start1
   layers:
   - Default
   - TransparentFX

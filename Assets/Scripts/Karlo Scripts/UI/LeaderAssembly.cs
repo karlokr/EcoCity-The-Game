@@ -29,7 +29,7 @@ public class LeaderAssembly : MonoBehaviour
         foreach (GameObject ScoreObject in GameObject.FindGameObjectsWithTag("LeaderScore")) {
             if (j < length) {
                 Debug.Log(j);
-                ScoreObject.GetComponent<Text>().text = score.ToString();
+                // ScoreObject.GetComponent<Text>().text = score.ToString();
                 j++;
             } else {
                 ScoreObject.GetComponentInParent<Image>().gameObject.SetActive(false);
