@@ -114,6 +114,7 @@ GameObject:
   - component: {fileID: 3349237013509034081}
   - component: {fileID: 3349237013606241746}
   - component: {fileID: 2379163540597328448}
+  - component: {fileID: 4853460649009380874}
   m_Layer: 0
   m_Name: WorldTile1
   m_TagString: WorldTile
@@ -258,6 +259,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &4853460649009380874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3349237013509034084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5433e2007b8c0e94d88e8f2fe64c290b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  purchased: 0
 --- !u!1 &3349237013966668644
 GameObject:
   m_ObjectHideFlags: 0
@@ -1756,10 +1770,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3349237013509034080}
     m_Modifications:
-    - target: {fileID: 100000, guid: 2367423c3655b76479076789d8650e64, type: 3}
-      propertyPath: m_Name
-      value: grave_small_mesh (4)
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 2367423c3655b76479076789d8650e64, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.4533
@@ -1811,6 +1821,10 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 2367423c3655b76479076789d8650e64, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 2367423c3655b76479076789d8650e64, type: 3}
+      propertyPath: m_Name
+      value: grave_small_mesh (4)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2367423c3655b76479076789d8650e64, type: 3}
@@ -2040,10 +2054,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3349237013509034080}
     m_Modifications:
-    - target: {fileID: 100000, guid: 2367423c3655b76479076789d8650e64, type: 3}
-      propertyPath: m_Name
-      value: grave_small_mesh
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 2367423c3655b76479076789d8650e64, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.3188
@@ -2095,6 +2105,10 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 2367423c3655b76479076789d8650e64, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 2367423c3655b76479076789d8650e64, type: 3}
+      propertyPath: m_Name
+      value: grave_small_mesh
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2367423c3655b76479076789d8650e64, type: 3}
@@ -2565,6 +2579,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3349237013509034080}
     m_Modifications:
+    - target: {fileID: 100000, guid: 501d25c7f0c923348813a11dae66cbdd, type: 3}
+      propertyPath: m_Name
+      value: bush_large_mesh (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 501d25c7f0c923348813a11dae66cbdd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.17987388
@@ -2616,10 +2634,6 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 501d25c7f0c923348813a11dae66cbdd, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.02
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 501d25c7f0c923348813a11dae66cbdd, type: 3}
-      propertyPath: m_Name
-      value: bush_large_mesh (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 501d25c7f0c923348813a11dae66cbdd, type: 3}
@@ -2721,10 +2735,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3349237013509034080}
     m_Modifications:
-    - target: {fileID: 100000, guid: 2367423c3655b76479076789d8650e64, type: 3}
-      propertyPath: m_Name
-      value: grave_small_mesh (3)
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 2367423c3655b76479076789d8650e64, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.3827
@@ -2776,6 +2786,10 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 2367423c3655b76479076789d8650e64, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 2367423c3655b76479076789d8650e64, type: 3}
+      propertyPath: m_Name
+      value: grave_small_mesh (3)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2367423c3655b76479076789d8650e64, type: 3}
@@ -2863,10 +2877,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3349237013509034080}
     m_Modifications:
-    - target: {fileID: 100000, guid: 4e3b8318a9112f24d84095e1a4d96ae0, type: 3}
-      propertyPath: m_Name
-      value: dumpster_mesh
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 4e3b8318a9112f24d84095e1a4d96ae0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.1696
@@ -2918,6 +2928,10 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 4e3b8318a9112f24d84095e1a4d96ae0, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 4e3b8318a9112f24d84095e1a4d96ae0, type: 3}
+      propertyPath: m_Name
+      value: dumpster_mesh
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e3b8318a9112f24d84095e1a4d96ae0, type: 3}
@@ -3521,11 +3535,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3401370794055129360}
     m_Modifications:
-    - target: {fileID: 7245096402627961540, guid: 0fd4ed65e1bbbef4f99eccc1ff3a92fe,
-        type: 3}
-      propertyPath: m_Name
-      value: Empty Plot S (3)
-      objectReference: {fileID: 0}
     - target: {fileID: 7245096402627961538, guid: 0fd4ed65e1bbbef4f99eccc1ff3a92fe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3591,6 +3600,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.02
       objectReference: {fileID: 0}
+    - target: {fileID: 7245096402627961540, guid: 0fd4ed65e1bbbef4f99eccc1ff3a92fe,
+        type: 3}
+      propertyPath: m_Name
+      value: Empty Plot S (3)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0fd4ed65e1bbbef4f99eccc1ff3a92fe, type: 3}
 --- !u!4 &2947456422367678648 stripped
@@ -3606,10 +3620,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3349237013509034080}
     m_Modifications:
-    - target: {fileID: 100000, guid: 2367423c3655b76479076789d8650e64, type: 3}
-      propertyPath: m_Name
-      value: grave_small_mesh (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 2367423c3655b76479076789d8650e64, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.3188
@@ -3662,6 +3672,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.02
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 2367423c3655b76479076789d8650e64, type: 3}
+      propertyPath: m_Name
+      value: grave_small_mesh (1)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2367423c3655b76479076789d8650e64, type: 3}
 --- !u!4 &5769402502823287408 stripped
@@ -3677,10 +3691,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3349237013509034080}
     m_Modifications:
-    - target: {fileID: 100000, guid: 2367423c3655b76479076789d8650e64, type: 3}
-      propertyPath: m_Name
-      value: grave_small_mesh (5)
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 2367423c3655b76479076789d8650e64, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.4533
@@ -3733,6 +3743,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.02
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 2367423c3655b76479076789d8650e64, type: 3}
+      propertyPath: m_Name
+      value: grave_small_mesh (5)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2367423c3655b76479076789d8650e64, type: 3}
 --- !u!4 &5905926559526143586 stripped
@@ -3748,11 +3762,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3401370794055129360}
     m_Modifications:
-    - target: {fileID: 7245096402627961540, guid: 0fd4ed65e1bbbef4f99eccc1ff3a92fe,
-        type: 3}
-      propertyPath: m_Name
-      value: Empty Plot S (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 7245096402627961538, guid: 0fd4ed65e1bbbef4f99eccc1ff3a92fe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3817,6 +3826,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 7245096402627961540, guid: 0fd4ed65e1bbbef4f99eccc1ff3a92fe,
+        type: 3}
+      propertyPath: m_Name
+      value: Empty Plot S (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0fd4ed65e1bbbef4f99eccc1ff3a92fe, type: 3}
@@ -3904,6 +3918,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3349237013509034080}
     m_Modifications:
+    - target: {fileID: 100000, guid: 501d25c7f0c923348813a11dae66cbdd, type: 3}
+      propertyPath: m_Name
+      value: bush_large_mesh (2)
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 501d25c7f0c923348813a11dae66cbdd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.11262868
@@ -3956,10 +3974,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.02
       objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 501d25c7f0c923348813a11dae66cbdd, type: 3}
-      propertyPath: m_Name
-      value: bush_large_mesh (2)
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 501d25c7f0c923348813a11dae66cbdd, type: 3}
 --- !u!4 &6184406917467322772 stripped
@@ -3975,11 +3989,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3401370794055129360}
     m_Modifications:
-    - target: {fileID: 7245096402627961540, guid: 0fd4ed65e1bbbef4f99eccc1ff3a92fe,
-        type: 3}
-      propertyPath: m_Name
-      value: Empty Plot S
-      objectReference: {fileID: 0}
     - target: {fileID: 7245096402627961538, guid: 0fd4ed65e1bbbef4f99eccc1ff3a92fe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4044,6 +4053,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 7245096402627961540, guid: 0fd4ed65e1bbbef4f99eccc1ff3a92fe,
+        type: 3}
+      propertyPath: m_Name
+      value: Empty Plot S
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0fd4ed65e1bbbef4f99eccc1ff3a92fe, type: 3}
@@ -4656,10 +4670,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3349237013509034080}
     m_Modifications:
-    - target: {fileID: 100000, guid: 2367423c3655b76479076789d8650e64, type: 3}
-      propertyPath: m_Name
-      value: grave_small_mesh (2)
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 2367423c3655b76479076789d8650e64, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.3827
@@ -4712,6 +4722,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.02
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 2367423c3655b76479076789d8650e64, type: 3}
+      propertyPath: m_Name
+      value: grave_small_mesh (2)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2367423c3655b76479076789d8650e64, type: 3}
 --- !u!4 &6793258568740048517 stripped
@@ -4727,6 +4741,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3349237013509034080}
     m_Modifications:
+    - target: {fileID: 100000, guid: 501d25c7f0c923348813a11dae66cbdd, type: 3}
+      propertyPath: m_Name
+      value: bush_large_mesh
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 501d25c7f0c923348813a11dae66cbdd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.19425625
@@ -4778,10 +4796,6 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 501d25c7f0c923348813a11dae66cbdd, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.02
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 501d25c7f0c923348813a11dae66cbdd, type: 3}
-      propertyPath: m_Name
-      value: bush_large_mesh
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 501d25c7f0c923348813a11dae66cbdd, type: 3}
@@ -5015,11 +5029,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3401370794055129360}
     m_Modifications:
-    - target: {fileID: 7245096402627961540, guid: 0fd4ed65e1bbbef4f99eccc1ff3a92fe,
-        type: 3}
-      propertyPath: m_Name
-      value: Empty Plot S (2)
-      objectReference: {fileID: 0}
     - target: {fileID: 7245096402627961538, guid: 0fd4ed65e1bbbef4f99eccc1ff3a92fe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5084,6 +5093,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 7245096402627961540, guid: 0fd4ed65e1bbbef4f99eccc1ff3a92fe,
+        type: 3}
+      propertyPath: m_Name
+      value: Empty Plot S (2)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0fd4ed65e1bbbef4f99eccc1ff3a92fe, type: 3}
@@ -5256,10 +5270,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3349237013509034080}
     m_Modifications:
-    - target: {fileID: 100000, guid: 26208a42eeaecaf4090084d1dc718ea8, type: 3}
-      propertyPath: m_Name
-      value: Env_Rocks_01
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 26208a42eeaecaf4090084d1dc718ea8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.16434471
@@ -5311,6 +5321,10 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 26208a42eeaecaf4090084d1dc718ea8, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 26208a42eeaecaf4090084d1dc718ea8, type: 3}
+      propertyPath: m_Name
+      value: Env_Rocks_01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 26208a42eeaecaf4090084d1dc718ea8, type: 3}
@@ -5469,10 +5483,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3349237013509034080}
     m_Modifications:
-    - target: {fileID: 100000, guid: 1a373d7351fe19a419a3e1f77cd9a147, type: 3}
-      propertyPath: m_Name
-      value: memorial_mesh
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1a373d7351fe19a419a3e1f77cd9a147, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.3372887
@@ -5524,6 +5534,10 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 1a373d7351fe19a419a3e1f77cd9a147, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 1a373d7351fe19a419a3e1f77cd9a147, type: 3}
+      propertyPath: m_Name
+      value: memorial_mesh
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a373d7351fe19a419a3e1f77cd9a147, type: 3}

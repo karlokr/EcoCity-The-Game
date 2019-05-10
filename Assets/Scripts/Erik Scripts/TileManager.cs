@@ -25,7 +25,7 @@ public class TileManager : MonoBehaviour
         }
         foreach (GameObject tile in tiles)
         {
-            if (!tile.name.Equals("LevelOneLayout"))
+            if (!tile.name.Equals("WorldTile0"))
             {
                 tile.SetActive(false);
             }
