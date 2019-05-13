@@ -8,9 +8,11 @@ public class BuyTileMenu : MonoBehaviour
     private WorldTile worldTile;
     private Forest forestTile;
     public GameObject[] buildButtons;
+    private BuyTileMenu buyTileMenu;
 
     private void Awake()
     {
+        buyTileMenu = GameObject.FindGameObjectWithTag("BuyTileMenu").GetComponent<BuyTileMenu>();
     }
     // Start is called before the first frame update
     void Start()
@@ -55,6 +57,7 @@ public class BuyTileMenu : MonoBehaviour
             TileManager.shownTiles[(int)index.x, (int)index.y] = true;
             TileManager.showTiles();
             Destroy(worldTile.gameObject);
+            buyTileMenu.buildButtons[2].SetActive(false);
         }
 
     }
