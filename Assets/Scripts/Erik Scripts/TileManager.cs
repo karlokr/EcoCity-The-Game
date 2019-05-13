@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
+[System.Serializable]
 public class TileManager : MonoBehaviour
 {
     private const int rowNumber = 5;
@@ -12,7 +14,6 @@ public class TileManager : MonoBehaviour
     // Start is called before the first frame update
     private void Awake()
     {
-        worldTiles = GameObject.FindGameObjectsWithTag("WorldTile");
         int count = 0;
         for (int row = 0; row < rowNumber; row++)
         {
@@ -22,6 +23,7 @@ public class TileManager : MonoBehaviour
                 count++;
             }
         }
+        
         foreach (GameObject tile in tiles)
         {
             if (!tile.name.Equals("WorldTile0"))

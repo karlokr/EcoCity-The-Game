@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class BuyTile : MonoBehaviour
 {
+    //private TileManager tilemanager;
     GameObject randomTile;
     void Start()
     {
-       
+       //tilemanager = GameObject.Find
     }
 
     // Update is called once per frame
