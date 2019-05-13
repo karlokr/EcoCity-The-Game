@@ -9,8 +9,6 @@ public class BuyTileMenu : MonoBehaviour
     private Forest forestTile;
     public GameObject[] buildButtons;
 
-    private GameObject randomTile;
-
     private void Awake()
     {
     }
@@ -48,20 +46,19 @@ public class BuyTileMenu : MonoBehaviour
     }
     public void BuyNewTile()
     {
-        SelectRandomTile();
         ResourceKeeper.wood -= 1000;
         Vector2 index = TileManager.findTile(worldTile.gameObject);
-        GameObject newTile = worldTile.createNewTile(randomTile);
+        GameObject newTile = worldTile.createNewTile(SelectRandomTile());
         TileManager.tiles[(int)index.x, (int)index.y] = newTile;
         TileManager.shownTiles[(int)index.x, (int)index.y] = true;
         TileManager.showTiles();
         Destroy(worldTile.gameObject);
 
     }
-    private void SelectRandomTile()
+    public GameObject SelectRandomTile()
     {
-        int randomNumber = Random.Range(0, 2);
-        randomTile = Resources.Load("Prefabs/WorldTile" + randomNumber) as GameObject;
+        int randomNumber = Random.Range(0, 3);
+        return Resources.Load("Prefabs/WorldTile" + randomNumber) as GameObject;
 
     }
 }
