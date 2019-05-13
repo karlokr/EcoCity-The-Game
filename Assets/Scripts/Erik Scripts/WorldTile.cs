@@ -18,7 +18,7 @@ public class WorldTile : MonoBehaviour
     }
     public GameObject createNewTile(GameObject prefabToBuild)
     {
-        GameObject newTile = SimplePool.Spawn(prefabToBuild, transform.position, transform.rotation);
+        GameObject newTile = Instantiate(prefabToBuild, transform.position, transform.rotation);
         newTile.GetComponent<WorldTile>().purchased = true;
         newTile.transform.Translate(Vector3.down * 12f);
         newTile.transform.SetParent(GameObject.FindGameObjectWithTag("TileHolder").transform);
