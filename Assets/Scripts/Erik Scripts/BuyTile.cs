@@ -1,9 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-#if UNITY_EDITOR
-using UnityEditor;
-#endif
 
 public class BuyTile : MonoBehaviour
 {
@@ -32,8 +29,6 @@ public class BuyTile : MonoBehaviour
     private void SelectRandomTile()
     {
         int randomNumber = Random.Range(0, 1);
-#if UNITY_EDITOR
-        randomTile = (GameObject) AssetDatabase.LoadAssetAtPath("Assets/Prefabs/Kristian Prefab/WorldTile" + randomNumber, typeof(GameObject));
-#endif
+        randomTile = (GameObject) Resources.Load("Prefabs/WorldTile" + randomNumber);
     }
 }
