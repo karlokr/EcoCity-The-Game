@@ -46,13 +46,16 @@ public class BuyTileMenu : MonoBehaviour
     }
     public void BuyNewTile()
     {
-        ResourceKeeper.wood -= 1000;
-        Vector2 index = TileManager.findTile(worldTile.gameObject);
-        GameObject newTile = worldTile.createNewTile(SelectRandomTile());
-        TileManager.tiles[(int)index.x, (int)index.y] = newTile;
-        TileManager.shownTiles[(int)index.x, (int)index.y] = true;
-        TileManager.showTiles();
-        Destroy(worldTile.gameObject);
+        if (ResourceKeeper.wood >= 1000)
+        {
+            ResourceKeeper.wood -= 1000;
+            Vector2 index = TileManager.findTile(worldTile.gameObject);
+            GameObject newTile = worldTile.createNewTile(SelectRandomTile());
+            TileManager.tiles[(int)index.x, (int)index.y] = newTile;
+            TileManager.shownTiles[(int)index.x, (int)index.y] = true;
+            TileManager.showTiles();
+            Destroy(worldTile.gameObject);
+        }
 
     }
     public GameObject SelectRandomTile()
