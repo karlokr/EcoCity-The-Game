@@ -40,7 +40,7 @@ public class SimplePool : MonoBehaviour
     // Note, you can also use Preload() to set the initial size
     // of a pool -- this can be handy if only some of your pools
     // are going to be exceptionally large (for example, your bullets.)
-    const int DEFAULT_POOL_SIZE = 3;
+    const int DEFAULT_POOL_SIZE = 100;
 
     /// <summary>
     /// The Pool class represents the pool for a particular prefab.

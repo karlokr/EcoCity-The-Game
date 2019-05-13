@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class BuyTileMenu : MonoBehaviour
 {
     private WorldTile worldTile;
+    private ModelPicker pick;
     private Forest forestTile;
     public GameObject[] buildButtons;
     private BuyTileMenu buyTileMenu;
@@ -17,7 +18,6 @@ public class BuyTileMenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
@@ -52,19 +52,13 @@ public class BuyTileMenu : MonoBehaviour
         {
             ResourceKeeper.wood -= 1000;
             Vector2 index = TileManager.findTile(worldTile.gameObject);
-            GameObject newTile = worldTile.createNewTile(SelectRandomTile());
+            GameObject newTile = worldTile.createNewTile();
             TileManager.tiles[(int)index.x, (int)index.y] = newTile;
             TileManager.shownTiles[(int)index.x, (int)index.y] = true;
             TileManager.showTiles();
             Destroy(worldTile.gameObject);
             buyTileMenu.buildButtons[2].SetActive(false);
         }
-
-    }
-    public GameObject SelectRandomTile()
-    {
-        int randomNumber = Random.Range(0, 3);
-        return Resources.Load("Prefabs/WorldTile" + randomNumber) as GameObject;
 
     }
 }
