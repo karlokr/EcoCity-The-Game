@@ -12,7 +12,6 @@ public class UpgradeMenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
     }
     private void Awake()
     {
@@ -33,11 +32,14 @@ public class UpgradeMenu : MonoBehaviour
         {
            upgradeOptions[i].GetComponentInChildren<Text>().text = upgrades[i].upgradeName;
         }
+        
     }
 
     public void SetSelectedBuilding(Building b)
     {
         selectedBuilding = b;
+        CheckUpgrades();
+
     }
 
     public void ClearSelected()
@@ -52,6 +54,7 @@ public class UpgradeMenu : MonoBehaviour
 
     public void UpdateInspectMenu(int i)
     {
+        CheckUpgrades();
         Upgrade upgrade = selectedBuilding.upgrades[i];
         inspectMenu.SetMoneyCost(upgrade.cost.ToString());
         inspectMenu.SetNameText(upgrade.name);
@@ -79,5 +82,19 @@ public class UpgradeMenu : MonoBehaviour
             inspectMenu.stat1Image.GetComponent<Image>().sprite = inspectMenu.wood;
         }
         
+    }
+    public void CheckUpgrades()
+    {
+        for(int i = 0; i < selectedBuilding.upgrades.Length; i++)
+        {
+            if (selectedBuilding.upgrades[i].upgradeActive)
+            {
+                upgradeOptions[i].interactable = false;
+            }
+            else
+            {
+                upgradeOptions[i].interactable = true;
+            }
+        }
     }
 }

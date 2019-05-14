@@ -451,11 +451,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1942898279846151785}
     m_Modifications:
-    - target: {fileID: 2460546236600169304, guid: 811447dfe188e594cabc1b6ff1a42527,
-        type: 3}
-      propertyPath: m_Name
-      value: Camera
-      objectReference: {fileID: 0}
     - target: {fileID: 2460546236600169305, guid: 811447dfe188e594cabc1b6ff1a42527,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -510,6 +505,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2460546236600169304, guid: 811447dfe188e594cabc1b6ff1a42527,
+        type: 3}
+      propertyPath: m_Name
+      value: Camera
       objectReference: {fileID: 0}
     - target: {fileID: 2460546237016485464, guid: 811447dfe188e594cabc1b6ff1a42527,
         type: 3}
@@ -574,11 +574,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1942898279846151785}
     m_Modifications:
-    - target: {fileID: 5923870517207411471, guid: 0e2e450a05f17d948b51ddcfe448684e,
-        type: 3}
-      propertyPath: m_Name
-      value: ResourceKeeper
-      objectReference: {fileID: 0}
     - target: {fileID: 5923870517207411468, guid: 0e2e450a05f17d948b51ddcfe448684e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -634,6 +629,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5923870517207411471, guid: 0e2e450a05f17d948b51ddcfe448684e,
+        type: 3}
+      propertyPath: m_Name
+      value: ResourceKeeper
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e2e450a05f17d948b51ddcfe448684e, type: 3}
 --- !u!4 &1942898280791348689 stripped
@@ -649,11 +649,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1942898279846151785}
     m_Modifications:
-    - target: {fileID: 6997184795865007120, guid: 940b2a1dcf1721b46b896d024318b35b,
-        type: 3}
-      propertyPath: m_Name
-      value: GameCanvas
-      objectReference: {fileID: 0}
     - target: {fileID: 6997184795865007124, guid: 940b2a1dcf1721b46b896d024318b35b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -759,6 +754,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6997184795865007120, guid: 940b2a1dcf1721b46b896d024318b35b,
+        type: 3}
+      propertyPath: m_Name
+      value: GameCanvas
+      objectReference: {fileID: 0}
     - target: {fileID: 6997184796125505860, guid: 940b2a1dcf1721b46b896d024318b35b,
         type: 3}
       propertyPath: m_AnchorMin.x
@@ -777,17 +777,17 @@ PrefabInstance:
     - target: {fileID: 6997184796125505860, guid: 940b2a1dcf1721b46b896d024318b35b,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: -677.4
+      value: -997.2
       objectReference: {fileID: 0}
     - target: {fileID: 6997184796125505860, guid: 940b2a1dcf1721b46b896d024318b35b,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 2.5
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6997184796125505860, guid: 940b2a1dcf1721b46b896d024318b35b,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: -224
+      value: -437
       objectReference: {fileID: 0}
     - target: {fileID: 6997184796125505860, guid: 940b2a1dcf1721b46b896d024318b35b,
         type: 3}
