@@ -44,11 +44,12 @@ public class Signup : MonoBehaviour {
                 Debug.Log(webRequest.error);
             } else {
                 Debug.Log("Form upload complete!");
-                if (webRequest.downloadHandler.text == "0") {
+                if (webRequest.downloadHandler.text[0] == '0') {
                     Debug.Log("User created successfully.");
-                    DBManager.isGuest = true;  //change this later
                     DBManager.username = Username;
+                    DBManager.id = int.Parse(webRequest.downloadHandler.text.Split('\t')[1]);
                     PlayerPrefs.SetString("username", DBManager.username);
+                    PlayerPrefs.SetInt("id", DBManager.id);
                     PlayerPrefs.Save();
                     UnityEngine.SceneManagement.SceneManager.LoadScene(2);
                 } else {
