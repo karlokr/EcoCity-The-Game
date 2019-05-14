@@ -46,7 +46,7 @@ public class BuyTileMenu : MonoBehaviour
         forestTile.BuyForest();       
 
     }
-    public void BuyNewTile()
+    IEnumerator BuyNewTileRoutine()
     {
         if (ResourceKeeper.wood >= 1000)
         {
@@ -58,7 +58,13 @@ public class BuyTileMenu : MonoBehaviour
             TileManager.showTiles();
             Destroy(worldTile.gameObject);
             buyTileMenu.buildButtons[2].SetActive(false);
+            yield return null;
         }
+        
+    }
 
+    public void BuyNewTile()
+    {
+        StartCoroutine(BuyNewTileRoutine());
     }
 }

@@ -28,7 +28,7 @@ public class WorldTile : MonoBehaviour
 
     public GameObject PickTile()
     {
-        int randIndex = Random.Range(0, tileList.Count - 1);
+        int randIndex = Random.Range(0, tileList.Count);
         GameObject myTile = Instantiate(tileList[randIndex], transform.position, transform.rotation, transform.parent);
         return myTile;
     }
