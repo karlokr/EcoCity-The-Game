@@ -105,11 +105,11 @@ public class CameraClicker : MonoBehaviour
                             selectedPlot.FocusOnPlot();
                             if (selectedPlot.size == (Plot.PlotSize)0)
                             {
-                                buildMenuObj[1].SetActive(true);
+                                buildMenuObj[0].SetActive(true);
                             }
                             else if (selectedPlot.size == (Plot.PlotSize)1)
                             {
-                                buildMenuObj[0].SetActive(true);
+                                buildMenuObj[1].SetActive(true);
                             }
                             else if (selectedPlot.size == (Plot.PlotSize)2)
                             {
