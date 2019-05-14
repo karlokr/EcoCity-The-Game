@@ -33,11 +33,11 @@ public class MatchTimer : MonoBehaviour
 
     void Start()
     {
-        timePerYear = levelTimeInSeconds / (endYear - startYear);
-        timePerMonth = timePerYear / 12;
+        timePerYear = levelTimeInSeconds / (float) (endYear - startYear);
+        timePerMonth = timePerYear / 12f;
         currentYear = startYear;
         levelTimeInMonths = 0;
-
+        
         matchStarted = false;
     }
 
@@ -45,6 +45,16 @@ public class MatchTimer : MonoBehaviour
     void Update()
     {
         AdvanceTime();
+    }
+
+    public float GetMonthTimer()
+    {
+        return monthTimer; 
+    }
+
+    public float GetTimePerMonth()
+    {
+        return timePerMonth;
     }
 
     private void AdvanceTime()

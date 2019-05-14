@@ -40,16 +40,19 @@ public class Login : MonoBehaviour
                 Debug.Log(webRequest.error);
             } else {
                 Debug.Log("Form upload complete!");
-                Debug.Log(Password);
+                if (webRequest.downloadHandler.text[0] == '0') {
+                    DBManager.username = Username;
+                    DBManager.id = int.Parse(webRequest.downloadHandler.text.Split('\t')[1]);
+                    Debug.Log("User login success");
+                    PlayerPrefs.SetString("username", DBManager.username);
+                    PlayerPrefs.SetInt("id", DBManager.id);
+                    PlayerPrefs.Save();
+                    UnityEngine.SceneManagement.SceneManager.LoadScene(2);
+                } else {
+                    Debug.Log("User login failed. Error #" + webRequest.downloadHandler.text);
+                }
             }
-            if (webRequest.downloadHandler.text[0] == '0') {
-                DBManager.username = Username;
-                DBManager.id = int.Parse(webRequest.downloadHandler.text.Split('\t')[1]);
-                Debug.Log("User login success");
-                UnityEngine.SceneManagement.SceneManager.LoadScene(2);
-            } else {
-                Debug.Log("User login failed. Error #" + webRequest.downloadHandler.text);
-            }
+            
         }
     }
 

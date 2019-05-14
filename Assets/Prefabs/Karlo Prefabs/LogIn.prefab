@@ -1637,7 +1637,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8392502819965909398}
+      - m_Target: {fileID: 7155250643305737377}
         m_MethodName: LoginButton
         m_Mode: 1
         m_Arguments:
@@ -2116,7 +2116,10 @@ GameObject:
   - component: {fileID: 5822655062281259714}
   - component: {fileID: 5822655062281259717}
   - component: {fileID: 5822655062281259716}
-  - component: {fileID: 5822655062281259712}
+  - component: {fileID: 7155250643305737377}
+  - component: {fileID: 4086701765265207365}
+  - component: {fileID: 2125436071141411444}
+  - component: {fileID: 565168042062614111}
   m_Layer: 5
   m_Name: LogIn
   m_TagString: Untagged
@@ -2206,7 +2209,48 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &5822655062281259712
+--- !u!114 &7155250643305737377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5822655062281259719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0967aec36b0eb24594bc6f02d52df6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  username: {fileID: 7468797415544314582}
+  password: {fileID: 1929268696571538624}
+--- !u!114 &4086701765265207365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5822655062281259719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd7ef1bae1225da44b16f90221b2592e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  username: {fileID: 5821644544759601293}
+  password: {fileID: 5821644544255566183}
+  confirmPassword: {fileID: 5821644544171454277}
+--- !u!114 &2125436071141411444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5822655062281259719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0953a85c0f712494780d0eaba4f9c9ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &565168042062614111
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2475,7 +2519,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5822655062281259712}
+      - m_Target: {fileID: 565168042062614111}
         m_MethodName: NewAccountButton
         m_Mode: 1
         m_Arguments:
@@ -2566,8 +2610,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f046589af0c15c040953623d3971fb75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SignUpPanel: {fileID: 5822655061072608358}
-  LoginPanel: {fileID: 5822655062567059484}
+  SignUpPanel: {fileID: 0}
+  LoginPanel: {fileID: 0}
 --- !u!1 &7367317365586938669
 GameObject:
   m_ObjectHideFlags: 0
@@ -3333,7 +3377,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4202777273466414868}
+      - m_Target: {fileID: 2125436071141411444}
         m_MethodName: RegisterGuestButton
         m_Mode: 1
         m_Arguments:
@@ -3845,11 +3889,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5822655062281259715}
     m_Modifications:
-    - target: {fileID: 8684856536458646004, guid: b26db4f8d5c06134cba4944b275bb272,
-        type: 3}
-      propertyPath: m_Name
-      value: LoginPanel
-      objectReference: {fileID: 0}
     - target: {fileID: 8684856536458646005, guid: b26db4f8d5c06134cba4944b275bb272,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3955,11 +3994,21 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 8684856536458646004, guid: b26db4f8d5c06134cba4944b275bb272,
+        type: 3}
+      propertyPath: m_Name
+      value: LoginPanel
+      objectReference: {fileID: 0}
     - target: {fileID: 8723917558243129968, guid: b26db4f8d5c06134cba4944b275bb272,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 5822655062281259712}
+      objectReference: {fileID: 0}
+    - target: {fileID: 8723917558243129968, guid: b26db4f8d5c06134cba4944b275bb272,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: NewAccountButton
+      objectReference: {fileID: 0}
     - target: {fileID: 8684856535598102732, guid: b26db4f8d5c06134cba4944b275bb272,
         type: 3}
       propertyPath: SignUpPanel
@@ -4024,6 +4073,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -243
+      objectReference: {fileID: 0}
+    - target: {fileID: 8723917557569806099, guid: b26db4f8d5c06134cba4944b275bb272,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RegisterGuestButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 8727611939478841294, guid: b26db4f8d5c06134cba4944b275bb272,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoginButton
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b26db4f8d5c06134cba4944b275bb272, type: 3}
@@ -4148,9 +4207,42 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 5822655062281259712}
+      objectReference: {fileID: 565168042062614111}
+    - target: {fileID: 1355731933726813680, guid: 0300d14c3b6b39e4e823e746823a47a5,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Back
+      objectReference: {fileID: 0}
+    - target: {fileID: 1359989366721857291, guid: 0300d14c3b6b39e4e823e746823a47a5,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 4086701765265207365}
+    - target: {fileID: 1359989366721857291, guid: 0300d14c3b6b39e4e823e746823a47a5,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RegisterButton
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0300d14c3b6b39e4e823e746823a47a5, type: 3}
+--- !u!1 &5821644544171454277 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1388032259246928366, guid: 0300d14c3b6b39e4e823e746823a47a5,
+    type: 3}
+  m_PrefabInstance: {fileID: 4866672806590160555}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5821644544255566183 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1388032259397631948, guid: 0300d14c3b6b39e4e823e746823a47a5,
+    type: 3}
+  m_PrefabInstance: {fileID: 4866672806590160555}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5821644544759601293 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1388032259832972838, guid: 0300d14c3b6b39e4e823e746823a47a5,
+    type: 3}
+  m_PrefabInstance: {fileID: 4866672806590160555}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &5822655061072608359 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1389321794468504268, guid: 0300d14c3b6b39e4e823e746823a47a5,
