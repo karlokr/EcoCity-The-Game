@@ -18,18 +18,12 @@ public class WorldTile : MonoBehaviour
         
     }
     public GameObject createNewTile()
-    {
-        GameObject newTile = PickTile();
-        newTile.GetComponent<WorldTile>().purchased = true;
-        newTile.transform.Translate(Vector3.down * 12f);
-        newTile.transform.SetParent(GameObject.FindGameObjectWithTag("TileHolder").transform);
-        return newTile;
-    }
-
-    public GameObject PickTile()
-    {
+    {   
         int randIndex = Random.Range(0, tileList.Count);
         GameObject myTile = SimplePool.Spawn(tileList[randIndex], transform.position, transform.rotation);
+        myTile.GetComponent<WorldTile>().purchased = true;
+        myTile.transform.Translate(Vector3.down * 12f);
+        //myTile.transform.SetParent(GameObject.FindGameObjectWithTag("TileHolder").transform);
         return myTile;
     }
 }
