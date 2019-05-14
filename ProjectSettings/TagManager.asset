@@ -31,6 +31,10 @@ TagManager:
   - LLevel
   - UsernameLogin
   - AudioPlayer
+  - EmissionsBar
+  - PopulationBar
+  - MoneyPerMonth
+  - WoodPerMonth
   layers:
   - Default
   - TransparentFX
