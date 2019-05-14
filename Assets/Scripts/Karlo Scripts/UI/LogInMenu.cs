@@ -4,11 +4,19 @@ using UnityEngine;
 
 public class LogInMenu : MonoBehaviour
 {
+
     public GameObject SignUpPanel;
     public GameObject LoginPanel;
 
     public void GoToMenu() {
-        UnityEngine.SceneManagement.SceneManager.LoadScene(1);
+        if (PlayerPrefs.HasKey("id")) {
+            DBManager.username = PlayerPrefs.GetString("username");
+            DBManager.id = PlayerPrefs.GetInt("id");
+            UnityEngine.SceneManagement.SceneManager.LoadScene(2);
+        } else {
+            UnityEngine.SceneManagement.SceneManager.LoadScene(1);
+        }
+        
     }
 
     public void NewAccountButton() {
@@ -20,4 +28,5 @@ public class LogInMenu : MonoBehaviour
         SignUpPanel.SetActive(false);
         LoginPanel.SetActive(true);
     }
+
 }
