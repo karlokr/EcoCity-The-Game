@@ -9,7 +9,7 @@ public class WorldTile : MonoBehaviour
     public bool purchased;
     // Start is called before the first frame update
     void Start()
-    {
+    {  
     }
 
     // Update is called once per frame
@@ -29,7 +29,7 @@ public class WorldTile : MonoBehaviour
     public GameObject PickTile()
     {
         int randIndex = Random.Range(0, tileList.Count);
-        GameObject myTile = Instantiate(tileList[randIndex], transform.position, transform.rotation, transform.parent);
+        GameObject myTile = SimplePool.Spawn(tileList[randIndex], transform.position, transform.rotation);
         return myTile;
     }
 }
