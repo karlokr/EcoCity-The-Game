@@ -23,10 +23,7 @@ public class SignupGuest : MonoBehaviour {
                     Debug.Log("User created successfully.");
                     DBManager.username = username;
                     DBManager.isGuest = true;
-                    Debug.Log(webRequest.downloadHandler.text);
-                    DBManager.id = int.Parse(webRequest.downloadHandler.text.Split('\t')[1]);
                     PlayerPrefs.SetString("username", DBManager.username);
-                    PlayerPrefs.SetInt("id", DBManager.id);
                     PlayerPrefs.SetString("isGuest", "true");
                     PlayerPrefs.Save();
                     UnityEngine.SceneManagement.SceneManager.LoadScene(2);
