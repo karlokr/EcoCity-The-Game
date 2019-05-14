@@ -2,22 +2,30 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
+
 
 public class ResourceKeeperText : MonoBehaviour
 {
-    private Text population;
-    private Text money;
-    private Text emission;
-    private Text wood;
+    private TextMeshProUGUI population;
+    private TextMeshProUGUI money;
+    private TextMeshProUGUI emission;
+    private TextMeshProUGUI wood;
     private MatchTimer matchTimer;
+
+    private TextMeshProUGUI woodPerMonth;
+    private TextMeshProUGUI moneyPerMonth;
 
     private void Awake()
     {
         matchTimer = GameObject.FindGameObjectWithTag("MatchTimer").GetComponent<MatchTimer>();
-        money = GameObject.FindGameObjectWithTag("Money").GetComponent<Text>();
-        emission = GameObject.FindGameObjectWithTag("Emission").GetComponent<Text>();
-        population = GameObject.FindGameObjectWithTag("Population").GetComponent<Text>();
-        wood = GameObject.FindGameObjectWithTag("Wood").GetComponent<Text>();
+        money = GameObject.FindGameObjectWithTag("Money").GetComponent<TextMeshProUGUI>();
+        emission = GameObject.FindGameObjectWithTag("Emission").GetComponent<TextMeshProUGUI>();
+        population = GameObject.FindGameObjectWithTag("Population").GetComponent<TextMeshProUGUI>();
+        wood = GameObject.FindGameObjectWithTag("Wood").GetComponent<TextMeshProUGUI>();
+
+        woodPerMonth = GameObject.FindGameObjectWithTag("WoodPerMonth").GetComponent<TextMeshProUGUI>();
+        moneyPerMonth = GameObject.FindGameObjectWithTag("MoneyPerMonth").GetComponent<TextMeshProUGUI>();
     }
 
     // Start is called before the first frame update
@@ -32,9 +40,12 @@ public class ResourceKeeperText : MonoBehaviour
         if (matchTimer.matchStarted)
         {
             money.text = ResourceKeeper.money.ToString();
-            emission.text = ResourceKeeper.emission.ToString();
+            emission.text = ResourceKeeper.emission.ToString() + " CO2 ppm";
             population.text = ResourceKeeper.population.ToString();
             wood.text = ResourceKeeper.wood.ToString();
+
+            woodPerMonth.text = "+" + ResourceKeeper.woodIncome.ToString();
+            moneyPerMonth.text = "+" + ResourceKeeper.income.ToString();
         }
     }
 }

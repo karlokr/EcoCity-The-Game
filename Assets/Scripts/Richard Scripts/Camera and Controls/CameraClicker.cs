@@ -197,7 +197,7 @@ public class CameraClicker : MonoBehaviour
         if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Moved)
         {
             Vector2 touchDeltaPosition = Input.GetTouch(0).deltaPosition;
-            cameraHolder.transform.Translate(-touchDeltaPosition.x * cameraHolder.speed, 0, -touchDeltaPosition.y * cameraHolder.speed);
+            cameraHolder.transform.Translate(-touchDeltaPosition.x * cameraHolder.speed, 0, -touchDeltaPosition.y * cameraHolder.speed * Time.deltaTime);
         }
     }
 
