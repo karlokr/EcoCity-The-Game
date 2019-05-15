@@ -15,6 +15,11 @@ public class CameraHolder : MonoBehaviour
     private float animPlayPercent = 0.0f;
     private Camera mainCamera;
 
+    private bool movingRight;
+    private bool movingLeft;
+    private bool movingUp;
+    private bool movingDown;
+
     private void Awake()
     {
         animator = GetComponent<Animator>();
@@ -41,25 +46,45 @@ public class CameraHolder : MonoBehaviour
     private void HandleControls()
     {
         //Strafe Controls
-        if (Input.GetKey(KeyCode.W))
+        if (Input.GetKey(KeyCode.W) || movingUp)
         {
-            transform.Translate(Vector3.forward * speed * Time.deltaTime);
+            transform.Translate(Vector3.up * speed * Time.deltaTime);
         }
 
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.A) || movingLeft)
         {
             transform.Translate(Vector3.left * speed * Time.deltaTime);
         }
 
-        if (Input.GetKey(KeyCode.D))
+        if (Input.GetKey(KeyCode.D) || movingRight)
         {
             transform.Translate(Vector3.right * speed * Time.deltaTime);
         }
 
-        if (Input.GetKey(KeyCode.S))
+        if (Input.GetKey(KeyCode.S) || movingDown)
         {
             transform.Translate(Vector3.back * speed * Time.deltaTime);
         }
+    }
+
+    public void MoveDown(bool state)
+    {
+        movingDown = state;
+    }
+
+    public void MoveForward(bool state)
+    {
+        movingUp = state;
+    }
+
+    public void MoveRight(bool state)
+    {
+        movingRight = state;
+    }
+
+    public void MoveLeft(bool state)
+    {
+        movingLeft = state;
     }
 
     private void SetZoom()
@@ -82,10 +107,7 @@ public class CameraHolder : MonoBehaviour
 
     public void ZoomOut()
     {
-        if (Input.GetAxis("Mouse ScrollWheel") < 0f) // backwards
-        {
-            orthoTarget = Mathf.Clamp(mainCamera.orthographicSize + zoomSpeed, minZoom, maxZoom);
-        }
+        orthoTarget = Mathf.Clamp(mainCamera.orthographicSize + zoomSpeed, minZoom, maxZoom);
     }
 
 }

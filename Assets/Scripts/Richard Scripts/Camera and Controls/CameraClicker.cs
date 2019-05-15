@@ -105,11 +105,11 @@ public class CameraClicker : MonoBehaviour
                             selectedPlot.FocusOnPlot();
                             if (selectedPlot.size == (Plot.PlotSize)0)
                             {
-                                buildMenuObj[1].SetActive(true);
+                                buildMenuObj[0].SetActive(true);
                             }
                             else if (selectedPlot.size == (Plot.PlotSize)1)
                             {
-                                buildMenuObj[0].SetActive(true);
+                                buildMenuObj[1].SetActive(true);
                             }
                             else if (selectedPlot.size == (Plot.PlotSize)2)
                             {
@@ -197,7 +197,7 @@ public class CameraClicker : MonoBehaviour
         if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Moved)
         {
             Vector2 touchDeltaPosition = Input.GetTouch(0).deltaPosition;
-            cameraHolder.transform.Translate(-touchDeltaPosition.x * cameraHolder.speed, 0, -touchDeltaPosition.y * cameraHolder.speed);
+            cameraHolder.transform.Translate(-touchDeltaPosition.x * cameraHolder.speed, 0, -touchDeltaPosition.y * cameraHolder.speed * Time.deltaTime);
         }
     }
 
