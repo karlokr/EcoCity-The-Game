@@ -29,10 +29,8 @@ public class Login : MonoBehaviour
     }
 
     public void LoginButton() {
-        if (AuthFuncs.CheckUsername(Username) && AuthFuncs.CheckPassword(Password)) {
             Password = AuthFuncs.EncryptPassword(Password);
             StartCoroutine(UserLogin("https://ecocitythegame.ca/sqlconnect/login.php"));
-        }
     }
 
     IEnumerator UserLogin(string url) {
@@ -63,11 +61,14 @@ public class Login : MonoBehaviour
                     case 2:
                         Debug.Log("User login failed. Name check query failure. Error #" + webRequest.downloadHandler.text);
                         break;
-                    case 3:
+                    case 5:
                         Debug.Log("User login failed. No account associated with inputed username. Error #" + webRequest.downloadHandler.text);
+                        username.GetComponentInChildren<TextMeshProUGUI>().text = "Incorrect username";
+                        username.GetComponentInChildren<TextMeshProUGUI>().color = Color.red;
                         break;
-                    case 4:
+                    case 6:
                         Debug.Log("User login failed. Password Incorrect. Error #" + webRequest.downloadHandler.text);
+                        password.GetComponentInChildren<TextMeshProUGUI>().text = "Incorrect password";
                         break;
                 }
             }

@@ -1,15 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
+using System.Text;
 using UnityEngine;
 
 public static class AuthFuncs{
 
     public static string EncryptPassword(string Password) {
-        string EncryptedPass = "";
-        for (int i = 1; i <= Password.Length; i++) {
-            EncryptedPass += ((char)(Password[i - 1] * (i + 1))).ToString();
+        var crypt = new SHA256Managed();
+        var hash = new StringBuilder();
+        byte[] crypto = crypt.ComputeHash(Encoding.UTF8.GetBytes(Password));
+        foreach (byte theByte in crypto) {
+            hash.Append(theByte.ToString("x2"));
         }
-        return EncryptedPass;
+        return hash.ToString();
     }
 
     public static string DecryptPassword(string Encrypted) {
