@@ -68,6 +68,7 @@ public class Signup : MonoBehaviour {
                         break;
                     case 3:
                         Debug.Log("User creation failed. Name already exists. Error #" + webRequest.downloadHandler.text);
+                        username.GetComponentInChildren<TextMeshProUGUI>().text = "Incorrect username";
                         break;
                     case 4:
                         Debug.Log("User creation failed. Insert user into DB failed. Error #" + webRequest.downloadHandler.text);
