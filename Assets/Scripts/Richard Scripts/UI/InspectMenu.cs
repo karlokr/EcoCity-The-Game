@@ -34,7 +34,6 @@ public class InspectMenu : MonoBehaviour
     {
         animator = GetComponent<Animator>();
 
-
     }
 
     // Start is called before the first frame update
@@ -112,6 +111,7 @@ public class InspectMenu : MonoBehaviour
     public void ReceiveBuilding(GameObject g)
     {
         Building b = g.GetComponent<Building>();
+        ResetImages();
 
         SetMoneyCost(b.cost.ToString());
         SetPopCost(b.populationRequired.ToString());
@@ -137,5 +137,54 @@ public class InspectMenu : MonoBehaviour
             stat2Image.GetComponent<Image>().sprite = pop;
         }
         SetStat3("");
+    }
+
+    public void ForestBuyMenu()
+    {
+        ResetImages();
+        SetDescriptionText("Purchasing a Forest tile will give you a lot of Wood and some Upgrade Materials");
+        SetWoodCost("0");
+        SetMoneyCost("100");
+        SetPopCost("0");
+        SetNameText("Forest");
+        SetStat1("+ 5 UPGRADE MATERIAL");
+        stat1Image.sprite = upgradeMaterial;
+        stat2Image.sprite = wood;
+        SetStat2("+ 1000 wood");
+        SetStat3("");
+    }
+
+    public void RockBuyMenu()
+    {
+        ResetImages();
+        SetDescriptionText("Purchasing a Rock tile will give you bonus Money and lots of Upgrade Materials");
+        SetWoodCost("50");
+        SetMoneyCost("50");
+        SetPopCost("0");
+        SetNameText("Rock");
+        SetStat1("+ 10 UPGRADE MATERIAL");
+        stat1Image.sprite = upgradeMaterial;
+        stat2Image.sprite = gold;
+        SetStat2("+ 150 gold");
+        SetStat3("");
+    }
+
+    public void WorldTileMenu()
+    {
+        SetDescriptionText("Purchasing another world tile to expand your city!");
+        SetWoodCost("10000");
+        SetMoneyCost("0");
+        SetPopCost("0");
+        SetNameText("Expand Ground");
+        SetStat1("");
+        stat1Image.enabled = false;
+        stat2Image.enabled = false;
+        SetStat2("");
+        SetStat3("");
+    }
+    public void ResetImages()
+    {
+        stat1Image.enabled = true;
+        stat2Image.enabled = true;
     }
 }

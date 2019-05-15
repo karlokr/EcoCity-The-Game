@@ -73,6 +73,7 @@ MonoBehaviour:
   elapsedTime: 0
   buildTime: 10
   woodGained: 1000
+  upgradeMaterialGained: 5
   prefabToBuild: {fileID: 5553049097827639339, guid: 843cbb8582d79cc41977603298a3b19e,
     type: 3}
   building: 0

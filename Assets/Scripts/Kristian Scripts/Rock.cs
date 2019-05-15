@@ -10,7 +10,7 @@ public class Rock : MonoBehaviour
     public float elapsedTime = 0f;
     public float buildTime = 10f;
     public int moneyGained;
-    public int resourceMaterialGained;
+    public int upgradeMaterialGained;
 
     public Plot prefabToBuild;
 
@@ -37,9 +37,10 @@ public class Rock : MonoBehaviour
 
     public void BuyRock()
     {
-        if (ResourceKeeper.money >= 100)
+        if (ResourceKeeper.money >= 50 && ResourceKeeper.wood >= 50)
         {
-            ResourceKeeper.money -= 100;
+            ResourceKeeper.money -= 50;
+            ResourceKeeper.wood -= 50;
             building = true;
             buyTileMenu.buildButtons[3].SetActive(false);
         }
@@ -74,7 +75,7 @@ public class Rock : MonoBehaviour
         newPlot.transform.Translate(Vector3.forward * 2.5f);
         newPlot.transform.localScale = new Vector3(0.02f, 1f, 0.02f);
         ResourceKeeper.money += moneyGained;
-        ResourceKeeper.upgradeMaterial += resourceMaterialGained;
+        ResourceKeeper.upgradeMaterial += upgradeMaterialGained;
         Destroy(gameObject);
         buyTileMenu.buildButtons[4].SetActive(false);
     }

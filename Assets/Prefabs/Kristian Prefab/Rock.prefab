@@ -64,7 +64,7 @@ MonoBehaviour:
   elapsedTime: 0
   buildTime: 10
   moneyGained: 150
-  resourceMaterialGained: 10
+  upgradeMaterialGained: 10
   prefabToBuild: {fileID: 8967674373036049140, guid: b6e31eb9ce0f60c4c9e0364ebc0a6385,
     type: 3}
   building: 0
