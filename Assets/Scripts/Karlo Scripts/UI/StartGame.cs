@@ -9,7 +9,6 @@ public class StartGame : MonoBehaviour
         DBManager.inGame = false;
         DBManager.username = null;
         DBManager.id = -1;
-        DBManager.score = -1;
         DBManager.isGuest = false;
         DBManager.save_num = -1;
         DBManager.game_mode = null;

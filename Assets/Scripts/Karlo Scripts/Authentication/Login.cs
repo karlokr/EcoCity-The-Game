@@ -11,6 +11,7 @@ public class Login : MonoBehaviour
 {
     public GameObject username;
     public GameObject password;
+    public Button LogInButton;
     private string Username;
     private string Password;
     private bool isFocused;
@@ -20,6 +21,11 @@ public class Login : MonoBehaviour
         Enter();
         AssignInputs();
         isFocused = username.GetComponentInChildren<TMP_InputField>().isFocused || password.GetComponentInChildren<TMP_InputField>().isFocused;
+        if (AuthFuncs.CheckUsername(Username) && AuthFuncs.CheckPassword(Password)) {
+            LogInButton.interactable = true;
+        } else {
+            LogInButton.interactable = false;
+        }
     }
 
     public void LoginButton() {
@@ -40,16 +46,29 @@ public class Login : MonoBehaviour
                 Debug.Log(webRequest.error);
             } else {
                 Debug.Log("Form upload complete!");
-                if (webRequest.downloadHandler.text[0] == '0') {
-                    DBManager.username = Username;
-                    DBManager.id = int.Parse(webRequest.downloadHandler.text.Split('\t')[1]);
-                    Debug.Log("User login success");
-                    PlayerPrefs.SetString("username", DBManager.username);
-                    PlayerPrefs.SetInt("id", DBManager.id);
-                    PlayerPrefs.Save();
-                    UnityEngine.SceneManagement.SceneManager.LoadScene(2);
-                } else {
-                    Debug.Log("User login failed. Error #" + webRequest.downloadHandler.text);
+                int res = int.Parse(webRequest.downloadHandler.text[0].ToString());
+                switch (res) {
+                    case 0:
+                        DBManager.username = Username;
+                        DBManager.id = int.Parse(webRequest.downloadHandler.text.Split('\t')[1]);
+                        Debug.Log("User login success");
+                        PlayerPrefs.SetString("username", DBManager.username);
+                        PlayerPrefs.SetInt("id", DBManager.id);
+                        PlayerPrefs.Save();
+                        UnityEngine.SceneManagement.SceneManager.LoadScene(2);
+                        break;
+                    case 1:
+                        Debug.Log("User login failed. No Connection to Server. Error #" + webRequest.downloadHandler.text);
+                        break;
+                    case 2:
+                        Debug.Log("User login failed. Name check query failure. Error #" + webRequest.downloadHandler.text);
+                        break;
+                    case 3:
+                        Debug.Log("User login failed. No account associated with inputed username. Error #" + webRequest.downloadHandler.text);
+                        break;
+                    case 4:
+                        Debug.Log("User login failed. Password Incorrect. Error #" + webRequest.downloadHandler.text);
+                        break;
                 }
             }
             

@@ -1525,7 +1525,6 @@ GameObject:
   - component: {fileID: 5148419280577859821}
   - component: {fileID: 2566140848281334571}
   - component: {fileID: 4048314559889241524}
-  - component: {fileID: 8392502819965909398}
   m_Layer: 5
   m_Name: Log In Button
   m_TagString: Untagged
@@ -1632,7 +1631,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Highlighted
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 5148419280577859821}
   m_OnClick:
     m_PersistentCalls:
@@ -1695,21 +1694,6 @@ MonoBehaviour:
   _gradientType: 0
   _blendMode: 2
   _offset: 0
---- !u!114 &8392502819965909398
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 8684856535187235449, guid: b26db4f8d5c06134cba4944b275bb272,
-    type: 3}
-  m_PrefabInstance: {fileID: 2902841455748338152}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4793189136950030915}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b0967aec36b0eb24594bc6f02d52df6c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  username: {fileID: 7468797415544314582}
-  password: {fileID: 1929268696571538624}
 --- !u!1 &5165415556677371231
 GameObject:
   m_ObjectHideFlags: 0
@@ -2223,6 +2207,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   username: {fileID: 7468797415544314582}
   password: {fileID: 1929268696571538624}
+  LogInButton: {fileID: 2566140848281334571}
 --- !u!114 &4086701765265207365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2238,6 +2223,7 @@ MonoBehaviour:
   username: {fileID: 5821644544759601293}
   password: {fileID: 5821644544255566183}
   confirmPassword: {fileID: 5821644544171454277}
+  SignUpButton: {fileID: 5860944797499382176}
 --- !u!114 &2125436071141411444
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4084,7 +4070,13 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: LoginButton
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8727611939478841294, guid: b26db4f8d5c06134cba4944b275bb272,
+        type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: b26db4f8d5c06134cba4944b275bb272, type: 3}
 --- !u!1001 &4866672806590160555
 PrefabInstance:
@@ -4223,14 +4215,25 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: RegisterButton
       objectReference: {fileID: 0}
+    - target: {fileID: 1359989366721857291, guid: 0300d14c3b6b39e4e823e746823a47a5,
+        type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0300d14c3b6b39e4e823e746823a47a5, type: 3}
---- !u!1 &5821644544171454277 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1388032259246928366, guid: 0300d14c3b6b39e4e823e746823a47a5,
+--- !u!114 &5860944797499382176 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1359989366721857291, guid: 0300d14c3b6b39e4e823e746823a47a5,
     type: 3}
   m_PrefabInstance: {fileID: 4866672806590160555}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1392445389, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5821644544255566183 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1388032259397631948, guid: 0300d14c3b6b39e4e823e746823a47a5,
@@ -4252,6 +4255,12 @@ RectTransform:
 --- !u!1 &5822655061072608358 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1389321794468504269, guid: 0300d14c3b6b39e4e823e746823a47a5,
+    type: 3}
+  m_PrefabInstance: {fileID: 4866672806590160555}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5821644544171454277 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1388032259246928366, guid: 0300d14c3b6b39e4e823e746823a47a5,
     type: 3}
   m_PrefabInstance: {fileID: 4866672806590160555}
   m_PrefabAsset: {fileID: 0}

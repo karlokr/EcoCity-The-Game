@@ -21,21 +21,11 @@ public static class AuthFuncs{
     }
 
     public static bool CheckUsername(string Username) {
-        if (Username != "") {
-            return true;
-        } else {
-            Debug.LogWarning("Username field empty");
-            return false;
-        }
+        return Username != "";
     }
 
     public static bool CheckPassword(string Password) {
-        if (Password != "") {
-            return true;
-        } else {
-            Debug.LogWarning("Username field empty");
-            return false;
-        }
+        return Password != "";
     }
 
     public static bool CheckSignupPassword(string Password, string ConfirmPassword) {
