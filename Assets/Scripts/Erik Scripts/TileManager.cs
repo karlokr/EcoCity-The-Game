@@ -5,8 +5,8 @@ using UnityEngine;
 [System.Serializable]
 public class TileManager : MonoBehaviour
 {
-    private const int rowNumber = 5;
-    private const int colNumber = 5;
+    private const int rowNumber = 3;
+    private const int colNumber = 3;
     public static GameObject[,] tiles = new GameObject[rowNumber, colNumber];
     public static bool[,] shownTiles = new bool[rowNumber, colNumber];
 

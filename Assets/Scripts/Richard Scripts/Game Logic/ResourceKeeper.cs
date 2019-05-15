@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ResourceKeeper : MonoBehaviour
 {
+    public Renderer visualModel;
     GameObject[] buildingList;
     //The Big 4
     public static int money = 10000;
@@ -31,15 +32,17 @@ public class ResourceKeeper : MonoBehaviour
     {
         money += income;
         wood += woodIncome;
-    } 
-    //public void emitMonthy()
+    }
+    //public void emitMonthly()
     //{
     //    buildingList = GameObject.FindGameObjectsWithTag("Building");
     //    foreach (GameObject building in buildingList)
     //    {
     //        Building buildingType = building.GetComponent<Building>();
-    //        buildingType.ResourcePop(buildingType);
+    //        visualModel = buildingType.GetComponent<Renderer>();
+    //        //visualModel.enabled = true;
+    //        //buildingType.ResourcePop(buildingType);
     //    }
-    //    }
+    //}
 
-    }
+}
