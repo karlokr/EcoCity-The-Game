@@ -204,14 +204,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6733296661522002626}
     m_Modifications:
-    - target: {fileID: 100000, guid: 1d82ee77af9ee5c46bdba56204e622e9, type: 3}
-      propertyPath: m_Name
-      value: flower_mesh
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 1d82ee77af9ee5c46bdba56204e622e9, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1d82ee77af9ee5c46bdba56204e622e9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 13.128045
@@ -254,6 +246,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1d82ee77af9ee5c46bdba56204e622e9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 1d82ee77af9ee5c46bdba56204e622e9, type: 3}
+      propertyPath: m_Name
+      value: flower_mesh
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 1d82ee77af9ee5c46bdba56204e622e9, type: 3}
+      propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -332,7 +332,7 @@ Canvas:
   m_GameObject: {fileID: 86237927}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
+  m_RenderMode: 0
   m_Camera: {fileID: 1329728250}
   m_PlaneDistance: 2
   m_PixelPerfect: 0
@@ -386,14 +386,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6733296661522002626}
     m_Modifications:
-    - target: {fileID: 100000, guid: 8dce7dbdd30c01f49a3ff28478a7315e, type: 3}
-      propertyPath: m_Name
-      value: Prop_Roadsign_03 (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 8dce7dbdd30c01f49a3ff28478a7315e, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8dce7dbdd30c01f49a3ff28478a7315e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -15.198601
@@ -436,6 +428,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8dce7dbdd30c01f49a3ff28478a7315e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8dce7dbdd30c01f49a3ff28478a7315e, type: 3}
+      propertyPath: m_Name
+      value: Prop_Roadsign_03 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8dce7dbdd30c01f49a3ff28478a7315e, type: 3}
+      propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1033,14 +1033,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6733296661522002626}
     m_Modifications:
-    - target: {fileID: 100000, guid: 1d82ee77af9ee5c46bdba56204e622e9, type: 3}
-      propertyPath: m_Name
-      value: flower_mesh (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 1d82ee77af9ee5c46bdba56204e622e9, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1d82ee77af9ee5c46bdba56204e622e9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 11.621399
@@ -1096,6 +1088,14 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 1d82ee77af9ee5c46bdba56204e622e9, type: 3}
       propertyPath: m_LocalScale.z
       value: 2.2714086
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 1d82ee77af9ee5c46bdba56204e622e9, type: 3}
+      propertyPath: m_Name
+      value: flower_mesh (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 1d82ee77af9ee5c46bdba56204e622e9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d82ee77af9ee5c46bdba56204e622e9, type: 3}
@@ -1608,8 +1608,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f046589af0c15c040953623d3971fb75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LoginMenu: {fileID: 0}
   SignUpPanel: {fileID: 0}
-  LoginPanel: {fileID: 0}
+  LogInPanel: {fileID: 0}
+  GameMenu: {fileID: 0}
+  GameCanvas: {fileID: 0}
 --- !u!114 &477995819
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2095,14 +2098,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6733296661522002626}
     m_Modifications:
-    - target: {fileID: 100000, guid: ea729863e0ab2b942844148c09cd395a, type: 3}
-      propertyPath: m_Name
-      value: grass_square_mesh
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: ea729863e0ab2b942844148c09cd395a, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: ea729863e0ab2b942844148c09cd395a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 13.821399
@@ -2150,6 +2145,14 @@ PrefabInstance:
     - target: {fileID: 400000, guid: ea729863e0ab2b942844148c09cd395a, type: 3}
       propertyPath: m_LocalScale.z
       value: 1.8831619
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: ea729863e0ab2b942844148c09cd395a, type: 3}
+      propertyPath: m_Name
+      value: grass_square_mesh
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: ea729863e0ab2b942844148c09cd395a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ea729863e0ab2b942844148c09cd395a, type: 3}
@@ -2545,14 +2548,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6733296661522002626}
     m_Modifications:
-    - target: {fileID: 100000, guid: 17a4ffb1eae17e94298de2c66e171a1b, type: 3}
-      propertyPath: m_Name
-      value: Prop_Tree_02
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 17a4ffb1eae17e94298de2c66e171a1b, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 17a4ffb1eae17e94298de2c66e171a1b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.8713987
@@ -2595,6 +2590,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 17a4ffb1eae17e94298de2c66e171a1b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 17a4ffb1eae17e94298de2c66e171a1b, type: 3}
+      propertyPath: m_Name
+      value: Prop_Tree_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 17a4ffb1eae17e94298de2c66e171a1b, type: 3}
+      propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -3688,8 +3691,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f046589af0c15c040953623d3971fb75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SignUpPanel: {fileID: 0}
-  LoginPanel: {fileID: 0}
+  LoginMenu: {fileID: 5822655062281259719, guid: ceefddc80c69fa646b66ae688d601e83,
+    type: 3}
+  SignUpPanel: {fileID: 1568276926907988127, guid: 0300d14c3b6b39e4e823e746823a47a5,
+    type: 3}
+  LogInPanel: {fileID: 8351328435853424588, guid: 2b9efde4f45ef7246a9b897012b00d81,
+    type: 3}
+  GameMenu: {fileID: 2387601543281322347, guid: 519339c169a3ffd4ebd097874ef8fef8,
+    type: 3}
+  GameCanvas: {fileID: 86237927}
 --- !u!1001 &1138364832
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3926,14 +3936,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6733296661522002626}
     m_Modifications:
-    - target: {fileID: 100000, guid: 1a373d7351fe19a419a3e1f77cd9a147, type: 3}
-      propertyPath: m_Name
-      value: memorial_mesh
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 1a373d7351fe19a419a3e1f77cd9a147, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1a373d7351fe19a419a3e1f77cd9a147, type: 3}
       propertyPath: m_LocalPosition.x
       value: 11.518055
@@ -3976,6 +3978,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1a373d7351fe19a419a3e1f77cd9a147, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 1a373d7351fe19a419a3e1f77cd9a147, type: 3}
+      propertyPath: m_Name
+      value: memorial_mesh
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 1a373d7351fe19a419a3e1f77cd9a147, type: 3}
+      propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -4282,14 +4292,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6733296661522002626}
     m_Modifications:
-    - target: {fileID: 100000, guid: 1d82ee77af9ee5c46bdba56204e622e9, type: 3}
-      propertyPath: m_Name
-      value: flower_mesh (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 1d82ee77af9ee5c46bdba56204e622e9, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1d82ee77af9ee5c46bdba56204e622e9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9.711399
@@ -4345,6 +4347,14 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 1d82ee77af9ee5c46bdba56204e622e9, type: 3}
       propertyPath: m_LocalScale.z
       value: 1.819603
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 1d82ee77af9ee5c46bdba56204e622e9, type: 3}
+      propertyPath: m_Name
+      value: flower_mesh (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 1d82ee77af9ee5c46bdba56204e622e9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d82ee77af9ee5c46bdba56204e622e9, type: 3}
@@ -5212,14 +5222,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6733296661522002626}
     m_Modifications:
-    - target: {fileID: 100000, guid: c691257436ab8b94c82c2a977d632162, type: 3}
-      propertyPath: m_Name
-      value: Aerial_mesh
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: c691257436ab8b94c82c2a977d632162, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c691257436ab8b94c82c2a977d632162, type: 3}
       propertyPath: m_LocalPosition.x
       value: 11.691399
@@ -5267,6 +5269,14 @@ PrefabInstance:
     - target: {fileID: 400000, guid: c691257436ab8b94c82c2a977d632162, type: 3}
       propertyPath: m_LocalScale.y
       value: 0.53143
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: c691257436ab8b94c82c2a977d632162, type: 3}
+      propertyPath: m_Name
+      value: Aerial_mesh
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: c691257436ab8b94c82c2a977d632162, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c691257436ab8b94c82c2a977d632162, type: 3}
@@ -6168,14 +6178,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6733296661522002626}
     m_Modifications:
-    - target: {fileID: 100000, guid: 82d3701155d02e04090b77a5a4e47369, type: 3}
-      propertyPath: m_Name
-      value: Prop_Umbrella_02
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 82d3701155d02e04090b77a5a4e47369, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 82d3701155d02e04090b77a5a4e47369, type: 3}
       propertyPath: m_LocalPosition.x
       value: -16.628601
@@ -6231,6 +6233,14 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 82d3701155d02e04090b77a5a4e47369, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.5357485
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 82d3701155d02e04090b77a5a4e47369, type: 3}
+      propertyPath: m_Name
+      value: Prop_Umbrella_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 82d3701155d02e04090b77a5a4e47369, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82d3701155d02e04090b77a5a4e47369, type: 3}
@@ -6448,14 +6458,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6733296661522002626}
     m_Modifications:
-    - target: {fileID: 100000, guid: 8dce7dbdd30c01f49a3ff28478a7315e, type: 3}
-      propertyPath: m_Name
-      value: Prop_Roadsign_03
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 8dce7dbdd30c01f49a3ff28478a7315e, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8dce7dbdd30c01f49a3ff28478a7315e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.1210651
@@ -6498,6 +6500,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8dce7dbdd30c01f49a3ff28478a7315e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8dce7dbdd30c01f49a3ff28478a7315e, type: 3}
+      propertyPath: m_Name
+      value: Prop_Roadsign_03
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8dce7dbdd30c01f49a3ff28478a7315e, type: 3}
+      propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

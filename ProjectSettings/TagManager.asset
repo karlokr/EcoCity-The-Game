@@ -35,6 +35,10 @@ TagManager:
   - PopulationBar
   - WoodPerMonth
   - MoneyPerMonth
+  - SkullIsland
+  - TileHolder
+  - LoginUserLine
+  - LoginPasswordLine
   layers:
   - Default
   - TransparentFX
