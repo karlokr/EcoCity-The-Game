@@ -27,7 +27,7 @@ public class Signup : MonoBehaviour {
         if (AuthFuncs.CheckUsername(Username) && AuthFuncs.CheckSignupPassword(Password, ConfirmPassword)) {
             SignUpButton.interactable = true;
         } else {
-            SignUpButton.interactable = false;
+            SignUpButton.interactable = false; 
         }
     }
 
