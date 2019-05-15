@@ -11,6 +11,8 @@ public class Signup : MonoBehaviour {
     public GameObject password;
     public GameObject confirmPassword;
     public Button SignUpButton;
+    public GameObject GameMenu;
+    public GameObject GameCanvas;
     private string Username;
     private string Password;
     private string ConfirmPassword;
@@ -58,7 +60,7 @@ public class Signup : MonoBehaviour {
                         PlayerPrefs.SetString("username", DBManager.username);
                         PlayerPrefs.SetInt("id", DBManager.id);
                         PlayerPrefs.Save();
-                        UnityEngine.SceneManagement.SceneManager.LoadScene(2);
+                        (Instantiate(GameMenu) as GameObject).transform.parent = GameCanvas.transform;
                         break;
                     case 1:
                         Debug.Log("User creation failed. No Connection to Server. Error #" + webRequest.downloadHandler.text);
