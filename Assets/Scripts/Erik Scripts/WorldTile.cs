@@ -23,7 +23,7 @@ public class WorldTile : MonoBehaviour
         GameObject myTile = SimplePool.Spawn(tileList[randIndex], transform.position, transform.rotation);
         myTile.GetComponent<WorldTile>().purchased = true;
         myTile.transform.Translate(Vector3.down * 12f);
-        //myTile.transform.SetParent(GameObject.FindGameObjectWithTag("TileHolder").transform);
+        myTile.transform.SetParent(GameObject.FindGameObjectWithTag("TileHolder").transform);
         return myTile;
     }
 }
