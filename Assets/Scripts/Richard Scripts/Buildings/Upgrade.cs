@@ -12,7 +12,7 @@ public class Upgrade : MonoBehaviour
     public int woodIncomeIncrease;
     public Renderer visualModel;
     public bool upgradeActive;
-
+    public int upgradeMaterialCost;
     public string description;
 
     private void Awake()

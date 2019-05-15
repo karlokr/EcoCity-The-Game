@@ -18,10 +18,15 @@ public class InspectMenu : MonoBehaviour
     public Image stat2Image;
     public Image stat3Image;
 
+    public Image woodCostIcon;
+    public Image popCostIcon;
+
     public Sprite gold;
     public Sprite wood;
     public Sprite pop;
     public Sprite gem;
+    public Sprite upgradeMaterial;
+    public Sprite gray;
     public bool inspecting;
 
     private Animator animator;
@@ -39,6 +44,8 @@ public class InspectMenu : MonoBehaviour
         gold = Resources.Load<Sprite>("Sprites/UI_Graphic_Resource_Coins");
         wood = Resources.Load<Sprite>("Sprites/UI_Graphic_Resource_Wood");
         pop = Resources.Load<Sprite>("Sprites/UI_Graphic_Resource_Food");
+        upgradeMaterial = Resources.Load<Sprite>("Sprites/UI_Graphic_Resource_Iron");
+        gray = Resources.Load<Sprite>("Sprites/grey_panel");
     }
 
     // Update is called once per frame
@@ -91,6 +98,15 @@ public class InspectMenu : MonoBehaviour
     public void SetPopCost(string s)
     {
         popCost.text = s;
+    }
+    public void ClearPopCostIcon()
+    {
+        popCostIcon.sprite = gray;
+        SetPopCost("");
+    }
+    public void SetUpgradeCostIcon()
+    {
+        woodCostIcon.sprite = upgradeMaterial;
     }
 
     public void ReceiveBuilding(GameObject g)

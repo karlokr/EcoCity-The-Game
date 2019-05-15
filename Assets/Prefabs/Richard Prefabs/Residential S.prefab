@@ -4908,6 +4908,7 @@ MonoBehaviour:
   woodIncomeIncrease: 0
   visualModel: {fileID: 0}
   upgradeActive: 0
+  upgradeMaterialCost: 1
   description: Increase max population and reduce emission
 --- !u!1 &3724086252558644755
 GameObject:
@@ -14511,6 +14512,7 @@ MonoBehaviour:
   woodIncomeIncrease: 0
   visualModel: {fileID: 0}
   upgradeActive: 0
+  upgradeMaterialCost: 0
   description: Chimney reduces the Residential building emission and increases it's
     bonus population.
 --- !u!1 &5660184593139301442
@@ -14611,6 +14613,7 @@ MonoBehaviour:
   woodIncomeIncrease: 0
   visualModel: {fileID: 0}
   upgradeActive: 0
+  upgradeMaterialCost: 0
   description: Increase the max population.
 --- !u!1 &5660247066684898851
 GameObject:

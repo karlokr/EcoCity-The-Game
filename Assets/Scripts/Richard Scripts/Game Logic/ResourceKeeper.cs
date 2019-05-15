@@ -10,6 +10,7 @@ public class ResourceKeeper : MonoBehaviour
     public static int population = 0;
     public static int wood = 10000;
     public static int ecoScore = 0;
+    public static int upgradeMaterial = 0;
     //Accumulators
     public static int income = 5;
     public static int woodIncome = 5;

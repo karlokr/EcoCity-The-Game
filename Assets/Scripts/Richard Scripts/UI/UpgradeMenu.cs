@@ -59,8 +59,9 @@ public class UpgradeMenu : MonoBehaviour
         inspectMenu.SetMoneyCost(upgrade.cost.ToString());
         inspectMenu.SetNameText(upgrade.name);
         inspectMenu.SetDescriptionText(upgrade.description);
-        inspectMenu.SetWoodCost("0");
-        inspectMenu.SetPopCost("0");
+        inspectMenu.ClearPopCostIcon();
+        inspectMenu.SetUpgradeCostIcon();
+        inspectMenu.SetWoodCost(upgrade.upgradeMaterialCost.ToString());
         inspectMenu.SetStat2("-" + upgrade.emissionReduction.ToString() + " EMISSION");
         inspectMenu.stat2Image.GetComponent<Image>().sprite = inspectMenu.gem;
 

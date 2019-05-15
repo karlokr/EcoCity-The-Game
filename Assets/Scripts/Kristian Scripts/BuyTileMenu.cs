@@ -10,6 +10,7 @@ public class BuyTileMenu : MonoBehaviour
     private Forest forestTile;
     public GameObject[] buildButtons;
     private BuyTileMenu buyTileMenu;
+    private Rock rockTile;
 
     private void Awake()
     {
@@ -40,6 +41,22 @@ public class BuyTileMenu : MonoBehaviour
         {
             forestTile.TurnIntoPlot();
         }
+    }
+    public void ConvertRockTile()
+    {
+        if (rockTile.finished)
+        {
+            rockTile.TurnIntoPlot();
+        }
+    }
+    public void SetSelectedTile(Rock tile)
+    {
+        rockTile = tile;
+    }
+
+    public void BuyRockTile()
+    {
+        rockTile.BuyRock();
     }
     public void BuyTile()
     {

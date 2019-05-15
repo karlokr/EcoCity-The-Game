@@ -24,7 +24,7 @@ public class Forest : MonoBehaviour
     }
     private void Start()
     {
-        //buyTileMenu = GameObject.FindGameObjectWithTag("BuyTileMenu").GetComponent<BuyTileMenu>();
+        buyTileMenu = GameObject.FindGameObjectWithTag("BuyTileMenu").GetComponent<BuyTileMenu>();
         forestDefaultMaterial = GetComponentInChildren<Renderer>().material; 
     }
     void Update()
