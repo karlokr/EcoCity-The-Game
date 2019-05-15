@@ -12,6 +12,8 @@ public class Login : MonoBehaviour
     public GameObject username;
     public GameObject password;
     public Button LogInButton;
+    public GameObject GameMenu;
+    public GameObject GameCanvas;
     private string Username;
     private string Password;
     private bool isFocused;
@@ -53,7 +55,7 @@ public class Login : MonoBehaviour
                         PlayerPrefs.SetString("username", DBManager.username);
                         PlayerPrefs.SetInt("id", DBManager.id);
                         PlayerPrefs.Save();
-                        UnityEngine.SceneManagement.SceneManager.LoadScene(2);
+                        (Instantiate(GameMenu) as GameObject).transform.parent = GameCanvas.transform;
                         break;
                     case 1:
                         Debug.Log("User login failed. No Connection to Server. Error #" + webRequest.downloadHandler.text);
@@ -64,11 +66,16 @@ public class Login : MonoBehaviour
                     case 5:
                         Debug.Log("User login failed. No account associated with inputed username. Error #" + webRequest.downloadHandler.text);
                         username.GetComponentInChildren<TextMeshProUGUI>().text = "Incorrect username";
-                        username.GetComponentInChildren<TextMeshProUGUI>().color = Color.red;
+                        password.GetComponentInChildren<TextMeshProUGUI>().text = "Password";
+                        GameObject.FindGameObjectWithTag("LoginUserLine").GetComponent<Image>().color = Color.red;
+                        GameObject.FindGameObjectWithTag("LoginPasswordLine").GetComponent<Image>().color = new Color(95 / 255f, 105 / 255f, 115 / 255f, 1f);
                         break;
                     case 6:
                         Debug.Log("User login failed. Password Incorrect. Error #" + webRequest.downloadHandler.text);
                         password.GetComponentInChildren<TextMeshProUGUI>().text = "Incorrect password";
+                        username.GetComponentInChildren<TextMeshProUGUI>().text = "Username";
+                        GameObject.FindGameObjectWithTag("LoginUserLine").GetComponent<Image>().color = new Color(95/255f, 105/255f, 115/255f, 1f);
+                        GameObject.FindGameObjectWithTag("LoginPasswordLine").GetComponent<Image>().color = Color.red;
                         break;
                 }
             }

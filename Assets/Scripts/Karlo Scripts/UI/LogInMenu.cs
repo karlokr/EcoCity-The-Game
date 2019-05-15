@@ -5,28 +5,39 @@ using UnityEngine;
 public class LogInMenu : MonoBehaviour
 {
 
+    public GameObject LoginMenu;
     public GameObject SignUpPanel;
-    public GameObject LoginPanel;
+    public GameObject LogInPanel;
+    public GameObject GameMenu;
+    public GameObject GameCanvas;
+
+    public void GoToLogin() {
+        (Instantiate(LoginMenu) as GameObject).transform.parent = GameCanvas.transform;
+    }
+
+    public void GoToGameMenu() {
+        (Instantiate(GameMenu) as GameObject).transform.parent = GameCanvas.transform;
+    }
 
     public void GoToMenu() {
         if (PlayerPrefs.HasKey("id")) {
             DBManager.username = PlayerPrefs.GetString("username");
             DBManager.id = PlayerPrefs.GetInt("id");
-            UnityEngine.SceneManagement.SceneManager.LoadScene(2);
+            GoToGameMenu();
         } else {
-            UnityEngine.SceneManagement.SceneManager.LoadScene(1);
+            GoToLogin();
         }
         
     }
 
     public void NewAccountButton() {
         SignUpPanel.SetActive(true);
-        LoginPanel.SetActive(false);
+        LogInPanel.SetActive(false);
     }
 
     public void Back() {
         SignUpPanel.SetActive(false);
-        LoginPanel.SetActive(true);
+        LogInPanel.SetActive(true);
     }
 
 }

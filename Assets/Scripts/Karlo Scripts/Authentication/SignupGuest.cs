@@ -6,6 +6,9 @@ using UnityEngine.Networking;
 
 public class SignupGuest : MonoBehaviour {
 
+    public GameObject GameMenu;
+    public GameObject GameCanvas;
+
     IEnumerator RegisterGuest(string url) {
         WWWForm form = new WWWForm();
         string username = Guid.NewGuid().ToString();
@@ -28,7 +31,7 @@ public class SignupGuest : MonoBehaviour {
                         PlayerPrefs.SetString("username", DBManager.username);
                         PlayerPrefs.SetString("isGuest", "true");
                         PlayerPrefs.Save();
-                        UnityEngine.SceneManagement.SceneManager.LoadScene(2);
+                        (Instantiate(GameMenu) as GameObject).transform.parent = GameCanvas.transform;
                         break;
                     case 1:
                         Debug.Log("User creation failed. No Connection to Server. Error #" + webRequest.downloadHandler.text);

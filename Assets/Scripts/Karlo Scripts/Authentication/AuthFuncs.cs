@@ -16,14 +16,6 @@ public static class AuthFuncs{
         return hash.ToString();
     }
 
-    public static string DecryptPassword(string Encrypted) {
-        string DecryptedPass = "";
-        for (int i = 1; i <= Encrypted.Length; i++) {
-            DecryptedPass += ((char)(Encrypted[i - 1] / (i + 1))).ToString();
-        }
-        return DecryptedPass;
-    }
-
     public static bool CheckUsername(string Username) {
         return Username != "";
     }
