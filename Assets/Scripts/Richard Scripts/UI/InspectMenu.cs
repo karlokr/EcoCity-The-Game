@@ -112,7 +112,6 @@ public class InspectMenu : MonoBehaviour
     {
         Building b = g.GetComponent<Building>();
         ResetImages();
-
         SetMoneyCost(b.cost.ToString());
         SetPopCost(b.populationRequired.ToString());
         SetWoodCost(b.woodCost.ToString());
@@ -171,7 +170,8 @@ public class InspectMenu : MonoBehaviour
 
     public void WorldTileMenu()
     {
-        SetDescriptionText("Purchasing another world tile to expand your city!");
+        ResetImages();
+        SetDescriptionText("Purchase another world tile to expand your city!");
         SetWoodCost("10000");
         SetMoneyCost("0");
         SetPopCost("0");
@@ -184,6 +184,8 @@ public class InspectMenu : MonoBehaviour
     }
     public void ResetImages()
     {
+        popCostIcon.sprite = pop;
+        woodCostIcon.sprite = wood;
         stat1Image.enabled = true;
         stat2Image.enabled = true;
     }
