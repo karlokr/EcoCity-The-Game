@@ -11,6 +11,7 @@ public class ResourceKeeperText : MonoBehaviour
     private TextMeshProUGUI money;
     private TextMeshProUGUI emission;
     private TextMeshProUGUI wood;
+    private TextMeshProUGUI upgradeMaterial;
     private MatchTimer matchTimer;
 
     private TextMeshProUGUI woodPerMonth;
@@ -23,6 +24,7 @@ public class ResourceKeeperText : MonoBehaviour
         emission = GameObject.FindGameObjectWithTag("Emission").GetComponent<TextMeshProUGUI>();
         population = GameObject.FindGameObjectWithTag("Population").GetComponent<TextMeshProUGUI>();
         wood = GameObject.FindGameObjectWithTag("Wood").GetComponent<TextMeshProUGUI>();
+        upgradeMaterial = GameObject.FindGameObjectWithTag("UpgradeMaterial").GetComponent<TextMeshProUGUI>();
 
         woodPerMonth = GameObject.FindGameObjectWithTag("WoodPerMonth").GetComponent<TextMeshProUGUI>();
         moneyPerMonth = GameObject.FindGameObjectWithTag("MoneyPerMonth").GetComponent<TextMeshProUGUI>();
@@ -43,6 +45,7 @@ public class ResourceKeeperText : MonoBehaviour
             emission.text = ResourceKeeper.emission.ToString() + " CO2 ppm";
             population.text = ResourceKeeper.population.ToString();
             wood.text = ResourceKeeper.wood.ToString();
+            upgradeMaterial.text = ResourceKeeper.upgradeMaterial.ToString();
 
             woodPerMonth.text = "+" + ResourceKeeper.woodIncome.ToString();
             moneyPerMonth.text = "+" + ResourceKeeper.income.ToString();

@@ -9704,12 +9704,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upgradeName: ECO POWER
   cost: 500
-  emissionReduction: 10
+  emissionReduction: 15
   incomeIncrease: 10
   populationIncrease: 0
   woodIncomeIncrease: 10
   visualModel: {fileID: 0}
   upgradeActive: 0
+  upgradeMaterialCost: 5
   description: get the power of ECO
 --- !u!1 &4143626005980779012
 GameObject:
@@ -14555,12 +14556,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upgradeName: Steam Chimney
   cost: 100
-  emissionReduction: 1
+  emissionReduction: 5
   incomeIncrease: 0
   populationIncrease: 0
-  woodIncomeIncrease: 1
+  woodIncomeIncrease: 5
   visualModel: {fileID: 0}
   upgradeActive: 0
+  upgradeMaterialCost: 2
   description: Reduce emissions and increase wood income.
 --- !u!1 &5380372139478803928
 GameObject:
@@ -19439,12 +19441,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upgradeName: Generator
   cost: 300
-  emissionReduction: 5
+  emissionReduction: 10
   incomeIncrease: 5
   populationIncrease: 0
   woodIncomeIncrease: 5
   visualModel: {fileID: 0}
   upgradeActive: 0
+  upgradeMaterialCost: 3
   description: Reduce emissions and increase wood income.
 --- !u!1 &7980228404448646092
 GameObject:
@@ -19575,6 +19578,8 @@ MonoBehaviour:
   moneyParticleSystem: {fileID: 6746829347826388585}
   woodParticleSystem: {fileID: 4262482337754860104}
   upgradeSystems: {fileID: 6619998057364882615}
+  landingThud: {fileID: 0}
+  coinSpluge: {fileID: 0}
   populationIncrease: 0
   woodIncomeIncrease: 20
   incomeIncrease: 30

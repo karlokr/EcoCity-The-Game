@@ -35,6 +35,11 @@ TagManager:
   - PopulationBar
   - WoodPerMonth
   - MoneyPerMonth
+  - SkullIsland
+  - TileHolder
+  - Rock
+  - UpgradeMaterial
+  - Gems
   layers:
   - Default
   - TransparentFX
