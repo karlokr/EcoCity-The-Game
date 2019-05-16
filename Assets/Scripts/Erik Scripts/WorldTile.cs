@@ -7,7 +7,12 @@ public class WorldTile : MonoBehaviour
     public List<GameObject> tileList;
     //public GameObject prefabToBuild;
     public bool purchased;
+    public Animator animator;
     // Start is called before the first frame update
+    private void Awake()
+    {
+        animator = GetComponent<Animator>();
+    }
     void Start()
     {  
     }
@@ -25,5 +30,22 @@ public class WorldTile : MonoBehaviour
         myTile.transform.Translate(Vector3.down * 12f);
         myTile.transform.SetParent(GameObject.FindGameObjectWithTag("TileHolder").transform);
         return myTile;
+    }
+    /// <summary>
+    /// Debug function that sets the mesh color to magenta.
+    /// </summary>
+    public void FocusOnPlot()
+    {
+        animator.SetBool("Focused", true);
+    }
+
+
+    public static void UnfocusAllPlots()
+    {
+        Plot[] p = GameObject.FindObjectsOfType<Plot>();
+        foreach (Plot obj in p)
+        {
+            obj.animator.SetBool("Focused", false);
+        }
     }
 }
