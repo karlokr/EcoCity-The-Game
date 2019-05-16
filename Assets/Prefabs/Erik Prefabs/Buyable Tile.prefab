@@ -193,7 +193,17 @@ MonoBehaviour:
   - {fileID: 3349237013509034084, guid: 208f9f21f07861b4fb13bd1c8a241a85, type: 3}
   - {fileID: 3349237013509034084, guid: f101fb44d5fe8ca44a1508c737f0a6c6, type: 3}
   - {fileID: 3349237013509034084, guid: dbb3b48282a0c814ca6cca27ebfa58b6, type: 3}
+  - {fileID: 3349237013509034084, guid: 017c0263a8a9a4f43b908110ca8be4b0, type: 3}
+  - {fileID: 3349237013509034084, guid: 2a9e5db63fa85b545bd3573a8644c0b6, type: 3}
+  - {fileID: 3349237013509034084, guid: dea830a97da14524080a22fc31066b7b, type: 3}
+  - {fileID: 3349237013509034084, guid: d01bdf00e767ca74eab22e0c2e85287b, type: 3}
+  - {fileID: 3349237013509034084, guid: d91dca13c2040964b803854ac76a819a, type: 3}
+  - {fileID: 3349237013509034084, guid: 63548836ed489444fbc82d986e615b26, type: 3}
+  - {fileID: 3349237013509034084, guid: 1dc43f83a2ccc6744bbbabaccf0025ee, type: 3}
+  - {fileID: 3349237013509034084, guid: 0ba2e0f3b14749249bd813e0a593ee12, type: 3}
+  - {fileID: 3349237013509034084, guid: 558fae21581f2b14cbeb3c283ef65ed7, type: 3}
   purchased: 0
+  animator: {fileID: 0}
 --- !u!23 &6619594189102961832
 MeshRenderer:
   m_ObjectHideFlags: 0
