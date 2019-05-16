@@ -2,19 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class MatchTimerText : MonoBehaviour
 {
-    private Text text;
+    private TextMeshProUGUI text;
     private MatchTimer matchTimer;
-    private Text population;
-    private Text money;
-    private Text emission;
-    private Text wood;
+
 
     private void Awake()
     {
-        text = GetComponent<Text>();
+        text = GetComponent<TextMeshProUGUI>();
         matchTimer = GameObject.FindGameObjectWithTag("MatchTimer").GetComponent<MatchTimer>();
     }
 

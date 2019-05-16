@@ -27,7 +27,7 @@ Transform:
   m_LocalPosition: {x: -376.7, y: -306.04, z: -33.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 2460546237016485464}
+  - {fileID: 6658709803695669142}
   - {fileID: 2460546237553263831}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -40,9 +40,10 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2460546237016485464}
+  - component: {fileID: 6658709803695669142}
   - component: {fileID: 2460546237016485465}
   - component: {fileID: 2460546237016485462}
+  - component: {fileID: 74619386764846878}
   m_Layer: 0
   m_Name: CameraHolder
   m_TagString: CameraHolder
@@ -50,8 +51,8 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2460546237016485464
-Transform:
+--- !u!224 &6658709803695669142
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -64,6 +65,11 @@ Transform:
   m_Father: {fileID: 2460546236600169305}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2460546237016485465
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -76,8 +82,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb5e00c277aa4d41a0d82b720471f7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 25
-  zoomSpeed: 20
+  speed: 1
+  zoomSpeed: 5
   minZoom: 13
   maxZoom: 60
 --- !u!95 &2460546237016485462
@@ -99,6 +105,38 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &74619386764846878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2460546237016485467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1367256648, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Content: {fileID: 6658709803695669142}
+  m_Horizontal: 1
+  m_Vertical: 1
+  m_MovementType: 1
+  m_Elasticity: 0.1
+  m_Inertia: 1
+  m_DecelerationRate: 0.135
+  m_ScrollSensitivity: 1
+  m_Viewport: {fileID: 6658709803695669142}
+  m_HorizontalScrollbar: {fileID: 0}
+  m_VerticalScrollbar: {fileID: 0}
+  m_HorizontalScrollbarVisibility: 0
+  m_VerticalScrollbarVisibility: 0
+  m_HorizontalScrollbarSpacing: 0
+  m_VerticalScrollbarSpacing: 0
+  m_OnValueChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.ScrollRect+ScrollRectEvent, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &2460546237098331035
 GameObject:
   m_ObjectHideFlags: 0

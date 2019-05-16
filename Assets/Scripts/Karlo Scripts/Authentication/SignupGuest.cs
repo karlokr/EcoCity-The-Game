@@ -19,15 +19,19 @@ public class SignupGuest : MonoBehaviour {
                 Debug.Log(webRequest.error);
             } else {
                 Debug.Log("Form upload complete!");
+                if (webRequest.downloadHandler.text[0] == '0') {
+                    Debug.Log("User created successfully.");
+                    DBManager.username = username;
+                    DBManager.isGuest = true;
+                    PlayerPrefs.SetString("username", DBManager.username);
+                    PlayerPrefs.SetString("isGuest", "true");
+                    PlayerPrefs.Save();
+                    UnityEngine.SceneManagement.SceneManager.LoadScene(2);
+                } else {
+                    Debug.Log("User creation failed. Error #" + webRequest.downloadHandler.text);
+                }
             }
-            if (webRequest.downloadHandler.text == "0") {
-                Debug.Log("User created successfully.");
-                DBManager.username = username;
-                DBManager.isGuest = true;
-                UnityEngine.SceneManagement.SceneManager.LoadScene(2);
-            } else {
-                Debug.Log("User creation failed. Error #" + webRequest.downloadHandler.text);
-            }
+            
         }
     }
 

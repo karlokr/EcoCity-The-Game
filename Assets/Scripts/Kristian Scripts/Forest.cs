@@ -10,6 +10,8 @@ public class Forest : MonoBehaviour
     public float elapsedTime = 0f;
     public float buildTime = 10f;
     public int woodGained;
+    private BuyTileMenu buyTileMenu;
+    public int upgradeMaterialGained;
 
     public static Material forestDefaultMaterial;
 
@@ -19,7 +21,7 @@ public class Forest : MonoBehaviour
     public bool finished;
     void Awake()
     {
-
+        buyTileMenu = GameObject.FindGameObjectWithTag("BuyTileMenu").GetComponent<BuyTileMenu>();
     }
     private void Start()
     {
@@ -39,6 +41,7 @@ public class Forest : MonoBehaviour
         {
             ResourceKeeper.money -= 100;
             building = true;
+            buyTileMenu.buildButtons[0].SetActive(false);
         }
         else
         {
@@ -70,7 +73,10 @@ public class Forest : MonoBehaviour
         newPlot.transform.Translate(Vector3.forward * 2.5f);
         newPlot.transform.localScale = new Vector3(0.02f, 1f, 0.02f);
         ResourceKeeper.wood += woodGained;
+        ResourceKeeper.upgradeMaterial += upgradeMaterialGained;
         Destroy(gameObject);
+        buyTileMenu.buildButtons[1].SetActive(false);
+
     }
 
 }
