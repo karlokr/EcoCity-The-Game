@@ -8,15 +8,21 @@ public class LogInMenu : MonoBehaviour
     public GameObject LoginMenu;
     public GameObject SignUpPanel;
     public GameObject LogInPanel;
+    public GameObject Title;
+    public GameObject Heading;
     public GameObject GameMenu;
     public GameObject GameCanvas;
 
     public void GoToLogin() {
         (Instantiate(LoginMenu) as GameObject).transform.parent = GameCanvas.transform;
+        Title.SetActive(false);
+        Heading.SetActive(false);
     }
 
     public void GoToGameMenu() {
         (Instantiate(GameMenu) as GameObject).transform.parent = GameCanvas.transform;
+        Title.SetActive(false);
+        Heading.SetActive(false);
     }
 
     public void GoToMenu() {

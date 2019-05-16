@@ -247,6 +247,8 @@ MonoBehaviour:
   LoginMenu: {fileID: 0}
   SignUpPanel: {fileID: 5822655061072608358}
   LogInPanel: {fileID: 5822655062567059484}
+  Title: {fileID: 0}
+  Heading: {fileID: 0}
   GameMenu: {fileID: 2387601543281322347, guid: 519339c169a3ffd4ebd097874ef8fef8,
     type: 3}
   GameCanvas: {fileID: 5822655062281259719}
@@ -391,16 +393,16 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 51539175927989499, guid: 2b9efde4f45ef7246a9b897012b00d81,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 7155250643305737377}
     - target: {fileID: 46628790674696369, guid: 2b9efde4f45ef7246a9b897012b00d81,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2125436071141411444}
+    - target: {fileID: 51539175927989499, guid: 2b9efde4f45ef7246a9b897012b00d81,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 7155250643305737377}
     - target: {fileID: 5162836939864281173, guid: 2b9efde4f45ef7246a9b897012b00d81,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -566,6 +568,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 6435381304492028527, guid: 0300d14c3b6b39e4e823e746823a47a5,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 565168042062614111}
     - target: {fileID: 1467004003656768857, guid: 0300d14c3b6b39e4e823e746823a47a5,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -576,11 +583,21 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 565168042062614111}
-    - target: {fileID: 6435381304492028527, guid: 0300d14c3b6b39e4e823e746823a47a5,
+    - target: {fileID: 1568819267795202690, guid: 0300d14c3b6b39e4e823e746823a47a5,
         type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 565168042062614111}
+      propertyPath: m_TagString
+      value: SignupUserLine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1568819267224570728, guid: 0300d14c3b6b39e4e823e746823a47a5,
+        type: 3}
+      propertyPath: m_TagString
+      value: SignupPasswordLine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1568819267307701578, guid: 0300d14c3b6b39e4e823e746823a47a5,
+        type: 3}
+      propertyPath: m_TagString
+      value: SignupCPasswordLine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0300d14c3b6b39e4e823e746823a47a5, type: 3}
 --- !u!1 &5822655061072608358 stripped

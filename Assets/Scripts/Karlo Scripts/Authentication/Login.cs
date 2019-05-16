@@ -28,6 +28,15 @@ public class Login : MonoBehaviour
         } else {
             LogInButton.interactable = false;
         }
+        if (Username == "") {
+            username.GetComponentInChildren<TextMeshProUGUI>().text = "Username";
+            GameObject.FindGameObjectWithTag("LoginUserLine").GetComponent<Image>().color = new Color(95 / 255f, 105 / 255f, 115 / 255f, 1f);
+        }
+        if (Password == "") {
+            password.GetComponentInChildren<TextMeshProUGUI>().text = "Password";
+            GameObject.FindGameObjectWithTag("LoginPasswordLine").GetComponent<Image>().color = new Color(95 / 255f, 105 / 255f, 115 / 255f, 1f);
+
+        }
     }
 
     public void LoginButton() {

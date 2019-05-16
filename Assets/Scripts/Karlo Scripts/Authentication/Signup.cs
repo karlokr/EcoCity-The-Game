@@ -31,6 +31,24 @@ public class Signup : MonoBehaviour {
         } else {
             SignUpButton.interactable = false; 
         }
+        if (Username == "") {
+            username.GetComponentInChildren<TextMeshProUGUI>().text = "Username";
+            GameObject.FindGameObjectWithTag("SignupUserLine").GetComponent<Image>().color = new Color(95 / 255f, 105 / 255f, 115 / 255f, 1f);
+            GameObject.FindGameObjectWithTag("SignupPasswordLine").GetComponent<Image>().color = new Color(95 / 255f, 105 / 255f, 115 / 255f, 1f);
+            GameObject.FindGameObjectWithTag("SignupCPasswordLine").GetComponent<Image>().color = new Color(95 / 255f, 105 / 255f, 115 / 255f, 1f);
+        }
+        if (Password == "") {
+            password.GetComponentInChildren<TextMeshProUGUI>().text = "Password";
+            GameObject.FindGameObjectWithTag("SignupUserLine").GetComponent<Image>().color = new Color(95 / 255f, 105 / 255f, 115 / 255f, 1f);
+            GameObject.FindGameObjectWithTag("SignupPasswordLine").GetComponent<Image>().color = new Color(95 / 255f, 105 / 255f, 115 / 255f, 1f);
+            GameObject.FindGameObjectWithTag("SignupCPasswordLine").GetComponent<Image>().color = new Color(95 / 255f, 105 / 255f, 115 / 255f, 1f);
+        }
+        if (ConfirmPassword == "") {
+            confirmPassword.GetComponentInChildren<TextMeshProUGUI>().text = "Confirm Password";
+            GameObject.FindGameObjectWithTag("SignupUserLine").GetComponent<Image>().color = new Color(95 / 255f, 105 / 255f, 115 / 255f, 1f);
+            GameObject.FindGameObjectWithTag("SignupPasswordLine").GetComponent<Image>().color = new Color(95 / 255f, 105 / 255f, 115 / 255f, 1f);
+            GameObject.FindGameObjectWithTag("SignupCPasswordLine").GetComponent<Image>().color = new Color(95 / 255f, 105 / 255f, 115 / 255f, 1f);
+        }
     }
 
     public void RegisterButton() {
@@ -70,7 +88,12 @@ public class Signup : MonoBehaviour {
                         break;
                     case 3:
                         Debug.Log("User creation failed. Name already exists. Error #" + webRequest.downloadHandler.text);
-                        username.GetComponentInChildren<TextMeshProUGUI>().text = "Incorrect username";
+                        username.GetComponentInChildren<TextMeshProUGUI>().text = "Username taken";
+                        password.GetComponentInChildren<TextMeshProUGUI>().text = "Password";
+                        confirmPassword.GetComponentInChildren<TextMeshProUGUI>().text = "Confirm Password";
+                        GameObject.FindGameObjectWithTag("SignupUserLine").GetComponent<Image>().color = Color.red;
+                        GameObject.FindGameObjectWithTag("SignupPasswordLine").GetComponent<Image>().color = new Color(95 / 255f, 105 / 255f, 115 / 255f, 1f);
+                        GameObject.FindGameObjectWithTag("SignupCPasswordLine").GetComponent<Image>().color = new Color(95 / 255f, 105 / 255f, 115 / 255f, 1f);
                         break;
                     case 4:
                         Debug.Log("User creation failed. Insert user into DB failed. Error #" + webRequest.downloadHandler.text);
