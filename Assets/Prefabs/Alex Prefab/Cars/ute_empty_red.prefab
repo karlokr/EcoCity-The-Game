@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -1443601469994543195}
   - component: {fileID: 6135136068834766887}
   - component: {fileID: -5557252502490203807}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ute_empty_red
   m_TagString: Untagged
   m_Icon: {fileID: 0}

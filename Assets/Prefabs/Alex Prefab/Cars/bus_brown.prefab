@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4196409082415094297}
   - component: {fileID: 6567943046246133493}
   - component: {fileID: -8775487114477508683}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: bus_brown
   m_TagString: Untagged
   m_Icon: {fileID: 0}

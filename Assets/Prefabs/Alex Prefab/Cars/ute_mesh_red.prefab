@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -5572428025481793777}
   - component: {fileID: -5435603220557101158}
   - component: {fileID: 8386819027880634395}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ute_mesh_red
   m_TagString: Untagged
   m_Icon: {fileID: 0}

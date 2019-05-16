@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2398495930619687453}
   - component: {fileID: 6908692828691866246}
   - component: {fileID: 428292461436711017}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ute_mesh_yellow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
