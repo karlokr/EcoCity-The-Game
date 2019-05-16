@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class ResourceKeeper : MonoBehaviour
 {
+    public Renderer visualModel;
+    GameObject[] buildingList;
     //The Big 4
     public static int money = 10000;
     public static int emission = 0;
     public static int population = 0;
-    public static int wood = 10000;
+    public static int wood = 99999;
     public static int ecoScore = 0;
     public static int upgradeMaterial = 0;
     //Accumulators
@@ -32,4 +34,16 @@ public class ResourceKeeper : MonoBehaviour
         money += income;
         wood += woodIncome;
     }
+    //public void emitMonthly()
+    //{
+    //    buildingList = GameObject.FindGameObjectsWithTag("Building");
+    //    foreach (GameObject building in buildingList)
+    //    {
+    //        Building buildingType = building.GetComponent<Building>();
+    //        visualModel = buildingType.GetComponent<Renderer>();
+    //        //visualModel.enabled = true;
+    //        //buildingType.ResourcePop(buildingType);
+    //    }
+    //}
+
 }
