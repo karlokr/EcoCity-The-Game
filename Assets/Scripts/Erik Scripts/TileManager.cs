@@ -5,15 +5,22 @@ using UnityEngine;
 [System.Serializable]
 public class TileManager : MonoBehaviour
 {
-    private const int rowNumber = 5;
-    private const int colNumber = 5;
-    public static GameObject[,] tiles = new GameObject[rowNumber, colNumber];
-    public static bool[,] shownTiles = new bool[rowNumber, colNumber];
+    private int dimension;
+    private static int rowNumber;
+    private static int colNumber;
+    public static GameObject[,] tiles;
+    public static bool[,] shownTiles;
 
     public GameObject[] worldTiles;
     // Start is called before the first frame update
     private void Awake()
     {
+        dimension = (int) Mathf.Sqrt(worldTiles.Length);
+        rowNumber = dimension;
+        colNumber = dimension;
+        tiles = new GameObject[rowNumber, colNumber];
+        shownTiles = new bool[rowNumber, colNumber];
+
         int count = 0;
         for (int row = 0; row < rowNumber; row++)
         {
