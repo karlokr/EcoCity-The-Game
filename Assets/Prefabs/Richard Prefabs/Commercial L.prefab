@@ -4914,6 +4914,8 @@ MonoBehaviour:
   moneyParticleSystem: {fileID: 5836984364329324055}
   woodParticleSystem: {fileID: 3283637033678991977}
   upgradeSystems: {fileID: 3915200992249441484}
+  landingThud: {fileID: 0}
+  coinSpluge: {fileID: 0}
   populationIncrease: 0
   woodIncomeIncrease: 0
   incomeIncrease: 30

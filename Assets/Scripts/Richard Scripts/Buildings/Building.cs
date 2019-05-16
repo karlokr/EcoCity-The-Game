@@ -5,6 +5,7 @@ using EZCameraShake;
 
 public class Building : MonoBehaviour
 {
+
     public Material debugMaterial;
     public static Material defaultMaterial;
     public Renderer rend;
@@ -112,4 +113,23 @@ public class Building : MonoBehaviour
         woodParticleSystem.Emit(wood);
         moneyParticleSystem.Emit(credits);
     }
+    //public void ResourcePop(Building building)
+    //{
+
+    //    switch (building.buildingType)
+    //    {
+    //        case "Industrial":
+    //            woodParticleSystem.Emit(1);
+    //            break;
+    //        case "Residential":
+    //            building.GetComponents<ParticleSystem>();
+    //            break;
+    //        case "Commercial":
+    //            moneyParticleSystem.Emit(1);
+    //            break;
+    //        default:
+    //            break;
+    //    }
+
+    //}
 }
