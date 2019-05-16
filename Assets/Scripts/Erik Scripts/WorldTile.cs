@@ -34,16 +34,12 @@ public class WorldTile : MonoBehaviour
     /// <summary>
     /// Debug function that sets the mesh color to magenta.
     /// </summary>
-    public void FocusOnPlot()
-    {
-        animator.SetBool("Focused", true);
-    }
 
 
-    public static void UnfocusAllPlots()
+    public static void UnfocusAllTiles()
     {
-        Plot[] p = GameObject.FindObjectsOfType<Plot>();
-        foreach (Plot obj in p)
+        WorldTile[] p = GameObject.FindObjectsOfType<WorldTile>();
+        foreach (WorldTile obj in p)
         {
             obj.animator.SetBool("Focused", false);
         }
