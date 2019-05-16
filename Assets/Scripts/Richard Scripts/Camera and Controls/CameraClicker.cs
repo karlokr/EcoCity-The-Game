@@ -151,6 +151,7 @@ public class CameraClicker : MonoBehaviour
                         case "WorldTile":
                             ClearSelections();
                             selectedTile = other.GetComponent<WorldTile>();
+                            selectedTile.GetComponent<Animator>().SetBool("Focused", true);
                             buyTileMenu.SetSelectedTile(selectedTile);
                             if (!selectedTile.purchased)
                             {
@@ -237,6 +238,7 @@ public class CameraClicker : MonoBehaviour
         upgradeMenuObj.SetActive(false);
         Building.UnfocusAllBuildings();
         Plot.UnfocusAllPlots();
+        WorldTile.UnfocusAllTiles();
         inspectMenu.SetInspecting(false);
         buyMenuObj.SetActive(false);
     }
