@@ -104,6 +104,7 @@ public class Building : MonoBehaviour
         CameraShaker.Instance.ShakeOnce(4f, 2f, 0.0f, 0.5f);
         landingParticleSystem.Play();
         EmitResources(populationIncrease, incomeIncrease, woodIncomeIncrease);
+        PlayLandingSounds();
     }
 
     public void EmitResources(int pop, int credits, int wood)

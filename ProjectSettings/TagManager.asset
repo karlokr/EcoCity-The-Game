@@ -39,6 +39,8 @@ TagManager:
   - TileHolder
   - LoginUserLine
   - LoginPasswordLine
+  - WinConditions
+  - PostProcessGlobal
   layers:
   - Default
   - TransparentFX

@@ -78,6 +78,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 25
   zoomSpeed: 20
+  minZoom: 13
+  maxZoom: 30
 --- !u!95 &2460546237016485462
 Animator:
   serializedVersion: 3
