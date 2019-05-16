@@ -187,7 +187,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5822655062281259719}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b0967aec36b0eb24594bc6f02d52df6c, type: 3}
   m_Name: 
@@ -205,7 +205,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5822655062281259719}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cd7ef1bae1225da44b16f90221b2592e, type: 3}
   m_Name: 
@@ -244,11 +244,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f046589af0c15c040953623d3971fb75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LoginMenu: {fileID: 0}
+  LoginMenu: {fileID: 5822655062567059484}
   SignUpPanel: {fileID: 5822655061072608358}
   LogInPanel: {fileID: 5822655062567059484}
-  Title: {fileID: 0}
-  Heading: {fileID: 0}
   GameMenu: {fileID: 2387601543281322347, guid: 519339c169a3ffd4ebd097874ef8fef8,
     type: 3}
   GameCanvas: {fileID: 5822655062281259719}
@@ -278,15 +276,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5822655062281259715}
     m_Modifications:
+    - target: {fileID: 4174268074456029968, guid: 2b9efde4f45ef7246a9b897012b00d81,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 8351328435853424588, guid: 2b9efde4f45ef7246a9b897012b00d81,
         type: 3}
       propertyPath: m_Name
       value: LoginPanel
-      objectReference: {fileID: 0}
-    - target: {fileID: 8351328435853424588, guid: 2b9efde4f45ef7246a9b897012b00d81,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8351328435853424589, guid: 2b9efde4f45ef7246a9b897012b00d81,
         type: 3}
@@ -408,6 +406,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 565168042062614111}
+    - target: {fileID: 3524980608636816729, guid: 2b9efde4f45ef7246a9b897012b00d81,
+        type: 3}
+      propertyPath: GameCanvas
+      value: 
+      objectReference: {fileID: 5822655062281259719}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b9efde4f45ef7246a9b897012b00d81, type: 3}
 --- !u!1 &5822655062567059484 stripped
@@ -419,18 +422,6 @@ GameObject:
 --- !u!224 &5822655062567059485 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8351328435853424589, guid: 2b9efde4f45ef7246a9b897012b00d81,
-    type: 3}
-  m_PrefabInstance: {fileID: 2534357924916623312}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &7468797415544314582 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4939787673293696262, guid: 2b9efde4f45ef7246a9b897012b00d81,
-    type: 3}
-  m_PrefabInstance: {fileID: 2534357924916623312}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1929268696571538624 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4174268074456029968, guid: 2b9efde4f45ef7246a9b897012b00d81,
     type: 3}
   m_PrefabInstance: {fileID: 2534357924916623312}
   m_PrefabAsset: {fileID: 0}
@@ -446,6 +437,18 @@ MonoBehaviour:
   m_Script: {fileID: 1392445389, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1929268696571538624 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4174268074456029968, guid: 2b9efde4f45ef7246a9b897012b00d81,
+    type: 3}
+  m_PrefabInstance: {fileID: 2534357924916623312}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7468797415544314582 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4939787673293696262, guid: 2b9efde4f45ef7246a9b897012b00d81,
+    type: 3}
+  m_PrefabInstance: {fileID: 2534357924916623312}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4975802917418583289
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -457,11 +460,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SignupPanel
-      objectReference: {fileID: 0}
-    - target: {fileID: 1568276926907988127, guid: 0300d14c3b6b39e4e823e746823a47a5,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1568276926907988126, guid: 0300d14c3b6b39e4e823e746823a47a5,
         type: 3}
@@ -583,21 +581,21 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 565168042062614111}
-    - target: {fileID: 1568819267795202690, guid: 0300d14c3b6b39e4e823e746823a47a5,
+    - target: {fileID: 1569285382412428702, guid: 0300d14c3b6b39e4e823e746823a47a5,
         type: 3}
       propertyPath: m_TagString
-      value: SignupUserLine
+      value: Untagged
       objectReference: {fileID: 0}
-    - target: {fileID: 1568819267224570728, guid: 0300d14c3b6b39e4e823e746823a47a5,
+    - target: {fileID: 1569285381976415348, guid: 0300d14c3b6b39e4e823e746823a47a5,
         type: 3}
       propertyPath: m_TagString
-      value: SignupPasswordLine
+      value: Untagged
       objectReference: {fileID: 0}
-    - target: {fileID: 1568819267307701578, guid: 0300d14c3b6b39e4e823e746823a47a5,
+    - target: {fileID: 8382406188356941061, guid: 0300d14c3b6b39e4e823e746823a47a5,
         type: 3}
-      propertyPath: m_TagString
-      value: SignupCPasswordLine
-      objectReference: {fileID: 0}
+      propertyPath: GameCanvas
+      value: 
+      objectReference: {fileID: 5822655062281259719}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0300d14c3b6b39e4e823e746823a47a5, type: 3}
 --- !u!1 &5822655061072608358 stripped

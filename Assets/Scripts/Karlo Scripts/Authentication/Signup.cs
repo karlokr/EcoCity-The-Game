@@ -33,21 +33,21 @@ public class Signup : MonoBehaviour {
         }
         if (Username == "") {
             username.GetComponentInChildren<TextMeshProUGUI>().text = "Username";
-            GameObject.FindGameObjectWithTag("SignupUserLine").GetComponent<Image>().color = new Color(95 / 255f, 105 / 255f, 115 / 255f, 1f);
-            GameObject.FindGameObjectWithTag("SignupPasswordLine").GetComponent<Image>().color = new Color(95 / 255f, 105 / 255f, 115 / 255f, 1f);
-            GameObject.FindGameObjectWithTag("SignupCPasswordLine").GetComponent<Image>().color = new Color(95 / 255f, 105 / 255f, 115 / 255f, 1f);
+            GameObject.FindGameObjectWithTag("SignupUserLine").GetComponentInChildren<Image>().color = new Color(95 / 255f, 105 / 255f, 115 / 255f, 1f);
+            GameObject.FindGameObjectWithTag("SignupPasswordLine").GetComponentInChildren<Image>().color = new Color(95 / 255f, 105 / 255f, 115 / 255f, 1f);
+            GameObject.FindGameObjectWithTag("SignupCPasswordLine").GetComponentInChildren<Image>().color = new Color(95 / 255f, 105 / 255f, 115 / 255f, 1f);
         }
         if (Password == "") {
             password.GetComponentInChildren<TextMeshProUGUI>().text = "Password";
-            GameObject.FindGameObjectWithTag("SignupUserLine").GetComponent<Image>().color = new Color(95 / 255f, 105 / 255f, 115 / 255f, 1f);
-            GameObject.FindGameObjectWithTag("SignupPasswordLine").GetComponent<Image>().color = new Color(95 / 255f, 105 / 255f, 115 / 255f, 1f);
-            GameObject.FindGameObjectWithTag("SignupCPasswordLine").GetComponent<Image>().color = new Color(95 / 255f, 105 / 255f, 115 / 255f, 1f);
+            GameObject.FindGameObjectWithTag("SignupUserLine").GetComponentInChildren<Image>().color = new Color(95 / 255f, 105 / 255f, 115 / 255f, 1f);
+            GameObject.FindGameObjectWithTag("SignupPasswordLine").GetComponentInChildren<Image>().color = new Color(95 / 255f, 105 / 255f, 115 / 255f, 1f);
+            GameObject.FindGameObjectWithTag("SignupCPasswordLine").GetComponentInChildren<Image>().color = new Color(95 / 255f, 105 / 255f, 115 / 255f, 1f);
         }
         if (ConfirmPassword == "") {
             confirmPassword.GetComponentInChildren<TextMeshProUGUI>().text = "Confirm Password";
-            GameObject.FindGameObjectWithTag("SignupUserLine").GetComponent<Image>().color = new Color(95 / 255f, 105 / 255f, 115 / 255f, 1f);
-            GameObject.FindGameObjectWithTag("SignupPasswordLine").GetComponent<Image>().color = new Color(95 / 255f, 105 / 255f, 115 / 255f, 1f);
-            GameObject.FindGameObjectWithTag("SignupCPasswordLine").GetComponent<Image>().color = new Color(95 / 255f, 105 / 255f, 115 / 255f, 1f);
+            GameObject.FindGameObjectWithTag("SignupUserLine").GetComponentInChildren<Image>().color = new Color(95 / 255f, 105 / 255f, 115 / 255f, 1f);
+            GameObject.FindGameObjectWithTag("SignupPasswordLine").GetComponentInChildren<Image>().color = new Color(95 / 255f, 105 / 255f, 115 / 255f, 1f);
+            GameObject.FindGameObjectWithTag("SignupCPasswordLine").GetComponentInChildren<Image>().color = new Color(95 / 255f, 105 / 255f, 115 / 255f, 1f);
         }
     }
 
