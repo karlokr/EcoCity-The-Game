@@ -9629,12 +9629,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upgradeName: Garden
   cost: 1000
-  emissionReduction: 5
+  emissionReduction: 10
   incomeIncrease: 0
   populationIncrease: 5
   woodIncomeIncrease: 0
   visualModel: {fileID: 0}
   upgradeActive: 0
+  upgradeMaterialCost: 5
   description: Increase max population and reduce emission
 --- !u!1 &2621534336506574789
 GameObject:
@@ -14526,13 +14527,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upgradeName: Steam Chimney
-  cost: 100
-  emissionReduction: 2
+  cost: 250
+  emissionReduction: 5
   incomeIncrease: 0
-  populationIncrease: 1
+  populationIncrease: 5
   woodIncomeIncrease: 0
   visualModel: {fileID: 0}
   upgradeActive: 0
+  upgradeMaterialCost: 2
   description: Chimney reduces the Residential building emission and increases it's
     bonus population.
 --- !u!1 &4918467663611520842
@@ -19443,6 +19445,7 @@ MonoBehaviour:
   woodIncomeIncrease: 0
   visualModel: {fileID: 0}
   upgradeActive: 0
+  upgradeMaterialCost: 3
   description: Increase the max population.
 --- !u!1 &7980228404448646092
 GameObject:
@@ -19592,6 +19595,8 @@ MonoBehaviour:
   moneyParticleSystem: {fileID: 2016771898003284120}
   woodParticleSystem: {fileID: 3793078087063566731}
   upgradeSystems: {fileID: 4925815279246005170}
+  landingThud: {fileID: 0}
+  coinSpluge: {fileID: 0}
   populationIncrease: 25
   woodIncomeIncrease: 0
   incomeIncrease: 50

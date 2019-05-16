@@ -31,6 +31,15 @@ TagManager:
   - LLevel
   - UsernameLogin
   - AudioPlayer
+  - EmissionsBar
+  - PopulationBar
+  - WoodPerMonth
+  - MoneyPerMonth
+  - SkullIsland
+  - TileHolder
+  - Rock
+  - UpgradeMaterial
+  - Gems
   layers:
   - Default
   - TransparentFX

@@ -52,7 +52,7 @@ namespace Michsky.UI.ModernUIPack
             }
 
             loadingBar.GetComponent<Image>().fillAmount = currentPercent / 100;
-            textPercent.GetComponent<TextMeshProUGUI>().text = ((int)currentPercent).ToString("F0") + "%";
+            //textPercent.GetComponent<TextMeshProUGUI>().text = ((int)currentPercent).ToString("F0") + "%";
         }
     }
 }

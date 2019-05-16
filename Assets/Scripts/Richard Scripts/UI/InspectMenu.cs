@@ -18,17 +18,21 @@ public class InspectMenu : MonoBehaviour
     public Image stat2Image;
     public Image stat3Image;
 
+    public Image woodCostIcon;
+    public Image popCostIcon;
+
     public Sprite gold;
     public Sprite wood;
     public Sprite pop;
     public Sprite gem;
+    public Sprite upgradeMaterial;
+    public Sprite gray;
     public bool inspecting;
 
     private Animator animator;
     private void Awake()
     {
         animator = GetComponent<Animator>();
-
 
     }
 
@@ -39,6 +43,8 @@ public class InspectMenu : MonoBehaviour
         gold = Resources.Load<Sprite>("Sprites/UI_Graphic_Resource_Coins");
         wood = Resources.Load<Sprite>("Sprites/UI_Graphic_Resource_Wood");
         pop = Resources.Load<Sprite>("Sprites/UI_Graphic_Resource_Food");
+        upgradeMaterial = Resources.Load<Sprite>("Sprites/UI_Graphic_Resource_Iron");
+        gray = Resources.Load<Sprite>("Sprites/grey_panel");
     }
 
     // Update is called once per frame
@@ -92,11 +98,20 @@ public class InspectMenu : MonoBehaviour
     {
         popCost.text = s;
     }
+    public void ClearPopCostIcon()
+    {
+        popCostIcon.sprite = gray;
+        SetPopCost("");
+    }
+    public void SetUpgradeCostIcon()
+    {
+        woodCostIcon.sprite = upgradeMaterial;
+    }
 
     public void ReceiveBuilding(GameObject g)
     {
         Building b = g.GetComponent<Building>();
-
+        ResetImages();
         SetMoneyCost(b.cost.ToString());
         SetPopCost(b.populationRequired.ToString());
         SetWoodCost(b.woodCost.ToString());
@@ -121,5 +136,57 @@ public class InspectMenu : MonoBehaviour
             stat2Image.GetComponent<Image>().sprite = pop;
         }
         SetStat3("");
+    }
+
+    public void ForestBuyMenu()
+    {
+        ResetImages();
+        SetDescriptionText("Purchasing a Forest tile will give you a lot of Wood and some Upgrade Materials");
+        SetWoodCost("0");
+        SetMoneyCost("100");
+        SetPopCost("0");
+        SetNameText("Forest");
+        SetStat1("+ 5 UPGRADE MATERIAL");
+        stat1Image.sprite = upgradeMaterial;
+        stat2Image.sprite = wood;
+        SetStat2("+ 1000 wood");
+        SetStat3("");
+    }
+
+    public void RockBuyMenu()
+    {
+        ResetImages();
+        SetDescriptionText("Purchasing a Rock tile will give you bonus Money and lots of Upgrade Materials");
+        SetWoodCost("50");
+        SetMoneyCost("50");
+        SetPopCost("0");
+        SetNameText("Rock");
+        SetStat1("+ 10 UPGRADE MATERIAL");
+        stat1Image.sprite = upgradeMaterial;
+        stat2Image.sprite = gold;
+        SetStat2("+ 150 gold");
+        SetStat3("");
+    }
+
+    public void WorldTileMenu()
+    {
+        ResetImages();
+        SetDescriptionText("Purchase another world tile to expand your city!");
+        SetWoodCost("10000");
+        SetMoneyCost("0");
+        SetPopCost("0");
+        SetNameText("Expand Ground");
+        SetStat1("");
+        stat1Image.enabled = false;
+        stat2Image.enabled = false;
+        SetStat2("");
+        SetStat3("");
+    }
+    public void ResetImages()
+    {
+        popCostIcon.sprite = pop;
+        woodCostIcon.sprite = wood;
+        stat1Image.enabled = true;
+        stat2Image.enabled = true;
     }
 }
