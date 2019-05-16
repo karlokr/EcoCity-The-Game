@@ -21,11 +21,10 @@ public class Forest : MonoBehaviour
     public bool finished;
     void Awake()
     {
-
+        buyTileMenu = GameObject.FindGameObjectWithTag("BuyTileMenu").GetComponent<BuyTileMenu>();
     }
     private void Start()
     {
-        buyTileMenu = GameObject.FindGameObjectWithTag("BuyTileMenu").GetComponent<BuyTileMenu>();
         forestDefaultMaterial = GetComponentInChildren<Renderer>().material; 
     }
     void Update()
