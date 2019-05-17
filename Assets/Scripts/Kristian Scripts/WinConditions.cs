@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Rendering.PostProcessing;
 using Michsky.UI.ModernUIPack;
 
 public class WinConditions : MonoBehaviour
@@ -17,11 +18,16 @@ public class WinConditions : MonoBehaviour
     private ProgressBar emissionBar;
     private ProgressBar populationBar;
 
+    private PostProcessVolume ppv;
+    private ColorGrading colorGrade = null;
+
     private void Awake()
     {
         matchTimer = GameObject.FindGameObjectWithTag("MatchTimer").GetComponent<MatchTimer>();
         emissionBar = GameObject.FindGameObjectWithTag("EmissionsBar").GetComponent<ProgressBar>();
         populationBar = GameObject.FindGameObjectWithTag("PopulationBar").GetComponent<ProgressBar>();
+        ppv = GameObject.FindGameObjectWithTag("PostProcessGlobal").GetComponent<PostProcessVolume>();
+        colorGrade = ppv.profile.GetSetting<ColorGrading>();
     }
     // Start is called before the first frame update
     void Start()
@@ -49,6 +55,7 @@ public class WinConditions : MonoBehaviour
 
         emissionBar.currentPercent = Mathf.Lerp(emissionBar.currentPercent, (ResourceKeeper.emission / emissionLimit) * 100f, barLerpSpeed * Time.deltaTime);
         emissionBar.currentPercent = Mathf.Clamp(emissionBar.currentPercent, 0, 100);
+        colorGrade.temperature.value = emissionBar.currentPercent;
 
         populationBar.currentPercent = Mathf.Lerp(populationBar.currentPercent, (ResourceKeeper.population / populationRequirement) * 100f, barLerpSpeed * Time.deltaTime);
         

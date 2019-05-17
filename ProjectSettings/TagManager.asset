@@ -40,6 +40,10 @@ TagManager:
   - MoneyPerMonth
   - SkullIsland
   - TileHolder
+  - LoginUserLine
+  - LoginPasswordLine
+  - WinConditions
+  - PostProcessGlobal
   - Rock
   - UpgradeMaterial
   - Gems

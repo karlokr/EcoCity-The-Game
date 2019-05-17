@@ -832,5 +832,15 @@ PrefabInstance:
       propertyPath: m_textInfo.pageCount
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7367317365586938669, guid: ceefddc80c69fa646b66ae688d601e83,
+        type: 3}
+      propertyPath: m_TagString
+      value: LoginUserLine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1604085512222287272, guid: ceefddc80c69fa646b66ae688d601e83,
+        type: 3}
+      propertyPath: m_TagString
+      value: LoginPasswordLine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ceefddc80c69fa646b66ae688d601e83, type: 3}
