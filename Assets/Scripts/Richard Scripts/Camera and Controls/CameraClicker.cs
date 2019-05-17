@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class CameraClicker : MonoBehaviour
 {
+    private AudioSource nukeSource;
+    private NukeAudio nukeAudio;
     private Camera viewportCamera;
     private CameraHolder cameraHolder;
     private MatchTimer matchTimer;
@@ -32,6 +34,7 @@ public class CameraClicker : MonoBehaviour
 
     private void Awake()
     {
+        nukeAudio = GameObject.FindObjectOfType<NukeAudio>();
         clickerAudio = GetComponent<ClickerAudio>();
         bombCounter = 0;
         resourceKeeper = GameObject.FindGameObjectWithTag("ResourceKeeper").GetComponent<ResourceKeeper>();
@@ -162,6 +165,8 @@ public class CameraClicker : MonoBehaviour
                         case "SkullIsland":
                             bombCounter++;
                             Debug.Log(bombCounter);
+                            nukeSource = nukeAudio.GetComponent<AudioSource>();
+                            nukeSource.PlayOneShot(nukeAudio.dontDoIt[bombCounter - 1]);
                             if (bombCounter == 5)
                             {
                                 nuke = other.GetComponent<NukeTime>();
