@@ -24,7 +24,6 @@ TagManager:
   - CampaignSelected
   - BackButton
   - EndlessButton
-  - SkullIsland
   - Collider
   - Start1
   - CampaignButton
