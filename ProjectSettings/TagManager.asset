@@ -46,6 +46,7 @@ TagManager:
   - Rock
   - UpgradeMaterial
   - Gems
+  - UIAudioPlayer
   layers:
   - Default
   - TransparentFX

@@ -172,6 +172,8 @@ MonoBehaviour:
   size: 2
   debugMaterial: {fileID: 2100000, guid: 28c7458476f6fba4891016eb9253541f, type: 2}
   animator: {fileID: 0}
+  audioData: {fileID: 0}
+  positive: {fileID: 8300000, guid: 35d1f816693763d46b3b414f550838d2, type: 3}
 --- !u!95 &1255779453703746299
 Animator:
   serializedVersion: 3
