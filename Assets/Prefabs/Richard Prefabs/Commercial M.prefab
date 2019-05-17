@@ -4895,12 +4895,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upgradeName: LocallySourced
   cost: 500
-  emissionReduction: 10
+  emissionReduction: 75
   incomeIncrease: 20
   populationIncrease: 0
   woodIncomeIncrease: 0
   visualModel: {fileID: 0}
   upgradeActive: 0
+  upgradeMaterialCost: 5
   description: THICC income increase. Small emission reduction.
 --- !u!1 &2839031442104201513
 GameObject:
@@ -5027,12 +5028,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upgradeName: Eco Supplier
   cost: 100
-  emissionReduction: 5
+  emissionReduction: 15
   incomeIncrease: 15
   populationIncrease: 0
   woodIncomeIncrease: 0
   visualModel: {fileID: 0}
   upgradeActive: 0
+  upgradeMaterialCost: 2
   description: BIG income increase minor emission reduction
 --- !u!1 &4760125560367686704
 GameObject:
@@ -19440,12 +19442,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upgradeName: Recycled Packaging
   cost: 250
-  emissionReduction: 5
+  emissionReduction: 20
   incomeIncrease: 5
   populationIncrease: 0
   woodIncomeIncrease: 0
   visualModel: {fileID: 0}
   upgradeActive: 0
+  upgradeMaterialCost: 3
   description: Income increase and a small emission reduction.
 --- !u!1 &7980228404448646092
 GameObject:

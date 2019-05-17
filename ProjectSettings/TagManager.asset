@@ -24,6 +24,9 @@ TagManager:
   - CampaignSelected
   - BackButton
   - EndlessButton
+  - SkullIsland
+  - Collider
+  - Start1
   - CampaignButton
   - LeaderScore
   - LeaderUser
@@ -41,6 +44,9 @@ TagManager:
   - LoginPasswordLine
   - WinConditions
   - PostProcessGlobal
+  - Rock
+  - UpgradeMaterial
+  - Gems
   layers:
   - Default
   - TransparentFX
@@ -50,7 +56,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - car
   - 
   - 
   - 

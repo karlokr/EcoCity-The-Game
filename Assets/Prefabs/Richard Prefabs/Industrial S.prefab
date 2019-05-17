@@ -9740,6 +9740,7 @@ MonoBehaviour:
   woodIncomeIncrease: 5
   visualModel: {fileID: 0}
   upgradeActive: 0
+  upgradeMaterialCost: 5
   description: get the power of ECO
 --- !u!1 &4000785101385935363
 GameObject:
@@ -14588,9 +14589,10 @@ MonoBehaviour:
   emissionReduction: 5
   incomeIncrease: 0
   populationIncrease: 0
-  woodIncomeIncrease: 1
+  woodIncomeIncrease: 2
   visualModel: {fileID: 0}
   upgradeActive: 0
+  upgradeMaterialCost: 2
   description: Reduce emissions and increase wood income.
 --- !u!1 &5660184593139301442
 GameObject:
@@ -14684,12 +14686,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upgradeName: Generator
   cost: 100
-  emissionReduction: 2
+  emissionReduction: 5
   incomeIncrease: 0
   populationIncrease: 0
   woodIncomeIncrease: 2
   visualModel: {fileID: 0}
   upgradeActive: 0
+  upgradeMaterialCost: 3
   description: Reduce emissions and increase wood income.
 --- !u!1 &6752303984346261712
 GameObject:

@@ -229,6 +229,7 @@ GameObject:
   - component: {fileID: 5692885578721872285}
   - component: {fileID: 5692885578721872282}
   - component: {fileID: 3381820568009617031}
+  - component: {fileID: 6687648672521352056}
   m_Layer: 0
   m_Name: TileHolder
   m_TagString: TileHolder
@@ -326,6 +327,18 @@ MonoBehaviour:
   - {fileID: 5692885579394085467}
   - {fileID: 5692885578695837604}
   - {fileID: 5692885579240610847}
+--- !u!114 &6687648672521352056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5692885578721872284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f38fd49c245a8664895dc37b0b3d82ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5692885578872205927
 GameObject:
   m_ObjectHideFlags: 0
@@ -2800,6 +2813,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3349237013606241746, guid: 208f9f21f07861b4fb13bd1c8a241a85,
+        type: 3}
+      propertyPath: yearRequirement
+      value: 2040
+      objectReference: {fileID: 0}
+    - target: {fileID: 3349237013606241746, guid: 208f9f21f07861b4fb13bd1c8a241a85,
+        type: 3}
+      propertyPath: emissionLimit
+      value: 10000
+      objectReference: {fileID: 0}
+    - target: {fileID: 3349237013606241746, guid: 208f9f21f07861b4fb13bd1c8a241a85,
+        type: 3}
+      propertyPath: populationRequirement
+      value: 500
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 208f9f21f07861b4fb13bd1c8a241a85, type: 3}

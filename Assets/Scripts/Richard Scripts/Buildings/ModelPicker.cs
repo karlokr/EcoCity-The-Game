@@ -18,10 +18,10 @@ public class ModelPicker : MonoBehaviour
         
     }
 
-
     public void PickModel()
     {
         int randIndex = Random.Range(0, models.Count - 1);
         GameObject myModel = Instantiate(models[randIndex], transform.parent.position, transform.parent.rotation, transform.parent);
     }
+
 }
