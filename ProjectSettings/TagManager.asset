@@ -24,7 +24,6 @@ TagManager:
   - CampaignSelected
   - BackButton
   - EndlessButton
-  - SkullIsland
   - Collider
   - Start1
   - CampaignButton
@@ -40,6 +39,10 @@ TagManager:
   - MoneyPerMonth
   - SkullIsland
   - TileHolder
+  - LoginUserLine
+  - LoginPasswordLine
+  - WinConditions
+  - PostProcessGlobal
   - Rock
   - UpgradeMaterial
   - Gems

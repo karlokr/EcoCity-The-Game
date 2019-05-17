@@ -82,10 +82,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb5e00c277aa4d41a0d82b720471f7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
-  zoomSpeed: 5
+  speed: 25
+  zoomSpeed: 20
   minZoom: 13
-  maxZoom: 60
+  maxZoom: 30
 --- !u!95 &2460546237016485462
 Animator:
   serializedVersion: 3

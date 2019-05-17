@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class MainMenu : MonoBehaviour
 {
@@ -15,27 +16,36 @@ public class MainMenu : MonoBehaviour
     private GameObject BackButton;
     private bool CampaignSelected;
     private bool EndlessSelected;
-    
+
+
+    public TextMeshProUGUI levelTitle;
+    public Image previewImage;
+    public string[] levelNames;
+    public Sprite[] levelPreviews;
+    private int currentInspectIndex;
 
     // Start is called before the first frame update
     void Start()
     {
+        currentInspectIndex = 0;
         NewGameManager.game_mode = null;
         NewGameManager.level = null;
         CampaignSelected = false;
         EndlessSelected = false;
-        CampaignSelectedButton.SetActive(false);
-        EndlessSelectedButton.SetActive(false);
+        //CampaignSelectedButton.SetActive(false);
+        //EndlessSelectedButton.SetActive(false);
         if (DBManager.inGame == false) {
             BackButton = GameObject.FindGameObjectWithTag("BackButton");
             BackButton.SetActive(false);
         }
+        NewGameManager.level = "easy";
+        previewImage.sprite = levelPreviews[currentInspectIndex];
     }
 
     // Update is called once per frame
     void Update()
     {
-        NewGameManager.level = "easy";
+        
     }
 
     public void PlayGame() {
@@ -43,8 +53,7 @@ public class MainMenu : MonoBehaviour
         DBManager.game_mode = NewGameManager.game_mode;
         DBManager.newGame = true;
         DBManager.inGame = true;
-        UnityEngine.SceneManagement.SceneManager.LoadScene(3);
-
+        UnityEngine.SceneManagement.SceneManager.LoadScene(levelNames[currentInspectIndex]);
     }
 
     public void CampignSelect() {
@@ -71,5 +80,19 @@ public class MainMenu : MonoBehaviour
 
     public void Back() {
         Destroy(Menu);
+    }
+
+    public void InspectNextLevel()
+    {
+        currentInspectIndex = Mathf.Clamp((currentInspectIndex + 1), 0, (levelNames.Length-1));
+        previewImage.sprite = levelPreviews[currentInspectIndex];
+        levelTitle.text = levelNames[currentInspectIndex];
+    }
+
+    public void InspectPreviousLevel()
+    {
+        currentInspectIndex = Mathf.Abs(currentInspectIndex - 1);
+        previewImage.sprite = levelPreviews[currentInspectIndex];
+        levelTitle.text = levelNames[currentInspectIndex];
     }
 }
