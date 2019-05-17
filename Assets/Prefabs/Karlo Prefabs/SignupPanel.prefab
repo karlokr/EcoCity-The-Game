@@ -2150,7 +2150,7 @@ GameObject:
   - component: {fileID: 1465333444321664720}
   m_Layer: 5
   m_Name: Username
-  m_TagString: SignupUserLine
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2606,7 +2606,7 @@ GameObject:
   - component: {fileID: 1465333444891895610}
   m_Layer: 5
   m_Name: Password
-  m_TagString: SignupPasswordLine
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
