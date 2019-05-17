@@ -177,17 +177,11 @@ MonoBehaviour:
   moneyParticleSystem: {fileID: 935245168541869795}
   woodParticleSystem: {fileID: 4335812689850226912}
   upgradeSystems: {fileID: 1535814283312778574}
-<<<<<<< HEAD
   landingThud: {fileID: 8300000, guid: b1032e4a4a4dbb743aac2a619ee4d092, type: 3}
   coinSpluge: {fileID: 8300000, guid: 144a4665084de9144bf991fd3615fa42, type: 3}
-=======
-  landingThud: {fileID: 0}
-  coinSpluge: {fileID: 0}
->>>>>>> 695bd38baf762be51b32d80a026987be470ba8fd
   populationIncrease: 0
   woodIncomeIncrease: 15
   incomeIncrease: 0
---- !u!95 &1288238248757256751
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
