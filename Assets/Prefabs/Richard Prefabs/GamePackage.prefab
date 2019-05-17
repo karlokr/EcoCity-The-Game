@@ -1588,7 +1588,8 @@ PrefabInstance:
       propertyPath: volumeLayer.m_Bits
       value: 4294967295
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 74619386764846878, guid: 811447dfe188e594cabc1b6ff1a42527, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 811447dfe188e594cabc1b6ff1a42527, type: 3}
 --- !u!114 &1942898279972744241 stripped
 MonoBehaviour:
