@@ -29,6 +29,9 @@ public class InspectMenu : MonoBehaviour
     public Sprite gray;
     public bool inspecting;
 
+    private Rock rock;
+    private Forest forest;
+    private WorldTile worldTile;
     private Animator animator;
     private void Awake()
     {
@@ -44,7 +47,7 @@ public class InspectMenu : MonoBehaviour
         wood = Resources.Load<Sprite>("Sprites/UI_Graphic_Resource_Wood");
         pop = Resources.Load<Sprite>("Sprites/UI_Graphic_Resource_Food");
         upgradeMaterial = Resources.Load<Sprite>("Sprites/UI_Graphic_Resource_Iron");
-        gray = Resources.Load<Sprite>("Sprites/grey_panel");
+        gray = Resources.Load<Sprite>("Sprites/grey_panel");     
     }
 
     // Update is called once per frame
@@ -140,47 +143,51 @@ public class InspectMenu : MonoBehaviour
 
     public void ForestBuyMenu()
     {
+        forest = GameObject.FindObjectOfType<Forest>();
         ResetImages();
-        SetDescriptionText("Purchasing a Forest tile will give you a lot of Wood and some Upgrade Materials");
-        SetWoodCost("0");
-        SetMoneyCost("100");
-        SetPopCost("0");
-        SetNameText("Forest");
-        SetStat1("+ 5 UPGRADE MATERIAL");
+        SetDescriptionText(forest.description);
+        SetWoodCost(forest.woodCost.ToString());
+        SetMoneyCost(forest.cost.ToString());
+        SetPopCost(forest.popCost.ToString());
+        SetNameText(forest.title);
+        SetStat1("+" + forest.upgradeMaterialGained.ToString() + " STEEL");
         stat1Image.sprite = upgradeMaterial;
         stat2Image.sprite = wood;
-        SetStat2("+ 1000 wood");
+        SetStat2("+" + forest.woodGained.ToString() + " WOOD");
         SetStat3("");
     }
 
     public void RockBuyMenu()
     {
+        rock = GameObject.FindObjectOfType<Rock>();
         ResetImages();
-        SetDescriptionText("Purchasing a Rock tile will give you bonus Money and lots of Upgrade Materials");
-        SetWoodCost("50");
-        SetMoneyCost("50");
-        SetPopCost("0");
-        SetNameText("Rock");
-        SetStat1("+ 10 UPGRADE MATERIAL");
+        SetDescriptionText(rock.description);
+        SetWoodCost(rock.woodCost.ToString());
+        SetMoneyCost(rock.cost.ToString());
+        SetPopCost(rock.popCost.ToString());
+        SetNameText(rock.title);
+        SetStat1("+" + rock.upgradeMaterialGained + " STEEL");
         stat1Image.sprite = upgradeMaterial;
         stat2Image.sprite = gold;
-        SetStat2("+ 150 gold");
+        SetStat2("+" + rock.moneyGained.ToString() + " MONEY");
         SetStat3("");
     }
 
     public void WorldTileMenu()
     {
+        worldTile = GameObject.FindObjectOfType<WorldTile>();
         ResetImages();
-        SetDescriptionText("Purchase another world tile to expand your city!");
-        SetWoodCost("10000");
-        SetMoneyCost("0");
-        SetPopCost("0");
-        SetNameText("Expand Ground");
+        SetDescriptionText(worldTile.description);
+        SetWoodCost(worldTile.woodCost.ToString());
+        SetMoneyCost(worldTile.moneyCost.ToString());
+        SetPopCost(worldTile.popCost.ToString());
+        SetNameText(worldTile.title);
         SetStat1("");
         stat1Image.enabled = false;
         stat2Image.enabled = false;
         SetStat2("");
         SetStat3("");
+        
     }
     public void ResetImages()
     {

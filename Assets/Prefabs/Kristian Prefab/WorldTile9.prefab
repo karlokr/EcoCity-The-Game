@@ -105,7 +105,6 @@ GameObject:
   - component: {fileID: 3349237013509034081}
   - component: {fileID: 2379163540597328448}
   - component: {fileID: 1641290071181275862}
-  - component: {fileID: 8998517064821270935}
   m_Layer: 0
   m_Name: WorldTile9
   m_TagString: WorldTile
@@ -274,22 +273,11 @@ MonoBehaviour:
   tileList: []
   purchased: 1
   animator: {fileID: 0}
---- !u!114 &8998517064821270935
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3349237013509034084}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71f48f7f79b75ed4fa147e175bdaae04, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  populationRequirement: 250
-  emissionLimit: 1000
-  yearRequirement: 2040
-  barLerpSpeed: 15
+  title: Expand The World
+  description: Purchase another world tile to continue growing your city!
+  woodCost: 1000
+  moneyCost: 0
+  popCost: 0
 --- !u!1 &3349237013966668644
 GameObject:
   m_ObjectHideFlags: 0
@@ -1304,7 +1292,7 @@ PrefabInstance:
     - target: {fileID: 4760237931473232516, guid: d94124c757dcd7e4d9a7efcf135b0b15,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.307
+      value: -0.322
       objectReference: {fileID: 0}
     - target: {fileID: 4760237931473232516, guid: d94124c757dcd7e4d9a7efcf135b0b15,
         type: 3}
@@ -1559,7 +1547,7 @@ PrefabInstance:
     - target: {fileID: 4760237931473232516, guid: d94124c757dcd7e4d9a7efcf135b0b15,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.075918846
+      value: -0.08
       objectReference: {fileID: 0}
     - target: {fileID: 4760237931473232516, guid: d94124c757dcd7e4d9a7efcf135b0b15,
         type: 3}
@@ -2364,7 +2352,7 @@ PrefabInstance:
     - target: {fileID: 4760237931473232516, guid: d94124c757dcd7e4d9a7efcf135b0b15,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.1776932
+      value: 0.165
       objectReference: {fileID: 0}
     - target: {fileID: 4760237931473232516, guid: d94124c757dcd7e4d9a7efcf135b0b15,
         type: 3}
@@ -2374,7 +2362,7 @@ PrefabInstance:
     - target: {fileID: 4760237931473232516, guid: d94124c757dcd7e4d9a7efcf135b0b15,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.32797003
+      value: 0.316
       objectReference: {fileID: 0}
     - target: {fileID: 4760237931473232516, guid: d94124c757dcd7e4d9a7efcf135b0b15,
         type: 3}
@@ -3274,7 +3262,7 @@ PrefabInstance:
     - target: {fileID: 4760237931473232516, guid: a19a8cfeef3a9f345875733583ce8f27,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.47309768
+      value: 0.491
       objectReference: {fileID: 0}
     - target: {fileID: 4760237931473232516, guid: a19a8cfeef3a9f345875733583ce8f27,
         type: 3}
@@ -3284,7 +3272,7 @@ PrefabInstance:
     - target: {fileID: 4760237931473232516, guid: a19a8cfeef3a9f345875733583ce8f27,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.31
+      value: 0.317
       objectReference: {fileID: 0}
     - target: {fileID: 4760237931473232516, guid: a19a8cfeef3a9f345875733583ce8f27,
         type: 3}

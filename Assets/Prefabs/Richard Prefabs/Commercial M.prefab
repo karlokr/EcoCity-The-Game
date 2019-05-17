@@ -45,7 +45,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   models:
   - {fileID: 100000, guid: da3aa27e16a60194ea66f90d187a3660, type: 3}
-  - {fileID: 100000, guid: 87fa912de9bd9a143a8a26511cd93987, type: 3}
+  - {fileID: 100000, guid: 2d411e3705baf384f95cd9fdb8f7c680, type: 3}
   - {fileID: 100000, guid: 2d411e3705baf384f95cd9fdb8f7c680, type: 3}
   - {fileID: 100000, guid: d9052d0a1977d744fb0bd304bded4446, type: 3}
   - {fileID: 100000, guid: a57f2a3f27562464e869aefe6954871b, type: 3}

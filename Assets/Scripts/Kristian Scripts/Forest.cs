@@ -12,7 +12,11 @@ public class Forest : MonoBehaviour
     public int woodGained;
     private BuyTileMenu buyTileMenu;
     public int upgradeMaterialGained;
-
+    public int cost;
+    public int woodCost;
+    public int popCost;
+    public string title = "Forest";
+    public string description = "Purchasing a Forest tile will give you a lot of Wood and some Upgrade Materials";
     public static Material forestDefaultMaterial;
 
     public Plot prefabToBuild;
@@ -37,9 +41,9 @@ public class Forest : MonoBehaviour
 
     public void BuyForest()
     {
-        if (ResourceKeeper.money >= 100)
+        if (ResourceKeeper.money >= cost)
         {
-            ResourceKeeper.money -= 100;
+            ResourceKeeper.money -= cost;
             building = true;
             buyTileMenu.buildButtons[0].SetActive(false);
         }

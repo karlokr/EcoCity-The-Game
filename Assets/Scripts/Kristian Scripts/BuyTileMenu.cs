@@ -65,9 +65,9 @@ public class BuyTileMenu : MonoBehaviour
     }
     IEnumerator BuyNewTileRoutine()
     {
-        if (ResourceKeeper.wood >= 1000)
+        if (ResourceKeeper.wood >= worldTile.woodCost)
         {
-            ResourceKeeper.wood -= 1000;
+            ResourceKeeper.wood -= worldTile.woodCost;
             Vector2 index = TileManager.findTile(worldTile.gameObject);
             GameObject newTile = worldTile.createNewTile();
             TileManager.tiles[(int)index.x, (int)index.y] = newTile;
