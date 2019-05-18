@@ -15,6 +15,7 @@ public class Forest : MonoBehaviour
     public int cost;
     public int woodCost;
     public int popCost;
+    public int emission;
     public string title = "Forest";
     public string description = "Purchasing a Forest tile will give you a lot of Wood and some Upgrade Materials";
     public static Material forestDefaultMaterial;
@@ -76,6 +77,7 @@ public class Forest : MonoBehaviour
         newPlot.transform.Translate(Vector3.left * 7.4f);
         newPlot.transform.Translate(Vector3.forward * 2.5f);
         newPlot.transform.localScale = new Vector3(0.02f, 1f, 0.02f);
+        ResourceKeeper.emission += emission;
         ResourceKeeper.wood += woodGained;
         ResourceKeeper.upgradeMaterial += upgradeMaterialGained;
         Destroy(gameObject);

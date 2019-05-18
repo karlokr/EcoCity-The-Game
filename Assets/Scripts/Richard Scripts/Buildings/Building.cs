@@ -82,10 +82,11 @@ public class Building : MonoBehaviour
 
     public void ActivateUpgrade(int index)
     {
-        if (ResourceKeeper.money >= upgrades[index].cost && !upgrades[index].upgradeActive && ResourceKeeper.upgradeMaterial >= upgrades[index].upgradeMaterialCost)
+        if (ResourceKeeper.money >= upgrades[index].cost && !upgrades[index].upgradeActive && ResourceKeeper.upgradeMaterial >= upgrades[index].upgradeMaterialCost && ResourceKeeper.wood >= upgrades[index].woodCost)
         {
             upgrades[index].Activate();
             ResourceKeeper.money -= upgrades[index].cost;
+            ResourceKeeper.wood -= upgrades[index].woodCost;
             ResourceKeeper.upgradeMaterial -= upgrades[index].upgradeMaterialCost;
             ResourceKeeper.emission -= upgrades[index].emissionReduction;
             ResourceKeeper.income += upgrades[index].incomeIncrease;

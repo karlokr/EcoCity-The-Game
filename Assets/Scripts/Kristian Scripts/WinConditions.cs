@@ -52,6 +52,10 @@ public class WinConditions : MonoBehaviour
         {
             SceneManager.LoadScene("win_screen");
         }
+        else if (CheckLoss())
+        {
+            SceneManager.LoadScene("lose_screen");
+        }
 
         emissionBar.currentPercent = Mathf.Lerp(emissionBar.currentPercent, (ResourceKeeper.emission / emissionLimit) * 100f, barLerpSpeed * Time.deltaTime);
         emissionBar.currentPercent = Mathf.Clamp(emissionBar.currentPercent, 0, 100);
@@ -64,7 +68,18 @@ public class WinConditions : MonoBehaviour
 
     public bool CheckWin()
     {
-        if (ResourceKeeper.population > populationRequirement && ResourceKeeper.emission < emissionLimit)
+        if (ResourceKeeper.population >= populationRequirement && ResourceKeeper.emission <= emissionLimit)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+    public bool CheckLoss()
+    {
+        if (ResourceKeeper.emission >= GameObject.FindObjectOfType<WinConditions>().emissionLimit)
         {
             return true;
         }

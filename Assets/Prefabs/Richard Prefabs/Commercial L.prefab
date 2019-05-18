@@ -4906,9 +4906,9 @@ MonoBehaviour:
   - {fileID: 1704164026378150744}
   verticalOffset: 0
   buildingType: Commercial
-  cost: 1000
-  woodCost: 500
-  populationRequired: 30
+  cost: 1250
+  woodCost: 750
+  populationRequired: 100
   emission: 100
   landingParticleSystem: {fileID: 4868764811494845038}
   popParticleSystem: {fileID: 7960129278324118893}
@@ -19440,8 +19440,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upgradeName: EcoSupplier
-  cost: 500
-  emissionReduction: 25
+  cost: 1000
+  woodCost: 1000
+  emissionReduction: 50
   incomeIncrease: 15
   populationIncrease: 0
   woodIncomeIncrease: 0
@@ -19587,11 +19588,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upgradeName: RecycledPackaging
-  cost: 1000
+  cost: 2000
+  woodCost: 2000
   emissionReduction: 50
-  incomeIncrease: 10
+  incomeIncrease: 15
   populationIncrease: 0
-  woodIncomeIncrease: 0
+  woodIncomeIncrease: 5
   visualModel: {fileID: 0}
   upgradeActive: 0
   upgradeMaterialCost: 3
@@ -19687,14 +19689,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upgradeName: LocallySourced
-  cost: 10000
-  emissionReduction: 100
-  incomeIncrease: 25
+  cost: 3000
+  woodCost: 3000
+  emissionReduction: 15
+  incomeIncrease: 5
   populationIncrease: 0
-  woodIncomeIncrease: 0
+  woodIncomeIncrease: 5
   visualModel: {fileID: 0}
   upgradeActive: 0
-  upgradeMaterialCost: 10
+  upgradeMaterialCost: 5
   description: THICC income increase. Small emission reduction.
 --- !u!1001 &2601944253148122091
 PrefabInstance:
@@ -19703,11 +19706,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2470695281993958904}
     m_Modifications:
-    - target: {fileID: 1319097346479073063, guid: a266c376265a9fe4896dfa4c6941bd88,
-        type: 3}
-      propertyPath: m_Name
-      value: Upgrade Particle Systems
-      objectReference: {fileID: 0}
     - target: {fileID: 8965814030696559441, guid: a266c376265a9fe4896dfa4c6941bd88,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -19762,6 +19760,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1319097346479073063, guid: a266c376265a9fe4896dfa4c6941bd88,
+        type: 3}
+      propertyPath: m_Name
+      value: Upgrade Particle Systems
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a266c376265a9fe4896dfa4c6941bd88, type: 3}

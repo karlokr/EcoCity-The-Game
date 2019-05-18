@@ -86,7 +86,7 @@ public class CameraClicker : MonoBehaviour
                             selectedBuilding = other.GetComponentInParent<Building>();
                             selectedBuilding.FocusOnBuilding();
                             upgradeMenuObj.SetActive(true);
-                            upgradeMenu.PopulateList(selectedBuilding.upgrades);
+                            //upgradeMenu.PopulateList(selectedBuilding.upgrades);
                             upgradeMenu.SetSelectedBuilding(selectedBuilding);
                             break;
                         case "Plot":
