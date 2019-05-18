@@ -8,10 +8,10 @@ public class ResourceKeeper : MonoBehaviour
     public Renderer visualModel;
     
     //The Big 4
-    public static int money = 10000;
+    public static int money = 0;
     public static int emission = 0;
     public static int population = 0;
-    public static int wood = 99999;
+    public static int wood = 0;
     public static int ecoScore = 0;
     public static int upgradeMaterial = 0;
     //Accumulators

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4307982401481708422}
   m_Layer: 0
   m_Name: Win Conditions
-  m_TagString: Untagged
+  m_TagString: WinConditions
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

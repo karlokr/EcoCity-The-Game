@@ -72,7 +72,7 @@ public class CameraClicker : MonoBehaviour
     {
         if (!EventSystem.current.IsPointerOverGameObject())
         {
-            if (Input.GetMouseButtonUp(0) && matchTimer.matchStarted && !dragging)
+            if ((Input.GetMouseButtonUp(0) && matchTimer.matchStarted))
             {
                 Ray screenToWorld = viewportCamera.ScreenPointToRay(Input.mousePosition);
                 if (Physics.Raycast(screenToWorld, out RaycastHit raycastHit))
