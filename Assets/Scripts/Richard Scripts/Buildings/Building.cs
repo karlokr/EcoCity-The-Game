@@ -98,9 +98,9 @@ public class Building : MonoBehaviour
         }
         if (ResourceKeeper.upgradeMaterial < upgrades[index].upgradeMaterialCost)
         {
-            GameObject.FindGameObjectWithTag("WoodNotif").GetComponent<Animator>().SetTrigger("Notify");
-            GameObject.FindGameObjectWithTag("WoodPanel").GetComponentInChildren<Image>().color = Color.red;
-            GameObject.FindGameObjectWithTag("WoodNotifTitle").GetComponent<TextMeshProUGUI>().text = "NOT ENOUGH WOOD";
+            GameObject.FindGameObjectWithTag("SteelNotif").GetComponent<Animator>().SetTrigger("Notify");
+            GameObject.FindGameObjectWithTag("SteelPanel").GetComponentInChildren<Image>().color = Color.red;
+            GameObject.FindGameObjectWithTag("SteelNotifTitle").GetComponent<TextMeshProUGUI>().text = "NOT ENOUGH WOOD";
         }
         else if (ResourceKeeper.money >= upgrades[index].cost && !upgrades[index].upgradeActive && ResourceKeeper.upgradeMaterial >= upgrades[index].upgradeMaterialCost && ResourceKeeper.wood >= upgrades[index].woodCost)
         {
