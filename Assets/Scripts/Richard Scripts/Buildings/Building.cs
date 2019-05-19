@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using EZCameraShake;
+using UnityEngine.UI;
+using TMPro;
 
 public class Building : MonoBehaviour
 {
