@@ -42,15 +42,17 @@ public class Forest : MonoBehaviour
 
     public void BuyForest()
     {
-        if (ResourceKeeper.money >= cost)
+        if (ResourceKeeper.money < cost)
+        {
+            GameObject.FindGameObjectWithTag("CreditNotif").GetComponent<Animator>().SetTrigger("Notify");
+            GameObject.FindGameObjectWithTag("CreditPanel").GetComponentInChildren<Image>().color = Color.red;
+            GameObject.FindGameObjectWithTag("CreditNotifTitle").GetComponent<TextMeshProUGUI>().text = "NOT ENOUGH MONEY";
+        }
+        else if (ResourceKeeper.money >= cost)
         {
             ResourceKeeper.money -= cost;
             building = true;
             buyTileMenu.buildButtons[0].SetActive(false);
-        }
-        else
-        {
-            Debug.Log("Not enough money");
         }
 
     }

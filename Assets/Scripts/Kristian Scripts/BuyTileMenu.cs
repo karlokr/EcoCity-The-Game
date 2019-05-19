@@ -65,7 +65,25 @@ public class BuyTileMenu : MonoBehaviour
     }
     IEnumerator BuyNewTileRoutine()
     {
-        if (ResourceKeeper.wood >= worldTile.woodCost && ResourceKeeper.money >= worldTile.moneyCost && ResourceKeeper.population >= worldTile.popCost)
+        if (ResourceKeeper.money < worldTile.moneyCost)
+        {
+            GameObject.FindGameObjectWithTag("CreditNotif").GetComponent<Animator>().SetTrigger("Notify");
+            GameObject.FindGameObjectWithTag("CreditPanel").GetComponentInChildren<Image>().color = Color.red;
+            //W H A T
+            //GameObject.FindGameObjectWithTag("CreditNotifTitle").GetComponent<TextMeshProUGUI>().text = "NOT ENOUGH MONEY";
+        }
+        if (ResourceKeeper.wood < worldTile.woodCost)
+        {
+            GameObject.FindGameObjectWithTag("WoodNotif").GetComponent<Animator>().SetTrigger("Notify");
+            GameObject.FindGameObjectWithTag("WoodPanel").GetComponentInChildren<Image>().color = Color.red;
+            //W H A T
+            //GameObject.FindGameObjectWithTag("WoodNotifTitle").GetComponent<TextMeshProUGUI>().text = "NOT ENOUGH WOOD";
+        }
+        if (ResourceKeeper.population < worldTile.popCost)
+        {
+            GameObject.FindGameObjectWithTag("PopNotif").GetComponent<Animator>().SetTrigger("Notify");
+        }
+        else if (ResourceKeeper.wood >= worldTile.woodCost && ResourceKeeper.money >= worldTile.moneyCost && ResourceKeeper.population >= worldTile.popCost)
         {
             ResourceKeeper.wood -= worldTile.woodCost;
             ResourceKeeper.money -= worldTile.moneyCost;
