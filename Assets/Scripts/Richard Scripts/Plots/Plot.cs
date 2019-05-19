@@ -1,4 +1,6 @@
 ﻿using UnityEngine;
+using TMPro;
+using UnityEngine.UI;
 
 [System.Serializable]
 public class Plot : MonoBehaviour
@@ -7,12 +9,12 @@ public class Plot : MonoBehaviour
     public enum PlotSize { Small, Medium, Large };
     public PlotSize size;
 
-    public Material debugMaterial;
+    public Sprite negativeSprite;
+    public Sprite positiveSprite;
     public static Material defaultMaterial;
     public Animator animator;
 
     private ResourceKeeper resourceKeeper;
-    
 
     private void Awake()
     {
@@ -38,15 +40,19 @@ public class Plot : MonoBehaviour
 
         if (ResourceKeeper.money < building.cost)
         {
-            Debug.Log("Not enough money");
+            GameObject.FindGameObjectWithTag("CreditNotif").GetComponent<Animator>().SetTrigger("Notify");
+            GameObject.FindGameObjectWithTag("CreditPanel").GetComponentInChildren<Image>().color = Color.red;
+            GameObject.FindGameObjectWithTag("CreditNotifTitle").GetComponent<TextMeshProUGUI>().text = "NOT ENOUGH MONEY";
         }
         if (ResourceKeeper.wood < building.woodCost)
         {
-            Debug.Log("Not Enough wood");
+            GameObject.FindGameObjectWithTag("WoodNotif").GetComponent<Animator>().SetTrigger("Notify");
+            GameObject.FindGameObjectWithTag("WoodPanel").GetComponentInChildren<Image>().color = Color.red;
+            GameObject.FindGameObjectWithTag("WoodNotifTitle").GetComponent<TextMeshProUGUI>().text = "NOT ENOUGH WOOD";
         }
         if (ResourceKeeper.population < building.populationRequired)
         {
-            Debug.Log("Not enough population to build this building");
+            GameObject.FindGameObjectWithTag("PopNotif").GetComponent<Animator>().SetTrigger("Notify");
         }
 
         else if (ResourceKeeper.money >= building.cost && ResourceKeeper.wood >= building.woodCost && ResourceKeeper.population >= building.populationRequired)
