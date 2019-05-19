@@ -8,6 +8,11 @@ public class WorldTile : MonoBehaviour
     //public GameObject prefabToBuild;
     public bool purchased;
     public Animator animator;
+    public string title = "Expand The World";
+    public string description = "Purchase another world tile to continue growing your city!";
+    public int woodCost = 1000;
+    public int moneyCost = 0;
+    public int popCost = 0;
     // Start is called before the first frame update
     private void Awake()
     {

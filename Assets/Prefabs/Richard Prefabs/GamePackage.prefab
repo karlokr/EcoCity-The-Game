@@ -1773,6 +1773,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Post Processing Volume (GLOBAL)
       objectReference: {fileID: 0}
+    - target: {fileID: 2713925471685475506, guid: a050e625e4fcd31409409540678239d6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2713925471685475504, guid: a050e625e4fcd31409409540678239d6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2068,7 +2073,13 @@ PrefabInstance:
       propertyPath: orthographic size
       value: 13
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 2460546237098331029, guid: 811447dfe188e594cabc1b6ff1a42527,
+        type: 3}
+      propertyPath: volumeLayer.m_Bits
+      value: 4294967295
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 74619386764846878, guid: 811447dfe188e594cabc1b6ff1a42527, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 811447dfe188e594cabc1b6ff1a42527, type: 3}
 --- !u!114 &1942898279972744241 stripped
 MonoBehaviour:
@@ -2347,11 +2358,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.y
       value: -280.76
-      objectReference: {fileID: 0}
-    - target: {fileID: 8343347695872614546, guid: d12555b7cc99143418227cee3055e566,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 38.80005
       objectReference: {fileID: 0}
     - target: {fileID: 8343347695048528449, guid: d12555b7cc99143418227cee3055e566,
         type: 3}
@@ -2790,36 +2796,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1942898279916177919}
-    - target: {fileID: 8343347696576884396, guid: d12555b7cc99143418227cee3055e566,
-        type: 3}
-      propertyPath: m_text
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8343347696576884396, guid: d12555b7cc99143418227cee3055e566,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8343347696576884396, guid: d12555b7cc99143418227cee3055e566,
-        type: 3}
-      propertyPath: m_textInfo.spaceCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8343347696576884396, guid: d12555b7cc99143418227cee3055e566,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8343347696576884396, guid: d12555b7cc99143418227cee3055e566,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8343347696576884396, guid: d12555b7cc99143418227cee3055e566,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8343347694825001791, guid: d12555b7cc99143418227cee3055e566,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target

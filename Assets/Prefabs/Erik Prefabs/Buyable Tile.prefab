@@ -204,6 +204,11 @@ MonoBehaviour:
   - {fileID: 3349237013509034084, guid: 558fae21581f2b14cbeb3c283ef65ed7, type: 3}
   purchased: 0
   animator: {fileID: 0}
+  title: Expand The World
+  description: Purchase another world tile to continue growing your city!
+  woodCost: 1000
+  moneyCost: 0
+  popCost: 0
 --- !u!23 &6619594189102961832
 MeshRenderer:
   m_ObjectHideFlags: 0

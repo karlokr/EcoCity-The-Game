@@ -51,6 +51,6 @@ MonoBehaviour:
   - {fileID: 100000, guid: 388f1375f7aeb2d41aea84443462b50a, type: 3}
   - {fileID: 100000, guid: 1b19274013fb81d4a8fa3927dc5274ce, type: 3}
   spawnInterval: 2
-  spawnRadius: 50
+  spawnRadius: 100
   vertRadius: 5
   scaleFactor: 0.2

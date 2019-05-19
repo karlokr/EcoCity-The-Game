@@ -44,6 +44,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   populationRequirement: 100
-  emissionLimit: 1000
+  emissionLimit: 250
   yearRequirement: 2040
   barLerpSpeed: 15

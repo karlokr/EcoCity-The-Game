@@ -11,6 +11,11 @@ public class Rock : MonoBehaviour
     public float buildTime = 10f;
     public int moneyGained;
     public int upgradeMaterialGained;
+    public int cost;
+    public int woodCost;
+    public int popCost;
+    public string title = "Rock";
+    public string description = "Purchasing a Rock tile will give you bonus Money and lots of Upgrade Materials";
 
     public Plot prefabToBuild;
 
@@ -37,10 +42,10 @@ public class Rock : MonoBehaviour
 
     public void BuyRock()
     {
-        if (ResourceKeeper.money >= 50 && ResourceKeeper.wood >= 50)
+        if (ResourceKeeper.money >= cost && ResourceKeeper.wood >= woodCost)
         {
-            ResourceKeeper.money -= 50;
-            ResourceKeeper.wood -= 50;
+            ResourceKeeper.money -= cost;
+            ResourceKeeper.wood -= woodCost;
             building = true;
             buyTileMenu.buildButtons[3].SetActive(false);
         }

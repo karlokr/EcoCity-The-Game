@@ -54,6 +54,7 @@ public class UpgradeMenu : MonoBehaviour
 
     public void UpdateInspectMenu(int i)
     {
+        inspectMenu.ResetImages();
         CheckUpgrades();
         Upgrade upgrade = selectedBuilding.upgrades[i];
         inspectMenu.SetMoneyCost(upgrade.cost.ToString());
