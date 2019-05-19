@@ -42,16 +42,24 @@ public class Rock : MonoBehaviour
 
     public void BuyRock()
     {
-        if (ResourceKeeper.money >= cost && ResourceKeeper.wood >= woodCost)
+        if (ResourceKeeper.money < cost)
+        {
+            GameObject.FindGameObjectWithTag("CreditNotif").GetComponent<Animator>().SetTrigger("Notify");
+            GameObject.FindGameObjectWithTag("CreditPanel").GetComponentInChildren<Image>().color = Color.red;
+            GameObject.FindGameObjectWithTag("CreditNotifTitle").GetComponent<TextMeshProUGUI>().text = "NOT ENOUGH MONEY";
+        }
+        if (ResourceKeeper.wood < woodCost)
+        {
+            GameObject.FindGameObjectWithTag("WoodNotif").GetComponent<Animator>().SetTrigger("Notify");
+            GameObject.FindGameObjectWithTag("WoodPanel").GetComponentInChildren<Image>().color = Color.red;
+            GameObject.FindGameObjectWithTag("WoodNotifTitle").GetComponent<TextMeshProUGUI>().text = "NOT ENOUGH WOOD";
+        }
+        else if (ResourceKeeper.money >= cost && ResourceKeeper.wood >= woodCost)
         {
             ResourceKeeper.money -= cost;
             ResourceKeeper.wood -= woodCost;
             building = true;
             buyTileMenu.buildButtons[3].SetActive(false);
-        }
-        else
-        {
-            Debug.Log("Not enough money");
         }
 
     }

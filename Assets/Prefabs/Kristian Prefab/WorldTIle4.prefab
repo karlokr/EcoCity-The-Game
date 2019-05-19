@@ -262,9 +262,9 @@ MonoBehaviour:
   animator: {fileID: 0}
   title: Expand The World
   description: Purchase another world tile to continue growing your city!
-  woodCost: 1000
-  moneyCost: 0
-  popCost: 0
+  woodCost: 250
+  moneyCost: 500
+  popCost: 50
 --- !u!1 &3349237013966668644
 GameObject:
   m_ObjectHideFlags: 0
@@ -393,10 +393,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3349237013509034080}
     m_Modifications:
-    - target: {fileID: 100000, guid: a6c9b23e54b445f49b6249c416d43bf6, type: 3}
-      propertyPath: m_Name
-      value: hedge_mesh (2)
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a6c9b23e54b445f49b6249c416d43bf6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.186
@@ -448,6 +444,10 @@ PrefabInstance:
     - target: {fileID: 400000, guid: a6c9b23e54b445f49b6249c416d43bf6, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: a6c9b23e54b445f49b6249c416d43bf6, type: 3}
+      propertyPath: m_Name
+      value: hedge_mesh (2)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6c9b23e54b445f49b6249c416d43bf6, type: 3}
@@ -549,10 +549,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3349237013509034080}
     m_Modifications:
-    - target: {fileID: 100000, guid: a6c9b23e54b445f49b6249c416d43bf6, type: 3}
-      propertyPath: m_Name
-      value: hedge_mesh (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a6c9b23e54b445f49b6249c416d43bf6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.059
@@ -605,6 +601,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.02
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: a6c9b23e54b445f49b6249c416d43bf6, type: 3}
+      propertyPath: m_Name
+      value: hedge_mesh (1)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6c9b23e54b445f49b6249c416d43bf6, type: 3}
 --- !u!4 &450952168 stripped
@@ -620,10 +620,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3349237013509034080}
     m_Modifications:
-    - target: {fileID: 100000, guid: a6c9b23e54b445f49b6249c416d43bf6, type: 3}
-      propertyPath: m_Name
-      value: hedge_mesh
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a6c9b23e54b445f49b6249c416d43bf6, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.0692
@@ -668,6 +664,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: a6c9b23e54b445f49b6249c416d43bf6, type: 3}
+      propertyPath: m_Name
+      value: hedge_mesh
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6c9b23e54b445f49b6249c416d43bf6, type: 3}
 --- !u!4 &542885281 stripped
@@ -683,10 +683,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3349237013509034080}
     m_Modifications:
-    - target: {fileID: 100000, guid: a6c9b23e54b445f49b6249c416d43bf6, type: 3}
-      propertyPath: m_Name
-      value: hedge_mesh (3)
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a6c9b23e54b445f49b6249c416d43bf6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.3134
@@ -739,6 +735,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.02
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: a6c9b23e54b445f49b6249c416d43bf6, type: 3}
+      propertyPath: m_Name
+      value: hedge_mesh (3)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6c9b23e54b445f49b6249c416d43bf6, type: 3}
 --- !u!4 &1247461278 stripped
@@ -754,10 +754,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3349237013509034080}
     m_Modifications:
-    - target: {fileID: 100000, guid: a6c9b23e54b445f49b6249c416d43bf6, type: 3}
-      propertyPath: m_Name
-      value: hedge_mesh (4)
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a6c9b23e54b445f49b6249c416d43bf6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.435
@@ -809,6 +805,10 @@ PrefabInstance:
     - target: {fileID: 400000, guid: a6c9b23e54b445f49b6249c416d43bf6, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: a6c9b23e54b445f49b6249c416d43bf6, type: 3}
+      propertyPath: m_Name
+      value: hedge_mesh (4)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6c9b23e54b445f49b6249c416d43bf6, type: 3}
@@ -900,11 +900,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3349237013509034080}
     m_Modifications:
-    - target: {fileID: 1424405004404467532, guid: d94124c757dcd7e4d9a7efcf135b0b15,
-        type: 3}
-      propertyPath: m_Name
-      value: Forest (2)
-      objectReference: {fileID: 0}
     - target: {fileID: 4760237931473232516, guid: d94124c757dcd7e4d9a7efcf135b0b15,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -969,6 +964,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 1424405004404467532, guid: d94124c757dcd7e4d9a7efcf135b0b15,
+        type: 3}
+      propertyPath: m_Name
+      value: Forest (2)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d94124c757dcd7e4d9a7efcf135b0b15, type: 3}
@@ -1135,10 +1135,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3349237013509034080}
     m_Modifications:
-    - target: {fileID: 100000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
-      propertyPath: m_Name
-      value: tree_large_mesh (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.4542087
@@ -1190,6 +1186,10 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
+      propertyPath: m_Name
+      value: tree_large_mesh (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
@@ -1663,11 +1663,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3349237013509034080}
     m_Modifications:
-    - target: {fileID: 1424405004404467532, guid: d94124c757dcd7e4d9a7efcf135b0b15,
-        type: 3}
-      propertyPath: m_Name
-      value: Forest
-      objectReference: {fileID: 0}
     - target: {fileID: 4760237931473232516, guid: d94124c757dcd7e4d9a7efcf135b0b15,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1733,6 +1728,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.02
       objectReference: {fileID: 0}
+    - target: {fileID: 1424405004404467532, guid: d94124c757dcd7e4d9a7efcf135b0b15,
+        type: 3}
+      propertyPath: m_Name
+      value: Forest
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d94124c757dcd7e4d9a7efcf135b0b15, type: 3}
 --- !u!4 &1765537231689291524 stripped
@@ -1748,11 +1748,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3349237013509034080}
     m_Modifications:
-    - target: {fileID: 1424405004404467532, guid: a19a8cfeef3a9f345875733583ce8f27,
-        type: 3}
-      propertyPath: m_Name
-      value: Rock (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 4760237931473232516, guid: a19a8cfeef3a9f345875733583ce8f27,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1818,6 +1813,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.02
       objectReference: {fileID: 0}
+    - target: {fileID: 1424405004404467532, guid: a19a8cfeef3a9f345875733583ce8f27,
+        type: 3}
+      propertyPath: m_Name
+      value: Rock (1)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a19a8cfeef3a9f345875733583ce8f27, type: 3}
 --- !u!4 &2431063841135803052 stripped
@@ -1833,10 +1833,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3349237013509034080}
     m_Modifications:
-    - target: {fileID: 100000, guid: dc289fda3255c0c45a5b68320f21b278, type: 3}
-      propertyPath: m_Name
-      value: trash_mesh
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: dc289fda3255c0c45a5b68320f21b278, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.4839951
@@ -1889,6 +1885,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.02
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: dc289fda3255c0c45a5b68320f21b278, type: 3}
+      propertyPath: m_Name
+      value: trash_mesh
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc289fda3255c0c45a5b68320f21b278, type: 3}
 --- !u!4 &7579614193170922582 stripped
@@ -1904,11 +1904,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3349237013509034080}
     m_Modifications:
-    - target: {fileID: 1424405004404467532, guid: d94124c757dcd7e4d9a7efcf135b0b15,
-        type: 3}
-      propertyPath: m_Name
-      value: Forest (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 4760237931473232516, guid: d94124c757dcd7e4d9a7efcf135b0b15,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1974,6 +1969,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.02
       objectReference: {fileID: 0}
+    - target: {fileID: 1424405004404467532, guid: d94124c757dcd7e4d9a7efcf135b0b15,
+        type: 3}
+      propertyPath: m_Name
+      value: Forest (1)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d94124c757dcd7e4d9a7efcf135b0b15, type: 3}
 --- !u!4 &3162273269904112686 stripped
@@ -1989,11 +1989,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3349237013509034080}
     m_Modifications:
-    - target: {fileID: 1424405004404467532, guid: a19a8cfeef3a9f345875733583ce8f27,
-        type: 3}
-      propertyPath: m_Name
-      value: Rock
-      objectReference: {fileID: 0}
     - target: {fileID: 4760237931473232516, guid: a19a8cfeef3a9f345875733583ce8f27,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2058,6 +2053,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 1424405004404467532, guid: a19a8cfeef3a9f345875733583ce8f27,
+        type: 3}
+      propertyPath: m_Name
+      value: Rock
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a19a8cfeef3a9f345875733583ce8f27, type: 3}
@@ -2145,10 +2145,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3349237013509034080}
     m_Modifications:
-    - target: {fileID: 100000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
-      propertyPath: m_Name
-      value: tree_large_mesh
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.46869978
@@ -2200,6 +2196,10 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
+      propertyPath: m_Name
+      value: tree_large_mesh
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}

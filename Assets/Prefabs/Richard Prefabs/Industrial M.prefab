@@ -9703,8 +9703,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upgradeName: ECO POWER
-  cost: 500
-  emissionReduction: 15
+  cost: 1500
+  woodCost: 1500
+  emissionReduction: 25
   incomeIncrease: 10
   populationIncrease: 0
   woodIncomeIncrease: 10
@@ -14555,8 +14556,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upgradeName: Steam Chimney
-  cost: 100
-  emissionReduction: 5
+  cost: 500
+  woodCost: 500
+  emissionReduction: 10
   incomeIncrease: 0
   populationIncrease: 0
   woodIncomeIncrease: 5
@@ -19440,8 +19442,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upgradeName: Generator
-  cost: 300
-  emissionReduction: 10
+  cost: 1000
+  woodCost: 1000
+  emissionReduction: 25
   incomeIncrease: 5
   populationIncrease: 0
   woodIncomeIncrease: 5
@@ -19570,9 +19573,9 @@ MonoBehaviour:
   - {fileID: 2064324695384317562}
   verticalOffset: 0
   buildingType: Industrial
-  cost: 500
-  woodCost: 300
-  populationRequired: 20
+  cost: 400
+  woodCost: 600
+  populationRequired: 50
   emission: 50
   landingParticleSystem: {fileID: 8275358843509160407}
   popParticleSystem: {fileID: 4863832383499605732}
@@ -19706,11 +19709,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7980228404448646081}
     m_Modifications:
-    - target: {fileID: 1319097346479073063, guid: a266c376265a9fe4896dfa4c6941bd88,
-        type: 3}
-      propertyPath: m_Name
-      value: Upgrade Particle Systems
-      objectReference: {fileID: 0}
     - target: {fileID: 8965814030696559441, guid: a266c376265a9fe4896dfa4c6941bd88,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -19765,6 +19763,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1319097346479073063, guid: a266c376265a9fe4896dfa4c6941bd88,
+        type: 3}
+      propertyPath: m_Name
+      value: Upgrade Particle Systems
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a266c376265a9fe4896dfa4c6941bd88, type: 3}

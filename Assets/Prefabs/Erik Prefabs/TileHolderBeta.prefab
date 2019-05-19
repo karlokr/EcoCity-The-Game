@@ -1810,11 +1810,6 @@ PrefabInstance:
       propertyPath: purchased
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4853460649009380874, guid: f101fb44d5fe8ca44a1508c737f0a6c6,
-        type: 3}
-      propertyPath: woodCost
-      value: 1000
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f101fb44d5fe8ca44a1508c737f0a6c6, type: 3}
 --- !u!4 &4726758808586568441 stripped

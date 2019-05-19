@@ -206,9 +206,9 @@ MonoBehaviour:
   animator: {fileID: 0}
   title: Expand The World
   description: Purchase another world tile to continue growing your city!
-  woodCost: 1000
-  moneyCost: 0
-  popCost: 0
+  woodCost: 250
+  moneyCost: 500
+  popCost: 50
 --- !u!23 &6619594189102961832
 MeshRenderer:
   m_ObjectHideFlags: 0

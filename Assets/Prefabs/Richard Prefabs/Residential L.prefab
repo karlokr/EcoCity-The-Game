@@ -9704,7 +9704,7 @@ MonoBehaviour:
   buildingType: Residential
   cost: 1000
   woodCost: 1000
-  populationRequired: 30
+  populationRequired: 100
   emission: 50
   landingParticleSystem: {fileID: 8939408199892390474}
   popParticleSystem: {fileID: 6244525856112246000}
@@ -19407,10 +19407,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upgradeName: Steam Chimney
-  cost: 500
-  emissionReduction: 5
+  cost: 1000
+  woodCost: 1000
+  emissionReduction: 25
   incomeIncrease: 0
-  populationIncrease: 5
+  populationIncrease: 10
   woodIncomeIncrease: 0
   visualModel: {fileID: 0}
   upgradeActive: 0
@@ -19588,10 +19589,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upgradeName: RoomSize
-  cost: 1000
-  emissionReduction: 5
+  cost: 2000
+  woodCost: 2000
+  emissionReduction: 25
   incomeIncrease: 0
-  populationIncrease: 5
+  populationIncrease: 10
   woodIncomeIncrease: 0
   visualModel: {fileID: 0}
   upgradeActive: 0
@@ -19688,10 +19690,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upgradeName: Garden
-  cost: 1500
+  cost: 3000
+  woodCost: 3000
   emissionReduction: 10
   incomeIncrease: 0
-  populationIncrease: 10
+  populationIncrease: 20
   woodIncomeIncrease: 0
   visualModel: {fileID: 0}
   upgradeActive: 0
@@ -19704,11 +19707,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2470695281993958904}
     m_Modifications:
-    - target: {fileID: 1319097346479073063, guid: a266c376265a9fe4896dfa4c6941bd88,
-        type: 3}
-      propertyPath: m_Name
-      value: Upgrade Particle Systems
-      objectReference: {fileID: 0}
     - target: {fileID: 8965814030696559441, guid: a266c376265a9fe4896dfa4c6941bd88,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -19763,6 +19761,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1319097346479073063, guid: a266c376265a9fe4896dfa4c6941bd88,
+        type: 3}
+      propertyPath: m_Name
+      value: Upgrade Particle Systems
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a266c376265a9fe4896dfa4c6941bd88, type: 3}
