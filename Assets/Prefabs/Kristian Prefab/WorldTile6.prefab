@@ -249,7 +249,7 @@ MonoBehaviour:
   animator: {fileID: 0}
   title: Expand The World
   description: Purchase another world tile to continue growing your city!
-  woodCost: 250
+  woodCost: 500
   moneyCost: 500
   popCost: 50
 --- !u!1 &8768732635299077292
@@ -421,6 +421,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3349237013509034080}
     m_Modifications:
+    - target: {fileID: 100000, guid: 26208a42eeaecaf4090084d1dc718ea8, type: 3}
+      propertyPath: m_Name
+      value: Env_Rocks_01
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 26208a42eeaecaf4090084d1dc718ea8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.465
@@ -472,10 +476,6 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 26208a42eeaecaf4090084d1dc718ea8, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.01
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 26208a42eeaecaf4090084d1dc718ea8, type: 3}
-      propertyPath: m_Name
-      value: Env_Rocks_01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 26208a42eeaecaf4090084d1dc718ea8, type: 3}
@@ -563,6 +563,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3349237013509034080}
     m_Modifications:
+    - target: {fileID: 100000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
+      propertyPath: m_Name
+      value: tree_large_mesh (5)
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.091588445
@@ -614,10 +618,6 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.02
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
-      propertyPath: m_Name
-      value: tree_large_mesh (5)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
@@ -790,6 +790,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3349237013509034080}
     m_Modifications:
+    - target: {fileID: 100000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
+      propertyPath: m_Name
+      value: tree_large_mesh
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.022627963
@@ -841,10 +845,6 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.02
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
-      propertyPath: m_Name
-      value: tree_large_mesh
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
@@ -932,6 +932,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3349237013509034080}
     m_Modifications:
+    - target: {fileID: 100000, guid: ede154fab3d222444bee2634a7175825, type: 3}
+      propertyPath: m_Name
+      value: Prop_Tree_01
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: ede154fab3d222444bee2634a7175825, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.45450422
@@ -983,10 +987,6 @@ PrefabInstance:
     - target: {fileID: 400000, guid: ede154fab3d222444bee2634a7175825, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.02
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: ede154fab3d222444bee2634a7175825, type: 3}
-      propertyPath: m_Name
-      value: Prop_Tree_01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ede154fab3d222444bee2634a7175825, type: 3}
@@ -1088,6 +1088,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3349237013509034080}
     m_Modifications:
+    - target: {fileID: 100000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
+      propertyPath: m_Name
+      value: tree_large_mesh (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.34402892
@@ -1139,10 +1143,6 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.02
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
-      propertyPath: m_Name
-      value: tree_large_mesh (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
@@ -1315,6 +1315,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3349237013509034080}
     m_Modifications:
+    - target: {fileID: 100000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
+      propertyPath: m_Name
+      value: tree_large_mesh (31)
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.40839386
@@ -1366,10 +1370,6 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.02
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
-      propertyPath: m_Name
-      value: tree_large_mesh (31)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
@@ -1457,6 +1457,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3349237013509034080}
     m_Modifications:
+    - target: {fileID: 100000, guid: 26208a42eeaecaf4090084d1dc718ea8, type: 3}
+      propertyPath: m_Name
+      value: Env_Rocks_01 (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 26208a42eeaecaf4090084d1dc718ea8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.397
@@ -1513,10 +1517,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 26208a42eeaecaf4090084d1dc718ea8, type: 3}
-      propertyPath: m_Name
-      value: Env_Rocks_01 (1)
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 26208a42eeaecaf4090084d1dc718ea8, type: 3}
 --- !u!4 &2789817399086996795 stripped
@@ -1532,6 +1532,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3349237013509034080}
     m_Modifications:
+    - target: {fileID: 100000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
+      propertyPath: m_Name
+      value: tree_large_mesh (11)
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.32002917
@@ -1584,10 +1588,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.02
       objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
-      propertyPath: m_Name
-      value: tree_large_mesh (11)
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
 --- !u!4 &2900360927637824496 stripped
@@ -1603,6 +1603,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3349237013509034080}
     m_Modifications:
+    - target: {fileID: 100000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
+      propertyPath: m_Name
+      value: tree_large_mesh (3)
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.46572348
@@ -1655,10 +1659,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.02
       objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
-      propertyPath: m_Name
-      value: tree_large_mesh (3)
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
 --- !u!4 &2970120215971931807 stripped
@@ -1674,6 +1674,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3349237013509034080}
     m_Modifications:
+    - target: {fileID: 100000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
+      propertyPath: m_Name
+      value: tree_large_mesh (14)
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.46880013
@@ -1725,10 +1729,6 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.02
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
-      propertyPath: m_Name
-      value: tree_large_mesh (14)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
@@ -1986,6 +1986,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3349237013509034080}
     m_Modifications:
+    - target: {fileID: 100000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
+      propertyPath: m_Name
+      value: tree_large_mesh (21)
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.4613809
@@ -2038,10 +2042,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.02
       objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
-      propertyPath: m_Name
-      value: tree_large_mesh (21)
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
 --- !u!4 &3421548057303406623 stripped
@@ -2057,6 +2057,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3349237013509034080}
     m_Modifications:
+    - target: {fileID: 100000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
+      propertyPath: m_Name
+      value: tree_large_mesh (26)
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.3647753
@@ -2108,10 +2112,6 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.02
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
-      propertyPath: m_Name
-      value: tree_large_mesh (26)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
@@ -2298,6 +2298,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3349237013509034080}
     m_Modifications:
+    - target: {fileID: 100000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
+      propertyPath: m_Name
+      value: tree_large_mesh (13)
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.31038177
@@ -2350,10 +2354,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.02
       objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
-      propertyPath: m_Name
-      value: tree_large_mesh (13)
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
 --- !u!4 &4082989124307363503 stripped
@@ -2369,6 +2369,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3349237013509034080}
     m_Modifications:
+    - target: {fileID: 100000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
+      propertyPath: m_Name
+      value: tree_large_mesh (19)
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.30867282
@@ -2421,10 +2425,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.02
       objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
-      propertyPath: m_Name
-      value: tree_large_mesh (19)
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
 --- !u!4 &4192159897701272058 stripped
@@ -2440,6 +2440,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3349237013509034080}
     m_Modifications:
+    - target: {fileID: 100000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
+      propertyPath: m_Name
+      value: tree_large_mesh (4)
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.46465406
@@ -2492,10 +2496,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.02
       objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
-      propertyPath: m_Name
-      value: tree_large_mesh (4)
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
 --- !u!4 &4411993192377710396 stripped
@@ -2511,6 +2511,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3349237013509034080}
     m_Modifications:
+    - target: {fileID: 100000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
+      propertyPath: m_Name
+      value: tree_large_mesh (6)
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.038838606
@@ -2562,10 +2566,6 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.02
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
-      propertyPath: m_Name
-      value: tree_large_mesh (6)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
@@ -2653,6 +2653,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3349237013509034080}
     m_Modifications:
+    - target: {fileID: 100000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
+      propertyPath: m_Name
+      value: tree_large_mesh (12)
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.3193425
@@ -2704,10 +2708,6 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.02
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
-      propertyPath: m_Name
-      value: tree_large_mesh (12)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
@@ -2795,6 +2795,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3349237013509034080}
     m_Modifications:
+    - target: {fileID: 100000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
+      propertyPath: m_Name
+      value: tree_large_mesh (16)
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.47483587
@@ -2847,10 +2851,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.02
       objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
-      propertyPath: m_Name
-      value: tree_large_mesh (16)
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
 --- !u!4 &4574908958337352611 stripped
@@ -2866,6 +2866,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3349237013509034080}
     m_Modifications:
+    - target: {fileID: 100000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
+      propertyPath: m_Name
+      value: tree_large_mesh (30)
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.014816971
@@ -2917,10 +2921,6 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.02
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
-      propertyPath: m_Name
-      value: tree_large_mesh (30)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
@@ -3008,6 +3008,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3349237013509034080}
     m_Modifications:
+    - target: {fileID: 100000, guid: 471d45b220915504f893693209abc57d, type: 3}
+      propertyPath: m_Name
+      value: tree_medium_mesh
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 471d45b220915504f893693209abc57d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.29525155
@@ -3060,10 +3064,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.02
       objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 471d45b220915504f893693209abc57d, type: 3}
-      propertyPath: m_Name
-      value: tree_medium_mesh
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 471d45b220915504f893693209abc57d, type: 3}
 --- !u!4 &5119853339981948043 stripped
@@ -3079,6 +3079,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3349237013509034080}
     m_Modifications:
+    - target: {fileID: 100000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
+      propertyPath: m_Name
+      value: tree_large_mesh (8)
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.038937356
@@ -3130,10 +3134,6 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.02
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
-      propertyPath: m_Name
-      value: tree_large_mesh (8)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
@@ -3363,6 +3363,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3349237013509034080}
     m_Modifications:
+    - target: {fileID: 100000, guid: 17a4ffb1eae17e94298de2c66e171a1b, type: 3}
+      propertyPath: m_Name
+      value: Prop_Tree_02
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 17a4ffb1eae17e94298de2c66e171a1b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.23077293
@@ -3415,10 +3419,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.02
       objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 17a4ffb1eae17e94298de2c66e171a1b, type: 3}
-      propertyPath: m_Name
-      value: Prop_Tree_02
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17a4ffb1eae17e94298de2c66e171a1b, type: 3}
 --- !u!4 &5837446736577960864 stripped
@@ -3434,6 +3434,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3349237013509034080}
     m_Modifications:
+    - target: {fileID: 100000, guid: 798d0ce4417055244b0da7dbdd7cb46a, type: 3}
+      propertyPath: m_Name
+      value: Prop_Beachseat_03
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 798d0ce4417055244b0da7dbdd7cb46a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.1053
@@ -3486,10 +3490,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.02
       objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 798d0ce4417055244b0da7dbdd7cb46a, type: 3}
-      propertyPath: m_Name
-      value: Prop_Beachseat_03
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 798d0ce4417055244b0da7dbdd7cb46a, type: 3}
 --- !u!4 &5841940403078584176 stripped
@@ -3505,6 +3505,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3349237013509034080}
     m_Modifications:
+    - target: {fileID: 100000, guid: 26208a42eeaecaf4090084d1dc718ea8, type: 3}
+      propertyPath: m_Name
+      value: Env_Rocks_01 (2)
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 26208a42eeaecaf4090084d1dc718ea8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.4707
@@ -3561,10 +3565,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 26208a42eeaecaf4090084d1dc718ea8, type: 3}
-      propertyPath: m_Name
-      value: Env_Rocks_01 (2)
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 26208a42eeaecaf4090084d1dc718ea8, type: 3}
 --- !u!4 &5871199715722959003 stripped
@@ -3580,6 +3580,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3349237013509034080}
     m_Modifications:
+    - target: {fileID: 100000, guid: 4e3b8318a9112f24d84095e1a4d96ae0, type: 3}
+      propertyPath: m_Name
+      value: dumpster_mesh
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 4e3b8318a9112f24d84095e1a4d96ae0, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.3825
@@ -3632,10 +3636,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.02
       objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 4e3b8318a9112f24d84095e1a4d96ae0, type: 3}
-      propertyPath: m_Name
-      value: dumpster_mesh
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e3b8318a9112f24d84095e1a4d96ae0, type: 3}
 --- !u!4 &5893261298147485448 stripped
@@ -3651,6 +3651,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3349237013509034080}
     m_Modifications:
+    - target: {fileID: 100000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
+      propertyPath: m_Name
+      value: tree_large_mesh (24)
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.183
@@ -3703,10 +3707,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.02
       objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
-      propertyPath: m_Name
-      value: tree_large_mesh (24)
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
 --- !u!4 &6152248408037840414 stripped
@@ -3722,6 +3722,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3349237013509034080}
     m_Modifications:
+    - target: {fileID: 100000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
+      propertyPath: m_Name
+      value: tree_large_mesh (7)
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.096557006
@@ -3773,10 +3777,6 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.02
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
-      propertyPath: m_Name
-      value: tree_large_mesh (7)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
@@ -3864,6 +3864,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3349237013509034080}
     m_Modifications:
+    - target: {fileID: 100000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
+      propertyPath: m_Name
+      value: tree_large_mesh (22)
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.214
@@ -3916,10 +3920,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.02
       objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
-      propertyPath: m_Name
-      value: tree_large_mesh (22)
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
 --- !u!4 &6223982152373796595 stripped
@@ -3935,6 +3935,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3349237013509034080}
     m_Modifications:
+    - target: {fileID: 100000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
+      propertyPath: m_Name
+      value: tree_large_mesh (2)
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.46701226
@@ -3986,10 +3990,6 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.02
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
-      propertyPath: m_Name
-      value: tree_large_mesh (2)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
@@ -4077,6 +4077,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3349237013509034080}
     m_Modifications:
+    - target: {fileID: 100000, guid: 471d45b220915504f893693209abc57d, type: 3}
+      propertyPath: m_Name
+      value: tree_medium_mesh (2)
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 471d45b220915504f893693209abc57d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.05479564
@@ -4129,10 +4133,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.02
       objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 471d45b220915504f893693209abc57d, type: 3}
-      propertyPath: m_Name
-      value: tree_medium_mesh (2)
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 471d45b220915504f893693209abc57d, type: 3}
 --- !u!4 &6415318509904764345 stripped
@@ -4148,6 +4148,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3349237013509034080}
     m_Modifications:
+    - target: {fileID: 100000, guid: b65b99031ee1bc4449bf81590c840ddc, type: 3}
+      propertyPath: m_Name
+      value: bush_small_mesh
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b65b99031ee1bc4449bf81590c840ddc, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.010761256
@@ -4199,10 +4203,6 @@ PrefabInstance:
     - target: {fileID: 400000, guid: b65b99031ee1bc4449bf81590c840ddc, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.02
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: b65b99031ee1bc4449bf81590c840ddc, type: 3}
-      propertyPath: m_Name
-      value: bush_small_mesh
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b65b99031ee1bc4449bf81590c840ddc, type: 3}
@@ -4361,6 +4361,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3349237013509034080}
     m_Modifications:
+    - target: {fileID: 100000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
+      propertyPath: m_Name
+      value: tree_large_mesh (17)
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.4791368
@@ -4413,10 +4417,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.02
       objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
-      propertyPath: m_Name
-      value: tree_large_mesh (17)
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
 --- !u!4 &6944713033054382323 stripped
@@ -4432,6 +4432,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3349237013509034080}
     m_Modifications:
+    - target: {fileID: 100000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
+      propertyPath: m_Name
+      value: tree_large_mesh (23)
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.2719107
@@ -4483,10 +4487,6 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.02
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
-      propertyPath: m_Name
-      value: tree_large_mesh (23)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
@@ -4673,6 +4673,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3349237013509034080}
     m_Modifications:
+    - target: {fileID: 100000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
+      propertyPath: m_Name
+      value: tree_large_mesh (20)
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.33653453
@@ -4724,10 +4728,6 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.02
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
-      propertyPath: m_Name
-      value: tree_large_mesh (20)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
@@ -4829,6 +4829,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3349237013509034080}
     m_Modifications:
+    - target: {fileID: 100000, guid: 471d45b220915504f893693209abc57d, type: 3}
+      propertyPath: m_Name
+      value: tree_medium_mesh (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 471d45b220915504f893693209abc57d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.47327253
@@ -4881,10 +4885,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.02
       objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 471d45b220915504f893693209abc57d, type: 3}
-      propertyPath: m_Name
-      value: tree_medium_mesh (1)
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 471d45b220915504f893693209abc57d, type: 3}
 --- !u!4 &7434147999869229605 stripped
@@ -4900,6 +4900,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3349237013509034080}
     m_Modifications:
+    - target: {fileID: 100000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
+      propertyPath: m_Name
+      value: tree_large_mesh (25)
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.28143182
@@ -4952,10 +4956,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.02
       objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
-      propertyPath: m_Name
-      value: tree_large_mesh (25)
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
 --- !u!4 &7631375200348414446 stripped
@@ -4971,6 +4971,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3349237013509034080}
     m_Modifications:
+    - target: {fileID: 100000, guid: 798d0ce4417055244b0da7dbdd7cb46a, type: 3}
+      propertyPath: m_Name
+      value: Prop_Beachseat_03 (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 798d0ce4417055244b0da7dbdd7cb46a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.1053
@@ -5022,10 +5026,6 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 798d0ce4417055244b0da7dbdd7cb46a, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.02
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 798d0ce4417055244b0da7dbdd7cb46a, type: 3}
-      propertyPath: m_Name
-      value: Prop_Beachseat_03 (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 798d0ce4417055244b0da7dbdd7cb46a, type: 3}
@@ -5113,6 +5113,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3349237013509034080}
     m_Modifications:
+    - target: {fileID: 100000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
+      propertyPath: m_Name
+      value: tree_large_mesh (18)
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.4691053
@@ -5165,10 +5169,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.02
       objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
-      propertyPath: m_Name
-      value: tree_large_mesh (18)
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
 --- !u!4 &8104466020492685445 stripped
@@ -5184,6 +5184,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3349237013509034080}
     m_Modifications:
+    - target: {fileID: 100000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
+      propertyPath: m_Name
+      value: tree_large_mesh (15)
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.4668267
@@ -5236,10 +5240,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.02
       objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
-      propertyPath: m_Name
-      value: tree_large_mesh (15)
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
 --- !u!4 &8104837788156979063 stripped
@@ -5255,6 +5255,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3349237013509034080}
     m_Modifications:
+    - target: {fileID: 100000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
+      propertyPath: m_Name
+      value: tree_large_mesh (10)
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.09226591
@@ -5307,10 +5311,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.02
       objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
-      propertyPath: m_Name
-      value: tree_large_mesh (10)
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
 --- !u!4 &8160904507567420479 stripped
@@ -5326,6 +5326,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3349237013509034080}
     m_Modifications:
+    - target: {fileID: 100000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
+      propertyPath: m_Name
+      value: tree_large_mesh (29)
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.11243907
@@ -5378,10 +5382,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.02
       objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
-      propertyPath: m_Name
-      value: tree_large_mesh (29)
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
 --- !u!4 &8399735978652386321 stripped
@@ -5397,6 +5397,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3349237013509034080}
     m_Modifications:
+    - target: {fileID: 100000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
+      propertyPath: m_Name
+      value: tree_large_mesh (9)
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.47416866
@@ -5449,10 +5453,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.02
       objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
-      propertyPath: m_Name
-      value: tree_large_mesh (9)
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
 --- !u!4 &8514600705708276734 stripped
@@ -5468,6 +5468,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3349237013509034080}
     m_Modifications:
+    - target: {fileID: 100000, guid: 44b9ead1b0029ec4d8cffa009c4b0702, type: 3}
+      propertyPath: m_Name
+      value: Prop_Beachseat_01
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 44b9ead1b0029ec4d8cffa009c4b0702, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.18808351
@@ -5519,10 +5523,6 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 44b9ead1b0029ec4d8cffa009c4b0702, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.02
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 44b9ead1b0029ec4d8cffa009c4b0702, type: 3}
-      propertyPath: m_Name
-      value: Prop_Beachseat_01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 44b9ead1b0029ec4d8cffa009c4b0702, type: 3}
@@ -5610,6 +5610,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3349237013509034080}
     m_Modifications:
+    - target: {fileID: 100000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
+      propertyPath: m_Name
+      value: tree_large_mesh (28)
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.36135826
@@ -5662,10 +5666,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.02
       objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
-      propertyPath: m_Name
-      value: tree_large_mesh (28)
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
 --- !u!4 &8974582354985240795 stripped
@@ -5681,6 +5681,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3349237013509034080}
     m_Modifications:
+    - target: {fileID: 100000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
+      propertyPath: m_Name
+      value: tree_large_mesh (27)
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.45308134
@@ -5732,10 +5736,6 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.02
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}
-      propertyPath: m_Name
-      value: tree_large_mesh (27)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ccc03e88bfc20c46b4f5ea02f4da61f, type: 3}

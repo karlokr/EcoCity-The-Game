@@ -9550,7 +9550,7 @@ GameObject:
   - component: {fileID: 5507955789871140816}
   - component: {fileID: 2064324695384317562}
   m_Layer: 0
-  m_Name: M Home Garden Upgrade (Placeholder)
+  m_Name: Home Garden
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9630,7 +9630,7 @@ MonoBehaviour:
   upgradeName: Garden
   cost: 1500
   woodCost: 1500
-  emissionReduction: 25
+  emissionReduction: 15
   incomeIncrease: 0
   populationIncrease: 5
   woodIncomeIncrease: 0
@@ -14450,7 +14450,7 @@ GameObject:
   - component: {fileID: 5006777081984759180}
   - component: {fileID: 7902414147911773445}
   m_Layer: 0
-  m_Name: M Chimney Upgrade (Placeholder)
+  m_Name: Chimney
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14530,7 +14530,7 @@ MonoBehaviour:
   upgradeName: Steam Chimney
   cost: 500
   woodCost: 500
-  emissionReduction: 10
+  emissionReduction: 25
   incomeIncrease: 0
   populationIncrease: 5
   woodIncomeIncrease: 0
@@ -19362,7 +19362,7 @@ GameObject:
   - component: {fileID: 1359723918969965826}
   - component: {fileID: 3371344018673174223}
   m_Layer: 0
-  m_Name: RoomSize
+  m_Name: Room Size
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19594,6 +19594,7 @@ MonoBehaviour:
   woodCost: 500
   populationRequired: 35
   emission: 50
+  size: 2
   landingParticleSystem: {fileID: 1992813550023812180}
   popParticleSystem: {fileID: 5055846860957644758}
   moneyParticleSystem: {fileID: 2016771898003284120}

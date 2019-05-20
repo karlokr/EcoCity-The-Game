@@ -14490,8 +14490,8 @@ MonoBehaviour:
   upgradeName: Locally Sourced
   cost: 600
   woodCost: 400
-  emissionReduction: 10
-  incomeIncrease: 15
+  emissionReduction: 15
+  incomeIncrease: 10
   populationIncrease: 0
   woodIncomeIncrease: 0
   visualModel: {fileID: 0}
@@ -14511,7 +14511,7 @@ GameObject:
   - component: {fileID: 7210902730279220320}
   - component: {fileID: 2095555080246993863}
   m_Layer: 0
-  m_Name: Eco Supplier Upgrade
+  m_Name: Eco-Friendly Supplier
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19577,6 +19577,7 @@ MonoBehaviour:
   woodCost: 25
   populationRequired: 10
   emission: 25
+  size: 1
   landingParticleSystem: {fileID: 1817527598903307531}
   popParticleSystem: {fileID: 238660324322417511}
   moneyParticleSystem: {fileID: 123590234238462153}

@@ -9705,7 +9705,7 @@ MonoBehaviour:
   upgradeName: ECO POWER
   cost: 1500
   woodCost: 1500
-  emissionReduction: 25
+  emissionReduction: 15
   incomeIncrease: 10
   populationIncrease: 0
   woodIncomeIncrease: 10
@@ -14478,7 +14478,7 @@ GameObject:
   - component: {fileID: 5006777081984759180}
   - component: {fileID: 7902414147911773445}
   m_Layer: 0
-  m_Name: M Chimney Upgrade (Placeholder)
+  m_Name: Chimney
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14558,7 +14558,7 @@ MonoBehaviour:
   upgradeName: Steam Chimney
   cost: 500
   woodCost: 500
-  emissionReduction: 10
+  emissionReduction: 25
   incomeIncrease: 0
   populationIncrease: 0
   woodIncomeIncrease: 5
@@ -19364,7 +19364,7 @@ GameObject:
   - component: {fileID: 1359723918969965826}
   - component: {fileID: 3371344018673174223}
   m_Layer: 0
-  m_Name: M Generator Upgrade (Placeholder)
+  m_Name: Generator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19577,6 +19577,7 @@ MonoBehaviour:
   woodCost: 600
   populationRequired: 50
   emission: 50
+  size: 2
   landingParticleSystem: {fileID: 8275358843509160407}
   popParticleSystem: {fileID: 4863832383499605732}
   moneyParticleSystem: {fileID: 6746829347826388585}

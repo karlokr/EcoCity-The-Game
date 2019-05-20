@@ -14508,7 +14508,7 @@ GameObject:
   - component: {fileID: 7210902730279220320}
   - component: {fileID: 2095555080246993863}
   m_Layer: 0
-  m_Name: Chimney Upgrade (Placeholder)
+  m_Name: Chimney
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14609,7 +14609,7 @@ GameObject:
   - component: {fileID: 6771358516282105301}
   - component: {fileID: 5224022948985823060}
   m_Layer: 0
-  m_Name: Generator Upgrade (Placeholder)
+  m_Name: Generator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19574,6 +19574,7 @@ MonoBehaviour:
   woodCost: 75
   populationRequired: 10
   emission: 25
+  size: 1
   landingParticleSystem: {fileID: 3336621586210489489}
   popParticleSystem: {fileID: 3056429536294521997}
   moneyParticleSystem: {fileID: 3889510649148544613}

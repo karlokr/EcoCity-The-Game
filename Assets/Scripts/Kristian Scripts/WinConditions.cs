@@ -40,15 +40,11 @@ public class WinConditions : MonoBehaviour
     {
         if (matchTimer.currentYear >= yearRequirement)
         {
-            if (CheckWin())
-            {
-                SceneManager.LoadScene("win_screen");
-            }
-            else
-            {
-                SceneManager.LoadScene("lose_screen");
-            }
-        } else if (CheckWin())
+            Debug.Log("Ran out of time");
+            SceneManager.LoadScene("lose_screen");
+        
+        }
+        else if (CheckWin())
         {
             SceneManager.LoadScene("win_screen");
         }

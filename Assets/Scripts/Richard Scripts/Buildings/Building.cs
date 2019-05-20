@@ -24,7 +24,7 @@ public class Building : MonoBehaviour
     private Animator animator;
     public int populationRequired;
     public int emission;
-    private int level;
+    public int size;
     public ParticleSystem landingParticleSystem;
     public ParticleSystem popParticleSystem;
     public ParticleSystem moneyParticleSystem;

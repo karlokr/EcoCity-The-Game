@@ -4909,7 +4909,8 @@ MonoBehaviour:
   cost: 1250
   woodCost: 750
   populationRequired: 100
-  emission: 100
+  emission: 75
+  size: 3
   landingParticleSystem: {fileID: 4868764811494845038}
   popParticleSystem: {fileID: 7960129278324118893}
   moneyParticleSystem: {fileID: 5836984364329324055}
@@ -19362,7 +19363,7 @@ GameObject:
   - component: {fileID: 2482396109743194739}
   - component: {fileID: 6067670806412709821}
   m_Layer: 0
-  m_Name: EcoSupplier
+  m_Name: Eco-Friendly Supplier
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19442,7 +19443,7 @@ MonoBehaviour:
   upgradeName: EcoSupplier
   cost: 1000
   woodCost: 1000
-  emissionReduction: 50
+  emissionReduction: 35
   incomeIncrease: 15
   populationIncrease: 0
   woodIncomeIncrease: 0
@@ -19510,7 +19511,7 @@ GameObject:
   - component: {fileID: 6458858123665320613}
   - component: {fileID: 6106095939136019656}
   m_Layer: 0
-  m_Name: RecycledPackaging
+  m_Name: Recycled Packaging
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19590,7 +19591,7 @@ MonoBehaviour:
   upgradeName: RecycledPackaging
   cost: 2000
   woodCost: 2000
-  emissionReduction: 50
+  emissionReduction: 35
   incomeIncrease: 15
   populationIncrease: 0
   woodIncomeIncrease: 5
@@ -19611,7 +19612,7 @@ GameObject:
   - component: {fileID: 4749810981494294771}
   - component: {fileID: 1704164026378150744}
   m_Layer: 0
-  m_Name: LocallySourced
+  m_Name: Locally Sourced
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19691,7 +19692,7 @@ MonoBehaviour:
   upgradeName: LocallySourced
   cost: 3000
   woodCost: 3000
-  emissionReduction: 15
+  emissionReduction: 20
   incomeIncrease: 5
   populationIncrease: 0
   woodIncomeIncrease: 5
