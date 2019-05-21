@@ -14,6 +14,9 @@ public class Plot : MonoBehaviour
     public static Material defaultMaterial;
     public Animator animator;
 
+    public AudioSource audioData;
+    public AudioClip positive;
+
     private ResourceKeeper resourceKeeper;
 
     private void Awake()
@@ -24,8 +27,7 @@ public class Plot : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
-
+        audioData = GameObject.FindGameObjectWithTag("UIAudioPlayer").GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -68,6 +70,9 @@ public class Plot : MonoBehaviour
             ResourceKeeper.buildingSizeTotal += building.size;
             Destroy(gameObject);
             building.Emit();
+             
+            // Play audio
+            audioData.PlayOneShot(positive);
         }
 
     }

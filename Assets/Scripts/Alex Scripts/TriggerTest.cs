@@ -11,7 +11,6 @@ public class TriggerTest : MonoBehaviour
         if (other.tag == "Collider")
         {
             Destroy(gameObject);
-            Debug.Log("destroy!!!!!!!!!!!!! " + gameObject);
         }
     }
 }

@@ -60,6 +60,7 @@ TagManager:
   - CreditPanel
   - WoodPanel
   - SteelPanel
+  - UIAudioPlayer
   layers:
   - Default
   - TransparentFX

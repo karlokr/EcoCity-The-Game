@@ -21,6 +21,8 @@ public class WinConditions : MonoBehaviour
     private PostProcessVolume ppv;
     private ColorGrading colorGrade = null;
 
+    private SaveGame saveGame;
+
     private void Awake()
     {
         matchTimer = GameObject.FindGameObjectWithTag("MatchTimer").GetComponent<MatchTimer>();
@@ -28,6 +30,7 @@ public class WinConditions : MonoBehaviour
         populationBar = GameObject.FindGameObjectWithTag("PopulationBar").GetComponent<ProgressBar>();
         ppv = GameObject.FindGameObjectWithTag("PostProcessGlobal").GetComponent<PostProcessVolume>();
         colorGrade = ppv.profile.GetSetting<ColorGrading>();
+        saveGame = GetComponent<SaveGame>();
     }
     // Start is called before the first frame update
     void Start()
@@ -83,5 +86,12 @@ public class WinConditions : MonoBehaviour
         {
             return false;
         }
+    }
+
+
+    public void SubmitSave()
+    {
+        SaveManager.ecoscore = ResourceKeeper.ecoScore;
+        saveGame.SaveButton();
     }
 }
