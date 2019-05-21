@@ -45,7 +45,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   models:
   - {fileID: 100000, guid: da3aa27e16a60194ea66f90d187a3660, type: 3}
-  - {fileID: 100000, guid: 87fa912de9bd9a143a8a26511cd93987, type: 3}
+  - {fileID: 100000, guid: 2d411e3705baf384f95cd9fdb8f7c680, type: 3}
   - {fileID: 100000, guid: 2d411e3705baf384f95cd9fdb8f7c680, type: 3}
   - {fileID: 100000, guid: d9052d0a1977d744fb0bd304bded4446, type: 3}
   - {fileID: 100000, guid: a57f2a3f27562464e869aefe6954871b, type: 3}
@@ -4816,7 +4816,7 @@ GameObject:
   - component: {fileID: 5507955789871140816}
   - component: {fileID: 2064324695384317562}
   m_Layer: 0
-  m_Name: LocallySourced
+  m_Name: Locally Sourced
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4894,13 +4894,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upgradeName: LocallySourced
-  cost: 500
-  emissionReduction: 10
-  incomeIncrease: 20
+  cost: 1500
+  woodCost: 1500
+  emissionReduction: 15
+  incomeIncrease: 25
   populationIncrease: 0
   woodIncomeIncrease: 0
   visualModel: {fileID: 0}
   upgradeActive: 0
+  upgradeMaterialCost: 5
   description: THICC income increase. Small emission reduction.
 --- !u!1 &2839031442104201513
 GameObject:
@@ -4948,7 +4950,7 @@ GameObject:
   - component: {fileID: 5006777081984759180}
   - component: {fileID: 7902414147911773445}
   m_Layer: 0
-  m_Name: EcoSupplier
+  m_Name: Eco-Friendly Supplier
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5026,13 +5028,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upgradeName: Eco Supplier
-  cost: 100
-  emissionReduction: 5
+  cost: 500
+  woodCost: 500
+  emissionReduction: 25
   incomeIncrease: 15
   populationIncrease: 0
   woodIncomeIncrease: 0
   visualModel: {fileID: 0}
   upgradeActive: 0
+  upgradeMaterialCost: 2
   description: BIG income increase minor emission reduction
 --- !u!1 &4760125560367686704
 GameObject:
@@ -19361,7 +19365,7 @@ GameObject:
   - component: {fileID: 1359723918969965826}
   - component: {fileID: 3371344018673174223}
   m_Layer: 0
-  m_Name: RecycledPackaging
+  m_Name: Recycled Packaging
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19439,13 +19443,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upgradeName: Recycled Packaging
-  cost: 250
-  emissionReduction: 5
+  cost: 1000
+  woodCost: 1000
+  emissionReduction: 25
   incomeIncrease: 5
   populationIncrease: 0
   woodIncomeIncrease: 0
   visualModel: {fileID: 0}
   upgradeActive: 0
+  upgradeMaterialCost: 3
   description: Income increase and a small emission reduction.
 --- !u!1 &7980228404448646092
 GameObject:
@@ -19461,6 +19467,7 @@ GameObject:
   - component: {fileID: 7980228404448646082}
   - component: {fileID: 8899015603853730578}
   - component: {fileID: 225357389486546714}
+  - component: {fileID: 2764193838281687952}
   m_Layer: 0
   m_Name: Commercial M
   m_TagString: Building
@@ -19567,18 +19574,21 @@ MonoBehaviour:
   - {fileID: 2064324695384317562}
   verticalOffset: 0
   buildingType: Commercial
-  cost: 500
-  woodCost: 250
-  populationRequired: 20
+  cost: 600
+  woodCost: 400
+  populationRequired: 50
   emission: 50
+  size: 2
   landingParticleSystem: {fileID: 424859611718425528}
   popParticleSystem: {fileID: 973342529090776899}
   moneyParticleSystem: {fileID: 6144797721899737433}
   woodParticleSystem: {fileID: 2165375434012007831}
   upgradeSystems: {fileID: 2526483776509760919}
+  landingThud: {fileID: 8300000, guid: b1032e4a4a4dbb743aac2a619ee4d092, type: 3}
+  coinSpluge: {fileID: 8300000, guid: 144a4665084de9144bf991fd3615fa42, type: 3}
   populationIncrease: 0
   woodIncomeIncrease: 0
-  incomeIncrease: 30
+  incomeIncrease: 15
 --- !u!95 &225357389486546714
 Animator:
   serializedVersion: 3
@@ -19598,6 +19608,102 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!82 &2764193838281687952
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7980228404448646092}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &3549328640442200752
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19605,11 +19711,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7980228404448646081}
     m_Modifications:
-    - target: {fileID: 1319097346479073063, guid: a266c376265a9fe4896dfa4c6941bd88,
-        type: 3}
-      propertyPath: m_Name
-      value: Upgrade Particle Systems
-      objectReference: {fileID: 0}
     - target: {fileID: 8965814030696559441, guid: a266c376265a9fe4896dfa4c6941bd88,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -19664,6 +19765,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1319097346479073063, guid: a266c376265a9fe4896dfa4c6941bd88,
+        type: 3}
+      propertyPath: m_Name
+      value: Upgrade Particle Systems
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a266c376265a9fe4896dfa4c6941bd88, type: 3}

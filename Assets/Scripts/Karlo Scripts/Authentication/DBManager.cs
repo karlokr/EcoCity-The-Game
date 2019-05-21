@@ -6,7 +6,6 @@ public static class DBManager {
 
     public static string username;
     public static int id;
-    public static int score;
     public static bool isGuest;
     public static bool inGame;
     public static bool newGame;
@@ -19,8 +18,9 @@ public static class DBManager {
     public static void LogOut() {
         username = null;
         id = -1;
-        score = -1;
         isGuest = false;
+        newGame = false;
+        inGame = false;
         save_num = -1;
         game_mode = null;
         level = null;

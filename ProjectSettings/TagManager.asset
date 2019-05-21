@@ -24,6 +24,8 @@ TagManager:
   - CampaignSelected
   - BackButton
   - EndlessButton
+  - Collider
+  - Start1
   - CampaignButton
   - LeaderScore
   - LeaderUser
@@ -35,6 +37,29 @@ TagManager:
   - PopulationBar
   - WoodPerMonth
   - MoneyPerMonth
+  - SkullIsland
+  - TileHolder
+  - LoginUserLine
+  - LoginPasswordLine
+  - WinConditions
+  - PostProcessGlobal
+  - Rock
+  - UpgradeMaterial
+  - Gems
+  - SignupCPasswordLine
+  - SignupPasswordLine
+  - SignupUserLine
+  - CreditNotif
+  - WoodNotif
+  - SteelNotif
+  - CreditNotifTitle
+  - WoodNotifTitle
+  - SteelNotifTitle
+  - PopNotif
+  - PopNotifTitle
+  - CreditPanel
+  - WoodPanel
+  - SteelPanel
   layers:
   - Default
   - TransparentFX
@@ -44,7 +69,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - car
   - 
   - 
   - 

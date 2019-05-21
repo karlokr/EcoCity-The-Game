@@ -2,9 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using EZCameraShake;
+using UnityEngine.UI;
+using TMPro;
 
 public class Building : MonoBehaviour
 {
+
     public Material debugMaterial;
     public static Material defaultMaterial;
     public Renderer rend;
@@ -21,7 +24,7 @@ public class Building : MonoBehaviour
     private Animator animator;
     public int populationRequired;
     public int emission;
-    private int level;
+    public int size;
     public ParticleSystem landingParticleSystem;
     public ParticleSystem popParticleSystem;
     public ParticleSystem moneyParticleSystem;
@@ -81,10 +84,30 @@ public class Building : MonoBehaviour
 
     public void ActivateUpgrade(int index)
     {
-        if (ResourceKeeper.money >= upgrades[index].cost && !upgrades[index].upgradeActive)
+        if (ResourceKeeper.money < upgrades[index].cost)
+        {
+            GameObject.FindGameObjectWithTag("CreditNotif").GetComponent<Animator>().SetTrigger("Notify");
+            GameObject.FindGameObjectWithTag("CreditPanel").GetComponentInChildren<Image>().color = Color.red;
+            GameObject.FindGameObjectWithTag("CreditNotifTitle").GetComponent<TextMeshProUGUI>().text = "NOT ENOUGH MONEY";
+        }
+        if (ResourceKeeper.wood < upgrades[index].woodCost)
+        {
+            GameObject.FindGameObjectWithTag("WoodNotif").GetComponent<Animator>().SetTrigger("Notify");
+            GameObject.FindGameObjectWithTag("WoodPanel").GetComponentInChildren<Image>().color = Color.red;
+            GameObject.FindGameObjectWithTag("WoodNotifTitle").GetComponent<TextMeshProUGUI>().text = "NOT ENOUGH WOOD";
+        }
+        if (ResourceKeeper.upgradeMaterial < upgrades[index].upgradeMaterialCost)
+        {
+            GameObject.FindGameObjectWithTag("SteelNotif").GetComponent<Animator>().SetTrigger("Notify");
+            GameObject.FindGameObjectWithTag("SteelPanel").GetComponentInChildren<Image>().color = Color.red;
+            GameObject.FindGameObjectWithTag("SteelNotifTitle").GetComponent<TextMeshProUGUI>().text = "NOT ENOUGH WOOD";
+        }
+        else if (ResourceKeeper.money >= upgrades[index].cost && !upgrades[index].upgradeActive && ResourceKeeper.upgradeMaterial >= upgrades[index].upgradeMaterialCost && ResourceKeeper.wood >= upgrades[index].woodCost)
         {
             upgrades[index].Activate();
             ResourceKeeper.money -= upgrades[index].cost;
+            ResourceKeeper.wood -= upgrades[index].woodCost;
+            ResourceKeeper.upgradeMaterial -= upgrades[index].upgradeMaterialCost;
             ResourceKeeper.emission -= upgrades[index].emissionReduction;
             ResourceKeeper.income += upgrades[index].incomeIncrease;
             ResourceKeeper.woodIncome += upgrades[index].woodIncomeIncrease;
@@ -104,6 +127,7 @@ public class Building : MonoBehaviour
         CameraShaker.Instance.ShakeOnce(4f, 2f, 0.0f, 0.5f);
         landingParticleSystem.Play();
         EmitResources(populationIncrease, incomeIncrease, woodIncomeIncrease);
+        PlayLandingSounds();
     }
 
     public void EmitResources(int pop, int credits, int wood)

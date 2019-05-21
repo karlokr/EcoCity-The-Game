@@ -18,17 +18,24 @@ public class InspectMenu : MonoBehaviour
     public Image stat2Image;
     public Image stat3Image;
 
+    public Image woodCostIcon;
+    public Image popCostIcon;
+
     public Sprite gold;
     public Sprite wood;
     public Sprite pop;
     public Sprite gem;
+    public Sprite upgradeMaterial;
+    public Sprite gray;
     public bool inspecting;
 
+    private Rock rock;
+    private Forest forest;
+    private WorldTile worldTile;
     private Animator animator;
     private void Awake()
     {
         animator = GetComponent<Animator>();
-
 
     }
 
@@ -39,6 +46,8 @@ public class InspectMenu : MonoBehaviour
         gold = Resources.Load<Sprite>("Sprites/UI_Graphic_Resource_Coins");
         wood = Resources.Load<Sprite>("Sprites/UI_Graphic_Resource_Wood");
         pop = Resources.Load<Sprite>("Sprites/UI_Graphic_Resource_Food");
+        upgradeMaterial = Resources.Load<Sprite>("Sprites/UI_Graphic_Resource_Iron");
+        gray = Resources.Load<Sprite>("Sprites/grey_panel");     
     }
 
     // Update is called once per frame
@@ -92,11 +101,15 @@ public class InspectMenu : MonoBehaviour
     {
         popCost.text = s;
     }
+    public void ClearPopCostIcon()
+    {
+        popCostIcon.sprite = upgradeMaterial;
+    }
 
     public void ReceiveBuilding(GameObject g)
     {
         Building b = g.GetComponent<Building>();
-
+        ResetImages();
         SetMoneyCost(b.cost.ToString());
         SetPopCost(b.populationRequired.ToString());
         SetWoodCost(b.woodCost.ToString());
@@ -121,5 +134,66 @@ public class InspectMenu : MonoBehaviour
             stat2Image.GetComponent<Image>().sprite = pop;
         }
         SetStat3("");
+    }
+
+    public void ForestBuyMenu()
+    {
+        forest = GameObject.FindObjectOfType<Forest>();
+        ResetImages();
+        SetDescriptionText(forest.description);
+        SetWoodCost(forest.woodCost.ToString());
+        SetMoneyCost(forest.cost.ToString());
+        SetPopCost(forest.popCost.ToString());
+        SetNameText(forest.title);
+        SetStat1("+" + forest.upgradeMaterialGained.ToString() + " STEEL");
+        stat1Image.sprite = upgradeMaterial;
+        stat2Image.sprite = wood;
+        SetStat2("+" + forest.woodGained.ToString() + " WOOD");
+        SetStat3("+" + forest.emission + " EMISSION");
+        stat3Image.enabled = true;
+        stat3Image.sprite = gem;
+    }
+
+    public void RockBuyMenu()
+    {
+        rock = GameObject.FindObjectOfType<Rock>();
+        ResetImages();
+        SetDescriptionText(rock.description);
+        SetWoodCost(rock.woodCost.ToString());
+        SetMoneyCost(rock.cost.ToString());
+        SetPopCost(rock.popCost.ToString());
+        SetNameText(rock.title);
+        SetStat1("+" + rock.upgradeMaterialGained + " STEEL");
+        stat1Image.sprite = upgradeMaterial;
+        stat2Image.sprite = gold;
+        SetStat2("+" + rock.moneyGained.ToString() + " MONEY");
+        SetStat3("");
+    }
+
+    public void WorldTileMenu()
+    {
+        worldTile = GameObject.FindObjectOfType<WorldTile>();
+        ResetImages();
+        SetDescriptionText(worldTile.description);
+        SetWoodCost(worldTile.woodCost.ToString());
+        SetMoneyCost(worldTile.moneyCost.ToString());
+        SetPopCost(worldTile.popCost.ToString());
+        SetNameText(worldTile.title);
+        SetStat1("");
+        stat1Image.enabled = false;
+        stat2Image.enabled = false;
+        SetStat2("");
+        SetStat3("");
+        
+    }
+    public void ResetImages()
+    {
+        popCostIcon.sprite = pop;
+        woodCostIcon.sprite = wood;
+        stat1Image.enabled = true;
+        stat2Image.enabled = true;
+        SetStat3("");
+        stat3Image.enabled = false;
+        
     }
 }

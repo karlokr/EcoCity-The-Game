@@ -4823,7 +4823,7 @@ GameObject:
   - component: {fileID: 3623883358931729975}
   - component: {fileID: 2178677516925368736}
   m_Layer: 0
-  m_Name: Home Garden Upgrade (Placeholder)
+  m_Name: Home Garden
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4901,13 +4901,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upgradeName: Garden
-  cost: 250
+  cost: 600
+  woodCost: 400
   emissionReduction: 5
   incomeIncrease: 0
-  populationIncrease: 2
+  populationIncrease: 5
   woodIncomeIncrease: 0
   visualModel: {fileID: 0}
   upgradeActive: 0
+  upgradeMaterialCost: 5
   description: Increase max population and reduce emission
 --- !u!1 &3724086252558644755
 GameObject:
@@ -14426,7 +14428,7 @@ GameObject:
   - component: {fileID: 7210902730279220320}
   - component: {fileID: 2095555080246993863}
   m_Layer: 0
-  m_Name: Chimney Upgrade (Placeholder)
+  m_Name: Chimney
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14504,13 +14506,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upgradeName: Steam Chimney
-  cost: 50
-  emissionReduction: 1
+  cost: 150
+  woodCost: 150
+  emissionReduction: 15
   incomeIncrease: 0
-  populationIncrease: 1
+  populationIncrease: 5
   woodIncomeIncrease: 0
   visualModel: {fileID: 0}
   upgradeActive: 0
+  upgradeMaterialCost: 2
   description: Chimney reduces the Residential building emission and increases it's
     bonus population.
 --- !u!1 &5660184593139301442
@@ -14604,13 +14608,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upgradeName: RoomSize
-  cost: 100
-  emissionReduction: 0
+  cost: 300
+  woodCost: 200
+  emissionReduction: 10
   incomeIncrease: 0
   populationIncrease: 5
   woodIncomeIncrease: 0
   visualModel: {fileID: 0}
   upgradeActive: 0
+  upgradeMaterialCost: 3
   description: Increase the max population.
 --- !u!1 &5660247066684898851
 GameObject:
@@ -14847,10 +14853,11 @@ MonoBehaviour:
   - {fileID: 2178677516925368736}
   verticalOffset: 0
   buildingType: Residential
-  cost: 50
-  woodCost: 5
+  cost: 75
+  woodCost: 75
   populationRequired: 0
-  emission: 15
+  emission: 25
+  size: 1
   landingParticleSystem: {fileID: 5685520625446552974}
   popParticleSystem: {fileID: 5163133909321681918}
   moneyParticleSystem: {fileID: 7405703078320314808}
@@ -14860,7 +14867,7 @@ MonoBehaviour:
   coinSpluge: {fileID: 8300000, guid: 144a4665084de9144bf991fd3615fa42, type: 3}
   populationIncrease: 10
   woodIncomeIncrease: 0
-  incomeIncrease: 15
+  incomeIncrease: 0
 --- !u!82 &2561463194860383122
 AudioSource:
   m_ObjectHideFlags: 0
@@ -19716,11 +19723,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8551157436125872206}
     m_Modifications:
-    - target: {fileID: 1319097346479073063, guid: a266c376265a9fe4896dfa4c6941bd88,
-        type: 3}
-      propertyPath: m_Name
-      value: Upgrade Particle Systems
-      objectReference: {fileID: 0}
     - target: {fileID: 8965814030696559441, guid: a266c376265a9fe4896dfa4c6941bd88,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -19775,6 +19777,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1319097346479073063, guid: a266c376265a9fe4896dfa4c6941bd88,
+        type: 3}
+      propertyPath: m_Name
+      value: Upgrade Particle Systems
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a266c376265a9fe4896dfa4c6941bd88, type: 3}

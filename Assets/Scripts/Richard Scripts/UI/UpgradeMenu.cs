@@ -12,7 +12,6 @@ public class UpgradeMenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
     }
     private void Awake()
     {
@@ -27,17 +26,20 @@ public class UpgradeMenu : MonoBehaviour
         }
     }
 
-    public void PopulateList(Upgrade[] upgrades)
-    {
-        for (int i = 0; i < upgrades.Length; i++)
-        {
-           upgradeOptions[i].GetComponentInChildren<Text>().text = upgrades[i].upgradeName;
-        }
-    }
+    //public void PopulateList(Upgrade[] upgrades)
+    //{
+    //    for (int i = 0; i < upgrades.Length; i++)
+    //    {
+    //       upgradeOptions[i].GetComponentInChildren<Text>().text = upgrades[i].upgradeName;
+    //    }
+        
+    //}
 
     public void SetSelectedBuilding(Building b)
     {
         selectedBuilding = b;
+        CheckUpgrades();
+
     }
 
     public void ClearSelected()
@@ -52,12 +54,15 @@ public class UpgradeMenu : MonoBehaviour
 
     public void UpdateInspectMenu(int i)
     {
+        inspectMenu.ResetImages();
+        CheckUpgrades();
         Upgrade upgrade = selectedBuilding.upgrades[i];
         inspectMenu.SetMoneyCost(upgrade.cost.ToString());
         inspectMenu.SetNameText(upgrade.name);
         inspectMenu.SetDescriptionText(upgrade.description);
-        inspectMenu.SetWoodCost("0");
-        inspectMenu.SetPopCost("0");
+        inspectMenu.ClearPopCostIcon();
+        inspectMenu.SetPopCost(upgrade.upgradeMaterialCost.ToString());
+        inspectMenu.SetWoodCost(upgrade.woodCost.ToString());
         inspectMenu.SetStat2("-" + upgrade.emissionReduction.ToString() + " EMISSION");
         inspectMenu.stat2Image.GetComponent<Image>().sprite = inspectMenu.gem;
 
@@ -79,5 +84,19 @@ public class UpgradeMenu : MonoBehaviour
             inspectMenu.stat1Image.GetComponent<Image>().sprite = inspectMenu.wood;
         }
         
+    }
+    public void CheckUpgrades()
+    {
+        for(int i = 0; i < selectedBuilding.upgrades.Length; i++)
+        {
+            if (selectedBuilding.upgrades[i].upgradeActive)
+            {
+                upgradeOptions[i].interactable = false;
+            }
+            else
+            {
+                upgradeOptions[i].interactable = true;
+            }
+        }
     }
 }

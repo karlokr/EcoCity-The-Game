@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class CameraClicker : MonoBehaviour
 {
+    private AudioSource nukeSource;
+    private NukeAudio nukeAudio;
     private Camera viewportCamera;
     private CameraHolder cameraHolder;
     private MatchTimer matchTimer;
@@ -28,9 +30,11 @@ public class CameraClicker : MonoBehaviour
     //A GameObject that will be passed to a selected object.
     private GameObject objectToPass;
     private NukeTime nuke;
+    private Rock selectedRock;
 
     private void Awake()
     {
+        nukeAudio = GameObject.FindObjectOfType<NukeAudio>();
         clickerAudio = GetComponent<ClickerAudio>();
         bombCounter = 0;
         resourceKeeper = GameObject.FindGameObjectWithTag("ResourceKeeper").GetComponent<ResourceKeeper>();
@@ -46,28 +50,15 @@ public class CameraClicker : MonoBehaviour
     {
         dragging = false;
         buildMenuObj = GameObject.FindGameObjectsWithTag("BuildMenu");
-        for(int i = 0; i < buildMenuObj.Length; i++)
-        {
-            buildMenuObj[i].SetActive(false);
-        }
-
         upgradeMenuObj = GameObject.FindGameObjectWithTag("UpgradeMenu");
-        upgradeMenuObj.SetActive(false);
-
         upgradeMenu = upgradeMenuObj.GetComponent<UpgradeMenu>();
-
         buyMenuObj = GameObject.FindGameObjectWithTag("BuyTileMenu");
-        buyMenuObj.SetActive(false);
-        buyTileMenu.buildButtons[0].SetActive(false);
-        buyTileMenu.buildButtons[1].SetActive(false);
-        buyTileMenu.buildButtons[2].SetActive(false);
+        ClearSelections();
     }
 
     // Update is called once per frame
     void Update()
     {
-        //HandleMouseDrag();
-        HandleMobileDrag();
         HandleClicks();
     }
 
@@ -81,7 +72,7 @@ public class CameraClicker : MonoBehaviour
     {
         if (!EventSystem.current.IsPointerOverGameObject())
         {
-            if (Input.GetMouseButtonUp(0) && matchTimer.matchStarted && !dragging)
+            if ((Input.GetMouseButtonUp(0) && matchTimer.matchStarted))
             {
                 Ray screenToWorld = viewportCamera.ScreenPointToRay(Input.mousePosition);
                 if (Physics.Raycast(screenToWorld, out RaycastHit raycastHit))
@@ -95,7 +86,7 @@ public class CameraClicker : MonoBehaviour
                             selectedBuilding = other.GetComponentInParent<Building>();
                             selectedBuilding.FocusOnBuilding();
                             upgradeMenuObj.SetActive(true);
-                            upgradeMenu.PopulateList(selectedBuilding.upgrades);
+                            //upgradeMenu.PopulateList(selectedBuilding.upgrades);
                             upgradeMenu.SetSelectedBuilding(selectedBuilding);
                             break;
                         case "Plot":
@@ -115,28 +106,55 @@ public class CameraClicker : MonoBehaviour
                             {
                                 buildMenuObj[2].SetActive(true);
                             }
-                            //buildMenu.SetButtonVisibilitySize(selectedPlot.size);
                             break;
                         case "Forest":
                             ClearSelections();
                             selectedForest = other.GetComponent<Forest>();
                             buyTileMenu.SetSelectedTile(selectedForest);
                             buyMenuObj.SetActive(true);
-                            buyTileMenu.buildButtons[2].SetActive(false);
                             if (!selectedForest.finished)
                             {
-                                buyTileMenu.buildButtons[0].SetActive(true);
-                                buyTileMenu.buildButtons[1].SetActive(false);                                
+                                buyTileMenu.buildButtons[0].SetActive(true);                              
                             }
-                            if (selectedForest.finished || selectedForest.building)
+                            if (selectedForest.building)
                             {
                                 buyTileMenu.buildButtons[0].SetActive(false);
                                 buyTileMenu.buildButtons[1].SetActive(true);
+                                buyTileMenu.buildButtons[1].GetComponent<Button>().interactable = false;
+                            }
+                            if (selectedForest.finished)
+                            {
+                                buyTileMenu.buildButtons[1].SetActive(true);
+                                buyTileMenu.buildButtons[1].GetComponent<Button>().interactable = true;
                             }
                             break;
+                        case "Rock":
+                            ClearSelections();
+                            selectedRock = other.GetComponent<Rock>();
+                            buyTileMenu.SetSelectedTile(selectedRock);
+                            buyMenuObj.SetActive(true);
+
+                            if (!selectedRock.finished)
+                            {
+                                buyTileMenu.buildButtons[3].SetActive(true);
+                            }
+                            if (selectedRock.building)
+                            {
+                                buyTileMenu.buildButtons[3].SetActive(false);
+                                buyTileMenu.buildButtons[4].SetActive(true);
+                                buyTileMenu.buildButtons[4].GetComponent<Button>().interactable = false;
+                            }
+                            if (selectedRock.finished)
+                            {
+                                buyTileMenu.buildButtons[4].SetActive(true);
+                                buyTileMenu.buildButtons[4].GetComponent<Button>().interactable = true;
+                            }
+                            break;
+
                         case "WorldTile":
                             ClearSelections();
                             selectedTile = other.GetComponent<WorldTile>();
+                            selectedTile.GetComponent<Animator>().SetBool("Focused", true);
                             buyTileMenu.SetSelectedTile(selectedTile);
                             if (!selectedTile.purchased)
                             {
@@ -147,6 +165,8 @@ public class CameraClicker : MonoBehaviour
                         case "SkullIsland":
                             bombCounter++;
                             Debug.Log(bombCounter);
+                            nukeSource = nukeAudio.GetComponent<AudioSource>();
+                            nukeSource.PlayOneShot(nukeAudio.dontDoIt[bombCounter - 1]);
                             if (bombCounter == 5)
                             {
                                 nuke = other.GetComponent<NukeTime>();
@@ -216,9 +236,14 @@ public class CameraClicker : MonoBehaviour
             buildMenuObj[i].SetActive(false);
         }
         
+        for (int i = 0; i < buyTileMenu.buildButtons.Length; i++)
+        {
+            buyTileMenu.buildButtons[i].SetActive(false);
+        }
         upgradeMenuObj.SetActive(false);
         Building.UnfocusAllBuildings();
         Plot.UnfocusAllPlots();
+        WorldTile.UnfocusAllTiles();
         inspectMenu.SetInspecting(false);
         buyMenuObj.SetActive(false);
     }

@@ -103,7 +103,6 @@ GameObject:
   - component: {fileID: 3349237013509034082}
   - component: {fileID: 3349237013509034085}
   - component: {fileID: 3349237013509034081}
-  - component: {fileID: 3349237013606241746}
   - component: {fileID: 2379163540597328448}
   - component: {fileID: 1641290071181275862}
   m_Layer: 0
@@ -228,18 +227,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotateSpeed: 15
---- !u!114 &3349237013606241746
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3349237013509034084}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71f48f7f79b75ed4fa147e175bdaae04, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &2379163540597328448
 Animator:
   serializedVersion: 3
@@ -273,6 +260,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tileList: []
   purchased: 1
+  animator: {fileID: 0}
+  title: Expand The World
+  description: Purchase another world tile to continue growing your city!
+  woodCost: 500
+  moneyCost: 500
+  popCost: 50
 --- !u!1 &3349237013966668644
 GameObject:
   m_ObjectHideFlags: 0

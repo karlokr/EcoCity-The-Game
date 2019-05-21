@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System;
@@ -11,6 +10,9 @@ public class Signup : MonoBehaviour {
     public GameObject username;
     public GameObject password;
     public GameObject confirmPassword;
+    public Button SignUpButton;
+    public GameObject GameMenu;
+    public GameObject GameCanvas;
     private string Username;
     private string Password;
     private string ConfirmPassword;
@@ -24,6 +26,29 @@ public class Signup : MonoBehaviour {
         isFocused = username.GetComponentInChildren<TMP_InputField>().isFocused
                     || password.GetComponentInChildren<TMP_InputField>().isFocused
                     || confirmPassword.GetComponentInChildren<TMP_InputField>().isFocused;
+        if (AuthFuncs.CheckUsername(Username) && AuthFuncs.CheckSignupPassword(Password, ConfirmPassword)) {
+            SignUpButton.interactable = true;
+        } else {
+            SignUpButton.interactable = false; 
+        }
+        if (Username == "") {
+            username.GetComponentInChildren<TextMeshProUGUI>().text = "Username";
+            GameObject.FindGameObjectWithTag("SignupUserLine").GetComponentInChildren<Image>().color = new Color(95 / 255f, 105 / 255f, 115 / 255f, 1f);
+            GameObject.FindGameObjectWithTag("SignupPasswordLine").GetComponentInChildren<Image>().color = new Color(95 / 255f, 105 / 255f, 115 / 255f, 1f);
+            GameObject.FindGameObjectWithTag("SignupCPasswordLine").GetComponentInChildren<Image>().color = new Color(95 / 255f, 105 / 255f, 115 / 255f, 1f);
+        }
+        if (Password == "") {
+            password.GetComponentInChildren<TextMeshProUGUI>().text = "Password";
+            GameObject.FindGameObjectWithTag("SignupUserLine").GetComponentInChildren<Image>().color = new Color(95 / 255f, 105 / 255f, 115 / 255f, 1f);
+            GameObject.FindGameObjectWithTag("SignupPasswordLine").GetComponentInChildren<Image>().color = new Color(95 / 255f, 105 / 255f, 115 / 255f, 1f);
+            GameObject.FindGameObjectWithTag("SignupCPasswordLine").GetComponentInChildren<Image>().color = new Color(95 / 255f, 105 / 255f, 115 / 255f, 1f);
+        }
+        if (ConfirmPassword == "") {
+            confirmPassword.GetComponentInChildren<TextMeshProUGUI>().text = "Confirm Password";
+            GameObject.FindGameObjectWithTag("SignupUserLine").GetComponentInChildren<Image>().color = new Color(95 / 255f, 105 / 255f, 115 / 255f, 1f);
+            GameObject.FindGameObjectWithTag("SignupPasswordLine").GetComponentInChildren<Image>().color = new Color(95 / 255f, 105 / 255f, 115 / 255f, 1f);
+            GameObject.FindGameObjectWithTag("SignupCPasswordLine").GetComponentInChildren<Image>().color = new Color(95 / 255f, 105 / 255f, 115 / 255f, 1f);
+        }
     }
 
     public void RegisterButton() {
@@ -44,16 +69,38 @@ public class Signup : MonoBehaviour {
                 Debug.Log(webRequest.error);
             } else {
                 Debug.Log("Form upload complete!");
-                if (webRequest.downloadHandler.text[0] == '0') {
-                    Debug.Log("User created successfully.");
-                    DBManager.username = Username;
-                    DBManager.id = int.Parse(webRequest.downloadHandler.text.Split('\t')[1]);
-                    PlayerPrefs.SetString("username", DBManager.username);
-                    PlayerPrefs.SetInt("id", DBManager.id);
-                    PlayerPrefs.Save();
-                    UnityEngine.SceneManagement.SceneManager.LoadScene(2);
-                } else {
-                    Debug.Log("User creation failed. Error #" + webRequest.downloadHandler.text);
+                int res = int.Parse(webRequest.downloadHandler.text[0].ToString());
+                switch (res) {
+                    case 0:
+                        Debug.Log("User created successfully.");
+                        DBManager.username = Username;
+                        DBManager.id = int.Parse(webRequest.downloadHandler.text.Split('\t')[1]);
+                        PlayerPrefs.SetString("username", DBManager.username);
+                        PlayerPrefs.SetInt("id", DBManager.id);
+                        PlayerPrefs.Save();
+                        (Instantiate(GameMenu) as GameObject).transform.parent = GameCanvas.transform;
+                        break;
+                    case 1:
+                        Debug.Log("User creation failed. No Connection to Server. Error #" + webRequest.downloadHandler.text);
+                        break;
+                    case 2:
+                        Debug.Log("User creation failed. Name check query failure. Error #" + webRequest.downloadHandler.text);
+                        break;
+                    case 3:
+                        Debug.Log("User creation failed. Name already exists. Error #" + webRequest.downloadHandler.text);
+                        username.GetComponentInChildren<TextMeshProUGUI>().text = "Username taken";
+                        password.GetComponentInChildren<TextMeshProUGUI>().text = "Password";
+                        confirmPassword.GetComponentInChildren<TextMeshProUGUI>().text = "Confirm Password";
+                        GameObject.FindGameObjectWithTag("SignupUserLine").GetComponent<Image>().color = Color.red;
+                        GameObject.FindGameObjectWithTag("SignupPasswordLine").GetComponent<Image>().color = new Color(95 / 255f, 105 / 255f, 115 / 255f, 1f);
+                        GameObject.FindGameObjectWithTag("SignupCPasswordLine").GetComponent<Image>().color = new Color(95 / 255f, 105 / 255f, 115 / 255f, 1f);
+                        break;
+                    case 4:
+                        Debug.Log("User creation failed. Insert user into DB failed. Error #" + webRequest.downloadHandler.text);
+                        break;
+                    case 10:
+                        Debug.Log("User creation failed. Retrieve user ID failed. Error #" + webRequest.downloadHandler.text);
+                        break;
                 }
             }
             

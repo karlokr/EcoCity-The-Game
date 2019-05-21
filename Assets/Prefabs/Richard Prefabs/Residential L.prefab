@@ -9576,6 +9576,7 @@ GameObject:
   - component: {fileID: 2470695281993958901}
   - component: {fileID: 1648390923}
   - component: {fileID: -2209413150398133012}
+  - component: {fileID: -183506504697782886}
   m_Layer: 0
   m_Name: Residential L
   m_TagString: Building
@@ -9703,16 +9704,115 @@ MonoBehaviour:
   buildingType: Residential
   cost: 1000
   woodCost: 1000
-  populationRequired: 30
-  emission: 50
+  populationRequired: 100
+  emission: 75
+  size: 3
   landingParticleSystem: {fileID: 8939408199892390474}
   popParticleSystem: {fileID: 6244525856112246000}
   moneyParticleSystem: {fileID: 6419495382178383925}
   woodParticleSystem: {fileID: 828054617019931715}
   upgradeSystems: {fileID: 9154149089794443444}
+  landingThud: {fileID: 8300000, guid: b1032e4a4a4dbb743aac2a619ee4d092, type: 3}
+  coinSpluge: {fileID: 8300000, guid: 144a4665084de9144bf991fd3615fa42, type: 3}
   populationIncrease: 50
   woodIncomeIncrease: 0
   incomeIncrease: 0
+--- !u!82 &-183506504697782886
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2470695281993958899}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &3120688916710048103
 GameObject:
   m_ObjectHideFlags: 0
@@ -19230,7 +19330,7 @@ GameObject:
   - component: {fileID: 2482396109743194739}
   - component: {fileID: 6067670806412709821}
   m_Layer: 0
-  m_Name: L Chimney Upgrade (Placeholder)
+  m_Name: Chimney
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19308,13 +19408,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upgradeName: Steam Chimney
-  cost: 500
-  emissionReduction: 2
+  cost: 1000
+  woodCost: 1000
+  emissionReduction: 35
   incomeIncrease: 0
-  populationIncrease: 1
+  populationIncrease: 10
   woodIncomeIncrease: 0
   visualModel: {fileID: 0}
   upgradeActive: 0
+  upgradeMaterialCost: 2
   description: Chimney reduces the Residential building emission and increases it's
     bonus population.
 --- !u!1 &5954087372783556033
@@ -19410,7 +19512,7 @@ GameObject:
   - component: {fileID: 6458858123665320613}
   - component: {fileID: 6106095939136019656}
   m_Layer: 0
-  m_Name: RoomSize
+  m_Name: Room Size
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19488,13 +19590,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upgradeName: RoomSize
-  cost: 1000
-  emissionReduction: 0
+  cost: 2000
+  woodCost: 2000
+  emissionReduction: 35
   incomeIncrease: 0
-  populationIncrease: 5
+  populationIncrease: 10
   woodIncomeIncrease: 0
   visualModel: {fileID: 0}
   upgradeActive: 0
+  upgradeMaterialCost: 3
   description: Increase the max population.
 --- !u!1 &8253314066960209692
 GameObject:
@@ -19509,7 +19613,7 @@ GameObject:
   - component: {fileID: 4749810981494294771}
   - component: {fileID: 1704164026378150744}
   m_Layer: 0
-  m_Name: L Home Garden Upgrade (Placeholder)
+  m_Name: Home Garden
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19587,13 +19691,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upgradeName: Garden
-  cost: 1500
-  emissionReduction: 5
+  cost: 3000
+  woodCost: 3000
+  emissionReduction: 20
   incomeIncrease: 0
-  populationIncrease: 10
+  populationIncrease: 20
   woodIncomeIncrease: 0
   visualModel: {fileID: 0}
   upgradeActive: 0
+  upgradeMaterialCost: 5
   description: Increase max population and reduce emission
 --- !u!1001 &7873543481310998419
 PrefabInstance:
@@ -19602,11 +19708,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2470695281993958904}
     m_Modifications:
-    - target: {fileID: 1319097346479073063, guid: a266c376265a9fe4896dfa4c6941bd88,
-        type: 3}
-      propertyPath: m_Name
-      value: Upgrade Particle Systems
-      objectReference: {fileID: 0}
     - target: {fileID: 8965814030696559441, guid: a266c376265a9fe4896dfa4c6941bd88,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -19661,6 +19762,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1319097346479073063, guid: a266c376265a9fe4896dfa4c6941bd88,
+        type: 3}
+      propertyPath: m_Name
+      value: Upgrade Particle Systems
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a266c376265a9fe4896dfa4c6941bd88, type: 3}
