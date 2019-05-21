@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -65,9 +66,26 @@ public class BuyTileMenu : MonoBehaviour
     }
     IEnumerator BuyNewTileRoutine()
     {
-        if (ResourceKeeper.wood >= worldTile.woodCost)
+        if (ResourceKeeper.money < worldTile.moneyCost)
+        {
+            GameObject.FindGameObjectWithTag("CreditNotif").GetComponent<Animator>().SetTrigger("Notify");
+            GameObject.FindGameObjectWithTag("CreditPanel").GetComponentInChildren<Image>().color = Color.red;
+            GameObject.FindGameObjectWithTag("CreditNotifTitle").GetComponent<TextMeshProUGUI>().text = "NOT ENOUGH MONEY";
+        }
+        if (ResourceKeeper.wood < worldTile.woodCost)
+        {
+            GameObject.FindGameObjectWithTag("WoodNotif").GetComponent<Animator>().SetTrigger("Notify");
+            GameObject.FindGameObjectWithTag("WoodPanel").GetComponentInChildren<Image>().color = Color.red;
+            GameObject.FindGameObjectWithTag("WoodNotifTitle").GetComponent<TextMeshProUGUI>().text = "NOT ENOUGH WOOD";
+        }
+        if (ResourceKeeper.population < worldTile.popCost)
+        {
+            GameObject.FindGameObjectWithTag("PopNotif").GetComponent<Animator>().SetTrigger("Notify");
+        }
+        else if (ResourceKeeper.wood >= worldTile.woodCost && ResourceKeeper.money >= worldTile.moneyCost && ResourceKeeper.population >= worldTile.popCost)
         {
             ResourceKeeper.wood -= worldTile.woodCost;
+            ResourceKeeper.money -= worldTile.moneyCost;
             Vector2 index = TileManager.findTile(worldTile.gameObject);
             GameObject newTile = worldTile.createNewTile();
             TileManager.tiles[(int)index.x, (int)index.y] = newTile;

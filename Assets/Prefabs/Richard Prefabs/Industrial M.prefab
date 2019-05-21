@@ -9703,7 +9703,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upgradeName: ECO POWER
-  cost: 500
+  cost: 1500
+  woodCost: 1500
   emissionReduction: 15
   incomeIncrease: 10
   populationIncrease: 0
@@ -14477,7 +14478,7 @@ GameObject:
   - component: {fileID: 5006777081984759180}
   - component: {fileID: 7902414147911773445}
   m_Layer: 0
-  m_Name: M Chimney Upgrade (Placeholder)
+  m_Name: Chimney
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14555,8 +14556,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upgradeName: Steam Chimney
-  cost: 100
-  emissionReduction: 5
+  cost: 500
+  woodCost: 500
+  emissionReduction: 25
   incomeIncrease: 0
   populationIncrease: 0
   woodIncomeIncrease: 5
@@ -19362,7 +19364,7 @@ GameObject:
   - component: {fileID: 1359723918969965826}
   - component: {fileID: 3371344018673174223}
   m_Layer: 0
-  m_Name: M Generator Upgrade (Placeholder)
+  m_Name: Generator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19440,8 +19442,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upgradeName: Generator
-  cost: 300
-  emissionReduction: 10
+  cost: 1000
+  woodCost: 1000
+  emissionReduction: 25
   incomeIncrease: 5
   populationIncrease: 0
   woodIncomeIncrease: 5
@@ -19570,10 +19573,11 @@ MonoBehaviour:
   - {fileID: 2064324695384317562}
   verticalOffset: 0
   buildingType: Industrial
-  cost: 500
-  woodCost: 300
-  populationRequired: 20
+  cost: 400
+  woodCost: 600
+  populationRequired: 50
   emission: 50
+  size: 2
   landingParticleSystem: {fileID: 8275358843509160407}
   popParticleSystem: {fileID: 4863832383499605732}
   moneyParticleSystem: {fileID: 6746829347826388585}
@@ -19706,11 +19710,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7980228404448646081}
     m_Modifications:
-    - target: {fileID: 1319097346479073063, guid: a266c376265a9fe4896dfa4c6941bd88,
-        type: 3}
-      propertyPath: m_Name
-      value: Upgrade Particle Systems
-      objectReference: {fileID: 0}
     - target: {fileID: 8965814030696559441, guid: a266c376265a9fe4896dfa4c6941bd88,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -19765,6 +19764,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1319097346479073063, guid: a266c376265a9fe4896dfa4c6941bd88,
+        type: 3}
+      propertyPath: m_Name
+      value: Upgrade Particle Systems
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a266c376265a9fe4896dfa4c6941bd88, type: 3}

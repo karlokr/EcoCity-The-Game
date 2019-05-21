@@ -40,17 +40,17 @@ public class WinConditions : MonoBehaviour
     {
         if (matchTimer.currentYear >= yearRequirement)
         {
-            if (CheckWin())
-            {
-                SceneManager.LoadScene("win_screen");
-            }
-            else
-            {
-                SceneManager.LoadScene("lose_screen");
-            }
-        } else if (CheckWin())
+            Debug.Log("Ran out of time");
+            SceneManager.LoadScene("lose_screen");
+        
+        }
+        else if (CheckWin())
         {
             SceneManager.LoadScene("win_screen");
+        }
+        else if (CheckLoss())
+        {
+            SceneManager.LoadScene("lose_screen");
         }
 
         emissionBar.currentPercent = Mathf.Lerp(emissionBar.currentPercent, (ResourceKeeper.emission / emissionLimit) * 100f, barLerpSpeed * Time.deltaTime);
@@ -64,7 +64,18 @@ public class WinConditions : MonoBehaviour
 
     public bool CheckWin()
     {
-        if (ResourceKeeper.population > populationRequirement && ResourceKeeper.emission < emissionLimit)
+        if (ResourceKeeper.population >= populationRequirement && ResourceKeeper.emission <= emissionLimit)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+    public bool CheckLoss()
+    {
+        if (ResourceKeeper.emission >= GameObject.FindObjectOfType<WinConditions>().emissionLimit)
         {
             return true;
         }

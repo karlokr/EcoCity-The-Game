@@ -65,6 +65,7 @@ public class Plot : MonoBehaviour
             newBuilding.transform.Translate(Vector3.up * 35f);
             ResourceKeeper.money -= building.cost;
             ResourceKeeper.wood -= building.woodCost;
+            ResourceKeeper.buildingSizeTotal += building.size;
             Destroy(gameObject);
             building.Emit();
         }

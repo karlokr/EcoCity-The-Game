@@ -26,14 +26,14 @@ public class UpgradeMenu : MonoBehaviour
         }
     }
 
-    public void PopulateList(Upgrade[] upgrades)
-    {
-        for (int i = 0; i < upgrades.Length; i++)
-        {
-           upgradeOptions[i].GetComponentInChildren<Text>().text = upgrades[i].upgradeName;
-        }
+    //public void PopulateList(Upgrade[] upgrades)
+    //{
+    //    for (int i = 0; i < upgrades.Length; i++)
+    //    {
+    //       upgradeOptions[i].GetComponentInChildren<Text>().text = upgrades[i].upgradeName;
+    //    }
         
-    }
+    //}
 
     public void SetSelectedBuilding(Building b)
     {
@@ -61,8 +61,8 @@ public class UpgradeMenu : MonoBehaviour
         inspectMenu.SetNameText(upgrade.name);
         inspectMenu.SetDescriptionText(upgrade.description);
         inspectMenu.ClearPopCostIcon();
-        inspectMenu.SetUpgradeCostIcon();
-        inspectMenu.SetWoodCost(upgrade.upgradeMaterialCost.ToString());
+        inspectMenu.SetPopCost(upgrade.upgradeMaterialCost.ToString());
+        inspectMenu.SetWoodCost(upgrade.woodCost.ToString());
         inspectMenu.SetStat2("-" + upgrade.emissionReduction.ToString() + " EMISSION");
         inspectMenu.stat2Image.GetComponent<Image>().sprite = inspectMenu.gem;
 
