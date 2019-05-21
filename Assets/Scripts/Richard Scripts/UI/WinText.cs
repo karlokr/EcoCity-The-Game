@@ -10,6 +10,7 @@ public class WinText : MonoBehaviour
     private TextMeshProUGUI conditionsPara;
     private void Awake()
     {
+        winConditions = GameObject.FindGameObjectWithTag("WinConditions").GetComponent<WinConditions>();
         conditionsPara = GetComponent<TextMeshProUGUI>();
     }
 
