@@ -100,7 +100,11 @@ public class Building : MonoBehaviour
         {
             GameObject.FindGameObjectWithTag("SteelNotif").GetComponent<Animator>().SetTrigger("Notify");
             GameObject.FindGameObjectWithTag("SteelPanel").GetComponentInChildren<Image>().color = Color.red;
+<<<<<<< HEAD
             GameObject.FindGameObjectWithTag("SteelNotifTitle").GetComponent<TextMeshProUGUI>().text = "NOT ENOUGH WOOD";
+=======
+            GameObject.FindGameObjectWithTag("SteelNotifTitle").GetComponent<TextMeshProUGUI>().text = "NOT ENOUGH STEEL";
+>>>>>>> f583d5eb9fb4510be678ec45007eb61274846cd5
         }
         else if (ResourceKeeper.money >= upgrades[index].cost && !upgrades[index].upgradeActive && ResourceKeeper.upgradeMaterial >= upgrades[index].upgradeMaterialCost && ResourceKeeper.wood >= upgrades[index].woodCost)
         {

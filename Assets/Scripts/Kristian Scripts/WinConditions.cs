@@ -21,6 +21,11 @@ public class WinConditions : MonoBehaviour
     private PostProcessVolume ppv;
     private ColorGrading colorGrade = null;
 
+<<<<<<< HEAD
+=======
+    private bool saved = false;
+
+>>>>>>> f583d5eb9fb4510be678ec45007eb61274846cd5
     private SaveGame saveGame;
 
     private void Awake()
@@ -35,7 +40,7 @@ public class WinConditions : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -43,6 +48,7 @@ public class WinConditions : MonoBehaviour
     {
         if (matchTimer.currentYear >= yearRequirement)
         {
+<<<<<<< HEAD
             GameObject.FindGameObjectWithTag("LosePanel").GetComponent<Animator>().SetTrigger("Entry");
         }
         else if (CheckWin())
@@ -51,6 +57,22 @@ public class WinConditions : MonoBehaviour
         }
         else if (CheckLoss())
         {
+=======
+            SubmitSave();
+            matchTimer.StopTime();
+            GameObject.FindGameObjectWithTag("LosePanel").GetComponent<Animator>().SetTrigger("Entry");
+        }
+        else if (CheckWin())
+        {
+            SubmitSave();
+            matchTimer.StopTime();
+            GameObject.FindGameObjectWithTag("WinPanel").GetComponent<Animator>().SetTrigger("Entry");
+        }
+        else if (CheckLoss())
+        {
+            SubmitSave();
+            matchTimer.StopTime();
+>>>>>>> f583d5eb9fb4510be678ec45007eb61274846cd5
             GameObject.FindGameObjectWithTag("LosePanel").GetComponent<Animator>().SetTrigger("Entry");
         }
 
@@ -66,6 +88,20 @@ public class WinConditions : MonoBehaviour
     public bool CheckWin()
     {
         if (ResourceKeeper.population >= populationRequirement && ResourceKeeper.emission <= emissionLimit)
+<<<<<<< HEAD
+=======
+        {        
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+    public bool CheckLoss()
+    {
+        if (ResourceKeeper.emission >= GameObject.FindObjectOfType<WinConditions>().emissionLimit)
+>>>>>>> f583d5eb9fb4510be678ec45007eb61274846cd5
         {
             return true;
         }
@@ -74,6 +110,7 @@ public class WinConditions : MonoBehaviour
             return false;
         }
     }
+<<<<<<< HEAD
     public bool CheckLoss()
     {
         if (ResourceKeeper.emission >= GameObject.FindObjectOfType<WinConditions>().emissionLimit)
@@ -85,11 +122,25 @@ public class WinConditions : MonoBehaviour
             return false;
         }
     }
+=======
+>>>>>>> f583d5eb9fb4510be678ec45007eb61274846cd5
 
 
     public void SubmitSave()
     {
+<<<<<<< HEAD
         SaveManager.ecoscore = ResourceKeeper.ecoScore;
         saveGame.SaveButton();
     }
+=======
+        if(!saved)
+        {
+            SaveManager.ecoscore = ResourceKeeper.ecoScore;
+            saveGame.SaveButton();
+            saved = true;
+        }
+
+    }
+
+>>>>>>> f583d5eb9fb4510be678ec45007eb61274846cd5
 }

@@ -99,4 +99,8 @@ public class MatchTimer : MonoBehaviour
     {
         matchStarted = false;
     }
+    public void SetTimeScaleZero()
+    {
+        Time.timeScale = 0;
+    }
 }
