@@ -11,7 +11,7 @@ public class LeaderBoard : MonoBehaviour {
 
     public GameObject[] LeaderSlots;
     public GameObject Menu;
-    public GameObject GameMode;
+    //public GameObject GameMode;
     public GameObject Level;
     public GameObject PrevButton;
     public GameObject NextButton;
@@ -19,7 +19,7 @@ public class LeaderBoard : MonoBehaviour {
     public void Awake() {
         LeaderManager.Page = 0;
         StartCoroutine(GetLeaderBoard("https://ecocitythegame.ca/sqlconnect/leaderboard.php", LeaderManager.Page));
-        GameMode.GetComponent<TMP_Text>().text = DBManager.game_mode.Substring(0,1).ToUpper() + DBManager.game_mode.Substring(1);
+        //GameMode.GetComponent<TMP_Text>().text = DBManager.game_mode.Substring(0,1).ToUpper() + DBManager.game_mode.Substring(1);
         Level.GetComponent<TMP_Text>().text = DBManager.level.Substring(0, 1).ToUpper() + DBManager.level.Substring(1);
     }
 
@@ -42,7 +42,7 @@ public class LeaderBoard : MonoBehaviour {
     {
         WWWForm form = new WWWForm();
         form.AddField("pageno", page);
-        form.AddField("game_mode", DBManager.game_mode);
+        //form.AddField("game_mode", DBManager.game_mode);
         form.AddField("level", DBManager.level);
 
         using (UnityWebRequest webRequest = UnityWebRequest.Post(url, form))
