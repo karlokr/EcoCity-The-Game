@@ -2,6 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// This script creates an explosion when the nuke easter egg
+/// collides with the ground, adding a ton of emissions and 
+/// ending the game.
+/// </summary>
 public class Explosion : MonoBehaviour
 {
     private AudioSource nukeSource;
@@ -20,7 +25,6 @@ public class Explosion : MonoBehaviour
     }
     private void OnCollisionEnter(Collision other)
     {
-        Debug.Log("boooom");
         GameObject nuke = Instantiate(explosion, new Vector3(0, 30, 0), transform.rotation);
         StartCoroutine(Wait());
         nukeSource = nukeAudio.GetComponent<AudioSource>();
@@ -28,7 +32,6 @@ public class Explosion : MonoBehaviour
     }
     private IEnumerator Wait()
     {
-
         yield return new WaitForSeconds(1);
         ResourceKeeper.emission = 99999;
 

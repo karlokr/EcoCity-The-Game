@@ -2,17 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// This script handles the logic of the tile generation system
+/// 
+/// </summary>
 [System.Serializable]
 public class TileManager : MonoBehaviour
 {
     private int dimension;
     private static int rowNumber;
     private static int colNumber;
+    // Stores worldTile objects in 2D array.
     public static GameObject[,] tiles;
+    // Stores boolean values denoting whether the tile is purchased or not.
     public static bool[,] shownTiles;
-
+    // Stores all tiles in a public array.
     public GameObject[] worldTiles;
-    // Start is called before the first frame update
+    
+    // Populates all arrays at the start of the game.
     private void Awake()
     {
         dimension = (int) Mathf.Sqrt(worldTiles.Length);
@@ -40,6 +47,8 @@ public class TileManager : MonoBehaviour
         }
 
     }
+    // At the start of the game, populates the 2D array with
+    // booleans which determine if the tile is visible to the player.
     void Start()
     {
         for (int row = 0; row < rowNumber; row++)
@@ -100,8 +109,7 @@ public class TileManager : MonoBehaviour
             tiles[row + 1, col].SetActive(true);
         }
     }
-    // Finds the index of the tile in the 2D array and returns it
-
+    // Finds the index of the tile in the 2D array and returns it.
     public static Vector2 findTile(GameObject tile)
     {
         for (int row = 0; row < rowNumber; row++)
@@ -115,10 +123,7 @@ public class TileManager : MonoBehaviour
                 }
             }
         }
-        // This sucks, fix later
         Vector2 badIndex = new Vector2(0, 0);
         return badIndex;
-
-
     }
 }
