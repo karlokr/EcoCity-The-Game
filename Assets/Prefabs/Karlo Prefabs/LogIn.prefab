@@ -187,7 +187,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5822655062281259719}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b0967aec36b0eb24594bc6f02d52df6c, type: 3}
   m_Name: 
@@ -205,7 +205,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5822655062281259719}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cd7ef1bae1225da44b16f90221b2592e, type: 3}
   m_Name: 
@@ -349,7 +349,7 @@ PrefabInstance:
     - target: {fileID: 8351328435853424589, guid: 2b9efde4f45ef7246a9b897012b00d81,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -10
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8351328435853424589, guid: 2b9efde4f45ef7246a9b897012b00d81,
         type: 3}
@@ -421,7 +421,8 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 565168042062614111}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5977819496034469629, guid: 2b9efde4f45ef7246a9b897012b00d81, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2b9efde4f45ef7246a9b897012b00d81, type: 3}
 --- !u!1 &5822655062567059484 stripped
 GameObject:
@@ -539,7 +540,7 @@ PrefabInstance:
     - target: {fileID: 1568276926907988126, guid: 0300d14c3b6b39e4e823e746823a47a5,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -10
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1568276926907988126, guid: 0300d14c3b6b39e4e823e746823a47a5,
         type: 3}
@@ -621,7 +622,8 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 565168042062614111}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7432440142405712933, guid: 0300d14c3b6b39e4e823e746823a47a5, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 0300d14c3b6b39e4e823e746823a47a5, type: 3}
 --- !u!1 &5822655061072608358 stripped
 GameObject:

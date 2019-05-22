@@ -581,12 +581,13 @@ MonoBehaviour:
   CampaignSelectedButton: {fileID: 0}
   EndlessSelectedButton: {fileID: 0}
   Menu: {fileID: 2387601543281322347}
+  Username: {fileID: 6388090575099535208}
   levelTitle: {fileID: 8455280574564950709}
   previewImage: {fileID: 4127120627978614280}
   levelNames:
-  - Level 1
-  - Level 2
-  - Level 3
+  - Easy
+  - Medium
+  - Hard
   levelPreviews:
   - {fileID: 21300000, guid: 43e6fd5f07c4326409203544eeed53f5, type: 3}
   - {fileID: 21300000, guid: 9f936dbaed6121647845576997990c3f, type: 3}
@@ -825,7 +826,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -136.2}
+  m_AnchoredPosition: {x: 0, y: -121}
   m_SizeDelta: {x: 110, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3473740865283732268
@@ -1157,7 +1158,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -243, y: -85}
+  m_AnchoredPosition: {x: -51.01001, y: -85}
   m_SizeDelta: {x: 40.820007, y: 40.820007}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6642224245714021349
@@ -1513,8 +1514,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -123.72998, y: -85}
-  m_SizeDelta: {x: 179.77, y: 35.54}
+  m_AnchoredPosition: {x: -168, y: -85}
+  m_SizeDelta: {x: 180.9, y: 35.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2652818005994424134
 CanvasRenderer:
@@ -1544,7 +1545,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: xXx_Blaze_xXx
+  m_text: Username
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1579,7 +1580,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_textAlignment: 514
+  m_textAlignment: 516
   m_characterSpacing: 0
   m_wordSpacing: 0
   m_lineSpacing: 0
@@ -1613,10 +1614,10 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1164114684596240040}
-    characterCount: 13
+    characterCount: 8
     spriteCount: 0
     spaceCount: 0
-    wordCount: 3
+    wordCount: 1
     linkCount: 0
     lineCount: 1
     pageCount: 1
@@ -1670,7 +1671,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 125.8}
+  m_AnchoredPosition: {x: 0, y: 115}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6013514575641132867
@@ -1701,7 +1702,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: Level 1
+  m_text: Easy
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fa328c1ae3ffb6b4583cf371153b0be6, type: 2}
   m_sharedMaterial: {fileID: 21918420405216288, guid: fa328c1ae3ffb6b4583cf371153b0be6,
@@ -1771,10 +1772,10 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 8455280574564950709}
-    characterCount: 7
+    characterCount: 4
     spriteCount: 0
-    spaceCount: 1
-    wordCount: 2
+    spaceCount: 0
+    wordCount: 1
     linkCount: 0
     lineCount: 1
     pageCount: 1
