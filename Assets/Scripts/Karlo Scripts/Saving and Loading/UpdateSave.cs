@@ -5,6 +5,11 @@ using UnityEngine.Networking;
 
 public class UpdateSave : MonoBehaviour
 {
+    /// <summary>
+    /// Actually contacts the server to update the save
+    /// </summary>
+    /// <param name="url"></param>
+    /// <returns></returns>
     IEnumerator Save(string url) {
         WWWForm form = new WWWForm();
         form.AddField("name", DBManager.username);
@@ -29,6 +34,9 @@ public class UpdateSave : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Method for the update save button
+    /// </summary>
     public void UpdateSaveButton() {
         StartCoroutine(Save("https://ecocitythegame.ca/sqlconnect/updatesave.php"));
     }
