@@ -43,17 +43,15 @@ public class WinConditions : MonoBehaviour
     {
         if (matchTimer.currentYear >= yearRequirement)
         {
-            Debug.Log("Ran out of time");
-            SceneManager.LoadScene("lose_screen");
-        
+            GameObject.FindGameObjectWithTag("LosePanel").GetComponent<Animator>().SetTrigger("Entry");
         }
         else if (CheckWin())
         {
-            SceneManager.LoadScene("win_screen");
+            GameObject.FindGameObjectWithTag("WinPanel").GetComponent<Animator>().SetTrigger("Entry");
         }
         else if (CheckLoss())
         {
-            SceneManager.LoadScene("lose_screen");
+            GameObject.FindGameObjectWithTag("LosePanel").GetComponent<Animator>().SetTrigger("Entry");
         }
 
         emissionBar.currentPercent = Mathf.Lerp(emissionBar.currentPercent, (ResourceKeeper.emission / emissionLimit) * 100f, barLerpSpeed * Time.deltaTime);
