@@ -5,9 +5,6 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Karlo Scenes/Menus/LandingPage.unity
     guid: 9632fa71d68773646acd0e423a930a52
@@ -53,7 +50,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Erik Scenes/Level 1.unity
     guid: 6c30f3f7647e6424aac08d311757a70e
-  - enabled: 1
-    path: Assets/Scenes/Richard Scenes/SecondLevel.unity
-    guid: 7f6320e9aa2e0084a9c34f4a4013583b
   m_configObjects: {}
