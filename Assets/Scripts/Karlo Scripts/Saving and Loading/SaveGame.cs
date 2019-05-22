@@ -7,12 +7,17 @@ using UnityEngine.Networking;
 
 public class SaveGame : MonoBehaviour { 
 
+    /// <summary>
+    /// Actually contacts the server to save the game
+    /// </summary>
+    /// <param name="url"></param>
+    /// <returns></returns>
     IEnumerator Save(string url) {
         WWWForm form = new WWWForm();
         form.AddField("name", DBManager.username);
         form.AddField("id", DBManager.id);
         form.AddField("ecoscore", SaveManager.ecoscore);
-        form.AddField("savedata", SaveManager.savedata);
+        form.AddField("savedata", Guid.NewGuid().ToString());
 
         using (UnityWebRequest webRequest = UnityWebRequest.Post(url, form)) {
             yield return webRequest.SendWebRequest();
@@ -30,6 +35,9 @@ public class SaveGame : MonoBehaviour {
         }
     }
 
+    /// <summary>
+    /// method for the save game button
+    /// </summary>
     public void SaveButton() {
         StartCoroutine(Save("https://ecocitythegame.ca/sqlconnect/savegame.php"));
     }
