@@ -20,7 +20,8 @@ public class NukeTime : MonoBehaviour
     {
 
     }
-
+    
+    // Instantiates a new nuke object, and drops it on the center of the map.
     public void nukeTime()
     {
         GameObject nuke = Instantiate(missile, new Vector3(0,0,0) , transform.rotation);
