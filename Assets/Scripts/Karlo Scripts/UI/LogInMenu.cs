@@ -13,6 +13,20 @@ public class LogInMenu : MonoBehaviour
     public GameObject GameMenu;
     public GameObject GameCanvas;
 
+    void Awake() {
+        if (DBManager.inGame) {
+            GoToMenu();
+        } else {
+            DBManager.inGame = false;
+            DBManager.username = null;
+            DBManager.id = -1;
+            DBManager.isGuest = false;
+            DBManager.save_num = -1;
+            DBManager.game_mode = null;
+            DBManager.level = null;
+        }
+    }
+
     public void GoToLogin() {
         (Instantiate(LoginMenu) as GameObject).transform.parent = GameCanvas.transform;
         //Title.SetActive(false);
