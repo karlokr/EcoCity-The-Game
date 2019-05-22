@@ -63,5 +63,18 @@ public class ResourceKeeper : MonoBehaviour
 
         }
     }
+    public void ResetResourceKeeper()
+    {
+        money = 150;
+        emission = 0;
+        population = 0;
+        wood = 150;
+        ecoScore = 0;
+        buildingSizeTotal = 0;
+        upgradeMaterial = 0;
+        income = 5;
+        woodIncome = 5;
+
+    }
 
 }
