@@ -12,7 +12,7 @@ public class SaveGame : MonoBehaviour {
         form.AddField("name", DBManager.username);
         form.AddField("id", DBManager.id);
         form.AddField("ecoscore", SaveManager.ecoscore);
-        form.AddField("savedata", SaveManager.savedata);
+        form.AddField("savedata", Guid.NewGuid().ToString());
 
         using (UnityWebRequest webRequest = UnityWebRequest.Post(url, form)) {
             yield return webRequest.SendWebRequest();

@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// This script controls the logic of tile generation and purchases.
+/// </summary>
 public class WorldTile : MonoBehaviour
 {
     public List<GameObject> tileList;
@@ -13,6 +16,10 @@ public class WorldTile : MonoBehaviour
     public int woodCost = 250;
     public int moneyCost = 500;
     public int popCost = 50;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f583d5eb9fb4510be678ec45007eb61274846cd5
     // Start is called before the first frame update
     private void Awake()
     {
@@ -24,9 +31,10 @@ public class WorldTile : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-        
+    {     
     }
+
+    // Creates a new random tile from a pool of tile game objects.
     public GameObject createNewTile()
     {   
         int randIndex = Random.Range(0, tileList.Count);
@@ -36,11 +44,8 @@ public class WorldTile : MonoBehaviour
         myTile.transform.SetParent(GameObject.FindGameObjectWithTag("TileHolder").transform);
         return myTile;
     }
-    /// <summary>
-    /// Debug function that sets the mesh color to magenta.
-    /// </summary>
 
-
+    // Deselects all tiles after a new tile is purchased.
     public static void UnfocusAllTiles()
     {
         WorldTile[] p = GameObject.FindObjectsOfType<WorldTile>();
