@@ -7,7 +7,10 @@ using UnityEngine.UI;
 
 public class LeaderAssembly : MonoBehaviour
 {
-
+    /// <summary>
+    /// Assembles the leaderboard in-game after getting the response from the server
+    /// </summary>
+    /// <param name="LeaderSlots"></param>
     public static void GenerateLeaderBoard(GameObject[] LeaderSlots) {
         string RawData = LeaderManager.LeaderData;
         var LeaderData = JObject.Parse(RawData);
