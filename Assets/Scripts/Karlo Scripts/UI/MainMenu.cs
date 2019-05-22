@@ -98,10 +98,11 @@ public class MainMenu : MonoBehaviour
         
     }
 
-    public void InspectPreviousLevel()
-    {
-        currentInspectIndex = Mathf.Abs(currentInspectIndex - 1);
-        previewImage.sprite = levelPreviews[currentInspectIndex];
-        levelTitle.text = levelNames[currentInspectIndex];
+    public void InspectPreviousLevel() {
+        if (currentInspectIndex > 0) {
+            currentInspectIndex = Mathf.Abs(currentInspectIndex - 1);
+            previewImage.sprite = levelPreviews[currentInspectIndex];
+            levelTitle.text = levelNames[currentInspectIndex];
+        }
     }
 }

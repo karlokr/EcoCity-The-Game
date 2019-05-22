@@ -21,6 +21,8 @@ public class WinConditions : MonoBehaviour
     private PostProcessVolume ppv;
     private ColorGrading colorGrade = null;
 
+    private SaveGame saveGame;
+
     private void Awake()
     {
         matchTimer = GameObject.FindGameObjectWithTag("MatchTimer").GetComponent<MatchTimer>();
@@ -28,6 +30,7 @@ public class WinConditions : MonoBehaviour
         populationBar = GameObject.FindGameObjectWithTag("PopulationBar").GetComponent<ProgressBar>();
         ppv = GameObject.FindGameObjectWithTag("PostProcessGlobal").GetComponent<PostProcessVolume>();
         colorGrade = ppv.profile.GetSetting<ColorGrading>();
+        saveGame = GetComponent<SaveGame>();
     }
     // Start is called before the first frame update
     void Start()
@@ -40,17 +43,15 @@ public class WinConditions : MonoBehaviour
     {
         if (matchTimer.currentYear >= yearRequirement)
         {
-            Debug.Log("Ran out of time");
-            SceneManager.LoadScene("lose_screen");
-        
+            GameObject.FindGameObjectWithTag("LosePanel").GetComponent<Animator>().SetTrigger("Entry");
         }
         else if (CheckWin())
         {
-            SceneManager.LoadScene("win_screen");
+            GameObject.FindGameObjectWithTag("WinPanel").GetComponent<Animator>().SetTrigger("Entry");
         }
         else if (CheckLoss())
         {
-            SceneManager.LoadScene("lose_screen");
+            GameObject.FindGameObjectWithTag("LosePanel").GetComponent<Animator>().SetTrigger("Entry");
         }
 
         emissionBar.currentPercent = Mathf.Lerp(emissionBar.currentPercent, (ResourceKeeper.emission / emissionLimit) * 100f, barLerpSpeed * Time.deltaTime);
@@ -83,5 +84,12 @@ public class WinConditions : MonoBehaviour
         {
             return false;
         }
+    }
+
+
+    public void SubmitSave()
+    {
+        SaveManager.ecoscore = ResourceKeeper.ecoScore;
+        saveGame.SaveButton();
     }
 }
