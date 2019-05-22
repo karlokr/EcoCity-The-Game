@@ -14,6 +14,7 @@ public class MoveCar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Direction and speed of the car
         transform.Translate(Vector3.back * moveSpeed * Time.deltaTime * 10);
     }
 }
