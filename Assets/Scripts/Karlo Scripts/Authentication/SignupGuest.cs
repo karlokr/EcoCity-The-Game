@@ -9,6 +9,11 @@ public class SignupGuest : MonoBehaviour {
     public GameObject GameMenu;
     public GameObject GameCanvas;
 
+    /// <summary>
+    /// Contacts the server to actually register the guest user
+    /// </summary>
+    /// <param name="url"></param>
+    /// <returns></returns>
     IEnumerator RegisterGuest(string url) {
         WWWForm form = new WWWForm();
         string username = Guid.NewGuid().ToString();
@@ -54,6 +59,9 @@ public class SignupGuest : MonoBehaviour {
         }
     }
 
+    /// <summary>
+    /// method for the sign up guest button
+    /// </summary>
     public void RegisterGuestButton() {
             StartCoroutine(RegisterGuest("https://ecocitythegame.ca/sqlconnect/register.php"));
     }
