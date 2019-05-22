@@ -1,6 +1,9 @@
 ﻿
 using UnityEngine;
-
+/// <summary>
+/// Collision Script for cars,
+/// Destroying Cars when it collides objects.
+/// </summary>
 public class PlayerCollision : MonoBehaviour
 {
 

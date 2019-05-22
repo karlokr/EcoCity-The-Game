@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/// <summary>
+/// Car moves forward by the speed of variable moveSpeed.
+/// </summary>
 public class MoveCar : MonoBehaviour
 {
     public float moveSpeed = 1f;

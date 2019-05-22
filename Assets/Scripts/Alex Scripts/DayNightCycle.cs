@@ -1,7 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/// <summary>
+/// Camera script for Day Night Cycle.
+/// The camera rotates in specific angle.
+/// </summary>
 public class DayNightCycle : MonoBehaviour
 {
     // Start is called before the first frame update

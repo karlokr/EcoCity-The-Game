@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/// <summary>
+/// Spawning random Cars in random time
+/// </summary>
 public class SpwanCar : MonoBehaviour
 {
     // Starting point of the car
@@ -33,7 +35,7 @@ public class SpwanCar : MonoBehaviour
         
     }
 
-    // Spawn random Cars in random time
+    // Method Spawning random Cars in random time
     void SpawnRandom()
     {
         randomInt = Random.Range(0, spawnees.Length);
