@@ -194,7 +194,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -2.0000067, y: -62.800026}
+  m_AnchoredPosition: {x: -2, y: -62.800026}
   m_SizeDelta: {x: 1.8999939, y: 56.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7465991658645491635
@@ -270,7 +270,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -2.0000067, y: -122.40002}
+  m_AnchoredPosition: {x: -2, y: -122.40002}
   m_SizeDelta: {x: 1.8999939, y: 56.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8925100771004865307
@@ -346,7 +346,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -2.0000067, y: -181.20001}
+  m_AnchoredPosition: {x: -2, y: -181.20001}
   m_SizeDelta: {x: 1.8999939, y: 56.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3426145322554565108
@@ -1105,12 +1105,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LeaderSlots:
   - {fileID: 5656640058079607487}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 2927370134757984793}
+  - {fileID: 3818181589023055858}
+  - {fileID: 3879566255622916755}
+  - {fileID: 5698116572806226791}
   Menu: {fileID: 5656640058580819352}
-  GameMode: {fileID: 5656640057806763525}
   Level: {fileID: 5656640059317416847}
   PrevButton: {fileID: 8925400850693681941}
   NextButton: {fileID: 5589959178991380642}
@@ -1721,7 +1720,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -2.0000067, y: -239.80002}
+  m_AnchoredPosition: {x: -2, y: -239.80002}
   m_SizeDelta: {x: 1.8999939, y: 56.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1115619484947581457
