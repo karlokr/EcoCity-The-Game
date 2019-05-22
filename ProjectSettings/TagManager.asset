@@ -46,7 +46,23 @@ TagManager:
   - Rock
   - UpgradeMaterial
   - Gems
+  - SignupCPasswordLine
+  - SignupPasswordLine
+  - SignupUserLine
+  - CreditNotif
+  - WoodNotif
+  - SteelNotif
+  - CreditNotifTitle
+  - WoodNotifTitle
+  - SteelNotifTitle
+  - PopNotif
+  - PopNotifTitle
+  - CreditPanel
+  - WoodPanel
+  - SteelPanel
   - UIAudioPlayer
+  - WinPanel
+  - LosePanel
   layers:
   - Default
   - TransparentFX

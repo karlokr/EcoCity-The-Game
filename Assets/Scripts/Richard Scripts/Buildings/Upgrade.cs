@@ -6,6 +6,7 @@ public class Upgrade : MonoBehaviour
 {
     public string upgradeName;
     public int cost;
+    public int woodCost;
     public int emissionReduction;
     public int incomeIncrease;
     public int populationIncrease;

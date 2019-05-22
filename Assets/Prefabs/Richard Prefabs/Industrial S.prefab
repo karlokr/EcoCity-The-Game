@@ -9733,11 +9733,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upgradeName: ECO POWER
-  cost: 250
+  cost: 600
+  woodCost: 400
   emissionReduction: 10
   incomeIncrease: 5
   populationIncrease: 0
-  woodIncomeIncrease: 5
+  woodIncomeIncrease: 15
   visualModel: {fileID: 0}
   upgradeActive: 0
   upgradeMaterialCost: 5
@@ -14507,7 +14508,7 @@ GameObject:
   - component: {fileID: 7210902730279220320}
   - component: {fileID: 2095555080246993863}
   m_Layer: 0
-  m_Name: Chimney Upgrade (Placeholder)
+  m_Name: Chimney
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14585,11 +14586,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upgradeName: Steam Chimney
-  cost: 50
-  emissionReduction: 5
+  cost: 150
+  woodCost: 150
+  emissionReduction: 15
   incomeIncrease: 0
   populationIncrease: 0
-  woodIncomeIncrease: 2
+  woodIncomeIncrease: 5
   visualModel: {fileID: 0}
   upgradeActive: 0
   upgradeMaterialCost: 2
@@ -14607,7 +14609,7 @@ GameObject:
   - component: {fileID: 6771358516282105301}
   - component: {fileID: 5224022948985823060}
   m_Layer: 0
-  m_Name: Generator Upgrade (Placeholder)
+  m_Name: Generator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14685,11 +14687,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upgradeName: Generator
-  cost: 100
-  emissionReduction: 5
+  cost: 300
+  woodCost: 200
+  emissionReduction: 10
   incomeIncrease: 0
   populationIncrease: 0
-  woodIncomeIncrease: 2
+  woodIncomeIncrease: 10
   visualModel: {fileID: 0}
   upgradeActive: 0
   upgradeMaterialCost: 3
@@ -19568,9 +19571,10 @@ MonoBehaviour:
   verticalOffset: 0
   buildingType: Industrial
   cost: 25
-  woodCost: 10
-  populationRequired: 1
-  emission: 15
+  woodCost: 75
+  populationRequired: 10
+  emission: 25
+  size: 1
   landingParticleSystem: {fileID: 3336621586210489489}
   popParticleSystem: {fileID: 3056429536294521997}
   moneyParticleSystem: {fileID: 3889510649148544613}
@@ -19580,7 +19584,7 @@ MonoBehaviour:
   coinSpluge: {fileID: 8300000, guid: 144a4665084de9144bf991fd3615fa42, type: 3}
   populationIncrease: 0
   woodIncomeIncrease: 5
-  incomeIncrease: 20
+  incomeIncrease: 0
 --- !u!95 &-3835264439836399139
 Animator:
   serializedVersion: 3
@@ -19703,11 +19707,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8551157436125872206}
     m_Modifications:
-    - target: {fileID: 1319097346479073063, guid: a266c376265a9fe4896dfa4c6941bd88,
-        type: 3}
-      propertyPath: m_Name
-      value: Upgrade Particle Systems
-      objectReference: {fileID: 0}
     - target: {fileID: 8965814030696559441, guid: a266c376265a9fe4896dfa4c6941bd88,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -19762,6 +19761,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1319097346479073063, guid: a266c376265a9fe4896dfa4c6941bd88,
+        type: 3}
+      propertyPath: m_Name
+      value: Upgrade Particle Systems
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a266c376265a9fe4896dfa4c6941bd88, type: 3}

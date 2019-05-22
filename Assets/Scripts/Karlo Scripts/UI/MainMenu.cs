@@ -13,6 +13,7 @@ public class MainMenu : MonoBehaviour
     public GameObject CampaignSelectedButton;
     public GameObject EndlessSelectedButton;
     public GameObject Menu;
+    public GameObject Username;
     private GameObject BackButton;
     private bool CampaignSelected;
     private bool EndlessSelected;
@@ -38,14 +39,21 @@ public class MainMenu : MonoBehaviour
             BackButton = GameObject.FindGameObjectWithTag("BackButton");
             BackButton.SetActive(false);
         }
-        NewGameManager.level = "easy";
         previewImage.sprite = levelPreviews[currentInspectIndex];
+        Username.GetComponent<TMP_Text>().text = DBManager.username;
+        if (DBManager.isGuest) {
+            Username.GetComponent<TMP_Text>().text = "Guest";
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        switch (currentInspectIndex) {
+            case 0: NewGameManager.level = "easy"; break;
+            case 1: NewGameManager.level = "medium"; break;
+            case 2: NewGameManager.level = "hard"; break;
+        }
     }
 
     public void PlayGame() {
@@ -53,7 +61,7 @@ public class MainMenu : MonoBehaviour
         DBManager.game_mode = NewGameManager.game_mode;
         DBManager.newGame = true;
         DBManager.inGame = true;
-        UnityEngine.SceneManagement.SceneManager.LoadScene(levelNames[currentInspectIndex]);
+        UnityEngine.SceneManagement.SceneManager.LoadScene("campaign_" + DBManager.level);
     }
 
     public void CampignSelect() {
@@ -87,12 +95,14 @@ public class MainMenu : MonoBehaviour
         currentInspectIndex = Mathf.Clamp((currentInspectIndex + 1), 0, (levelNames.Length-1));
         previewImage.sprite = levelPreviews[currentInspectIndex];
         levelTitle.text = levelNames[currentInspectIndex];
+        
     }
 
-    public void InspectPreviousLevel()
-    {
-        currentInspectIndex = Mathf.Abs(currentInspectIndex - 1);
-        previewImage.sprite = levelPreviews[currentInspectIndex];
-        levelTitle.text = levelNames[currentInspectIndex];
+    public void InspectPreviousLevel() {
+        if (currentInspectIndex > 0) {
+            currentInspectIndex = Mathf.Abs(currentInspectIndex - 1);
+            previewImage.sprite = levelPreviews[currentInspectIndex];
+            levelTitle.text = levelNames[currentInspectIndex];
+        }
     }
 }

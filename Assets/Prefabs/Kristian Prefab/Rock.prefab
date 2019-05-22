@@ -64,10 +64,13 @@ MonoBehaviour:
   elapsedTime: 0
   buildTime: 10
   moneyGained: 150
-  upgradeMaterialGained: 20
+  upgradeMaterialGained: 25
   cost: 250
   woodCost: 150
+  popCost: 0
   title: Rock
+  description: Purchasing a Rock tile will give you bonus Money and lots of Upgrade
+    Materials
   prefabToBuild: {fileID: 8967674373036049140, guid: b6e31eb9ce0f60c4c9e0364ebc0a6385,
     type: 3}
   building: 0
@@ -271,10 +274,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4760237931473232516}
     m_Modifications:
-    - target: {fileID: 100000, guid: 26208a42eeaecaf4090084d1dc718ea8, type: 3}
-      propertyPath: m_Name
-      value: Env_Rocks_01
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 26208a42eeaecaf4090084d1dc718ea8, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.35
@@ -318,6 +317,10 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 26208a42eeaecaf4090084d1dc718ea8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 26208a42eeaecaf4090084d1dc718ea8, type: 3}
+      propertyPath: m_Name
+      value: Env_Rocks_01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 26208a42eeaecaf4090084d1dc718ea8, type: 3}

@@ -4816,7 +4816,7 @@ GameObject:
   - component: {fileID: 5507955789871140816}
   - component: {fileID: 2064324695384317562}
   m_Layer: 0
-  m_Name: LocallySourced
+  m_Name: Locally Sourced
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4894,9 +4894,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upgradeName: LocallySourced
-  cost: 500
-  emissionReduction: 75
-  incomeIncrease: 20
+  cost: 1500
+  woodCost: 1500
+  emissionReduction: 15
+  incomeIncrease: 25
   populationIncrease: 0
   woodIncomeIncrease: 0
   visualModel: {fileID: 0}
@@ -4949,7 +4950,7 @@ GameObject:
   - component: {fileID: 5006777081984759180}
   - component: {fileID: 7902414147911773445}
   m_Layer: 0
-  m_Name: EcoSupplier
+  m_Name: Eco-Friendly Supplier
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5027,8 +5028,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upgradeName: Eco Supplier
-  cost: 100
-  emissionReduction: 15
+  cost: 500
+  woodCost: 500
+  emissionReduction: 25
   incomeIncrease: 15
   populationIncrease: 0
   woodIncomeIncrease: 0
@@ -19363,7 +19365,7 @@ GameObject:
   - component: {fileID: 1359723918969965826}
   - component: {fileID: 3371344018673174223}
   m_Layer: 0
-  m_Name: RecycledPackaging
+  m_Name: Recycled Packaging
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19441,8 +19443,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upgradeName: Recycled Packaging
-  cost: 250
-  emissionReduction: 20
+  cost: 1000
+  woodCost: 1000
+  emissionReduction: 25
   incomeIncrease: 5
   populationIncrease: 0
   woodIncomeIncrease: 0
@@ -19571,10 +19574,11 @@ MonoBehaviour:
   - {fileID: 2064324695384317562}
   verticalOffset: 0
   buildingType: Commercial
-  cost: 500
-  woodCost: 250
-  populationRequired: 20
+  cost: 600
+  woodCost: 400
+  populationRequired: 50
   emission: 50
+  size: 2
   landingParticleSystem: {fileID: 424859611718425528}
   popParticleSystem: {fileID: 973342529090776899}
   moneyParticleSystem: {fileID: 6144797721899737433}
@@ -19584,7 +19588,7 @@ MonoBehaviour:
   coinSpluge: {fileID: 8300000, guid: 144a4665084de9144bf991fd3615fa42, type: 3}
   populationIncrease: 0
   woodIncomeIncrease: 0
-  incomeIncrease: 30
+  incomeIncrease: 15
 --- !u!95 &225357389486546714
 Animator:
   serializedVersion: 3
@@ -19707,11 +19711,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7980228404448646081}
     m_Modifications:
-    - target: {fileID: 1319097346479073063, guid: a266c376265a9fe4896dfa4c6941bd88,
-        type: 3}
-      propertyPath: m_Name
-      value: Upgrade Particle Systems
-      objectReference: {fileID: 0}
     - target: {fileID: 8965814030696559441, guid: a266c376265a9fe4896dfa4c6941bd88,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -19766,6 +19765,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1319097346479073063, guid: a266c376265a9fe4896dfa4c6941bd88,
+        type: 3}
+      propertyPath: m_Name
+      value: Upgrade Particle Systems
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a266c376265a9fe4896dfa4c6941bd88, type: 3}

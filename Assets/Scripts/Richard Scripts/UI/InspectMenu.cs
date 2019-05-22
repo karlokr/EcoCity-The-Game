@@ -103,12 +103,7 @@ public class InspectMenu : MonoBehaviour
     }
     public void ClearPopCostIcon()
     {
-        popCostIcon.sprite = gray;
-        SetPopCost("");
-    }
-    public void SetUpgradeCostIcon()
-    {
-        woodCostIcon.sprite = upgradeMaterial;
+        popCostIcon.sprite = upgradeMaterial;
     }
 
     public void ReceiveBuilding(GameObject g)
@@ -154,7 +149,9 @@ public class InspectMenu : MonoBehaviour
         stat1Image.sprite = upgradeMaterial;
         stat2Image.sprite = wood;
         SetStat2("+" + forest.woodGained.ToString() + " WOOD");
-        SetStat3("");
+        SetStat3("+" + forest.emission + " EMISSION");
+        stat3Image.enabled = true;
+        stat3Image.sprite = gem;
     }
 
     public void RockBuyMenu()
@@ -195,5 +192,8 @@ public class InspectMenu : MonoBehaviour
         woodCostIcon.sprite = wood;
         stat1Image.enabled = true;
         stat2Image.enabled = true;
+        SetStat3("");
+        stat3Image.enabled = false;
+        
     }
 }

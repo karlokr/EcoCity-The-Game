@@ -8,11 +8,12 @@ public class ResourceKeeper : MonoBehaviour
     public Renderer visualModel;
     
     //The Big 4
-    public static int money = 100;
+    public static int money = 150;
     public static int emission = 0;
     public static int population = 0;
-    public static int wood = 100;
+    public static int wood = 150;
     public static int ecoScore = 0;
+    public static int buildingSizeTotal;
     public static int upgradeMaterial = 0;
     //Accumulators
     public static int income = 5;
@@ -34,7 +35,9 @@ public class ResourceKeeper : MonoBehaviour
     {
         money += income;
         wood += woodIncome;
+        ecoScore = buildingSizeTotal - emission;
         emitMonthly();
+        Debug.Log(ecoScore);
     }
     public void emitMonthly()
     {
