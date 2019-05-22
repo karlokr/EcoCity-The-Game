@@ -2,6 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// When a user clicks the "skull island" game object
+/// five times, a nuke is launched, ending the game. This 
+/// script instantiates the nuke object.
+/// </summary>
 public class NukeTime : MonoBehaviour
 {
     public GameObject missile;
