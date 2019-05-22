@@ -23,6 +23,8 @@ public class Explosion : MonoBehaviour
     {
 
     }
+    // Creates an explosion effect when the nuke object hits the groud,
+    // also plays a unique explosion sound.
     private void OnCollisionEnter(Collision other)
     {
         GameObject nuke = Instantiate(explosion, new Vector3(0, 30, 0), transform.rotation);
