@@ -250,7 +250,7 @@ PrefabInstance:
     - target: {fileID: 1476258732257004916, guid: 79f51f471e8e50a429d1ecead51d834e,
         type: 3}
       propertyPath: levelTimeInSeconds
-      value: 300
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 79f51f471e8e50a429d1ecead51d834e, type: 3}
@@ -359,11 +359,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1942898279846151785}
     m_Modifications:
-    - target: {fileID: 1510593619222794995, guid: 5e3eec93bf971654fb8321bc52760d03,
-        type: 3}
-      propertyPath: m_Name
-      value: WinLose Canvas
-      objectReference: {fileID: 0}
     - target: {fileID: 1510593619222795007, guid: 5e3eec93bf971654fb8321bc52760d03,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -469,6 +464,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1510593619222794995, guid: 5e3eec93bf971654fb8321bc52760d03,
+        type: 3}
+      propertyPath: m_Name
+      value: WinLose Canvas
+      objectReference: {fileID: 0}
     - target: {fileID: 247998135, guid: 5e3eec93bf971654fb8321bc52760d03, type: 3}
       propertyPath: m_Color.r
       value: 0.78431374
@@ -500,25 +500,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1942898279846151785}
     m_Modifications:
-    - target: {fileID: 2460546236600169304, guid: 811447dfe188e594cabc1b6ff1a42527,
-        type: 3}
-      propertyPath: m_Name
-      value: Camera
-      objectReference: {fileID: 0}
     - target: {fileID: 2460546236600169305, guid: 811447dfe188e594cabc1b6ff1a42527,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -364.8
+      value: -391.59
       objectReference: {fileID: 0}
     - target: {fileID: 2460546236600169305, guid: 811447dfe188e594cabc1b6ff1a42527,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -341.23
+      value: -305.3
       objectReference: {fileID: 0}
     - target: {fileID: 2460546236600169305, guid: 811447dfe188e594cabc1b6ff1a42527,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -40.8
+      value: -67.1
       objectReference: {fileID: 0}
     - target: {fileID: 2460546236600169305, guid: 811447dfe188e594cabc1b6ff1a42527,
         type: 3}
@@ -560,11 +555,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2460546237098331030, guid: 811447dfe188e594cabc1b6ff1a42527,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 45
-      objectReference: {fileID: 0}
     - target: {fileID: 2460546237016485465, guid: 811447dfe188e594cabc1b6ff1a42527,
         type: 3}
       propertyPath: speed
@@ -574,6 +564,16 @@ PrefabInstance:
         type: 3}
       propertyPath: zoomSpeed
       value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2460546236600169304, guid: 811447dfe188e594cabc1b6ff1a42527,
+        type: 3}
+      propertyPath: m_Name
+      value: Camera
+      objectReference: {fileID: 0}
+    - target: {fileID: 2460546237098331030, guid: 811447dfe188e594cabc1b6ff1a42527,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 2460546237098331033, guid: 811447dfe188e594cabc1b6ff1a42527,
         type: 3}
@@ -645,11 +645,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1942898279846151785}
     m_Modifications:
-    - target: {fileID: 5923870517207411471, guid: 0e2e450a05f17d948b51ddcfe448684e,
-        type: 3}
-      propertyPath: m_Name
-      value: ResourceKeeper
-      objectReference: {fileID: 0}
     - target: {fileID: 5923870517207411468, guid: 0e2e450a05f17d948b51ddcfe448684e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -705,6 +700,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5923870517207411471, guid: 0e2e450a05f17d948b51ddcfe448684e,
+        type: 3}
+      propertyPath: m_Name
+      value: ResourceKeeper
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e2e450a05f17d948b51ddcfe448684e, type: 3}
 --- !u!4 &1942898280791348689 stripped
@@ -720,11 +720,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1942898279846151785}
     m_Modifications:
-    - target: {fileID: 8343347695234865551, guid: d12555b7cc99143418227cee3055e566,
-        type: 3}
-      propertyPath: m_Name
-      value: Canvas
-      objectReference: {fileID: 0}
     - target: {fileID: 8343347695234865539, guid: d12555b7cc99143418227cee3055e566,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -829,6 +824,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8343347695234865551, guid: d12555b7cc99143418227cee3055e566,
+        type: 3}
+      propertyPath: m_Name
+      value: Canvas
       objectReference: {fileID: 0}
     - target: {fileID: 8131159063497017673, guid: d12555b7cc99143418227cee3055e566,
         type: 3}
@@ -1285,6 +1285,32 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[8].m_CallState
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4909256864512403959, guid: d12555b7cc99143418227cee3055e566,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.0000104904175
+      objectReference: {fileID: 0}
+    - target: {fileID: 8241518212053237354, guid: d12555b7cc99143418227cee3055e566,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8241518212053237354, guid: d12555b7cc99143418227cee3055e566,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8241518212053237354, guid: d12555b7cc99143418227cee3055e566,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8241518212053237354, guid: d12555b7cc99143418227cee3055e566,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 190e55d30a74b334688b7e5d894ce75d,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d12555b7cc99143418227cee3055e566, type: 3}
 --- !u!1 &3443005876224904425 stripped

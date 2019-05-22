@@ -37,7 +37,7 @@ public class ResourceKeeper : MonoBehaviour
         wood += woodIncome;
         ecoScore = buildingSizeTotal - emission;
         emitMonthly();
-        Debug.Log(ecoScore);
+       // Debug.Log(ecoScore);
     }
     public void emitMonthly()
     {
