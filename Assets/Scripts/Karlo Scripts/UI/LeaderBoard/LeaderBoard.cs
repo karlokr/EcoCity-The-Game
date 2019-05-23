@@ -16,6 +16,9 @@ public class LeaderBoard : MonoBehaviour {
     public GameObject PrevButton;
     public GameObject NextButton;
 
+    /// <summary>
+    /// Defines the initial screen of the leaderboard
+    /// </summary>
     public void Awake() {
         LeaderManager.Page = 0;
         StartCoroutine(GetLeaderBoard("https://ecocitythegame.ca/sqlconnect/leaderboard.php", LeaderManager.Page));
@@ -23,7 +26,9 @@ public class LeaderBoard : MonoBehaviour {
         Level.GetComponent<TMP_Text>().text = DBManager.level.Substring(0, 1).ToUpper() + DBManager.level.Substring(1);
     }
 
-
+    /// <summary>
+    /// Goes to the next page in the leaderboard if the user has changes pages
+    /// </summary>
     public void Update() {
         if (LeaderManager.Page <= 0) {
             PrevButton.SetActive(false);
@@ -37,7 +42,12 @@ public class LeaderBoard : MonoBehaviour {
         }
     }
 
-
+    /// <summary>
+    /// Gets the leaderboard info from the server
+    /// </summary>
+    /// <param name="url"></param>
+    /// <param name="page"></param>
+    /// <returns></returns>
     IEnumerator GetLeaderBoard(string url, int page)
     {
         WWWForm form = new WWWForm();
@@ -74,15 +84,24 @@ public class LeaderBoard : MonoBehaviour {
         }
     }
 
+    /// <summary>
+    /// Closes the menu
+    /// </summary>
     public void Back() {
         Destroy(Menu);
     }
 
+    /// <summary>
+    /// selects the next page
+    /// </summary>
     public void NextPage() {
         LeaderManager.Page += 1;
         StartCoroutine(GetLeaderBoard("https://ecocitythegame.ca/sqlconnect/leaderboard.php", LeaderManager.Page));
     }
 
+    /// <summary>
+    /// selects the previous page
+    /// </summary>
     public void PreviousPage() {
         LeaderManager.Page -= 1;
         StartCoroutine(GetLeaderBoard("https://ecocitythegame.ca/sqlconnect/leaderboard.php", LeaderManager.Page));
