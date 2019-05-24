@@ -18,6 +18,9 @@ public class Login : MonoBehaviour
     private string Password;
     private bool isFocused;
 
+    /// <summary>
+    /// Defines the behaviour of the login panel
+    /// </summary>
     void Update() { 
         Tab();
         Enter();
@@ -39,11 +42,19 @@ public class Login : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Method for the log in button
+    /// </summary>
     public void LoginButton() {
             Password = AuthFuncs.EncryptPassword(Password);
             StartCoroutine(UserLogin("https://ecocitythegame.ca/sqlconnect/login.php"));
     }
 
+    /// <summary>
+    /// Contacts the server to actually log in.
+    /// </summary>
+    /// <param name="url"></param>
+    /// <returns></returns>
     IEnumerator UserLogin(string url) {
         WWWForm form = new WWWForm();
         form.AddField("name", Username);

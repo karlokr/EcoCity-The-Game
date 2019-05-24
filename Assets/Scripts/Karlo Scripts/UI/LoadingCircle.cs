@@ -5,7 +5,9 @@ using UnityEngine;
 public class LoadingCircle : MonoBehaviour
 {
 
-
+    /// <summary>
+    /// Loads the correct game based on the user selection
+    /// </summary>
     void Awake()
     {
         if (DBManager.level == "easy") {

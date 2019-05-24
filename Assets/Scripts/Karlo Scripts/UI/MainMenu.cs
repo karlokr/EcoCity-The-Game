@@ -25,7 +25,9 @@ public class MainMenu : MonoBehaviour
     public Sprite[] levelPreviews;
     private int currentInspectIndex;
 
-    // Start is called before the first frame update
+    /// <summary>
+    /// Sets the initial variables and settings when the main menu is first loaded
+    /// </summary>
     void Start()
     {
         currentInspectIndex = 0;
@@ -46,7 +48,9 @@ public class MainMenu : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
+    /// <summary>
+    /// sets the level based on user selection
+    /// </summary>
     void Update()
     {
         switch (currentInspectIndex) {
@@ -56,6 +60,9 @@ public class MainMenu : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Starts the game
+    /// </summary>
     public void PlayGame() {
         DBManager.level = NewGameManager.level;
         DBManager.game_mode = NewGameManager.game_mode;
@@ -64,32 +71,38 @@ public class MainMenu : MonoBehaviour
         UnityEngine.SceneManagement.SceneManager.LoadScene("campaign_" + DBManager.level);
     }
 
-    public void CampignSelect() {
-        CampaignSelected = true;
-        EndlessSelected = false;
-        NewGameManager.game_mode = "campaign";
-        CampaignSelectedButton.SetActive(true);
-        CampaignButton.SetActive(false);
-        EndlessButton.SetActive(true);
-        EndlessSelectedButton.SetActive(false);
-        PlayButton.GetComponent<Button>().interactable = true;
-    }
+//    public void CampignSelect() {
+//        CampaignSelected = true;
+//       EndlessSelected = false;
+//        NewGameManager.game_mode = "campaign";
+//        CampaignSelectedButton.SetActive(true);
+//        CampaignButton.SetActive(false);
+//        EndlessButton.SetActive(true);
+//        EndlessSelectedButton.SetActive(false);
+//        PlayButton.GetComponent<Button>().interactable = true;
+//    }
 
-    public void EndlessSelect() {
-        CampaignSelected = false;
-        EndlessSelected = true;
-        NewGameManager.game_mode = "endless";
-        CampaignSelectedButton.SetActive(false);
-        CampaignButton.SetActive(true);
-        EndlessButton.SetActive(false);
-        EndlessSelectedButton.SetActive(true);
-        PlayButton.GetComponent<Button>().interactable = true;
-    }
+//    public void EndlessSelect() {
+//        CampaignSelected = false;
+//        EndlessSelected = true;
+//        NewGameManager.game_mode = "endless";
+//        CampaignSelectedButton.SetActive(false);
+//        CampaignButton.SetActive(true);
+//        EndlessButton.SetActive(false);
+//        EndlessSelectedButton.SetActive(true);
+//        PlayButton.GetComponent<Button>().interactable = true;
+//   }
 
+    /// <summary>
+    /// closes the menu
+    /// </summary>
     public void Back() {
         Destroy(Menu);
     }
 
+    /// <summary>
+    /// Selects the next level
+    /// </summary>
     public void InspectNextLevel()
     {
         currentInspectIndex = Mathf.Clamp((currentInspectIndex + 1), 0, (levelNames.Length-1));
@@ -98,6 +111,9 @@ public class MainMenu : MonoBehaviour
         
     }
 
+    /// <summary>
+    /// selects the previous level
+    /// </summary>
     public void InspectPreviousLevel() {
         if (currentInspectIndex > 0) {
             currentInspectIndex = Mathf.Abs(currentInspectIndex - 1);

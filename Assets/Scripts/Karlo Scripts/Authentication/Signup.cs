@@ -18,7 +18,9 @@ public class Signup : MonoBehaviour {
     private string ConfirmPassword;
     private bool isFocused;
 
-    // Update is called once per frame
+    /// <summary>
+    /// Defines the behaviour of the sign up panel
+    /// </summary>
     void Update() {
         Tab();
         Enter();
@@ -51,6 +53,9 @@ public class Signup : MonoBehaviour {
         }
     }
 
+    /// <summary>
+    /// Method for the sign up button
+    /// </summary>
     public void RegisterButton() {
         if (AuthFuncs.CheckUsername(Username) && AuthFuncs.CheckSignupPassword(Password, ConfirmPassword)) {
             Password = AuthFuncs.EncryptPassword(Password);
@@ -58,6 +63,11 @@ public class Signup : MonoBehaviour {
         }
     }
 
+    /// <summary>
+    /// Contacts the server to actually sign up
+    /// </summary>
+    /// <param name="url"></param>
+    /// <returns></returns>
     IEnumerator Register(string url) {
         WWWForm form = new WWWForm();
         form.AddField("name", Username);
