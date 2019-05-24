@@ -21,6 +21,8 @@ public class WinConditions : MonoBehaviour
     private PostProcessVolume ppv;
     private ColorGrading colorGrade = null;
 
+    private bool saved = false;
+
     private SaveGame saveGame;
 
     private void Awake()
@@ -35,7 +37,7 @@ public class WinConditions : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -43,14 +45,20 @@ public class WinConditions : MonoBehaviour
     {
         if (matchTimer.currentYear >= yearRequirement)
         {
+            SubmitSave();
+            matchTimer.StopTime();
             GameObject.FindGameObjectWithTag("LosePanel").GetComponent<Animator>().SetTrigger("Entry");
         }
         else if (CheckWin())
         {
+            SubmitSave();
+            matchTimer.StopTime();
             GameObject.FindGameObjectWithTag("WinPanel").GetComponent<Animator>().SetTrigger("Entry");
         }
         else if (CheckLoss())
         {
+            SubmitSave();
+            matchTimer.StopTime();
             GameObject.FindGameObjectWithTag("LosePanel").GetComponent<Animator>().SetTrigger("Entry");
         }
 
@@ -66,7 +74,7 @@ public class WinConditions : MonoBehaviour
     public bool CheckWin()
     {
         if (ResourceKeeper.population >= populationRequirement && ResourceKeeper.emission <= emissionLimit)
-        {
+        {        
             return true;
         }
         else
@@ -89,7 +97,13 @@ public class WinConditions : MonoBehaviour
 
     public void SubmitSave()
     {
-        SaveManager.ecoscore = ResourceKeeper.ecoScore;
-        saveGame.SaveButton();
+        if(!saved)
+        {
+            SaveManager.ecoscore = ResourceKeeper.ecoScore;
+            saveGame.SaveButton();
+            saved = true;
+        }
+
     }
+
 }
