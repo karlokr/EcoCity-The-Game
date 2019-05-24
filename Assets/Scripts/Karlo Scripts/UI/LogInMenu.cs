@@ -13,6 +13,9 @@ public class LogInMenu : MonoBehaviour
     public GameObject GameMenu;
     public GameObject GameCanvas;
 
+    /// <summary>
+    /// Sets the variables when first starting the game, or goes into the game menu if already logged in
+    /// </summary>
     void Awake() {
         if (DBManager.inGame) {
             GoToMenu();
@@ -27,18 +30,27 @@ public class LogInMenu : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Goes to the login menu
+    /// </summary>
     public void GoToLogin() {
         (Instantiate(LoginMenu) as GameObject).transform.parent = GameCanvas.transform;
         //Title.SetActive(false);
         //Heading.SetActive(false);
     }
 
+    /// <summary>
+    /// Goes to the game menu if the user is logged in
+    /// </summary>
     public void GoToGameMenu() {
         (Instantiate(GameMenu) as GameObject).transform.parent = GameCanvas.transform;
         //Title.SetActive(false);
         //Heading.SetActive(false);
     }
 
+    /// <summary>
+    /// Goes to login menu or game menu depending if user is logged in or not
+    /// </summary>
     public void GoToMenu() {
         if (PlayerPrefs.HasKey("id")) {
             DBManager.username = PlayerPrefs.GetString("username");
@@ -50,11 +62,17 @@ public class LogInMenu : MonoBehaviour
         
     }
 
+    /// <summary>
+    /// defines the behaviour of the new account button
+    /// </summary>
     public void NewAccountButton() {
         SignUpPanel.SetActive(true);
         LogInPanel.SetActive(false);
     }
 
+    /// <summary>
+    /// defines the behaviour of the back button
+    /// </summary>
     public void Back() {
         SignUpPanel.SetActive(false);
         LogInPanel.SetActive(true);
