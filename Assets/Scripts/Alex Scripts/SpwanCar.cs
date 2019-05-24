@@ -1,13 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/// <summary>
+/// Spawning random Cars in random time
+/// </summary>
 public class SpwanCar : MonoBehaviour
 {
+    // Starting point of the car
     public Transform start1;
 
+    // List of Cars
     public GameObject[] spawnees;
-    // GameObject myCar;
 
     int randomInt;
     int interval = 3;
@@ -16,7 +19,6 @@ public class SpwanCar : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // car1 = Instantiate(car1, start1.position, start1.rotation);
     }
 
     // Update is called once per frame
@@ -33,6 +35,7 @@ public class SpwanCar : MonoBehaviour
         
     }
 
+    // Method Spawning random Cars in random time
     void SpawnRandom()
     {
         randomInt = Random.Range(0, spawnees.Length);
